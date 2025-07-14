@@ -17,13 +17,11 @@ class QuanLyLDPhoneGroupbox1:
         tips_label = ctk.CTkLabel(self.quanlyldphonegroupbox1, text="HƯỚNG DẪN: CHUỘT PHẢI VÀO Ở TRỐNG ĐỂ TÌM KIẾM LẠI THIẾT BỊ PHONE HOẶC LDPLAYER", font=("Arial", 14, "bold"), text_color="white", wraplength=400)
         tips_label.pack(pady=8)
 
-        self.bangdulieu_verinputmail()
+        self.bangdulieu_quanlyldphone()
         
-    def bangdulieu_verinputmail(self):
+    def bangdulieu_quanlyldphone(self):
         # ✅ SỬA PARENT WIDGET: dùng self.quanlyldphonegroupbox1 thay vì self.parent
-        table_frame = tk.Frame(self.quanlyldphonegroupbox1, width=547, height=720, bg="#3b3b3b", relief="solid", bd=2, highlightbackground="#f8f9fa", highlightcolor="#f8f9fa", highlightthickness=2)
-        
-        # ✅ SỬA VỊ TRÍ: đặt thấp hơn để không bị che khuất bởi tips_label
+        table_frame = tk.Frame(self.quanlyldphonegroupbox1, width=547, height=720, bg="#3b3b3b", relief="solid", bd=2, highlightbackground="#f8f9fa", highlightcolor="#f8f9fa", highlightthickness=2)        
         table_frame.place(x=10, y=50)  # Thay đổi từ y=50 thành y=70
         table_frame.pack_propagate(False)
         
