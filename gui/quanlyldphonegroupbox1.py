@@ -37,7 +37,7 @@ class QuanLyLDPhoneGroupbox1:
         scrollbar.pack(side="right", fill="y")
         
         # ✅ SỬA HEADERS CHO PHÙ HỢP VỚI QUẢN LÝ LD/PHONE
-        headers = [("", 30), ("STT", 50), ("TÊN THIẾT BỊ", 150), ("LD PORT", 150), ("TRẠNG THÁI", 145)]
+        headers = [("", 30), ("STT", 50), ("TRẠNG THÁI", 145), ("TÊN MÁY", 150), ("CHỌN", 150)]
         
         for col, (header, width) in enumerate(headers):
             header_label = tk.Label(scrollable_frame, text=header, font=('Arial', 10, 'bold'), bg="#0dcaf0", fg="black", width=width//8, relief="solid", bd=0, highlightbackground="white", highlightthickness=1)
