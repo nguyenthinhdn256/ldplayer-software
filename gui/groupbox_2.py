@@ -18,7 +18,7 @@ class Groupbox2Manager:
         self.settings_button.place(x=10, y=4)
 
         # Save ADB button
-        self.save_button = tk.Button(self.groupbox2, text="Save ADB", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=15, height=1)
+        self.save_button = tk.Button(self.groupbox2, text="Connect ADB", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=15, height=1)
         self.save_button.place(x=10, y=42)
         
         # Start Appium button 
