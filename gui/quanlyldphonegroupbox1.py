@@ -24,7 +24,7 @@ class QuanLyLDPhoneGroupbox1:
         table_frame = tk.Frame(self.quanlyldphonegroupbox1, width=547, height=720, bg="#3b3b3b", relief="solid", bd=2, highlightbackground="#f8f9fa", highlightcolor="#f8f9fa", highlightthickness=2)        
         table_frame.place(x=10, y=50)  # Thay đổi từ y=50 thành y=70
         table_frame.pack_propagate(False)
-        
+
         canvas = tk.Canvas(table_frame, bg="#3b3b3b", highlightthickness=0)
         scrollbar = ttk.Scrollbar(table_frame, orient="vertical", command=canvas.yview)
         scrollable_frame = tk.Frame(canvas, bg="#3b3b3b")
@@ -36,6 +36,9 @@ class QuanLyLDPhoneGroupbox1:
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
         
+        # Tạo context menu và bind vào tất cả widgets
+        self.create_context_menu(table_frame, canvas, scrollable_frame)
+
         # ✅ SỬA HEADERS CHO PHÙ HỢP VỚI QUẢN LÝ LD/PHONE
         headers = [("", 30), ("STT", 50), ("TRẠNG THÁI", 145), ("TÊN MÁY", 150), ("CHỌN", 150)]
         
@@ -47,3 +50,19 @@ class QuanLyLDPhoneGroupbox1:
         self.table_scrollable_frame = scrollable_frame
         self.table_headers = headers
         self.table_data = []
+
+    def create_context_menu(self, table_frame, canvas, scrollable_frame):
+        context_menu = tk.Menu(table_frame, tearoff=0, font=("Arial", 10))
+        context_menu.add_command(label="Tìm Lại LD/Phone", command=lambda: print("Tìm lại LD/Phone được thực hiện"))
+        context_menu.add_command(label="Chọn Tất Cả", command=lambda: print("Chọn tất cả được thực hiện"))
+        context_menu.add_command(label="Bỏ Chọn Tất Cả", command=lambda: print("Bỏ chọn tất cả được thực hiện"))
+        
+        def show_context_menu(event):
+            try:
+                context_menu.tk_popup(event.x_root, event.y_root)
+            finally:
+                context_menu.grab_release()
+        
+        table_frame.bind("<Button-3>", show_context_menu)
+        canvas.bind("<Button-3>", show_context_menu)
+        scrollable_frame.bind("<Button-3>", show_context_menu)
