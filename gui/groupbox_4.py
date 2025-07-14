@@ -75,8 +75,8 @@ class Groupbox4Manager:
         self.groupbox5_manager = CauHinhRegGroupbox5(content_frame)
     
     def setup_quanlyldphone_content(self, content_frame):
-        self.groupbox1_manager = QuanLyLDPhoneGroupbox1(content_frame)
-        self.groupbox2_manager = QuanLyLDPhoneGroupbox2(content_frame)
+        self.ldgroupbox1_manager = QuanLyLDPhoneGroupbox1(content_frame)
+        self.ldgroupbox2_manager = QuanLyLDPhoneGroupbox2(content_frame)
     
     def setup_quanlyreg_tab_content(self, content_frame):
         self.groupbox1_manager = QuanLyRegGroupbox1(content_frame)
