@@ -3,6 +3,11 @@ from tkinter import ttk
 import customtkinter as ctk
 import subprocess
 import sys, json, os
+import logging
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from service.veri_facebook import VerificationHandlerFactory
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class CauHinhRegGroupbox2:
     def __init__(self, parent):
@@ -134,6 +139,33 @@ class CauHinhRegGroupbox2:
         # Lưu trữ các checkbox để quản lý
         self.checkboxes.update({"mailthuesim": icon_mailthuesim, "mailironsim": icon_ironsim, "regclone2fa": icon_regclone2fa, "dongvanfb": icon_dongvanfb, "inputmail": icon_inputmail})
     
+    def get_selected_mail_verification_handler(self):
+        """Lấy handler cho verification mail được chọn"""
+        selected = self.app_selection_var.get()
+        if not selected:
+            return None
+        
+        try:
+            if selected == "mailthuesim":
+                api_key = self.gmail_mailthuesim_api_input.get() if hasattr(self, 'gmail_mailthuesim_api_input') else None
+                gmail_account = self.gmail_mailthuesim_input.get() if hasattr(self, 'gmail_mailthuesim_input') else None
+                return VerificationHandlerFactory.create_handler('mailthuesim', api_key=api_key, gmail_account=gmail_account)
+            elif selected == "mailironsim":
+                api_key = self.gmail_ironsim_input.get() if hasattr(self, 'gmail_ironsim_input') else None
+                return VerificationHandlerFactory.create_handler('mailironsim', api_key=api_key)
+            elif selected == "regclone2fa":
+                api_key = self.hotmail_regclone2fa_input.get() if hasattr(self, 'hotmail_regclone2fa_input') else None
+                return VerificationHandlerFactory.create_handler('regclone2fa', api_key=api_key)
+            elif selected == "dongvanfb":
+                api_key = self.hotmail_dongvanfb_api_input.get() if hasattr(self, 'hotmail_dongvanfb_api_input') else None
+                account = self.hotmail_dongvanfb_input.get() if hasattr(self, 'hotmail_dongvanfb_input') else None
+                return VerificationHandlerFactory.create_handler('dongvanfb', api_key=api_key, account=account)
+            elif selected == "inputmail":
+                return VerificationHandlerFactory.create_handler('inputmail')
+        except Exception as e:
+            logging.error(f"Lỗi tạo mail verification handler: {str(e)}")
+        return None
+
     def setup_versms_tab_content(self, content_frame):
         def create_checkbox_icon(parent, x, y, checked=False):
             canvas = tk.Canvas(parent, width=18, height=18, bg="#3b3b3b", highlightthickness=0)
@@ -233,6 +265,45 @@ class CauHinhRegGroupbox2:
 
         self.checkboxes.update({"simviotp": icon_simviotp, "smsironsim": icon_smsironsim, "funotp": icon_funotp, "5sim": icon_5sim, "368sms": icon_368sms, "hcotp": icon_hcotp, "smsthuesim": icon_smsthuesim, "sim24": icon_sim24})
     
+    def get_selected_sms_verification_handler(self):
+        """Lấy handler cho verification SMS được chọn"""
+        selected = self.app_selection_var.get()
+        if not selected:
+            return None
+        
+        try:
+            if selected == "simviotp":
+                api_key = self.sim_viotp_input.get() if hasattr(self, 'sim_viotp_input') else None
+                return VerificationHandlerFactory.create_handler('simviotp', api_key=api_key)
+            elif selected == "smsironsim":
+                api_key = self.sim_smsironsim_input2.get() if hasattr(self, 'sim_smsironsim_input2') else None
+                account = self.sim_smsironsim_input.get() if hasattr(self, 'sim_smsironsim_input') else None
+                return VerificationHandlerFactory.create_handler('smsironsim', api_key=api_key, account=account)
+            elif selected == "funotp":
+                api_key = self.sim_funotp_input.get() if hasattr(self, 'sim_funotp_input') else None
+                return VerificationHandlerFactory.create_handler('funotp', api_key=api_key)
+            elif selected == "5sim":
+                api_key = self.sim_5sim_input.get() if hasattr(self, 'sim_5sim_input') else None
+                return VerificationHandlerFactory.create_handler('5sim', api_key=api_key)
+            elif selected == "368sms":
+                api_key = self.sim_368sms_input.get() if hasattr(self, 'sim_368sms_input') else None
+                return VerificationHandlerFactory.create_handler('368sms', api_key=api_key)
+            elif selected == "hcotp":
+                api_key = self.sim_hcotp_input.get() if hasattr(self, 'sim_hcotp_input') else None
+                return VerificationHandlerFactory.create_handler('hcotp', api_key=api_key)
+            elif selected == "smsthuesim":
+                api_key = self.sim_smsthuesim_input.get() if hasattr(self, 'sim_smsthuesim_input') else None
+                gmail_account = self.gmail_smsthuesim_input.get() if hasattr(self, 'gmail_smsthuesim_input') else None
+                return VerificationHandlerFactory.create_handler('smsthuesim', api_key=api_key, gmail_account=gmail_account)
+            elif selected == "sim24":
+                api_key = self.sim_sim24_input.get() if hasattr(self, 'sim_sim24_input') else None
+                return VerificationHandlerFactory.create_handler('sim24', api_key=api_key)
+        except Exception as e:
+            logging.error(f"Lỗi tạo SMS verification handler: {str(e)}")
+        return None    
+
+
+
     #################################
     def setup_verinputmail_tab_content(self, content_frame):
         loai_mail_label = tk.Label(content_frame, text="Loại Mail:", font=('Arial', 12, 'bold'), bg='#3b3b3b', fg='white')
