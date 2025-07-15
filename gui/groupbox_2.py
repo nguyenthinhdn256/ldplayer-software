@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from gui.groupbox_4 import Groupbox4Manager
 from gui.cauhinhreggroupbox3 import CauHinhRegGroupbox3
+from utils.appium_server_manager import AppiumServerManager
 import threading
 import subprocess
 
@@ -9,6 +10,7 @@ import subprocess
 class Groupbox2Manager:
     def __init__(self, parent):
         self.parent = parent
+        self.appium_manager = AppiumServerManager()
         self.create_groupbox2()
     
     def create_groupbox2(self):
@@ -25,7 +27,7 @@ class Groupbox2Manager:
         self.save_button.place(x=10, y=42)
         
         # Start Appium button 
-        self.appium_button = tk.Button(self.groupbox2, text="Start Appium", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=15, height=1)
+        self.appium_button = tk.Button(self.groupbox2, text="Start Appium", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=15, height=1, command=self.toggle_appium_server )
         self.appium_button.place(x=10, y=82)
 
         # START REG button
@@ -139,4 +141,42 @@ class Groupbox2Manager:
                         groupbox4_manager.groupbox1_manager.create_rows_from_so_ld(so_ld_value)
         except Exception as e:
             print(f"Error in start reg click: {e}")
+
+    def toggle_appium_server(self):
+        """Toggle Appium server start/stop"""
+        def worker():
+            try:
+                if self.appium_manager.is_running:
+                    # Stop server
+                    self.parent.after(0, lambda: self.update_appium_button("Stopping...", "#ffc107"))
+                    result = self.appium_manager.stop_server()
+                    
+                    if result["success"]:
+                        self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
+                        self.parent.after(0, lambda: messagebox.showinfo("Success", result["message"]))
+                    else:
+                        self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
+                        self.parent.after(0, lambda: messagebox.showerror("Error", result["message"]))
+                else:
+                    # Start server
+                    self.parent.after(0, lambda: self.update_appium_button("Starting...", "#ffc107"))
+                    result = self.appium_manager.start_server()
+                    
+                    if result["success"]:
+                        self.parent.after(0, lambda: self.update_appium_button("Stop Appium", "#dc3545"))
+                        self.parent.after(0, lambda: messagebox.showinfo("Success", f"{result['message']}\nServer URL: {result['server_url']}"))
+                    else:
+                        self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
+                        self.parent.after(0, lambda: messagebox.showerror("Error", result["message"]))
+                        
+            except Exception as e:
+                self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
+                self.parent.after(0, lambda: messagebox.showerror("Error", f"Unexpected error: {str(e)}"))
+        
+        # Run in separate thread to avoid GUI freezing
+        threading.Thread(target=worker, daemon=True).start()
+    
+    def update_appium_button(self, text: str, color: str):
+        """Update button text and color"""
+        self.appium_button.config(text=text, bg=color)
         
