@@ -3,6 +3,7 @@ from tkinter import ttk, messagebox
 from gui.groupbox_4 import Groupbox4Manager
 from gui.cauhinhreggroupbox3 import CauHinhRegGroupbox3
 from utils.appium_server_manager import AppiumServerManager
+from utils.apk_manager import ApkManager
 import threading
 import subprocess
 
@@ -19,7 +20,7 @@ class Groupbox2Manager:
         self.groupbox2.pack_propagate(False)
 
         # App Settings button
-        self.settings_button = tk.Button(self.groupbox2, text="App Settings", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=15, height=1)
+        self.settings_button = tk.Button(self.groupbox2, text="App Settings", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=15, height=1, command=self.process_app_settings)
         self.settings_button.place(x=10, y=4)
 
         # Save ADB button
@@ -142,6 +143,8 @@ class Groupbox2Manager:
         except Exception as e:
             print(f"Error in start reg click: {e}")
 
+    #############################################
+    # Xử lý Appium server
     def toggle_appium_server(self):
         """Toggle Appium server start/stop"""
         def worker():
@@ -179,4 +182,34 @@ class Groupbox2Manager:
     def update_appium_button(self, text: str, color: str):
         """Update button text and color"""
         self.appium_button.config(text=text, bg=color)
+    #############################################
+
+
+    #############################################
+    # Xử lý cài app trong App Settings
+    def process_app_settings(self):
+        """Xử lý App Settings theo logic yêu cầu"""
+        def worker():
+            try:
+                manager = ApkManager()
+                
+                # Kiểm tra có device nào kết nối không
+                devices = manager.get_connected_devices()
+                if not devices:
+                    self.parent.after(0, lambda: messagebox.showwarning("Warning", 
+                        "No devices connected!\nPlease click 'Connect ADB' button first."))
+                    return
+                
+                # Hiển thị thông báo đang xử lý
+                self.parent.after(0, lambda: messagebox.showinfo("Processing", 
+                    f"Processing {len(devices)} device(s)...\nVui lòng đợi cài đặt hoàn thành."))
+                
+                # Xử lý tất cả devices
+                results = manager.process_all_devices()
+                
+            except Exception as e:
+                self.parent.after(0, lambda: messagebox.showerror("Error", f"Error: {str(e)}"))
         
+        threading.Thread(target=worker, daemon=True).start()
+
+    #############################################
