@@ -2,9 +2,7 @@
 import logging
 import threading
 import subprocess
-import sys
-import os
-import json
+import sys, os, json
 from typing import Dict, Any
 
 logger = logging.getLogger(__name__)
@@ -21,14 +19,7 @@ class FacebookRegistrationStarter:
         try:
             # Thu thập cấu hình cơ bản
             self.registration_config = self.collect_basic_configuration()
-            
-            # Gọi worker trong thread riêng
-            threading.Thread(
-                target=self._call_worker_thread,
-                args=(self.registration_config,),
-                daemon=True
-            ).start()
-            
+            threading.Thread(target=self._call_worker_thread, args=(self.registration_config,), daemon=True).start()
             return True
             
         except Exception as e:
@@ -57,11 +48,7 @@ class FacebookRegistrationStarter:
                     selected_devices = []
                     device_manager = groupbox4_manager.ldgroupbox1_manager
                     if hasattr(device_manager, 'device_checkboxes'):
-                        selected_devices = [
-                            device_id for device_id, checkbox_var 
-                            in device_manager.device_checkboxes.items() 
-                            if checkbox_var.get()
-                        ]
+                        selected_devices = [device_id for device_id, checkbox_var in device_manager.device_checkboxes.items() if checkbox_var.get()]
                     config['selected_devices'] = selected_devices
             
             logger.info(f"Collected basic config: {config}")
@@ -75,13 +62,9 @@ class FacebookRegistrationStarter:
         """Thread để gọi worker - chạy trực tiếp, không qua subprocess"""
         try:
             logger.info("Starting facebook_registration_worker directly...")
-            
-            # Import và chạy trực tiếp thay vì subprocess
             from service.facebook_registration_worker import FacebookRegistrationWorker
-            
             # Tạo worker instance
             worker = FacebookRegistrationWorker(max_workers=4)
-            
             # Khởi tạo worker pool
             init_result = worker.initialize_worker_pool(config)
             

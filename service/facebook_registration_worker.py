@@ -38,13 +38,7 @@ class FacebookRegistrationWorker:
             logger.info(f"✅ Prepared {len(self.device_ids)} devices")
             logger.info("🛑 Worker initialization completed. Ready for task execution.")
             
-            return {
-                'success': True,
-                'message': 'Worker pool initialized successfully',
-                'workers': self.max_workers,
-                'devices_prepared': len(self.device_ids),
-                'status': 'ready_for_execution'
-            }
+            return {'success': True, 'message': 'Worker pool initialized successfully', 'workers': self.max_workers, 'devices_prepared': len(self.device_ids), 'status': 'ready_for_execution'}
             
         except Exception as e:
             logger.error(f"❌ Error initializing worker pool: {e}")
@@ -100,17 +94,11 @@ if __name__ == "__main__":
         # Load config
         with open(args.config, 'r', encoding='utf-8') as f:
             config = json.load(f)
-        
         logger.info("🚀 Starting Facebook Registration Worker...")
-        
-        # Create worker instance
         worker = FacebookRegistrationWorker(max_workers=args.workers)
-        
-        # Initialize worker pool
         init_result = worker.initialize_worker_pool(config)
         
         if init_result.get('success', False):
-            # Run main registration logic
             final_result = worker.main(config)
             print(json.dumps(final_result, ensure_ascii=False, indent=2))
             sys.exit(0 if final_result.get('success', False) else 1)
