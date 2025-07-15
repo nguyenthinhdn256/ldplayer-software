@@ -5,7 +5,7 @@ from gui.cauhinhreggroupbox3 import CauHinhRegGroupbox3
 from utils.appium_server_manager import AppiumServerManager
 from utils.apk_manager import ApkManager
 import threading
-import subprocess
+import subprocess, time
 
 
 class Groupbox2Manager:
@@ -128,20 +128,59 @@ class Groupbox2Manager:
                 self.parent.after(0, lambda: messagebox.showerror("Lỗi", f"Đã xảy ra lỗi: {str(e)}"))
         threading.Thread(target=worker, daemon=True).start()
 
+    # def on_start_reg_click(self):
+    #     try:
+    #         app_window = self.parent
+    #         while app_window and not hasattr(app_window, 'groupbox4_manager'):
+    #             app_window = app_window.master
+    #         if app_window and hasattr(app_window, 'groupbox4_manager'):
+    #             groupbox4_manager = app_window.groupbox4_manager
+    #             if hasattr(groupbox4_manager, 'groupbox3_manager') and hasattr(groupbox4_manager.groupbox3_manager, 'so_ld_var'):
+    #                 so_ld_value = int(groupbox4_manager.groupbox3_manager.so_ld_var.get())
+    #                 groupbox4_manager.show_tab("QUẢN LÝ REG")
+    #                 if hasattr(groupbox4_manager, 'groupbox1_manager'):
+    #                     groupbox4_manager.groupbox1_manager.create_rows_from_so_ld(so_ld_value)
+    #     except Exception as e:
+    #         print(f"Error in start reg click: {e}")
+
     def on_start_reg_click(self):
+        """Thực hiện các bước UI trước, sau đó gọi worker"""
         try:
+            # === BƯỚC 1: Thực hiện logic UI cũ ===
             app_window = self.parent
             while app_window and not hasattr(app_window, 'groupbox4_manager'):
                 app_window = app_window.master
+                
             if app_window and hasattr(app_window, 'groupbox4_manager'):
                 groupbox4_manager = app_window.groupbox4_manager
+                
                 if hasattr(groupbox4_manager, 'groupbox3_manager') and hasattr(groupbox4_manager.groupbox3_manager, 'so_ld_var'):
                     so_ld_value = int(groupbox4_manager.groupbox3_manager.so_ld_var.get())
+                    
+                    # Chuyển sang tab "QUẢN LÝ REG"
                     groupbox4_manager.show_tab("QUẢN LÝ REG")
+                    
+                    # Tạo bảng dữ liệu
                     if hasattr(groupbox4_manager, 'groupbox1_manager'):
                         groupbox4_manager.groupbox1_manager.create_rows_from_so_ld(so_ld_value)
+                        
+                    # messagebox.showinfo("Thông báo", f"Đã tạo bảng với {so_ld_value} rows.\nBắt đầu khởi động worker...")
+            
+            # === BƯỚC 2: Import từ thư mục service ===
+            from service import facebook_main
+            
+            starter = facebook_main.FacebookRegistrationStarter(self.parent)
+            success = starter.call_worker_only()
+            
+            if success:
+                time.sleep(1)
+                # messagebox.showinfo("Thành công", "Worker đa tiến trình đã được khởi tạo!")
+            else:
+                messagebox.showerror("Lỗi", "Không thể khởi tạo worker")
+                
         except Exception as e:
             print(f"Error in start reg click: {e}")
+            messagebox.showerror("Lỗi", f"Lỗi khởi động: {str(e)}")
 
     #############################################
     # Xử lý Appium server
