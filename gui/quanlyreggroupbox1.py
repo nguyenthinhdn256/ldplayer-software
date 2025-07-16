@@ -49,18 +49,45 @@ class QuanLyRegGroupbox1:
         canvas.configure(scrollregion=canvas.bbox("all"))
 
     def create_rows_from_so_ld(self, so_ld_count):
+        """Tạo rows và lưu trữ widget references"""
+        # Xóa các rows cũ
         for widget in self.table_scrollable_frame.winfo_children():
-            if int(widget.grid_info()["row"]) > 0: widget.destroy()
+            if int(widget.grid_info()["row"]) > 0: 
+                widget.destroy()
+        
+        # Reset table_rows
+        self.table_rows = []
+        
+        # Tạo rows mới
         for row in range(1, so_ld_count + 1):
             cells = ["", str(row), "", "", "", "", "", "", "", "", "", "", ""]
+            row_widgets = []
+            
             for col, (cell_data, (_, width)) in enumerate(zip(cells, self.table_headers)):
                 cell_label = tk.Label(self.table_scrollable_frame, text=cell_data, font=('Arial', 9), bg="#3b3b3b", fg="white", width=width//8, relief="solid", bd=0, anchor="center", highlightbackground="white", highlightthickness=1)
                 cell_label.grid(row=row, column=col, sticky="ew")
+                row_widgets.append(cell_label)
+            
+            self.table_rows.append(row_widgets)
+        
         self.table_canvas.configure(scrollregion=self.table_canvas.bbox("all"))
 
     # Cập nhập status từ table_status_manager.py lên giao diện gui
+    def update_table_row_safe(self, row_index: int, status_data: dict):
+        """Thread-safe method để cập nhật table từ background thread"""
+        def update_ui():
+            self.update_table_row(row_index, status_data)
+        
+        # Tìm root window để gọi after
+        root = self.parent
+        while root.master:
+            root = root.master
+        
+        # Schedule UI update trên main thread
+        root.after(0, update_ui)
+
     def update_table_row(self, row_index: int, status_data: dict):
-        """Cập nhật một row trong bảng với dữ liệu mới"""
+        """Cập nhật một row trong bảng với dữ liệu mới - CHỈ ĐƯỢC GỌI TỪ MAIN THREAD"""
         try:
             if row_index < 0 or row_index >= len(self.table_rows):
                 return
@@ -70,7 +97,11 @@ class QuanLyRegGroupbox1:
             
             for col, field_name in enumerate(field_names):
                 if col < len(row_widgets) and field_name in status_data:
-                    row_widgets[col].config(text=status_data[field_name])
+                    old_text = row_widgets[col].cget("text")
+                    new_text = status_data[field_name]
+                    row_widgets[col].config(text=new_text)
+                    print(f"DEBUG: Updated row {row_index}, col {col} ({field_name}): '{old_text}' -> '{new_text}'")
+            
             
             # Cập nhật scroll region
             self.table_canvas.configure(scrollregion=self.table_canvas.bbox("all"))

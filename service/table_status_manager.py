@@ -26,12 +26,16 @@ class TableStatusManager:
                 if field not in status_data:
                     status_data[field] = ""
             
-            # Tự động set stt nếu trống
-            if not status_data["stt"]:
-                status_data["stt"] = str(device_index + 1)
+            # # Tự động set stt nếu trống
+            # if not status_data["stt"]:
+            #     status_data["stt"] = str(device_index + 1)
+            logger.info(f"Updating device_index={device_index}, STT={status_data['stt']}, Status={status_data['trang_thai']}")
             
-            # Gọi update table UI nếu table_manager được cung cấp
-            if table_manager and hasattr(table_manager, 'update_table_row'):
+            # GỌI UPDATE TABLE UI THREAD-SAFE
+            if table_manager and hasattr(table_manager, 'update_table_row_safe'):
+                table_manager.update_table_row_safe(device_index, status_data)
+            elif table_manager and hasattr(table_manager, 'update_table_row'):
+                # Fallback cho old method
                 table_manager.update_table_row(device_index, status_data)
             
             logger.info(f"Cập nhật status cho device {device_index + 1}: {status_data['trang_thai']}")

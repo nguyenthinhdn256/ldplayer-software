@@ -67,7 +67,7 @@ class FacebookRegistrationWorker:
             logger.info("Step 2: Initializing parallel workers...")
             futures = []
             for i, device_id in enumerate(self.device_ids):
-                future = self.executor.submit(self.process_device, device_id, i+1)
+                future = self.executor.submit(self.process_device, device_id, i)
                 futures.append(future)
                 logger.info(f"Submitted task {i+1} for device {device_id}")
             
@@ -87,25 +87,33 @@ class FacebookRegistrationWorker:
                 logger.info("Worker pool shutdown completed")
 
     def process_device(self, device_id: str, device_index: int):
-        starting_status = {"stt": str(device_index + 1), "trang_thai": "Đang khởi tạo quá trình...", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
-        self.status_manager.update_device_status(device_index, starting_status)
+        try:
+            stt_display = str(device_index + 1)
+            starting_status = {"stt": stt_display, "trang_thai": "Đang khởi tạo quá trình...", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, starting_status, self.table_manager)
 
-        time.sleep(1)
-        logger.info("Step 1: Tạm nghỉ 5s lần 2")
-        time.sleep(5)
+            time.sleep(1)
+            logger.info("Step 1: Tạm nghỉ 5s lần 2")
+            time.sleep(5)
 
 
-        # Thực hiện thây đổi ngôn ngữ.
-        start_change_language_status = {"stt": str(device_index + 1), "trang_thai": "Bắt đầu đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}    
-        self.status_manager.update_device_status(device_index, start_change_language_status)
-        xu_ly_buoc1 = XuLyBuoc1(device_id)
-        language_result = xu_ly_buoc1.thay_doi_ngon_ngu()
-        
-        time.sleep(5)
-        done_change_language_status = {"stt": str(device_index + 1), "trang_thai": "Đã đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
-        self.status_manager.update_device_status(device_index, done_change_language_status)
+            # Thực hiện thây đổi ngôn ngữ.
+            start_change_language_status = {"stt": stt_display, "trang_thai": "Bắt đầu đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}    
+            self.status_manager.update_device_status(device_index, start_change_language_status, self.table_manager)
+            xu_ly_buoc1 = XuLyBuoc1(device_id)
+            language_result = xu_ly_buoc1.thay_doi_ngon_ngu()
+            
+            time.sleep(5)
+            done_change_language_status = {"stt": stt_display, "trang_thai": "Đã đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, done_change_language_status, self.table_manager)
 
-        return f"Processed {device_id}"
+            return f"Processed {device_id}"
+
+        except Exception as e:
+            logger.error(f"Error processing device {device_id}: {e}")
+            error_status = {"stt": stt_display, "trang_thai": f"Lỗi: {str(e)}", "ten_may": device_id, "ket_qua": "Lỗi", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, error_status, self.table_manager)
+            return f"Error processing {device_id}: {e}"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Facebook Registration Worker')
