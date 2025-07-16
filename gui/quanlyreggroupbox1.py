@@ -7,6 +7,7 @@ class QuanLyRegGroupbox1:
         self.parent = parent
         self.app_selection_var = tk.StringVar(value="kantana")
         self.app_radio_buttons = []
+        self.table_rows = []
         self.bangdulieu_quanlyreg()
 
     def create_quanlyldphonegroupbox1(self):
@@ -56,5 +57,25 @@ class QuanLyRegGroupbox1:
                 cell_label = tk.Label(self.table_scrollable_frame, text=cell_data, font=('Arial', 9), bg="#3b3b3b", fg="white", width=width//8, relief="solid", bd=0, anchor="center", highlightbackground="white", highlightthickness=1)
                 cell_label.grid(row=row, column=col, sticky="ew")
         self.table_canvas.configure(scrollregion=self.table_canvas.bbox("all"))
+
+    # Cập nhập status từ table_status_manager.py lên giao diện gui
+    def update_table_row(self, row_index: int, status_data: dict):
+        """Cập nhật một row trong bảng với dữ liệu mới"""
+        try:
+            if row_index < 0 or row_index >= len(self.table_rows):
+                return
+            
+            row_widgets = self.table_rows[row_index]
+            field_names = ["", "stt", "trang_thai", "ten_may", "ket_qua", "ho", "ten", "mat_khau", "email_sdt", "uid", "cookie", "token", "proxy"]
+            
+            for col, field_name in enumerate(field_names):
+                if col < len(row_widgets) and field_name in status_data:
+                    row_widgets[col].config(text=status_data[field_name])
+            
+            # Cập nhật scroll region
+            self.table_canvas.configure(scrollregion=self.table_canvas.bbox("all"))
+            
+        except Exception as e:
+            print(f"Error updating table row {row_index}: {e}")
 
     

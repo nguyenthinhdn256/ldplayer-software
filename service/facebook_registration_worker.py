@@ -6,6 +6,7 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 from service.facebook_funtion_manager import XuLyBuoc1
+from service.table_status_manager import TableStatusManager
 from typing import Dict, Any
 
 # Setup logging
@@ -17,6 +18,7 @@ class FacebookRegistrationWorker:
         self.max_workers = max_workers
         self.executor = None
         self.device_ids = []
+        self.status_manager = TableStatusManager()
         logger.info(f"Initializing FacebookRegistrationWorker with {max_workers} workers")
     
     def initialize_worker_pool(self, config: Dict[str, Any]) -> Dict[str, Any]:
@@ -26,6 +28,7 @@ class FacebookRegistrationWorker:
             
             # Lấy danh sách devices trước
             self.device_ids = config.get('selected_devices', [])
+            self.table_manager = config.get('table_manager')
             so_ld = config.get('so_ld', 1)
             
             if not self.device_ids:
@@ -83,18 +86,25 @@ class FacebookRegistrationWorker:
                 self.executor.shutdown(wait=True)
                 logger.info("Worker pool shutdown completed")
 
-    def process_device(self, device_id: str, task_id: int):
-        """Function để xử lý từng device (chạy trong worker thread)"""
-        logger.info(f"Worker thread processing device {device_id} (task {task_id})")
+    def process_device(self, device_id: str, device_index: int):
+        starting_status = {"stt": str(device_index + 1), "trang_thai": "Đang khởi tạo quá trình...", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+        self.status_manager.update_device_status(device_index, starting_status)
+
         time.sleep(1)
         logger.info("Step 1: Tạm nghỉ 5s lần 2")
         time.sleep(5)
 
+
         # Thực hiện thây đổi ngôn ngữ.
+        start_change_language_status = {"stt": str(device_index + 1), "trang_thai": "Bắt đầu đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}    
+        self.status_manager.update_device_status(device_index, start_change_language_status)
         xu_ly_buoc1 = XuLyBuoc1(device_id)
         language_result = xu_ly_buoc1.thay_doi_ngon_ngu()
+        
         time.sleep(5)
-        logger.info(f"Đã thây đổi ngôn ngữ sang: {language_result}")
+        done_change_language_status = {"stt": str(device_index + 1), "trang_thai": "Đã đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+        self.status_manager.update_device_status(device_index, done_change_language_status)
+
         return f"Processed {device_id}"
 
 if __name__ == "__main__":

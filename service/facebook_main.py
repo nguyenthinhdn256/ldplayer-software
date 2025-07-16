@@ -50,6 +50,10 @@ class FacebookRegistrationStarter:
                     if hasattr(device_manager, 'device_checkboxes'):
                         selected_devices = [device_id for device_id, checkbox_var in device_manager.device_checkboxes.items() if checkbox_var.get()]
                     config['selected_devices'] = selected_devices
+                
+                # Lấy table_manager từ QUẢN LÝ REG tab
+                if hasattr(groupbox4_manager, 'groupbox1_manager'):
+                    config['table_manager'] = groupbox4_manager.groupbox1_manager
             
             logger.info(f"Collected basic config: {config}")
             return config
