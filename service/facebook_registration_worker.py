@@ -89,6 +89,25 @@ class FacebookRegistrationWorker:
     def process_device(self, device_id: str, device_index: int):
         try:
             stt_display = str(device_index + 1)
+        
+            # Khởi động Appium server cho device này nếu chưa có
+            appium_result = self.start_appium_for_device(device_id)
+            if not appium_result.get("success", False):
+                error_status = {"stt": stt_display, "trang_thai": f"Lỗi khởi động Appium: {appium_result.get('message', '')}", 
+                            "ten_may": device_id, "ket_qua": "Lỗi", "ho": "", "ten": "", "mat_khau": "", 
+                            "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+                self.status_manager.update_device_status(device_index, error_status, self.table_manager)
+                return f"Appium startup failed for {device_id}"
+            
+            # Lấy Appium server URL
+            appium_url = self.get_appium_url_for_device(device_id)
+            
+            starting_status = {"stt": stt_display, "trang_thai": f"Đã khởi động Appium server: {appium_url}", 
+                            "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", 
+                            "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, starting_status, self.table_manager)    
+
+            stt_display = str(device_index + 1)
             starting_status = {"stt": stt_display, "trang_thai": "Đang khởi tạo quá trình...", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
             self.status_manager.update_device_status(device_index, starting_status, self.table_manager)
 
@@ -114,6 +133,15 @@ class FacebookRegistrationWorker:
             error_status = {"stt": stt_display, "trang_thai": f"Lỗi: {str(e)}", "ten_may": device_id, "ket_qua": "Lỗi", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
             self.status_manager.update_device_status(device_index, error_status, self.table_manager)
             return f"Error processing {device_id}: {e}"
+        
+    def start_appium_for_device(self, device_id: str):
+        """Khởi động Appium server cho device nếu chưa có"""
+        try:
+            # Tìm appium manager từ UI
+            # Implementation tùy thuộc vào cách truy cập UI từ worker
+            pass
+        except Exception as e:
+            return {"success": False, "message": str(e)}
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Facebook Registration Worker')

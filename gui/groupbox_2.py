@@ -6,6 +6,7 @@ from utils.appium_server_manager import AppiumServerManager
 from utils.apk_manager import ApkManager
 import threading
 import subprocess, time
+from typing import Optional, Dict, Any
 
 
 class Groupbox2Manager:
@@ -185,13 +186,13 @@ class Groupbox2Manager:
     #############################################
     # Xử lý Appium server
     def toggle_appium_server(self):
-        """Toggle Appium server start/stop"""
+        """Toggle Appium server start/stop với dynamic device management"""
         def worker():
             try:
                 if self.appium_manager.is_running:
-                    # Stop server
+                    # STOP ALL SERVERS
                     self.parent.after(0, lambda: self.update_appium_button("Stopping...", "#ffc107"))
-                    result = self.appium_manager.stop_server()
+                    result = self.appium_manager.stop_all_servers()
                     
                     if result["success"]:
                         self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
@@ -200,17 +201,28 @@ class Groupbox2Manager:
                         self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
                         self.parent.after(0, lambda: messagebox.showerror("Error", result["message"]))
                 else:
-                    # Start server - disconnect trước, sau đó connect lại
+                    # START SERVERS FOR SELECTED DEVICES
                     self.parent.after(0, lambda: self.update_appium_button("Starting...", "#ffc107"))
                     
-                    # Disconnect trước khi start
-                    disconnect_result = self.appium_manager.stop_server()
+                    # Lấy danh sách devices đã chọn
+                    selected_devices = self.get_selected_devices()
                     
-                    result = self.appium_manager.start_server()
+                    if not selected_devices:
+                        self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
+                        self.parent.after(0, lambda: messagebox.showwarning("Warning", 
+                            "No devices selected!\nPlease go to 'QUẢN LÝ LD/PHONE' tab and select devices first."))
+                        return
+                    
+                    # Khởi động servers cho devices đã chọn
+                    result = self.appium_manager.start_servers_for_devices(selected_devices, max_workers=10)
                     
                     if result["success"]:
                         self.parent.after(0, lambda: self.update_appium_button("Stop Appium", "#dc3545"))
-                        self.parent.after(0, lambda: messagebox.showinfo("Success", f"{result['message']}\nServer URL: {result['server_url']}"))
+                        message = f"{result['message']}\n\nPort mapping:\n"
+                        for device_id in selected_devices:
+                            port = self.appium_manager.get_appium_port_for_device(device_id)
+                            message += f"• {device_id} → Port {port}\n"
+                        self.parent.after(0, lambda: messagebox.showinfo("Success", message))
                     else:
                         self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
                         self.parent.after(0, lambda: messagebox.showerror("Error", result["message"]))
@@ -221,6 +233,44 @@ class Groupbox2Manager:
         
         # Run in separate thread to avoid GUI freezing
         threading.Thread(target=worker, daemon=True).start()
+
+    def get_selected_devices(self) -> list:
+        """Lấy danh sách devices đã được chọn từ tab QUẢN LÝ LD/PHONE"""
+        try:
+            # Tìm groupbox4_manager
+            app_window = self.parent
+            while app_window and not hasattr(app_window, 'groupbox4_manager'):
+                app_window = app_window.master
+                
+            if not app_window or not hasattr(app_window, 'groupbox4_manager'):
+                return []
+                
+            groupbox4_manager = app_window.groupbox4_manager
+            
+            # Tìm device manager
+            if hasattr(groupbox4_manager, 'ldgroupbox1_manager'):
+                device_manager = groupbox4_manager.ldgroupbox1_manager
+                if hasattr(device_manager, 'device_checkboxes'):
+                    return [device_id for device_id, checkbox_var in device_manager.device_checkboxes.items() 
+                           if checkbox_var.get()]
+            
+            return []
+            
+        except Exception as e:
+            print(f"Error getting selected devices: {e}")
+            return []
+
+    def start_appium_for_device(self, device_id: str) -> Dict[str, Any]:
+        """Khởi động Appium server cho device cụ thể (gọi từ registration worker)"""
+        try:
+            result = self.appium_manager.start_server_for_device(device_id)
+            return result
+        except Exception as e:
+            return {"success": False, "message": f"Error starting Appium for {device_id}: {str(e)}"}
+
+    def get_appium_url_for_device(self, device_id: str) -> Optional[str]:
+        """Lấy Appium server URL cho device cụ thể"""
+        return self.appium_manager.get_device_server_url(device_id)
     
     def update_appium_button(self, text: str, color: str):
         """Update button text and color"""
