@@ -135,13 +135,39 @@ class FacebookRegistrationWorker:
             return f"Error processing {device_id}: {e}"
         
     def start_appium_for_device(self, device_id: str):
-        """Khởi động Appium server cho device nếu chưa có"""
+        """Giả định Appium server đã chạy sẵn - skip check"""
         try:
-            # Tìm appium manager từ UI
-            # Implementation tùy thuộc vào cách truy cập UI từ worker
-            pass
+            # Tính toán port dựa trên device_id  
+            if device_id.startswith('emulator-'):
+                adb_port = int(device_id.split('-')[1])
+                # Port mapping: 5556→4724, 5558→4725, 5560→4726...
+                appium_port = 4723 + ((adb_port - 5554) // 2)
+                appium_url = f"http://127.0.0.1:{appium_port}"
+                
+                return {
+                    "success": True, 
+                    "message": f"Using existing Appium server for {device_id}", 
+                    "port": appium_port,
+                    "server_url": appium_url
+                }
+            else:
+                return {"success": False, "message": f"Unknown device format: {device_id}"}
+                
         except Exception as e:
+            logger.error(f"Error getting Appium info for {device_id}: {str(e)}")
             return {"success": False, "message": str(e)}
+        
+    def get_appium_url_for_device(self, device_id: str):
+        """Lấy URL từ device_id pattern"""
+        try:
+            if device_id.startswith('emulator-'):
+                adb_port = int(device_id.split('-')[1])
+                appium_port = 4723 + ((adb_port - 5554) // 2)
+                return f"http://127.0.0.1:{appium_port}"
+            return None
+        except Exception as e:
+            logger.error(f"Error getting URL for {device_id}: {str(e)}")
+            return None
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Facebook Registration Worker')
