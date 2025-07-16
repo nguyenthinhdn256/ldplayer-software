@@ -200,8 +200,12 @@ class Groupbox2Manager:
                         self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
                         self.parent.after(0, lambda: messagebox.showerror("Error", result["message"]))
                 else:
-                    # Start server
+                    # Start server - disconnect trước, sau đó connect lại
                     self.parent.after(0, lambda: self.update_appium_button("Starting...", "#ffc107"))
+                    
+                    # Disconnect trước khi start
+                    disconnect_result = self.appium_manager.stop_server()
+                    
                     result = self.appium_manager.start_server()
                     
                     if result["success"]:

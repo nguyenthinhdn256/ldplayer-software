@@ -5,6 +5,7 @@ import logging
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
+from service.facebook_funtion_manager import XuLyBuoc1
 from typing import Dict, Any
 
 # Setup logging
@@ -82,6 +83,12 @@ class FacebookRegistrationWorker:
         time.sleep(1)
         logger.info("Step 1: Tạm nghỉ 5s lần 2")
         time.sleep(5)
+
+        # Thực hiện thây đổi ngôn ngữ.
+        xu_ly_buoc1 = XuLyBuoc1(device_id)
+        language_result = xu_ly_buoc1.thay_doi_ngon_ngu()
+        time.sleep(15)
+        logger.info(f"Đã thây đổi ngôn ngữ sang: {language_result}")
         return f"Processed {device_id}"
 
 if __name__ == "__main__":

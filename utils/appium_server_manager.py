@@ -26,7 +26,8 @@ class AppiumServerManager:
 
     def is_appium_server_running(self) -> bool:
         try:
-            return requests.get(f"{self.server_url}/status", timeout=5).status_code == 200
+            response = requests.get(f"{self.server_url}/status", timeout=5)
+            return response.status_code == 200
         except Exception:
             return False
 
@@ -35,22 +36,49 @@ class AppiumServerManager:
             if self.is_appium_server_running():
                 self.is_running = True
                 return {"success": True, "message": f"Appium server already running on {self.server_url}", "server_url": self.server_url}
+            
             if not self.is_port_available():
                 return {"success": False, "message": f"Port {self.port} is already in use by another service", "server_url": None}
+            
+            try:
+                import subprocess
+                subprocess.run(["taskkill", "/F", "/IM", "node.exe"], capture_output=True, text=True)
+                subprocess.run(["taskkill", "/F", "/IM", "appium.exe"], capture_output=True, text=True)
+            except Exception:
+                pass
+            
             self.service = AppiumService()
-            args = ['--address', self.host, '--port', str(self.port), '--log-level', self.log_level, '--session-override', '--no-reset', '--local-timezone']
-            self.service.start(args=args, timeout_ms=self.timeout * 1000)
+            args = ['--address', self.host, '--port', str(self.port), '--base-path', '/', '--log-level', self.log_level, '--session-override', '--no-reset', '--local-timezone', '--allow-insecure', 'chromedriver_autodownload']
+            self.service.start(args=args, timeout_ms=10000)
+            
             start_time = time.time()
             while time.time() - start_time < self.timeout:
-                if self.is_appium_server_running():
+                if self.test_server_endpoints():
                     self.is_running = True
                     return {"success": True, "message": f"Appium server started successfully on {self.server_url}", "server_url": self.server_url}
-                time.sleep(0.5)
+                time.sleep(1.0)
+            
             self.stop_server()
             return {"success": False, "message": f"Appium server failed to start within {self.timeout} seconds", "server_url": None}
+            
         except Exception as e:
             logger.error(f"Error starting Appium server: {str(e)}")
             return {"success": False, "message": f"Failed to start Appium server: {str(e)}", "server_url": None}
+        
+    def test_server_endpoints(self) -> bool:
+        """Test multiple endpoints để kiểm tra server có sẵn sàng không"""
+        endpoints = ['/status', '/wd/hub/status', '/sessions']
+        
+        for endpoint in endpoints:
+            try:
+                url = f"{self.server_url}{endpoint}"
+                response = requests.get(url, timeout=3)
+                if response.status_code == 200:
+                    return True
+            except Exception:
+                continue
+        
+        return False
 
     def stop_server(self) -> Dict[str, Any]:
         try:
