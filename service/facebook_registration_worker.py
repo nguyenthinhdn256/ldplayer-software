@@ -20,26 +20,32 @@ class FacebookRegistrationWorker:
         logger.info(f"Initializing FacebookRegistrationWorker with {max_workers} workers")
     
     def initialize_worker_pool(self, config: Dict[str, Any]) -> Dict[str, Any]:
-        """Tạo worker pool và chuẩn bị device list"""
+        """Tạo worker pool với số workers = số devices"""
         try:
-            logger.info("Creating worker pool...")
+            logger.info("Creating unlimited worker pool...")
             
-            # Tạo ThreadPoolExecutor
-            self.executor = ThreadPoolExecutor(max_workers=self.max_workers)
-            logger.info(f"✅ Worker pool created with {self.max_workers} workers")
-            
-            # Lấy danh sách devices
+            # Lấy danh sách devices trước
             self.device_ids = config.get('selected_devices', [])
             so_ld = config.get('so_ld', 1)
             
-            # Nếu không có devices, tạo mock devices
             if not self.device_ids:
                 self.device_ids = [f"mock_device_{i+1}" for i in range(so_ld)]
             
-            logger.info(f"✅ Prepared {len(self.device_ids)} devices")
-            logger.info("🛑 Worker initialization completed. Ready for task execution.")
+            # Tạo ThreadPoolExecutor với max_workers = số devices
+            num_devices = len(self.device_ids)
+            self.executor = ThreadPoolExecutor(max_workers=num_devices)
+            logger.info(f"✅ Worker pool created with {num_devices} workers (unlimited)")
             
-            return {'success': True, 'message': 'Worker pool initialized successfully', 'workers': self.max_workers, 'devices_prepared': len(self.device_ids), 'status': 'ready_for_execution'}
+            logger.info(f"✅ Prepared {num_devices} devices")
+            logger.info("🛑 Worker initialization completed. Ready for unlimited task execution.")
+            
+            return {
+                'success': True, 
+                'message': 'Worker pool initialized successfully', 
+                'workers': num_devices, 
+                'devices_prepared': num_devices, 
+                'status': 'ready_for_execution'
+            }
             
         except Exception as e:
             logger.error(f"❌ Error initializing worker pool: {e}")
@@ -87,7 +93,7 @@ class FacebookRegistrationWorker:
         # Thực hiện thây đổi ngôn ngữ.
         xu_ly_buoc1 = XuLyBuoc1(device_id)
         language_result = xu_ly_buoc1.thay_doi_ngon_ngu()
-        time.sleep(15)
+        time.sleep(5)
         logger.info(f"Đã thây đổi ngôn ngữ sang: {language_result}")
         return f"Processed {device_id}"
 
