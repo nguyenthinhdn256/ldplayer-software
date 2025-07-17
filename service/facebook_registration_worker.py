@@ -4,6 +4,7 @@ import json
 import logging
 import sys
 import time
+import uiautomator2 as u2 
 from concurrent.futures import ThreadPoolExecutor
 from service.facebook_funtion_manager import XuLyBuoc1
 from service.table_status_manager import TableStatusManager
@@ -134,6 +135,7 @@ class FacebookRegistrationWorker:
         try:
             
             stt_display = str(device_index + 1)
+            d = u2.connect(device_id)
 
             # **BƯỚC 1: Kiểm tra kết nối U2**
             logger.info(f"Processing device {device_id} with U2...")
@@ -165,11 +167,9 @@ class FacebookRegistrationWorker:
                 self.status_manager.update_device_status(device_index, error_status, self.table_manager)
                 return f"U2 Error for {device_id}: {test_result.get('error', 'Unknown')}"
             
-
             time.sleep(1)
             logger.info("Step 1: Tạm nghỉ 5s lần 2")
             time.sleep(5)
-
 
             # Thực hiện thây đổi ngôn ngữ.
             start_change_language_status = {"stt": stt_display, "trang_thai": "Bắt đầu đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}    
@@ -181,8 +181,49 @@ class FacebookRegistrationWorker:
             done_change_language_status = {"stt": stt_display, "trang_thai": "Đã đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
             self.status_manager.update_device_status(device_index, done_change_language_status, self.table_manager)
 
-            return f"Processed {device_id}"
+            # Change info device
+            maxchanger_start_status = {"stt": stt_display, "trang_thai": "Đang khởi động MaxChanger", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, maxchanger_start_status, self.table_manager)
+            d.app_start('com.minsoftware.maxchanger')
+            time.sleep(5)
+            d.swipe(270, 800, 270, 200)
+            time.sleep(1)
+            d(text="CHANGE INFO").click()
+            time.sleep(5)
+            d.app_stop('com.minsoftware.maxchanger')
+            maxchanger_done_status = {"stt": stt_display, "trang_thai": "Đã thực hiện MaxChanger thành công", "ten_may": device_id, "ket_qua": "Thành công", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, maxchanger_done_status, self.table_manager)
 
+            # Tắt vị trí
+            tabvitri_start_status = {"stt": stt_display, "trang_thai": "Đang khởi động tab Vị trí", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, tabvitri_start_status, self.table_manager)
+            d.app_start('com.android.settings', activity='.Settings$LocationSettingsActivity')
+            time.sleep(2)
+            location_switch = d(resourceId="com.android.settings:id/switch_widget")
+            if location_switch.exists and location_switch.info.get('checked', False):
+                location_switch.click()
+            time.sleep(2)
+            d.app_stop('com.android.settings')
+            tabvitri_done_status = {"stt": stt_display, "trang_thai": "Đã tắt Vị trí", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, tabvitri_done_status, self.table_manager)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            return f"Processed {device_id}"
         except Exception as e:
             logger.error(f"Error processing device {device_id}: {e}")
             error_status = {"stt": stt_display, "trang_thai": f"Lỗi: {str(e)}", "ten_may": device_id, "ket_qua": "Lỗi", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
