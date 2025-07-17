@@ -127,25 +127,13 @@ class Groupbox2Manager:
                 self.parent.after(0, lambda: messagebox.showerror("Lỗi", f"Đã xảy ra lỗi: {str(e)}"))
         threading.Thread(target=worker, daemon=True).start()
 
-    # def on_start_reg_click(self):
-    #     try:
-    #         app_window = self.parent
-    #         while app_window and not hasattr(app_window, 'groupbox4_manager'):
-    #             app_window = app_window.master
-    #         if app_window and hasattr(app_window, 'groupbox4_manager'):
-    #             groupbox4_manager = app_window.groupbox4_manager
-    #             if hasattr(groupbox4_manager, 'groupbox3_manager') and hasattr(groupbox4_manager.groupbox3_manager, 'so_ld_var'):
-    #                 so_ld_value = int(groupbox4_manager.groupbox3_manager.so_ld_var.get())
-    #                 groupbox4_manager.show_tab("QUẢN LÝ REG")
-    #                 if hasattr(groupbox4_manager, 'groupbox1_manager'):
-    #                     groupbox4_manager.groupbox1_manager.create_rows_from_so_ld(so_ld_value)
-    #     except Exception as e:
-    #         print(f"Error in start reg click: {e}")
 
     def on_start_reg_click(self):
         """Thực hiện các bước UI trước, sau đó gọi worker"""
         try:
-            # === BƯỚC 1: Thực hiện logic UI cũ ===
+            # **THÊM: Disable button để tránh click 2 lần**
+            self.start_reg_button.config(state='disabled', text="Starting...", bg='#6c757d')
+            
             app_window = self.parent
             while app_window and not hasattr(app_window, 'groupbox4_manager'):
                 app_window = app_window.master
@@ -162,10 +150,8 @@ class Groupbox2Manager:
                     # Tạo bảng dữ liệu
                     if hasattr(groupbox4_manager, 'groupbox1_manager'):
                         groupbox4_manager.groupbox1_manager.create_rows_from_so_ld(so_ld_value)
-                        
-                    # messagebox.showinfo("Thông báo", f"Đã tạo bảng với {so_ld_value} rows.\nBắt đầu khởi động worker...")
             
-            # === BƯỚC 2: Import từ thư mục service ===
+            # Import từ thư mục service
             from service import facebook_main
             
             starter = facebook_main.FacebookRegistrationStarter(self.parent)
@@ -173,65 +159,20 @@ class Groupbox2Manager:
             
             if success:
                 time.sleep(1)
-                # messagebox.showinfo("Thành công", "Worker đa tiến trình đã được khởi tạo!")
+                # **THÊM: Enable button lại sau khi hoàn thành**
+                self.start_reg_button.config(state='normal', text="Start", bg='#dc3545')
             else:
+                self.start_reg_button.config(state='normal', text="Start", bg='#dc3545')
                 messagebox.showerror("Lỗi", "Không thể khởi tạo worker")
                 
         except Exception as e:
+            # **THÊM: Enable button lại khi có lỗi**
+            self.start_reg_button.config(state='normal', text="Start", bg='#dc3545')
             print(f"Error in start reg click: {e}")
             messagebox.showerror("Lỗi", f"Lỗi khởi động: {str(e)}")
 
     #############################################
-    # Xử lý Appium server
-    # def toggle_appium_server(self):
-    #     """Toggle Appium server start/stop với dynamic device management"""
-    #     def worker():
-    #         try:
-    #             if self.appium_manager.is_running:
-    #                 # STOP ALL SERVERS
-    #                 self.parent.after(0, lambda: self.update_appium_button("Stopping...", "#ffc107"))
-    #                 result = self.appium_manager.stop_all_servers()
-                    
-    #                 if result["success"]:
-    #                     self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
-    #                     self.parent.after(0, lambda: messagebox.showinfo("Success", result["message"]))
-    #                 else:
-    #                     self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
-    #                     self.parent.after(0, lambda: messagebox.showerror("Error", result["message"]))
-    #             else:
-    #                 # START SERVERS FOR SELECTED DEVICES
-    #                 self.parent.after(0, lambda: self.update_appium_button("Starting...", "#ffc107"))
-                    
-    #                 # Lấy danh sách devices đã chọn
-    #                 selected_devices = self.get_selected_devices()
-                    
-    #                 if not selected_devices:
-    #                     self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
-    #                     self.parent.after(0, lambda: messagebox.showwarning("Warning", 
-    #                         "No devices selected!\nPlease go to 'QUẢN LÝ LD/PHONE' tab and select devices first."))
-    #                     return
-                    
-    #                 # Khởi động servers cho devices đã chọn
-    #                 result = self.appium_manager.start_servers_for_devices(selected_devices, max_workers=10)
-                    
-    #                 if result["success"]:
-    #                     self.parent.after(0, lambda: self.update_appium_button("Stop Appium", "#dc3545"))
-    #                     message = f"{result['message']}\n\nPort mapping:\n"
-    #                     for device_id in selected_devices:
-    #                         port = self.appium_manager.get_appium_port_for_device(device_id)
-    #                         message += f"• {device_id} → Port {port}\n"
-    #                     self.parent.after(0, lambda: messagebox.showinfo("Success", message))
-    #                 else:
-    #                     self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
-    #                     self.parent.after(0, lambda: messagebox.showerror("Error", result["message"]))
-                        
-    #         except Exception as e:
-    #             self.parent.after(0, lambda: self.update_appium_button("Start Appium", "#404040"))
-    #             self.parent.after(0, lambda: messagebox.showerror("Error", f"Unexpected error: {str(e)}"))
-        
-    #     # Run in separate thread to avoid GUI freezing
-    #     threading.Thread(target=worker, daemon=True).start()
-
+    
     def get_selected_devices(self) -> list:
         """Lấy danh sách devices đã được chọn từ tab QUẢN LÝ LD/PHONE"""
         try:
@@ -257,23 +198,6 @@ class Groupbox2Manager:
         except Exception as e:
             print(f"Error getting selected devices: {e}")
             return []
-
-    # def start_appium_for_device(self, device_id: str) -> Dict[str, Any]:
-    #     """Khởi động Appium server cho device cụ thể (gọi từ registration worker)"""
-    #     try:
-    #         result = self.appium_manager.start_server_for_device(device_id)
-    #         return result
-    #     except Exception as e:
-    #         return {"success": False, "message": f"Error starting Appium for {device_id}: {str(e)}"}
-
-    # def get_appium_url_for_device(self, device_id: str) -> Optional[str]:
-    #     """Lấy Appium server URL cho device cụ thể"""
-    #     return self.appium_manager.get_device_server_url(device_id)
-    
-    # def update_appium_button(self, text: str, color: str):
-    #     """Update button text and color"""
-    #     self.appium_button.config(text=text, bg=color)
-    #############################################
 
 
     #############################################
