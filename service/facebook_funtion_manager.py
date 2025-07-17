@@ -1,5 +1,7 @@
 import subprocess, time
 import logging
+from appium import webdriver
+from appium.webdriver.common.mobileby import MobileBy
 
 logger = logging.getLogger(__name__)
 
@@ -13,6 +15,10 @@ class XuLyBuoc1:
     def thay_doi_ngon_ngu(self) -> dict:
         """Thay đổi ngôn ngữ thiết bị sang tiếng Việt"""
         return change_device_language_to_vietnamese(self.device_id)
+    
+    def thay_doi_thong_tin_thiet_bi(self, appium_url: str) -> dict:
+        """Thay đổi thông tin thiết bị bằng MaxChanger"""
+        return change_device_info(self.device_id, appium_url)
 
 def change_device_language_to_vietnamese(device_id: str) -> dict:
     try:
@@ -38,3 +44,40 @@ def change_device_language_to_vietnamese(device_id: str) -> dict:
     except Exception as e:
         logger.error(f"Error changing language for device {device_id}: {str(e)}")
         return {"success": False, "message": f"Error changing language for device {device_id}: {str(e)}"}
+
+def change_device_info(device_id: str, appium_url: str) -> dict:
+    """Thay đổi thông tin thiết bị bằng app MaxChanger - SỬ DỤNG SESSION ĐÃ CÓ"""
+    try:
+        logger.info(f"Starting device info change for device: {device_id}")
+        
+        # Lấy session đã tạo sẵn từ AppiumServerManager
+        from gui.groupbox_2 import Groupbox2Manager
+        # Cần truy cập đến appium_manager instance để lấy session
+        # Session đã được tạo khi khởi động server
+        
+        # Tạm thời dùng session mới vì cần refactor để access manager
+        caps = {'platformName': 'Android', 'automationName': 'UiAutomator2', 'deviceName': device_id, 'udid': device_id, 'autoGrantPermissions': True, 'newCommandTimeout': 60, 'noReset': True}
+
+        driver = webdriver.Remote(appium_url, caps)
+        logger.info(f"Using session for MaxChanger on device {device_id}")
+        
+        # Đợi app khởi động
+        time.sleep(3)
+        
+        # Tìm và click button CHANGE INFO
+        button = driver.find_element(MobileBy.XPATH, "//android.widget.Button[@text='CHANGE INFO']")
+        button.click()
+        logger.info(f"Clicked CHANGE INFO button for device {device_id}")
+        
+        # Đợi xử lý
+        time.sleep(2)
+        
+        # Đóng session
+        driver.quit()
+        logger.info(f"Device info change completed for device {device_id}")
+        
+        return {"success": True, "message": f"Device info changed successfully for device {device_id}"}
+        
+    except Exception as e:
+        logger.error(f"Error changing device info for device {device_id}: {str(e)}")
+        return {"success": False, "message": f"Error changing device info for device {device_id}: {str(e)}"}

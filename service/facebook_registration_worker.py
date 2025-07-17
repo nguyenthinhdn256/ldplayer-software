@@ -88,25 +88,7 @@ class FacebookRegistrationWorker:
 
     def process_device(self, device_id: str, device_index: int):
         try:
-            stt_display = str(device_index + 1)
-        
-            # Khởi động Appium server cho device này nếu chưa có
-            appium_result = self.start_appium_for_device(device_id)
-            if not appium_result.get("success", False):
-                error_status = {"stt": stt_display, "trang_thai": f"Lỗi khởi động Appium: {appium_result.get('message', '')}", 
-                            "ten_may": device_id, "ket_qua": "Lỗi", "ho": "", "ten": "", "mat_khau": "", 
-                            "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
-                self.status_manager.update_device_status(device_index, error_status, self.table_manager)
-                return f"Appium startup failed for {device_id}"
             
-            # Lấy Appium server URL
-            appium_url = self.get_appium_url_for_device(device_id)
-            
-            starting_status = {"stt": stt_display, "trang_thai": f"Đã khởi động Appium server: {appium_url}", 
-                            "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", 
-                            "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
-            self.status_manager.update_device_status(device_index, starting_status, self.table_manager)    
-
             stt_display = str(device_index + 1)
             starting_status = {"stt": stt_display, "trang_thai": "Đang khởi tạo quá trình...", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
             self.status_manager.update_device_status(device_index, starting_status, self.table_manager)
@@ -126,6 +108,7 @@ class FacebookRegistrationWorker:
             done_change_language_status = {"stt": stt_display, "trang_thai": "Đã đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
             self.status_manager.update_device_status(device_index, done_change_language_status, self.table_manager)
 
+
             return f"Processed {device_id}"
 
         except Exception as e:
@@ -133,41 +116,7 @@ class FacebookRegistrationWorker:
             error_status = {"stt": stt_display, "trang_thai": f"Lỗi: {str(e)}", "ten_may": device_id, "ket_qua": "Lỗi", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
             self.status_manager.update_device_status(device_index, error_status, self.table_manager)
             return f"Error processing {device_id}: {e}"
-        
-    def start_appium_for_device(self, device_id: str):
-        """Giả định Appium server đã chạy sẵn - skip check"""
-        try:
-            # Tính toán port dựa trên device_id  
-            if device_id.startswith('emulator-'):
-                adb_port = int(device_id.split('-')[1])
-                # Port mapping: 5556→4724, 5558→4725, 5560→4726...
-                appium_port = 4723 + ((adb_port - 5554) // 2)
-                appium_url = f"http://127.0.0.1:{appium_port}"
-                
-                return {
-                    "success": True, 
-                    "message": f"Using existing Appium server for {device_id}", 
-                    "port": appium_port,
-                    "server_url": appium_url
-                }
-            else:
-                return {"success": False, "message": f"Unknown device format: {device_id}"}
-                
-        except Exception as e:
-            logger.error(f"Error getting Appium info for {device_id}: {str(e)}")
-            return {"success": False, "message": str(e)}
-        
-    def get_appium_url_for_device(self, device_id: str):
-        """Lấy URL từ device_id pattern"""
-        try:
-            if device_id.startswith('emulator-'):
-                adb_port = int(device_id.split('-')[1])
-                appium_port = 4723 + ((adb_port - 5554) // 2)
-                return f"http://127.0.0.1:{appium_port}"
-            return None
-        except Exception as e:
-            logger.error(f"Error getting URL for {device_id}: {str(e)}")
-            return None
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Facebook Registration Worker')
