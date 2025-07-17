@@ -208,10 +208,24 @@ class FacebookRegistrationWorker:
             self.status_manager.update_device_status(device_index, tabvitri_done_status, self.table_manager)
 
 
+            # Clear data và cấp quyền storage
+            time.sleep(2)
+            clear_start_status = {"stt": stt_display, "trang_thai": "Đang clear data và cấp quyền storage", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, clear_start_status, self.table_manager)
+            
+            clear_result = xu_ly_buoc1.clear_and_capquyen_app(["com.facebook.katana", "com.facebook.orca", "com.android.chrome"])
+            
+            if clear_result.get("success"):
+                clear_done_status = {"stt": stt_display, "trang_thai": "Đã clear data và cấp quyền storage thành công", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            else:
+                clear_done_status = {"stt": stt_display, "trang_thai": f"Clear data thất bại: {clear_result.get('message', '')}", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            
+            self.status_manager.update_device_status(device_index, clear_done_status, self.table_manager)
+            time.sleep(2)
 
-
-
-
+            # Tiến hành reg account
+            time.sleep(2)
+            d.app_start('com.facebook.katana')
 
 
 

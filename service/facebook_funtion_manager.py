@@ -16,10 +16,10 @@ class XuLyBuoc1:
         """Thay đổi ngôn ngữ thiết bị sang tiếng Việt"""
         return change_device_language_to_vietnamese(self.device_id)
     
-    def thay_doi_thong_tin_thiet_bi(self, appium_url: str) -> dict:
-        """Thay đổi thông tin thiết bị bằng MaxChanger"""
-        return change_device_info(self.device_id, appium_url)
-
+    def clear_and_capquyen_app(self, app_packages: list = None) -> dict:
+        """Clear dữ liệu và cấp quyền storage cho các app"""
+        return clear_and_capquyen_app(self.device_id, app_packages)
+    
 def change_device_language_to_vietnamese(device_id: str) -> dict:
     try:
         logger.info(f"Changing language to Vietnamese for device: {device_id}")
@@ -45,39 +45,38 @@ def change_device_language_to_vietnamese(device_id: str) -> dict:
         logger.error(f"Error changing language for device {device_id}: {str(e)}")
         return {"success": False, "message": f"Error changing language for device {device_id}: {str(e)}"}
 
-def change_device_info(device_id: str, appium_url: str) -> dict:
-    """Thay đổi thông tin thiết bị bằng app MaxChanger - SỬ DỤNG SESSION ĐÃ CÓ"""
+def clear_and_capquyen_app(device_id: str, app_packages: list = None) -> dict:
+    """Clear dữ liệu và cấp quyền storage cho các app"""
     try:
-        logger.info(f"Starting device info change for device: {device_id}")
+        logger.info(f"Clearing data and granting permissions for device: {device_id}")
         
-        # Lấy session đã tạo sẵn từ AppiumServerManager
-        from gui.groupbox_2 import Groupbox2Manager
-        # Cần truy cập đến appium_manager instance để lấy session
-        # Session đã được tạo khi khởi động server
+        # Danh sách app mặc định nếu không được cung cấp
+        if app_packages is None:
+            app_packages = ["com.facebook.katana", "com.facebook.orca", "com.android.chrome", "com.google.android.gms"]
         
-        # Tạm thời dùng session mới vì cần refactor để access manager
-        caps = {'platformName': 'Android', 'automationName': 'UiAutomator2', 'deviceName': device_id, 'udid': device_id, 'autoGrantPermissions': True, 'newCommandTimeout': 60, 'noReset': True}
-
-        driver = webdriver.Remote(appium_url, caps)
-        logger.info(f"Using session for MaxChanger on device {device_id}")
+        # Clear data cho tất cả apps
+        for package in app_packages:
+            try:
+                clear_cmd = ["adb", "-s", device_id, "shell", "pm", "clear", package]
+                subprocess.run(clear_cmd, capture_output=True, text=True, timeout=15)
+                logger.info(f"Cleared data for {package} on {device_id}")
+            except Exception as e:
+                logger.warning(f"Failed to clear {package} on {device_id}: {e}")
         
-        # Đợi app khởi động
-        time.sleep(3)
+        # Cấp quyền READ_EXTERNAL_STORAGE và WRITE_EXTERNAL_STORAGE cho tất cả apps
+        permissions = ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"]
+        for package in app_packages:
+            for permission in permissions:
+                try:
+                    grant_cmd = ["adb", "-s", device_id, "shell", "pm", "grant", package, permission]
+                    subprocess.run(grant_cmd, capture_output=True, text=True, timeout=10)
+                    logger.info(f"Granted {permission} to {package} on {device_id}")
+                except Exception as e:
+                    logger.warning(f"Failed to grant {permission} to {package} on {device_id}: {e}")
         
-        # Tìm và click button CHANGE INFO
-        button = driver.find_element(MobileBy.XPATH, "//android.widget.Button[@text='CHANGE INFO']")
-        button.click()
-        logger.info(f"Clicked CHANGE INFO button for device {device_id}")
-        
-        # Đợi xử lý
-        time.sleep(2)
-        
-        # Đóng session
-        driver.quit()
-        logger.info(f"Device info change completed for device {device_id}")
-        
-        return {"success": True, "message": f"Device info changed successfully for device {device_id}"}
+        return {"success": True, "message": f"Cleared data and granted permissions for {len(app_packages)} apps on {device_id}", "processed_apps": app_packages}
         
     except Exception as e:
-        logger.error(f"Error changing device info for device {device_id}: {str(e)}")
-        return {"success": False, "message": f"Error changing device info for device {device_id}: {str(e)}"}
+        logger.error(f"Error in clear_and_capquyen_app for {device_id}: {str(e)}")
+        return {"success": False, "message": f"Error in clear_and_capquyen_app for {device_id}: {str(e)}"}
+    
