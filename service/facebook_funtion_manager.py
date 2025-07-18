@@ -131,3 +131,76 @@ def wait_for_facebook_fully_loaded(d, timeout=60):
     
     print("❌ Facebook UI không load đầy đủ")
     return False
+
+
+# def wait_for_facebook_fully_loaded(d, timeout=60):
+#     """Chờ Facebook khởi động hoàn toàn và in ra kết quả phát hiện được"""
+    
+#     # Bước 1: Chờ app chạy foreground
+#     print("Đang chờ Facebook khởi động...")
+#     start_time = time.time()
+    
+#     while time.time() - start_time < timeout:
+#         try:
+#             current_app = d.app_current()
+#             if current_app.get('package') == 'com.facebook.katana':
+#                 print("✅ Facebook đã chạy foreground")
+#                 break
+#         except:
+#             pass
+#         time.sleep(1)
+#     else:
+#         print("❌ Facebook không khởi động trong thời gian quy định")
+#         return False
+    
+#     # Bước 2: Chờ UI elements xuất hiện
+#     print("Đang chờ UI Facebook load...")
+#     time.sleep(2)  # Cho app ổn định
+    
+#     ui_selectors = [
+#         {'method': 'text', 'value': 'Đăng ký Facebook'},
+#         {'method': 'text', 'value': 'Tạo tài khoản mới'},
+#         {'method': 'text', 'value': 'Đăng nhập'},
+#         {'method': 'resourceId', 'value': 'com.facebook.katana:id/login_button'},
+#         {'method': 'className', 'value': 'android.widget.Button'}
+#     ]
+    
+#     found_elements = []  # Danh sách lưu các element đã tìm thấy
+    
+#     for attempt in range(20):  # Thử 20 lần, mỗi lần 1s
+#         for selector in ui_selectors:
+#             try:
+#                 if selector['method'] == 'text':
+#                     if d(text=selector['value']).exists:
+#                         element_info = selector['value']
+#                         if element_info not in found_elements:
+#                             found_elements.append(element_info)
+#                             print(f"✅ Text element tìm thấy: '{element_info}'")
+                        
+#                 elif selector['method'] == 'resourceId':
+#                     if d(resourceId=selector['value']).exists:
+#                         element_info = selector['value']
+#                         if element_info not in found_elements:
+#                             found_elements.append(element_info)
+#                             print(f"✅ ResourceId element tìm thấy: '{element_info}'")
+                        
+#                 elif selector['method'] == 'className':
+#                     if d(className=selector['value']).exists:
+#                         element_info = selector['value']
+#                         if element_info not in found_elements:
+#                             found_elements.append(element_info)
+#                             print(f"✅ ClassName element tìm thấy: '{element_info}'")
+                            
+#             except Exception as e:
+#                 continue
+        
+#         # Nếu đã tìm thấy ít nhất 1 element quan trọng, return True
+#         if found_elements:
+#             print(f"🎉 Facebook UI đã load thành công!")
+#             print(f"📋 Các element đã phát hiện: {found_elements}")
+#             return True
+            
+#         time.sleep(1)
+    
+#     print("❌ Facebook UI không load đầy đủ - không tìm thấy element nào")
+#     return False

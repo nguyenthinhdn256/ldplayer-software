@@ -1,0 +1,20 @@
+{
+   "appDescription": {
+      "description": "Mô tả ứng dụng",
+      "message": "Trải nghiệm một loạt các dịch vụ DeFi bao gồm ví, hoán đổi, giao dịch NFT, tương tác DApp,..."
+   },
+   "appName": {
+      "description": "Tên ứng dụng",
+      "message": "Bitget Wallet (Trước đây là BitKeep)"
+   },
+   "demo": {
+      "description": "Tên tiện ích",
+      "message": "Bitget $URL$",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://developer.mozilla.org"
+         }
+      }
+   }
+}

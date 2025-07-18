@@ -1,0 +1,4889 @@
+{
+  "about_risk_modal_description": {
+    "message": "Total nilai token yang akan dikirim dari dompet Anda. Pengembalian dana tidak termasuk dalam total nilai."
+  },
+  "about_risk_modal_description_with_nft": {
+    "message": "Nilai total token, tidak termasuk biaya NFT, yang akan dikirim dari dompet Anda. Pengembalian dana tidak termasuk dalam nilai total."
+  },
+  "about_risk_modal_ok_button": {
+    "message": "OK"
+  },
+  "about_ton": {
+    "message": "TON adalah blockchain layer-1 sepenuhnya terdesentralisasi yang dirancang oleh Telegram untuk mengakuisisi miliaran pengguna. Ini menampilkan transaksi ultra-cepat, biaya sangat rendah, aplikasi yang mudah digunakan, dan ramah lingkungan."
+  },
+  "access_confirmation_logout": {
+    "message": "Keluar"
+  },
+  "access_confirmation_reset": {
+    "message": "Atur Ulang"
+  },
+  "access_confirmation_title": {
+    "message": "Masukkan kode sandi"
+  },
+  "access_confirmation_update_biometry": {
+    "message": "Masukkan sandi untuk menggunakan data biometrik"
+  },
+  "access_denied": {
+    "message": "Akses ditolak"
+  },
+  "account_deleted": {
+    "message": "Akun dihapus"
+  },
+  "activityActionModal_bid": {
+    "message": "Tawar"
+  },
+  "activityActionModal_burned": {
+    "message": "Dibakar"
+  },
+  "activityActionModal_call_contract": {
+    "message": "Panggil kontrak"
+  },
+  "activityActionModal_deposit": {
+    "message": "Setoran"
+  },
+  "activityActionModal_purchase": {
+    "message": "Beli\n"
+  },
+  "activityActionModal_received": {
+    "message": "Diterima"
+  },
+  "activityActionModal_sent": {
+    "message": "Terkirim"
+  },
+  "activityActionModal_swapped": {
+    "message": "Ditukar"
+  },
+  "activityActionModal_time_on": {
+    "message": "pada %{time}"
+  },
+  "activityActionModal_withdraw": {
+    "message": "Tarik"
+  },
+  "activityActionModal_withdrawal_request": {
+    "message": "Permintaan Penarikan"
+  },
+  "activity_buy_toncoin_btn": {
+    "message": "Beli Toncoin"
+  },
+  "activity_empty_transaction_caption": {
+    "message": "Lakukan transaksi pertama Anda!"
+  },
+  "activity_empty_transaction_title": {
+    "message": "Riwayat transaksi Anda akan ditampilkan di sini"
+  },
+  "activity_failed_transaction": {
+    "message": "Gagal"
+  },
+  "activity_receive_btn": {
+    "message": "Terima"
+  },
+  "activity_received": {
+    "message": "Diterima"
+  },
+  "activity_screen_title": {
+    "message": "Kegiatan"
+  },
+  "activity_sent": {
+    "message": "Terkirim"
+  },
+  "add_edit_favorite_address_label": {
+    "message": "Alamat"
+  },
+  "add_edit_favorite_add_title": {
+    "message": "Favorit baru"
+  },
+  "add_edit_favorite_delete": {
+    "message": "Hapus"
+  },
+  "add_edit_favorite_edit_title": {
+    "message": "Edit favorit"
+  },
+  "add_edit_favorite_name_placeholder": {
+    "message": "Nama"
+  },
+  "add_edit_favorite_save": {
+    "message": "Simpan"
+  },
+  "add_other_coins": {
+    "message": "Tambahkan kripto lain"
+  },
+  "address_copied": {
+    "message": "Alamat telah disalin"
+  },
+  "address_update_first_option": {
+    "message": "Kemungkinan besar dompet tujuan sudah aktif digunakan dan Anda tidak akan melihat perbedaan apa pun."
+  },
+  "address_update_learn_more": {
+    "message": "Pelajari lebih lanjut"
+  },
+  "address_update_new_style": {
+    "message": "Alamat baru"
+  },
+  "address_update_notification_desc_did_change": {
+    "message": "Alamat dompet Anda telah diperbarui ke format UQ. Alamat lama juga tetap berfungsi."
+  },
+  "address_update_notification_desc_will_change": {
+    "message": "Pada tanggal 5 Oktober, alamat dompet Anda akan diperbarui ke format UQ yang lebih baik. Alamat lama juga akan tetap berfungsi. Anda tidak perlu melakukan apa pun."
+  },
+  "address_update_old_style": {
+    "message": "Alamat lama"
+  },
+  "address_update_post_dates": {
+    "message": "\\n5 Oktober 2023: semua alamat akan beralih ke format UQ di Tonkeeper.\\n\\n1 Januari 2024: Tonkeeper berhenti memeriksa status kontrak dan menggunakan tanda \"bounceable\" dalam alamat. Koin yang dikirim ke kontrak yang belum diterbitkan dengan alamat EQ akan dikembalikan ke pengirim."
+  },
+  "address_update_post_published_date": {
+    "message": "Diterbitkan: 27 September 2023"
+  },
+  "address_update_post_rest": {
+    "message": "Terdapat dua gaya alamat di blockchain TON dan sampai sekarang hanya satu yang digunakan untuk aplikasi dan dompet.\n\nFormat EQ paling baik untuk kontrak pintar yang memproses dana masuk. Jika kontrak pintar belum diterbitkan — yaitu kodenya belum ada di blockchain — maka TON yang dikirim ke alamat tersebut akan dikembalikan kepada pengirim. Ini adalah fitur keamanan: jika ada kesalahan, TON akan dikembalikan.\n\nFormat UQ paling baik untuk dompet. Koin tidak pernah dikembalikan karena dompet dirancang untuk menyimpan dana. Setiap dompet dimulai sebagai alamat biasa tanpa kode di blockchain. Jadi, akan tidak masuk akal jika koin dikembalikan.\n\nTahun ini kami beralih ke format UQ yang lebih cocok untuk dompet. Jika Anda terus mengirim dana ke alamat EQ lama yang diberikan seseorang kepada Anda, akan ada dua pilihan:"
+  },
+  "address_update_post_top": {
+    "message": "Pada akhir tahun ini, seluruh jaringan TON akan menampilkan alamat dompet dengan cara yang berbeda. Alamat baru akan dimulai dengan UQ, bukan EQ. Dan empat huruf terakhir juga akan berubah. Alamat lama tetap berfungsi dan mengarah ke dompet yang sama. Ini tidak memengaruhi keamanan dana yang disimpan di dompet Anda."
+  },
+  "address_update_second_option": {
+    "message": "Kemungkinan lebih kecil bahwa dompet belum pernah digunakan untuk pembayaran. Dan Tonkeeper tidak akan mengirim koin ke alamat itu tahun depan. Anda harus meminta penerima untuk memberikan alamat UQ baru."
+  },
+  "address_update_title": {
+    "message": "Pembaruan Alamat"
+  },
+  "address_update_why_change": {
+    "message": "Mengapa diubah?"
+  },
+  "address_update_your_wallet": {
+    "message": "Dompet Anda"
+  },
+  "add_wallet": {
+    "message": "Tambahkan dompet"
+  },
+  "add_wallet_modal_create_subtitle": {
+    "message": "Buat dompet baru"
+  },
+  "add_wallet_modal_create_title": {
+    "message": "Dompet Baru"
+  },
+  "add_wallet_modal_import_subtitle": {
+    "message": "Pilih dari opsi di bawah ini."
+  },
+  "add_wallet_modal_import_title": {
+    "message": "Impor Dompet"
+  },
+  "add_wallet_modal_ledger_subtitle": {
+    "message": "Tingkat keamanan yang lebih tinggi dengan dompet perangkat keras"
+  },
+  "add_wallet_modal_ledger_title": {
+    "message": "Hubungkan Ledger"
+  },
+  "add_wallet_modal_other_options": {
+    "message": "Opsi lainnya"
+  },
+  "add_wallet_modal_signer_subtitle": {
+    "message": "Tingkat kontrol dan keamanan yang lebih tinggi"
+  },
+  "add_wallet_modal_signer_title": {
+    "message": "Hubungkan Signer"
+  },
+  "add_wallet_modal_subtitle": {
+    "message": "Buat dompet baru atau tambahkan dompet yang sudah ada."
+  },
+  "add_wallet_modal_testnet_subtitle": {
+    "message": "Impor dompet dengan 24 kata pemulihan rahasia ke Testnet"
+  },
+  "add_wallet_modal_testnet_title": {
+    "message": "Akun Testnet"
+  },
+  "add_wallet_modal_title": {
+    "message": "Tambah Dompet"
+  },
+  "add_wallet_modal_watch_only_subtitle": {
+    "message": "Untuk memantau aktivitas dompet tanpa frasa pemulihan"
+  },
+  "add_wallet_modal_watch_only_title": {
+    "message": "Hanya Mengamati Akun"
+  },
+  "add_watch_only_subtitle": {
+    "message": "Pantau aktivitas dompet tanpa frase pemulihan. Anda akan diberi tahu tentang transaksi dari dompet ini."
+  },
+  "add_watch_only_title": {
+    "message": "Pantau Akun"
+  },
+  "add_watch_only_wallet_not_found": {
+    "message": "Alamat dompet tidak ditemukan"
+  },
+  "all_regions": {
+    "message": "Semua Wilayah"
+  },
+  "appearance_accent_name_andromeda": {
+    "message": "Andromeda"
+  },
+  "appearance_accent_name_arctic": {
+    "message": "Arktik"
+  },
+  "appearance_accent_name_azure": {
+    "message": "Azure"
+  },
+  "appearance_accent_name_coral": {
+    "message": "Koral"
+  },
+  "appearance_accent_name_cosmos": {
+    "message": "Kosmos"
+  },
+  "appearance_accent_name_default": {
+    "message": "Tonkeeper"
+  },
+  "appearance_accent_name_flamingo": {
+    "message": "Flamingo"
+  },
+  "appearance_accent_name_fluid": {
+    "message": "Cairan"
+  },
+  "appearance_accent_name_galaxy": {
+    "message": "Galaksi"
+  },
+  "appearance_accent_name_iris": {
+    "message": "Iris"
+  },
+  "appearance_accent_name_marine": {
+    "message": "Maritim"
+  },
+  "appearance_accent_name_ocean": {
+    "message": "Lautan"
+  },
+  "appearance_accent_name_sky": {
+    "message": "Langit"
+  },
+  "appearance_confirm": {
+    "message": "Setel"
+  },
+  "appearance_description": {
+    "message": "TON Diamonds NFT akan membuat dompet Anda lebih berwarna dan unik."
+  },
+  "appearance_title": {
+    "message": "Tema"
+  },
+  "app_name": {
+    "message": "Tonkeeper"
+  },
+  "approval_accept": {
+    "message": "Terima"
+  },
+  "approval_accepted": {
+    "message": "Diterima"
+  },
+  "approval_accepted_at_collection": {
+    "message": "Diterima pada %{date}"
+  },
+  "approval_accepted_at_token": {
+    "message": "Diterima pada %{date}"
+  },
+  "approval_accepted_collection": {
+    "message": "Koleksi diterima"
+  },
+  "approval_accepted_token": {
+    "message": "Token diterima"
+  },
+  "approval_approve_all": {
+    "message": "Terima semua"
+  },
+  "approval_approve_collection_many": {
+    "message": "Setujui token yang masuk dari koleksi \"%{collection}"
+  },
+  "approval_approve_collection_one": {
+    "message": "Setujui token masuk dari koleksi \\\"%{collection}\\"
+  },
+  "approval_approve_many": {
+    "message": "Setujui %{count} token yang masuk"
+  },
+  "approval_approve_many_few": {
+    "message": "Setujui %{count} token masuk"
+  },
+  "approval_approve_many_many": {
+    "message": "Setujui %{count} token masuk"
+  },
+  "approval_approve_many_one": {
+    "message": "Setujui %{count} token masuk"
+  },
+  "approval_approve_many_other": {
+    "message": "Setujui %{count} token masuk"
+  },
+  "approval_approve_token": {
+    "message": "Setujui token masuk \\\"%{name}\\"
+  },
+  "approval_approve_two_collections": {
+    "message": "Setujui token masuk dari koleksi \\\"%{collection1}\\\" \\\"%{collection2}\\"
+  },
+  "approval_approve_two_tokens": {
+    "message": "Setujui token masuk \"%{name1}\" dan \"%{name2}"
+  },
+  "approval_blacklisted_collection": {
+    "message": "Koleksi dalam daftar hitam"
+  },
+  "approval_blacklisted_token": {
+    "message": "Token yang masuk daftar hitam"
+  },
+  "approval_decline": {
+    "message": "Tolak"
+  },
+  "approval_declined": {
+    "message": "Ditolak"
+  },
+  "approval_declined_at_collection": {
+    "message": "Ditolak pada %{date}"
+  },
+  "approval_declined_at_token": {
+    "message": "Ditolak pada %{date}"
+  },
+  "approval_details_collection": {
+    "message": "Detail koleksi"
+  },
+  "approval_details_token": {
+    "message": "Rincian token"
+  },
+  "approval_id_collection": {
+    "message": "ID Koleksi"
+  },
+  "approval_id_token": {
+    "message": "ID Token"
+  },
+  "approval_manage_tokens": {
+    "message": "Kelola token"
+  },
+  "approval_move_to_accepted": {
+    "message": "Pindahkan ke Diterima"
+  },
+  "approval_move_to_accepted_collection": {
+    "message": "Tampilkan koleksi di dompet"
+  },
+  "approval_move_to_accepted_token": {
+    "message": "Tampilkan token di dompet"
+  },
+  "approval_move_to_declined": {
+    "message": "Pindahkan ke Ditolak"
+  },
+  "approval_move_to_declined_collection": {
+    "message": "Sembunyikan koleksi dari dompet"
+  },
+  "approval_move_to_declined_token": {
+    "message": "Sembunyikan token dari dompet"
+  },
+  "approval_name": {
+    "message": "Nama"
+  },
+  "approval_not_spam": {
+    "message": "Bukan Spam"
+  },
+  "approval_pending": {
+    "message": "Tertunda"
+  },
+  "approval_show_all": {
+    "message": "Tampilkan semua"
+  },
+  "approval_single_token": {
+    "message": "Token tunggal"
+  },
+  "approval_spam": {
+    "message": "Spam"
+  },
+  "approval_token_copied": {
+    "message": "Token ID disalin"
+  },
+  "approval_token_count_few": {
+    "message": "%{count} token"
+  },
+  "approval_token_count_many": {
+    "message": "%{count} token"
+  },
+  "approval_token_count_one": {
+    "message": "%{count} token"
+  },
+  "approval_token_count_other": {
+    "message": "%{count} token"
+  },
+  "approval_unverified_token": {
+    "message": "Token tidak terverifikasi"
+  },
+  "approval_verify_collection": {
+    "message": "Verifikasi koleksi"
+  },
+  "approval_verify_description_collection": {
+    "message": "Token ini berasal dari penerbit yang tidak dikenal. Untuk mendeteksi pemalsuan, verifikasi ID koleksi dengan sumber resmi penerbit. Anda bisa mengubah visibilitas token nanti di pengaturan."
+  },
+  "approval_verify_description_token": {
+    "message": "Token ini diterbitkan oleh penerbit yang tidak dikenal. Untuk mendeteksi pemalsuan, verifikasi ID token dengan sumber resmi penerbit. Anda dapat mengubah visibilitas token nanti di pengaturan."
+  },
+  "approval_verify_token": {
+    "message": "Verifikasi token"
+  },
+  "approval_whitelisted_collection": {
+    "message": "Koleksi daftar putih"
+  },
+  "approval_whitelisted_token": {
+    "message": "Token dalam daftar putih"
+  },
+  "auth_failed": {
+    "message": "Autentikasi gagal"
+  },
+  "backup_check_caption": {
+    "message": "Mari kita lihat apakah Anda sudah mengisi semuanya dengan benar. Masukkan kata %{one}, %{two}, dan %{three}."
+  },
+  "backup_check_done_button": {
+    "message": "Selesai"
+  },
+  "backup_check_title": {
+    "message": "Pemeriksaan Cadangan"
+  },
+  "backup_screen_backup_warning": {
+    "message": "Saldo Anda adalah %{totalFiat}, dan itu hanya dilindungi oleh frasa pemulihan yang belum Anda catat. Cadangkan frasa tersebut untuk menghindari kehilangan dana jika terjadi masalah perangkat."
+  },
+  "backup_screen_last_backup_time": {
+    "message": "Cadangan terakhir %{time}"
+  },
+  "backup_screen_manual_backup_on": {
+    "message": "Cadangan Manual Aktif"
+  },
+  "backup_screen_manual_button": {
+    "message": "Cadangkan Secara Manual"
+  },
+  "backup_screen_manual_caption": {
+    "message": "Cadangkan dompet Anda secara manual dengan menuliskan frasa pemulihan."
+  },
+  "backup_screen_manual_title": {
+    "message": "Manual"
+  },
+  "backup_screen_show_recovery_phrase": {
+    "message": "Tampilkan Frasa Pemulihan"
+  },
+  "backup_screen_title": {
+    "message": "Cadangkan"
+  },
+  "backup_warning_cancel_button": {
+    "message": "Batalkan"
+  },
+  "backup_warning_caption": {
+    "message": "Harap baca dengan saksama berikut ini sebelum melihat frase pemulihan Anda."
+  },
+  "backup_warning_continue_button": {
+    "message": "Lanjutkan"
+  },
+  "backup_warning_p1": {
+    "message": "Jangan pernah memasukkan frasa pemulihan Anda di tempat lain selain Tonkeeper untuk mengakses dompet Anda."
+  },
+  "backup_warning_p2": {
+    "message": "Dukungan Tonkeeper tidak pernah meminta frasa pemulihan."
+  },
+  "backup_warning_p3": {
+    "message": "Siapapun yang tahu frasa pemulihan Anda dapat mengakses dompet Anda."
+  },
+  "backup_warning_title": {
+    "message": "Perhatian"
+  },
+  "balances_setup_wallet": {
+    "message": "Siapkan dompet"
+  },
+  "battery_description_empty": {
+    "message": "Tukar via Tonkeeper, kirim token dan NFT."
+  },
+  "battery_description_less_10": {
+    "message": "Anda memiliki cukup daya baterai untuk kurang dari 10 transaksi."
+  },
+  "battery_description_other": {
+    "message": "%{count} pengisian"
+  },
+  "battery_max_input_amount": {
+    "message": "Jumlah input maksimum adalah %{amount}"
+  },
+  "battery_ok": {
+    "message": "OK"
+  },
+  "battery_other_ways_by_crypto_subtitle": {
+    "message": "Menggunakan %{methods}"
+  },
+  "battery_other_ways_by_crypto_title": {
+    "message": "Isi ulang dengan %{symbol}"
+  },
+  "battery_other_ways_gift_subtitle": {
+    "message": "Bagikan dengan teman-teman"
+  },
+  "battery_other_ways_gift_title": {
+    "message": "Hadiah Baterai"
+  },
+  "battery_other_ways_promo_subtitle": {
+    "message": "Anda beruntung"
+  },
+  "battery_other_ways_promo_title": {
+    "message": "Masukkan kode promo"
+  },
+  "battery_packages_buy": {
+    "message": "Beli"
+  },
+  "battery_packages_disclaimer": {
+    "message": "Satu kali pengisian mencakup biaya transaksi rata-rata. Beberapa transaksi mungkin akan lebih mahal."
+  },
+  "battery_packages_ok": {
+    "message": "OKE"
+  },
+  "battery_packages_refilled": {
+    "message": "Baterai Anda sudah terisi penuh"
+  },
+  "battery_packages_refund": {
+    "message": "Riwayat pengisian"
+  },
+  "battery_packages_restore": {
+    "message": "Pulihkan Pembelian"
+  },
+  "battery_packages_subtitle_few": {
+    "message": "%{count} kali pengisian"
+  },
+  "battery_packages_subtitle_large": {
+    "message": "Paket besar"
+  },
+  "battery_packages_subtitle_many": {
+    "message": "%{count} pengisian"
+  },
+  "battery_packages_subtitle_medium": {
+    "message": "Paket medium"
+  },
+  "battery_packages_subtitle_one": {
+    "message": "%{count} isi daya"
+  },
+  "battery_packages_subtitle_other": {
+    "message": "%{count} pengisian"
+  },
+  "battery_packages_subtitle_small": {
+    "message": "Paket kecil"
+  },
+  "battery_packages_title": {
+    "message": "{{cnt}} transaksi untuk {{price}}"
+  },
+  "battery_please_wait": {
+    "message": "Baterai akan terisi dalam beberapa menit"
+  },
+  "battery_promocode_apply": {
+    "message": "Terapkan"
+  },
+  "battery_promocode_button": {
+    "message": "Isi Ulang dengan Kode Promo"
+  },
+  "battery_promocode_placeholder": {
+    "message": "Kode"
+  },
+  "battery_promocode_success": {
+    "message": "Baterai Anda sudah terisi penuh"
+  },
+  "battery_promocode_title": {
+    "message": "Kode Promo"
+  },
+  "battery_recharge_by_crypto_continue": {
+    "message": "Lanjutkan"
+  },
+  "battery_recharge_by_crypto_other_subtitle": {
+    "message": "Masukkan jumlah secara manual"
+  },
+  "battery_recharge_by_crypto_other_title": {
+    "message": "Lainnya"
+  },
+  "battery_recharge_by_crypto_title": {
+    "message": "Isi Ulang"
+  },
+  "battery_recharge_by_crypto_title_gift": {
+    "message": "Hadiah"
+  },
+  "battery_recharge_by_crypto_tokens": {
+    "message": "Token"
+  },
+  "battery_refilled": {
+    "message": "Baterai terisi penuh"
+  },
+  "battery_refund_subtitle": {
+    "message": "Pengisian Ulang dan Pengembalian Dana"
+  },
+  "battery_refund_title": {
+    "message": "Riwayat Biaya"
+  },
+  "battery_screen_title": {
+    "message": "Baterai"
+  },
+  "battery_send_widget_battery": {
+    "message": "Baterai"
+  },
+  "battery_settings": {
+    "message": "Baterai"
+  },
+  "battery_title": {
+    "message": "Baterai Tonkeeper"
+  },
+  "battery_transactions_charges_per_action_few": {
+    "message": "≈ %{count} pengisian per %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_many": {
+    "message": "≈ %{count} pengisian daya per %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_one": {
+    "message": "≈ %{count} kali isi daya per %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_other": {
+    "message": "≈ %{count} kali pengisian per %{transactionName}"
+  },
+  "battery_transactions_description": {
+    "message": "Transaksi yang dipilih akan dibayar oleh baterai Tonkeeper."
+  },
+  "battery_transactions_settings": {
+    "message": "Pengaturan Baterai"
+  },
+  "battery_transactions_supported": {
+    "message": "Transaksi yang didukung"
+  },
+  "battery_transactions_title": {
+    "message": "Transaksi"
+  },
+  "battery_transactions_types_jetton": {
+    "message": "transfer token"
+  },
+  "battery_transactions_types_nft": {
+    "message": "transfer NFT"
+  },
+  "battery_transactions_types_swap": {
+    "message": "penukaran melalui Tonkeeper"
+  },
+  "battery_transactions_types_ton": {
+    "message": "Transfer TON"
+  },
+  "battery_transactions_type_swap": {
+    "message": "tukar"
+  },
+  "battery_transactions_type_transfer": {
+    "message": "transfer"
+  },
+  "battery_transactions_will_be_paid": {
+    "message": "Akan dibayarkan: %{enabledTransactions}"
+  },
+  "biometry_android_face_recognition": {
+    "message": "pengenalan wajah"
+  },
+  "biometry_android_face_recognition_genitive": {
+    "message": "pengenalan wajah"
+  },
+  "biometry_android_face_recognition_instrumental": {
+    "message": "pengenalan wajah"
+  },
+  "biometry_android_fingerprint": {
+    "message": "sidik jari"
+  },
+  "biometry_android_fingerprint_genitive": {
+    "message": "sidik jari"
+  },
+  "biometry_android_fingerprint_instrumental": {
+    "message": "sidik jari"
+  },
+  "biometry_default": {
+    "message": "biometrik"
+  },
+  "biometry_default_accusative": {
+    "message": "biometrik"
+  },
+  "biometry_default_genitive": {
+    "message": "biometrik"
+  },
+  "biometry_default_instrumental": {
+    "message": "biometrik"
+  },
+  "biometry_ios_face_recognition": {
+    "message": "Face ID"
+  },
+  "biometry_ios_face_recognition_genitive": {
+    "message": "Face ID"
+  },
+  "biometry_ios_face_recognition_instrumental": {
+    "message": "Face ID"
+  },
+  "biometry_ios_fingerprint": {
+    "message": "Touch ID"
+  },
+  "biometry_ios_fingerprint_genitive": {
+    "message": "Touch ID"
+  },
+  "biometry_ios_fingerprint_instrumental": {
+    "message": "Touch ID"
+  },
+  "bluetooth_permissions_alert_cancel": {
+    "message": "Batal"
+  },
+  "bluetooth_permissions_alert_message": {
+    "message": "Silakan aktifkan izin Bluetooth di pengaturan Anda untuk menggunakan fitur ini"
+  },
+  "bluetooth_permissions_alert_open_settings": {
+    "message": "Buka Pengaturan"
+  },
+  "bluetooth_permissions_alert_title": {
+    "message": "Izin Bluetooth"
+  },
+  "bluetooth_powered_off_alert_cancel": {
+    "message": "Batal"
+  },
+  "bluetooth_powered_off_alert_message": {
+    "message": "Silakan aktifkan Bluetooth untuk menggunakan fitur ini"
+  },
+  "bluetooth_powered_off_alert_open_settings": {
+    "message": "Buka Pengaturan"
+  },
+  "bluetooth_powered_off_alert_title": {
+    "message": "Bluetooth mati"
+  },
+  "browser_about_dapps_caption": {
+    "message": "Jelajahi aplikasi dan layanan di mana Anda dapat menggunakan Tonkeeper untuk masuk dan pembayaran."
+  },
+  "browser_about_dapps_learn_more": {
+    "message": "Pelajari lebih lanjut"
+  },
+  "browser_about_dapps_title": {
+    "message": "Gunakan Tonkeeper dengan semua aplikasi dan layanan TON"
+  },
+  "browser_actions_copy_link": {
+    "message": "Salin tautan"
+  },
+  "browser_actions_disconnect": {
+    "message": "Putuskan"
+  },
+  "browser_actions_mute": {
+    "message": "Bisu"
+  },
+  "browser_actions_refresh": {
+    "message": "Segarkan"
+  },
+  "browser_actions_share": {
+    "message": "Bagikan"
+  },
+  "browser_apps_all": {
+    "message": "Semua"
+  },
+  "browser_connected": {
+    "message": "Terhubung"
+  },
+  "browser_connected_empty_text": {
+    "message": "Jelajahi aplikasi dan layanan di peramban Tonkeeper."
+  },
+  "browser_connected_empty_title": {
+    "message": "Aplikasi yang terhubung akan ditampilkan di sini"
+  },
+  "browser_connected_title": {
+    "message": "Terhubung"
+  },
+  "browser_empty_search": {
+    "message": "Pencarian Anda tidak mendapatkan hasil"
+  },
+  "browser_explore": {
+    "message": "Jelajahi"
+  },
+  "browser_explore_all": {
+    "message": "Jelajahi semua"
+  },
+  "browser_more_description": {
+    "message": "Pasar, bursa, dan lain-lain"
+  },
+  "browser_more_title": {
+    "message": "Jelajahi semua layanan"
+  },
+  "browser_open_link": {
+    "message": "Buka tautan"
+  },
+  "browser_popular_title": {
+    "message": "Populer"
+  },
+  "browser_remove_alert_approve_button": {
+    "message": "Hapus"
+  },
+  "browser_remove_alert_title": {
+    "message": "Hapus “%{name}”?"
+  },
+  "browser_search_label": {
+    "message": "Cari atau masukkan alamat"
+  },
+  "browser_start_typing": {
+    "message": "Masukkan alamat atau cari di web"
+  },
+  "browser_title": {
+    "message": "Peramban"
+  },
+  "browser_web_search_title": {
+    "message": "Pencarian %{searchEngine}"
+  },
+  "buy_ton_subtitle": {
+    "message": "Instan dengan kartu bank"
+  },
+  "buy_ton_title": {
+    "message": "Beli TON"
+  },
+  "cancel": {
+    "message": "Batal"
+  },
+  "chart_check_connection": {
+    "message": "Silakan periksa koneksi Anda dan coba lagi."
+  },
+  "chart_no_internet": {
+    "message": "Tidak ada koneksi internet"
+  },
+  "chart_periods_1D": {
+    "message": "H"
+  },
+  "chart_periods_1H": {
+    "message": "J"
+  },
+  "chart_periods_1M": {
+    "message": "1B"
+  },
+  "chart_periods_1Y": {
+    "message": "Tahun"
+  },
+  "chart_periods_6M": {
+    "message": "6B"
+  },
+  "chart_periods_7D": {
+    "message": "M\n"
+  },
+  "chart_price": {
+    "message": "Harga"
+  },
+  "check_words_caption": {
+    "message": "Untuk memeriksa apakah Anda telah menuliskan frasa pemulihan Anda dengan benar, harap masukkan kata %, %, dan %."
+  },
+  "check_words_success": {
+    "message": "Selamat! Anda telah mengatur dompet Anda"
+  },
+  "check_words_title": {
+    "message": "Baiklah, mari kita periksa"
+  },
+  "choose_country_auto": {
+    "message": "Otomatis"
+  },
+  "choose_country_cancel": {
+    "message": "Batal"
+  },
+  "choose_country_empty_placeholder": {
+    "message": "Pencarian Anda tidak mengembalikan hasil apa pun"
+  },
+  "choose_country_search": {
+    "message": "Cari"
+  },
+  "choose_country_title": {
+    "message": "Pilih negara Anda"
+  },
+  "choose_currency_currencies_AED": {
+    "message": "Dirham Uni Emirat Arab"
+  },
+  "choose_currency_currencies_BDT": {
+    "message": "Taka Bangladesh"
+  },
+  "choose_currency_currencies_BRL": {
+    "message": "Real Brasil"
+  },
+  "choose_currency_currencies_BYN": {
+    "message": "Rubel Belarusia"
+  },
+  "choose_currency_currencies_CAD": {
+    "message": "Dolar Kanada"
+  },
+  "choose_currency_currencies_CHF": {
+    "message": "Franc Swiss"
+  },
+  "choose_currency_currencies_CNY": {
+    "message": "Yuan Tiongkok"
+  },
+  "choose_currency_currencies_EUR": {
+    "message": "Euro"
+  },
+  "choose_currency_currencies_GBP": {
+    "message": "Pound Inggris"
+  },
+  "choose_currency_currencies_GEL": {
+    "message": "Lari Georgia"
+  },
+  "choose_currency_currencies_IDR": {
+    "message": "Rupiah Indonesia"
+  },
+  "choose_currency_currencies_ILS": {
+    "message": "Shekel Israel"
+  },
+  "choose_currency_currencies_INR": {
+    "message": "Rupee India"
+  },
+  "choose_currency_currencies_IRR": {
+    "message": "Rial Iran"
+  },
+  "choose_currency_currencies_JPY": {
+    "message": "Yen Jepang"
+  },
+  "choose_currency_currencies_KRW": {
+    "message": "Won Korea Selatan"
+  },
+  "choose_currency_currencies_KZT": {
+    "message": "Tenge Kazakhstan"
+  },
+  "choose_currency_currencies_NGN": {
+    "message": "Naira Nigeria"
+  },
+  "choose_currency_currencies_RUB": {
+    "message": "Rubel Rusia"
+  },
+  "choose_currency_currencies_THB": {
+    "message": "Baht Thailand"
+  },
+  "choose_currency_currencies_TON": {
+    "message": "Toncoin"
+  },
+  "choose_currency_currencies_TRY": {
+    "message": "Lira Turki"
+  },
+  "choose_currency_currencies_UAH": {
+    "message": "Hryvnia Ukraina"
+  },
+  "choose_currency_currencies_USD": {
+    "message": "Dolar Amerika Serikat"
+  },
+  "choose_currency_currencies_UZS": {
+    "message": "Sum Uzbekistan"
+  },
+  "choose_currency_currencies_VND": {
+    "message": "Dong Vietnam"
+  },
+  "choose_currency_header_title": {
+    "message": "Mata uang utama"
+  },
+  "choose_wallets_already_added": {
+    "message": "Sudah ditambahkan"
+  },
+  "choose_wallets_subtitle": {
+    "message": "Pilih dompet yang ingin Anda tambahkan."
+  },
+  "choose_wallets_title": {
+    "message": "Pilih Dompet"
+  },
+  "choose_wallets_tokens": {
+    "message": "token"
+  },
+  "choose_wallets_w5_subtitle": {
+    "message": "Lebih rendah biaya blockchain, transaksi tanpa gas dan transfer ganda."
+  },
+  "choose_wallets_w5_subtitle_link": {
+    "message": "Pelajari lebih lanjut"
+  },
+  "confirm": {
+    "message": "Konfirmasi"
+  },
+  "confirm_renew_all_domains_title": {
+    "message": "Konfirmasi tindakan"
+  },
+  "confirm_sending_amount": {
+    "message": "Jumlah"
+  },
+  "confirm_sending_fee": {
+    "message": "Biaya"
+  },
+  "confirm_sending_inactive_warn_about": {
+    "message": "Apa yang harus Anda lakukan"
+  },
+  "confirm_sending_inactive_warn_description": {
+    "message": "Jangan lanjutkan jika Anda mengharapkan keajaiban blockchain terjadi. Itu tidak akan terjadi."
+  },
+  "confirm_sending_inactive_warn_title": {
+    "message": "Kontrak Tidak Aktif"
+  },
+  "confirm_sending_liquid_warn_description": {
+    "message": "Anda tidak akan lagi menerima hadiah dari TON yang di-staking yang dikirim. Pemilik baru akan mulai menerima hadiah."
+  },
+  "confirm_sending_liquid_warn_title": {
+    "message": "Catatan"
+  },
+  "confirm_sending_message": {
+    "message": "Komentar"
+  },
+  "confirm_sending_method_title": {
+    "message": "Kirim dana Anda ke %{name}?"
+  },
+  "confirm_sending_recipient": {
+    "message": "Penerima"
+  },
+  "confirm_sending_recipient_address": {
+    "message": "Alamat penerima"
+  },
+  "confirm_sending_sent_caption_btc": {
+    "message": "Transaksi Anda telah dikirim ke jaringan dan akan diproses dalam waktu satu jam."
+  },
+  "confirm_sending_sent_caption_other": {
+    "message": "Transaksi Anda telah dikirim ke jaringan dan akan diproses dalam satu menit."
+  },
+  "confirm_sending_sent_caption_ton": {
+    "message": "Transaksi Anda dikirim ke jaringan dan akan diproses dalam beberapa detik."
+  },
+  "confirm_sending_sent_jetton_title": {
+    "message": "Jetton terkirim"
+  },
+  "confirm_sending_sent_title": {
+    "message": "Mata uang telah dikirim"
+  },
+  "confirm_sending_submit": {
+    "message": "Konfirmasi dan Kirim"
+  },
+  "confirm_sending_title": {
+    "message": "Konfirmasi pengiriman"
+  },
+  "confirmSendModal_network_fee": {
+    "message": "Biaya jaringan"
+  },
+  "confirmSendModal_refund": {
+    "message": "Pengembalian Dana"
+  },
+  "confirmSendModal_title": {
+    "message": "Konfirmasi tindakan"
+  },
+  "confirmSendModal_total_risk": {
+    "message": "Total: %{totalAmount}"
+  },
+  "confirmSendModal_to_your_address": {
+    "message": "Ke alamat Anda"
+  },
+  "confirmSendModal_transaction_type_burn": {
+    "message": "Bakar"
+  },
+  "confirmSendModal_transaction_type_receive": {
+    "message": "Terima"
+  },
+  "confirmSendModal_transaction_type_send": {
+    "message": "Kirim"
+  },
+  "confirmSendModal_wallet": {
+    "message": "Dompet:"
+  },
+  "confirmSendModal_will_be_paid_with_battery": {
+    "message": "Akan dibayar dengan Baterai"
+  },
+  "continue": {
+    "message": "Lanjutkan"
+  },
+  "copied": {
+    "message": "Tersalin"
+  },
+  "copy_error_log": {
+    "message": "Salin log kesalahan"
+  },
+  "create_pin_current_title": {
+    "message": "Masukkan kata sandi saat ini"
+  },
+  "create_pin_new_title": {
+    "message": "Buat kode sandi baru"
+  },
+  "create_pin_repeat_title": {
+    "message": "Masukkan kembali kata sandi"
+  },
+  "create_wallet_caption": {
+    "message": "Kami sangat menyarankan Anda menuliskan frasa pemulihan karena itu adalah satu-satunya cara untuk mengakses dan memulihkan dompet Anda jika perangkat Anda hilang. Jangan kirim ke email Anda sendiri atau ambil tangkapan layar. Lebih aman jika disimpan secara offline."
+  },
+  "create_wallet_continue_button": {
+    "message": "Lanjutkan"
+  },
+  "create_wallet_generated": {
+    "message": "Dompet Anda telah dibuat!"
+  },
+  "create_wallet_generating": {
+    "message": "Sedang membuat dompet..."
+  },
+  "create_wallet_title": {
+    "message": "Ambil pena dan selembar kertas"
+  },
+  "customize": {
+    "message": "Sesuaikan"
+  },
+  "customize_modal_save": {
+    "message": "Simpan"
+  },
+  "customize_modal_subtitle": {
+    "message": "Nama dan ikon dompet disimpan secara lokal di perangkat Anda."
+  },
+  "customize_modal_title": {
+    "message": "Sesuaikan dompet Anda"
+  },
+  "customize_modal_wallet_name": {
+    "message": "Nama Dompet"
+  },
+  "decryption_error": {
+    "message": "Kesalahan dekripsi"
+  },
+  "deploy_contract_button": {
+    "message": "Konfirmasi dan terapkan"
+  },
+  "deploy_contract_title": {
+    "message": "Terapkan kontrak"
+  },
+  "disable_nft_marketplace_banner_description": {
+    "message": "Koleksi dan tukar."
+  },
+  "dns_addresses_few": {
+    "message": "%{count} alamat"
+  },
+  "dns_addresses_many": {
+    "message": "%{count} alamat"
+  },
+  "dns_addresses_one": {
+    "message": "%{count} alamat"
+  },
+  "dns_addresses_other": {
+    "message": "%{count} alamat"
+  },
+  "dns_address_linked": {
+    "message": "Alamat ditautkan"
+  },
+  "dns_address_unlinked": {
+    "message": "Alamat tidak terhubung"
+  },
+  "dns_alert_expiring_many_few": {
+    "message": "Anda memiliki %{count} domain yang akan kedaluwarsa. Perbarui semuanya hingga %{untilDate}."
+  },
+  "dns_alert_expiring_many_many": {
+    "message": "Anda memiliki %{count} domain yang akan kedaluwarsa. Perbarui semua sebelum %{untilDate}."
+  },
+  "dns_alert_expiring_many_one": {
+    "message": "Anda memiliki %{count} domain yang akan kedaluwarsa. Perbarui semua sampai %{untilDate}."
+  },
+  "dns_alert_expiring_many_other": {
+    "message": "Anda memiliki %{count} domain yang akan kedaluwarsa. Perpanjang semua hingga %{untilDate}."
+  },
+  "dns_alert_expiring_one": {
+    "message": "%{domain} akan kedaluwarsa dalam %{count} hari. Perbarui hingga %{untilDate}."
+  },
+  "dns_current_address": {
+    "message": "Alamat Anda saat ini"
+  },
+  "dns_expiration_date": {
+    "message": "Tanggal kedaluwarsa"
+  },
+  "dns_link_title": {
+    "message": "Konfirmasi transaksi"
+  },
+  "dns_on_sale_text": {
+    "message": "Domain sedang dijual di pasar sekarang. Untuk mentransfer, Anda harus menghapusnya dari penjualan terlebih dahulu."
+  },
+  "dns_renew_all_until_btn": {
+    "message": "Perbarui semua hingga %{untilDate}"
+  },
+  "dns_renew_in_progress_btn": {
+    "message": "Perpanjangan domain sedang berlangsung…"
+  },
+  "dns_renew_toast_success": {
+    "message": "Domain telah diperpanjang"
+  },
+  "dns_renew_until_btn": {
+    "message": "Perpanjang hingga %{untilDate}"
+  },
+  "dns_renew_valid_caption_few": {
+    "message": "Berakhir dalam %{count} hari"
+  },
+  "dns_renew_valid_caption_many": {
+    "message": "Akan kedaluwarsa dalam %{count} hari"
+  },
+  "dns_renew_valid_caption_one": {
+    "message": "Berakhir dalam %{count} hari"
+  },
+  "dns_renew_valid_caption_other": {
+    "message": "Akan berakhir dalam %{count} hari"
+  },
+  "dns_replace_button": {
+    "message": "Ganti"
+  },
+  "dns_replace_description": {
+    "message": "Tambahkan alamat dompet yang akan ditautkan oleh domain {{domain}}."
+  },
+  "dns_replace_save": {
+    "message": "Simpan"
+  },
+  "dns_unlink_title": {
+    "message": "Konfirmasi pembatalan tautan"
+  },
+  "dns_wallet_address": {
+    "message": "Alamat dompet"
+  },
+  "domains_renewed": {
+    "message": "Domain yang diperbarui"
+  },
+  "edit_coins_add": {
+    "message": "Tambahkan"
+  },
+  "edit_coins_added": {
+    "message": "Ditambahkan"
+  },
+  "edit_coins_added_toast": {
+    "message": "Ditambahkan"
+  },
+  "edit_coins_hide": {
+    "message": "Sembunyikan"
+  },
+  "edit_coins_title": {
+    "message": "Tambahkan kripto"
+  },
+  "encryptedComments_encryptedComment": {
+    "message": "Komentar terenkripsi"
+  },
+  "encryptedComments_encryptedCommentModal_button": {
+    "message": "Dekripsi komentar"
+  },
+  "encryptedComments_encryptedCommentModal_checkboxLabel": {
+    "message": "Jangan tampilkan lagi"
+  },
+  "encryptedComments_encryptedCommentModal_description": {
+    "message": "Komentar dienkripsi oleh pengirim dan hanya dapat didekripsi oleh Anda. Harap berhati-hati dengan isi dan waspada terhadap penipuan."
+  },
+  "encryptedComments_encryptedCommentModal_title": {
+    "message": "Komentar Terenkripsi"
+  },
+  "encryptedComments_show": {
+    "message": "Tampilkan"
+  },
+  "error_network": {
+    "message": "Kesalahan jaringan"
+  },
+  "error_occurred": {
+    "message": "Terjadi kesalahan"
+  },
+  "exchange_method_dont_show_again": {
+    "message": "Jangan tampilkan lagi"
+  },
+  "exchange_method_open_warning": {
+    "message": "Anda sedang membuka aplikasi eksternal yang tidak dioperasikan oleh Tonkeeper."
+  },
+  "exchange_modal_buy": {
+    "message": "Beli"
+  },
+  "exchange_modal_buy_title": {
+    "message": "Beli Toncoin"
+  },
+  "exchange_modal_hide": {
+    "message": "Sembunyikan"
+  },
+  "exchange_modal_other_ways_to_buy": {
+    "message": "Cara lain untuk membeli"
+  },
+  "exchange_modal_other_ways_to_sell": {
+    "message": "Cara lain untuk menjual"
+  },
+  "exchange_modal_sell": {
+    "message": "Jual"
+  },
+  "exchange_modal_sell_title": {
+    "message": "Jual Toncoin"
+  },
+  "exchange_modal_show_all": {
+    "message": "Tampilkan semua"
+  },
+  "exchange_modal_title": {
+    "message": "Beli atau Jual"
+  },
+  "exchange_not_exists": {
+    "message": "ID pertukaran tidak valid"
+  },
+  "exchange_other_ways": {
+    "message": "Cara lain untuk membeli atau menjual TON"
+  },
+  "exchange_telegram_bot": {
+    "message": "BOT TELEGRAM"
+  },
+  "exchange_title": {
+    "message": "Beli TON"
+  },
+  "expiring_domains": {
+    "message": "Domain yang akan kedaluwarsa"
+  },
+  "finish_setup_backup": {
+    "message": "Cadangkan frasa pemulihan dompet"
+  },
+  "finish_setup_done_button": {
+    "message": "Selesai"
+  },
+  "finish_setup_enable_notifications": {
+    "message": "Aktifkan notifikasi transaksi"
+  },
+  "finish_setup_header_title": {
+    "message": "Selesaikan pengaturan"
+  },
+  "finish_setup_join_tg": {
+    "message": "Bergabung dengan saluran Tonkeeper"
+  },
+  "finish_setup_use_biometry": {
+    "message": "Gunakan %{name} untuk menyetujui transaksi"
+  },
+  "form_optional_indicator": {
+    "message": "Opsional"
+  },
+  "gasless_switch_label": {
+    "message": "Ketuk untuk membayar dalam %{currency}"
+  },
+  "import_add_wallet": {
+    "message": "Tambah Dompet"
+  },
+  "import_add_wallet_description": {
+    "message": "Buat dompet baru atau tambahkan dompet yang sudah ada."
+  },
+  "import_existing_wallet": {
+    "message": "Dompet yang Ada"
+  },
+  "import_existing_wallet_description": {
+    "message": "Impor dompet dengan 24 kata pemulihan rahasia"
+  },
+  "import_new_wallet": {
+    "message": "Impor Dompet Baru"
+  },
+  "import_new_wallet_description": {
+    "message": "Buat dompet baru"
+  },
+  "import_signer": {
+    "message": "Cocokkan Penandatangan"
+  },
+  "import_signer_description": {
+    "message": "Tingkat kontrol dan keamanan yang lebih tinggi"
+  },
+  "import_wallet_caption": {
+    "message": "Untuk memulihkan akses ke dompet Anda, masukkan 24 kata kunci pemulihan yang diberikan kepada Anda saat Anda membuat dompet Anda."
+  },
+  "import_wallet_reset_caption": {
+    "message": "Silakan memulihkan akses ke dompet Anda dengan memasukkan 24 kata rahasia yang Anda tulis saat membuat dompet."
+  },
+  "import_wallet_title": {
+    "message": "Masukkan frase pemulihan\\ndiri Anda"
+  },
+  "import_wallet_wrong_words_err": {
+    "message": "Frasa tidak benar"
+  },
+  "indexer_latency_error": {
+    "message": "Kesalahan pengiriman, coba lagi nanti"
+  },
+  "info_about_inactive_back": {
+    "message": "Kembali"
+  },
+  "info_about_inactive_desc1": {
+    "message": "Tonkeeper tidak tahu apakah alamat ini adalah dompet atau kontrak pintar."
+  },
+  "info_about_inactive_desc2": {
+    "message": "Jika Anda ingin hanya menyetor uang ke dompet — Anda dapat melanjutkan."
+  },
+  "info_about_inactive_desc3_1": {
+    "message": "Jika Anda mengharapkan tindakan otomatis dari kontrak pintar,"
+  },
+  "info_about_inactive_desc3_2": {
+    "message": "— transfer Anda mungkin macet di alamat tersebut."
+  },
+  "info_about_inactive_desc3_bold": {
+    "message": "JANGAN LANJUTKAN"
+  },
+  "info_about_inactive_title": {
+    "message": "Kontrak tidak aktif"
+  },
+  "intro_continue_btn": {
+    "message": "Mulai"
+  },
+  "intro_item1_caption": {
+    "message": "Berkat arsitektur unik The Open Network, transaksi TON diselesaikan dalam hitungan detik."
+  },
+  "intro_item1_title": {
+    "message": "Kecepatan kelas dunia"
+  },
+  "intro_item2_caption": {
+    "message": "Tonkeeper menyimpan kunci kriptografi Anda di perangkat Anda. Semua transaksi dilakukan melalui protokol terdesentralisasi sehingga kripto Anda tidak pernah jatuh ke tangan bursa terpusat."
+  },
+  "intro_item2_title": {
+    "message": "Keamanan ujung-ke-ujung"
+  },
+  "intro_item3_caption": {
+    "message": "-"
+  },
+  "intro_item3_title": {
+    "message": "-"
+  },
+  "intro_title": {
+    "message": "Selamat\\ndatang di "
+  },
+  "jetton_buy_tether": {
+    "message": "Beli USD₮"
+  },
+  "jetton_id": {
+    "message": "ID token: %{jettonAddress}"
+  },
+  "jetton_id_copied": {
+    "message": "ID token disalin"
+  },
+  "jetton_locked_till": {
+    "message": "Dikunci hingga %{date}"
+  },
+  "jetton_migrate_tether": {
+    "message": "Tukar jUSDT ke USD₮"
+  },
+  "jetton_name": {
+    "message": "%{name} Token"
+  },
+  "jetton_open_explorer": {
+    "message": "Lihat detail"
+  },
+  "jetton_price": {
+    "message": "Harga:"
+  },
+  "jettons_list_title": {
+    "message": "Token"
+  },
+  "jettons_manage_tokens": {
+    "message": "Kelola token"
+  },
+  "jettons_show_jettons": {
+    "message": "Tampilkan token di dompet"
+  },
+  "jetton_token": {
+    "message": "Token"
+  },
+  "language_language_alert_cancel": {
+    "message": "Batal"
+  },
+  "language_language_alert_open": {
+    "message": "Pengaturan"
+  },
+  "language_language_alert_title": {
+    "message": "Untuk mengubah bahasa aplikasi, masuk ke Pengaturan perangkat"
+  },
+  "language_languagesList_en": {
+    "message": "Inggris"
+  },
+  "language_languagesList_es": {
+    "message": "Spanyol"
+  },
+  "language_languagesList_id": {
+    "message": "Indonesia"
+  },
+  "language_languagesList_ru": {
+    "message": "Rusia"
+  },
+  "language_languagesList_system": {
+    "message": "Sistem"
+  },
+  "language_languagesList_tr": {
+    "message": "Turki"
+  },
+  "language_languagesList_uk": {
+    "message": "Ukraina"
+  },
+  "language_languagesList_uz": {
+    "message": "Uzbek"
+  },
+  "language_languagesList_zh_Hans": {
+    "message": "Cina"
+  },
+  "language_list_item_title": {
+    "message": "Bahasa"
+  },
+  "language_list_item_value": {
+    "message": "Bahasa Indonesia"
+  },
+  "language_title": {
+    "message": "Bahasa"
+  },
+  "later": {
+    "message": "Nanti"
+  },
+  "ledger_confirm_title": {
+    "message": "Konfirmasi Tindakan"
+  },
+  "ledger_confirm_tx": {
+    "message": "Konfirmasi transaksi Anda di Ledger"
+  },
+  "ledger_connect": {
+    "message": "Hubungkan Ledger ke perangkat Anda melalui Bluetooth"
+  },
+  "ledger_connect_title": {
+    "message": "Hubungkan Ledger"
+  },
+  "ledger_install_ton_app": {
+    "message": "Pasang Aplikasi TON"
+  },
+  "ledger_min_required_version_button": {
+    "message": "OK"
+  },
+  "ledger_min_required_version_subtitle": {
+    "message": "Jenis transaksi ini tidak didukung dalam versi aplikasi Anda saat ini."
+  },
+  "ledger_min_required_version_title": {
+    "message": "Perbarui aplikasi TON di Ledger ke versi %{version}"
+  },
+  "ledger_open_ton_app": {
+    "message": "Buka kunci dan buka aplikasi TON"
+  },
+  "ledger_operation_not_supported": {
+    "message": "Operasi ini tidak tersedia untuk dompet Ledger. Pilih dompet lain dan coba lagi."
+  },
+  "legal_font_license": {
+    "message": "Font Montserrat"
+  },
+  "legal_header_title": {
+    "message": "Hukum"
+  },
+  "legal_licenses_title": {
+    "message": "Lisensi"
+  },
+  "legal_privacy": {
+    "message": "Kebijakan Privasi"
+  },
+  "legal_terms": {
+    "message": "Ketentuan Layanan"
+  },
+  "link_copied": {
+    "message": "Tautan disalin"
+  },
+  "loading": {
+    "message": "Memuat"
+  },
+  "logout_modal_agreement": {
+    "message": "Saya memiliki salinan cadangan dari frasa pemulihan"
+  },
+  "logout_modal_backup_button": {
+    "message": "Cadangkan"
+  },
+  "logout_modal_caption": {
+    "message": "Kunci dompet akan dihapus dari perangkat ini."
+  },
+  "logout_modal_delete_button": {
+    "message": "Hapus Data Dompet"
+  },
+  "logout_modal_delete_caption": {
+    "message": "Kunci dompet dan semua data pribadi akan dihapus dari perangkat ini."
+  },
+  "logout_modal_delete_title": {
+    "message": "Hapus Data Dompet"
+  },
+  "logout_modal_logout_button": {
+    "message": "Keluar"
+  },
+  "logout_modal_title": {
+    "message": "Keluar"
+  },
+  "manage_other_coins": {
+    "message": "Kelola kripto saya"
+  },
+  "migration_cancel_btn": {
+    "message": "Batalkan migrasi"
+  },
+  "migration_caption": {
+    "message": "Tonkeeper memperkenalkan format dompet baru yang mendukung pembayaran berlangganan. Saldo Anda akan dipindahkan ke alamat baru. Frasa pemulihan Anda akan tetap sama."
+  },
+  "migration_failed": {
+    "message": "Migrasi gagal. Tidak dapat memindahkan saldo Anda."
+  },
+  "migration_fee_info": {
+    "message": "Biaya jaringan ≈%{tonFee} TON (%{fiatFee})"
+  },
+  "migration_in_progress": {
+    "message": "Migrasi Wallet v4 sedang berlangsung"
+  },
+  "migration_migrate_btn": {
+    "message": "Perbarui dompet"
+  },
+  "migration_new_wallet": {
+    "message": "Dompet baru"
+  },
+  "migration_old_wallet": {
+    "message": "Dompet lama"
+  },
+  "migration_subtitle": {
+    "message": "Buka kunci dompet untuk melanjutkan."
+  },
+  "migration_title": {
+    "message": "Tingkatkan dompet Anda"
+  },
+  "migration_with_biometry": {
+    "message": "Lanjutkan dengan %{type}"
+  },
+  "migration_with_passcode": {
+    "message": "Masukkan kode sandi"
+  },
+  "nft_about_collection": {
+    "message": "Tentang koleksi"
+  },
+  "nft_about_dns": {
+    "message": "TON DNS adalah layanan yang memungkinkan pengguna menetapkan nama yang dapat dibaca manusia untuk dompet kripto, kontrak pintar, dan situs web. \n\nDengan TON DNS, akses ke layanan terdesentralisasi mirip dengan akses ke situs web di internet."
+  },
+  "nft_actions_hide_and_report": {
+    "message": "Sembunyikan dan Laporkan"
+  },
+  "nft_actions_hide_collection": {
+    "message": "Sembunyikan Koleksi"
+  },
+  "nft_actions_hide_nft": {
+    "message": "Sembunyikan NFT"
+  },
+  "nft_actions_view_on_explorer": {
+    "message": "Lihat di Tonviewer"
+  },
+  "nft_browse_markets": {
+    "message": "Telusuri Pasar"
+  },
+  "nft_chain": {
+    "message": "Rantai"
+  },
+  "nft_change_owner_title": {
+    "message": "Ubah pemilik koleksi"
+  },
+  "nft_change_theme": {
+    "message": "Ganti tema"
+  },
+  "nft_collection": {
+    "message": "Koleksi"
+  },
+  "nft_collection_name": {
+    "message": "Nama Koleksi"
+  },
+  "nft_confirm_operation": {
+    "message": "Konfirmasi"
+  },
+  "nft_contract_address": {
+    "message": "Alamat kontrak"
+  },
+  "nft_deploy_collection_title": {
+    "message": "Buat Koleksi NFT"
+  },
+  "nft_details": {
+    "message": "Detail"
+  },
+  "nft_diamonds_description": {
+    "message": "TON Diamonds memiliki kemampuan untuk mengubah tema dompet Tonkeeper Anda dan mencocokkannya dengan warna NFT Anda."
+  },
+  "nft_features": {
+    "message": "Fitur"
+  },
+  "nft_fee": {
+    "message": "Biaya"
+  },
+  "nft_fee_and_royalties": {
+    "message": "Biaya & royalti"
+  },
+  "nft_hide_details": {
+    "message": "Sembunyikan detail"
+  },
+  "nft_item_deploy_title": {
+    "message": "Jual NFT"
+  },
+  "nft_item_name": {
+    "message": "Nama NFT"
+  },
+  "nft_link_domain_button": {
+    "message": "Tautkan domain"
+  },
+  "nft_link_domain_caption": {
+    "message": "Setelah Anda menghubungkan domain, Anda bisa mentransfernya dan menggunakannya sebagai alias untuk alamat Anda."
+  },
+  "nft_link_domain_mismatch_warn": {
+    "message": "Domain tidak terhubung ke alamat Anda saat ini. Berhati-hatilah dengan transaksi ke domain ini."
+  },
+  "nft_link_username_button": {
+    "message": "Tautkan nama"
+  },
+  "nft_link_username_caption": {
+    "message": "Setelah Anda menautkan nama, Anda akan dapat mentransfernya dan menggunakannya sebagai alias untuk alamat Anda."
+  },
+  "nft_link_username_mismatch_warn": {
+    "message": "Nama tidak terhubung dengan alamat Anda saat ini. Berhati-hatilah dengan transaksi ke nama ini."
+  },
+  "nft_marketplace_address": {
+    "message": "Marketplace"
+  },
+  "nft_marketplace_banner_description": {
+    "message": "Beli, jual, kumpulkan, dan tukar."
+  },
+  "nft_marketplace_banner_title": {
+    "message": "NFT Anda akan disimpan di sini"
+  },
+  "nft_marketplaces": {
+    "message": "Jelajahi"
+  },
+  "nft_marketplaces_title": {
+    "message": "Pasar NFT"
+  },
+  "nft_metadata": {
+    "message": "Metadata"
+  },
+  "nft_more": {
+    "message": "Lebih"
+  },
+  "nft_new_owner_address": {
+    "message": "Alamat pemilik baru"
+  },
+  "nft_on_sale": {
+    "message": "Dijual"
+  },
+  "nft_on_sale_text": {
+    "message": "NFT sedang dijual di marketplace sekarang.\nUntuk mentransfer, Anda harus menghapusnya dari penjualan terlebih dahulu."
+  },
+  "nft_open_in_marketplace": {
+    "message": "Lihat di Pasar NFT"
+  },
+  "nft_operations_expired": {
+    "message": "Permintaan kehabisan waktu, silakan coba lagi"
+  },
+  "nft_operation_slide_to_confirm": {
+    "message": "Geser untuk Konfirmasi"
+  },
+  "nft_operation_success": {
+    "message": "Selesai"
+  },
+  "nft_owner_address": {
+    "message": "Pemilik"
+  },
+  "nft_price": {
+    "message": "Harga"
+  },
+  "nft_proceeds": {
+    "message": "Hasil Anda"
+  },
+  "nft_properties": {
+    "message": "Properti"
+  },
+  "nft_royalty": {
+    "message": "Royalti"
+  },
+  "nft_royalty_address": {
+    "message": "Alamat royalti"
+  },
+  "nft_sale_cancel_title": {
+    "message": "Hapus dari penjualan"
+  },
+  "nft_sale_place_title": {
+    "message": "Jual NFT"
+  },
+  "nft_show_details": {
+    "message": "Tampilkan detail"
+  },
+  "nft_single_nft": {
+    "message": "NFT Tunggal"
+  },
+  "nft_standard": {
+    "message": "Standar Token"
+  },
+  "nft_title": {
+    "message": "NFT"
+  },
+  "nft_token_id": {
+    "message": "ID Token"
+  },
+  "nft_transaction_head_placeholder": {
+    "message": "NFT"
+  },
+  "nft_transfer_comment": {
+    "message": "Komentar"
+  },
+  "nft_transfer_confirm_fee_label": {
+    "message": "Biaya"
+  },
+  "nft_transfer_confirm_fee_refund_label": {
+    "message": "Pengembalian Dana"
+  },
+  "nft_transfer_confirm_fee_value": {
+    "message": "≈ %{value} TON"
+  },
+  "nft_transfer_title": {
+    "message": "Transfer NFT"
+  },
+  "nft_transfer_description": {
+    "message": "NFT akan dikirim ke alamat ini. Berhati-hatilah saat mengirim NFT ke pengguna lain."
+  },
+  "nft_transfer_dns": {
+    "message": "Transfer"
+  },
+  "nft_transfer_nft": {
+    "message": "Transfer NFT"
+  },
+  "nft_transfer_recipient": {
+    "message": "Penerima"
+  },
+  "nft_unlink_domain_button": {
+    "message": "Terkait dengan {{address}}"
+  },
+  "nft_unnamed_collection": {
+    "message": "Koleksi tanpa nama"
+  },
+  "nft_view_in_explorer": {
+    "message": "Lihat di penjelajah"
+  },
+  "nokyc": {
+    "message": "tanpa KYC"
+  },
+  "notcoin_all": {
+    "message": "Tukar semua di Tonkeeper Pro"
+  },
+  "notcoin_burn_not_available_hours": {
+    "message": "Penukaran akan tersedia dalam %{count} jam"
+  },
+  "notcoin_burn_not_available_minutes": {
+    "message": "Pertukaran akan tersedia dalam %{count} menit"
+  },
+  "notcoin_burn_not_available_seconds": {
+    "message": "Penukaran akan tersedia dalam %{count} detik"
+  },
+  "notcoin_count": {
+    "message": "Jumlah voucher"
+  },
+  "notcoin_count_max": {
+    "message": "Maksimum 4 per penukaran"
+  },
+  "notcoin_exchange": {
+    "message": "Tukar\\voucher ke NOT"
+  },
+  "notcoin_exchange_all": {
+    "message": "Tukar semua di\\nTonkeeper Pro"
+  },
+  "notcoin_exchange_subtitle": {
+    "message": "NOT akan tersedia di saldo Anda sesaat setelah penukaran."
+  },
+  "notcoin_exchange_title": {
+    "message": "Tukarkan voucher Anda ke NOT"
+  },
+  "notcoin_exchange_to_not": {
+    "message": "Tukar ke NOT"
+  },
+  "notcoin_name": {
+    "message": "Notcoin"
+  },
+  "notcoin_not_vouchers": {
+    "message": "Bukan voucher"
+  },
+  "notcoin_open": {
+    "message": "Buka"
+  },
+  "notcoin_open_bot": {
+    "message": "Buka Bot Notcoin"
+  },
+  "notcoin_slogan": {
+    "message": "Mungkin tidak ada"
+  },
+  "notcoin_total_amount": {
+    "message": "Jumlah total"
+  },
+  "notcoin_verify_subtitle": {
+    "message": "Verifikasi mungkin memerlukan beberapa jam."
+  },
+  "notcoin_verify_title": {
+    "message": "Hubungkan dompet ke Notcoin Bot untuk memverifikasi pembakaran"
+  },
+  "notifications_alert_cancel": {
+    "message": "Batal"
+  },
+  "notifications_alert_description": {
+    "message": "Alamat tautan dari notifikasi tidak cocok dengan alamat aplikasi."
+  },
+  "notifications_alert_open": {
+    "message": "Buka saja"
+  },
+  "notifications_alert_title": {
+    "message": "Apakah Anda yakin ingin membuka tautan eksternal?"
+  },
+  "notifications_allow_notifications": {
+    "message": "Aktifkan notifikasi"
+  },
+  "notifications_apps": {
+    "message": "Aplikasi"
+  },
+  "notifications_apps_description": {
+    "message": "Notifikasi dari aplikasi yang terhubung di aktivitas Anda"
+  },
+  "notifications_disconnect_app": {
+    "message": "Putuskan %{app_name}"
+  },
+  "notifications_disconnected_app": {
+    "message": "Aplikasi terputus"
+  },
+  "notifications_earlier": {
+    "message": "Lebih awal"
+  },
+  "notifications_from_connected": {
+    "message": "Dari aplikasi yang terhubung"
+  },
+  "notifications_muted": {
+    "message": "Notifikasi telah dibisukan"
+  },
+  "notifications_mute_notifications": {
+    "message": "Bisukan notifikasi"
+  },
+  "notifications_notifications": {
+    "message": "Notifikasi"
+  },
+  "notifications_placeholder_description": {
+    "message": "Jelajahi aplikasi dan layanan di browser Tonkeeper."
+  },
+  "notifications_placeholder_title": {
+    "message": "Notifikasi akan ditampilkan di sini"
+  },
+  "notifications_report": {
+    "message": "Laporkan"
+  },
+  "notifications_disabled_action": {
+    "message": "Buka Pengaturan"
+  },
+  "notifications_disabled_description": {
+    "message": "Anda telah menonaktifkan notifikasi di pengaturan ponsel Anda. Untuk mengaktifkan notifikasi, buka Pengaturan di perangkat ini."
+  },
+  "notifications_disabled_title": {
+    "message": "Pemberitahuan dinonaktifkan"
+  },
+  "notifications_not_supported": {
+    "message": "Pemberitahuan tidak didukung di perangkat Anda"
+  },
+  "notifications_switch_title": {
+    "message": "Notifikasi push"
+  },
+  "notifications_title": {
+    "message": "Notifikasi"
+  },
+  "notification_switch_description": {
+    "message": "Dapatkan notifikasi ketika Anda menerima TON, token, dan NFT. Notifikasi dari aplikasi yang terhubung."
+  },
+  "notify_connection_err_caption": {
+    "message": "%{host} tidak merespons. Silakan coba lagi nanti."
+  },
+  "notify_connection_err_caption_few": {
+    "message": "%{hosts} dan %{lastHost} tidak merespons. Silakan coba lagi nanti."
+  },
+  "notify_connection_err_title": {
+    "message": "Tidak dapat terhubung ke server"
+  },
+  "notify_incorrect_time_err_caption": {
+    "message": "Di pengaturan perangkat, aktifkan otomatis waktu dan tanggal. Jika waktu tidak diatur otomatis, bisa memengaruhi transfer dana."
+  },
+  "notify_incorrect_time_err_title": {
+    "message": "Waktu dan tanggal tidak benar"
+  },
+  "notify_no_signal_caption": {
+    "message": "Silakan periksa koneksi internet Anda."
+  },
+  "notify_no_signal_title": {
+    "message": "Tidak ada sinyal"
+  },
+  "old_wallet_error": {
+    "message": "Gunakan dompet dengan versi v4R2"
+  },
+  "pairSigner_about": {
+    "message": "Tentang Signer"
+  },
+  "pairSigner_open_signer": {
+    "message": "Buka Penandatangan di perangkat ini"
+  },
+  "pairSigner_subtitle": {
+    "message": "Buka Signer » Pilih kunci yang diperlukan » Pindai kode QR"
+  },
+  "pairSigner_title": {
+    "message": "Pindai kode QR"
+  },
+  "passcode_changed": {
+    "message": "Passcode diubah"
+  },
+  "paste": {
+    "message": "Tempel"
+  },
+  "pin_enter_faceid_err": {
+    "message": "Pemeriksaan biometrik gagal"
+  },
+  "pin_enter_skip_faceid_err": {
+    "message": "Biometrik diperlukan"
+  },
+  "platform_android_capitalized_face_recognition": {
+    "message": "Pengenalan Wajah"
+  },
+  "platform_android_capitalized_fingerprint": {
+    "message": "Sidik jari"
+  },
+  "platform_android_face_recognition": {
+    "message": "pengenalan wajah"
+  },
+  "platform_android_face_recognition_genitive": {
+    "message": "pengenalan wajah"
+  },
+  "platform_android_fingerprint": {
+    "message": "Sidik jari"
+  },
+  "platform_android_fingerprint_genitive": {
+    "message": "sidik jari"
+  },
+  "platform_ios_capitalized_face_recognition": {
+    "message": "Pengenalan Wajah"
+  },
+  "platform_ios_capitalized_fingerprint": {
+    "message": "Touch ID"
+  },
+  "platform_ios_face_recognition": {
+    "message": "Pengenalan wajah"
+  },
+  "platform_ios_face_recognition_genitive": {
+    "message": "Pengenalan wajah"
+  },
+  "platform_ios_fingerprint": {
+    "message": "Touch ID"
+  },
+  "platform_ios_fingerprint_genitive": {
+    "message": "Touch ID"
+  },
+  "programmable_nfts_alert_cancel": {
+    "message": "Batal"
+  },
+  "programmable_nfts_alert_description": {
+    "message": "Kunjungi tautan eksternal ini hanya jika Anda mempercayai penulis koleksi.\\n\\n{{uri}}"
+  },
+  "programmable_nfts_alert_open": {
+    "message": "Tetap buka"
+  },
+  "programmable_nfts_alert_title": {
+    "message": "Apakah Anda yakin ingin membuka tautan eksternal?"
+  },
+  "receive_address_title": {
+    "message": "Atau gunakan alamat dompet"
+  },
+  "receive_copy": {
+    "message": "Salin"
+  },
+  "receiveModal_copy": {
+    "message": "Salin"
+  },
+  "receiveModal_receive": {
+    "message": "Terima"
+  },
+  "receiveModal_receive_description": {
+    "message": "Kirim hanya %{tokenName} dan token di jaringan TON ke alamat ini, atau Anda mungkin kehilangan dana Anda."
+  },
+  "receiveModal_receive_title": {
+    "message": "Terima %{tokenName}"
+  },
+  "receiveModal_receive_ton": {
+    "message": "Kirim hanya Toncoin TON dan token dalam jaringan TON ke alamat ini, atau Anda mungkin kehilangan dana Anda."
+  },
+  "receive_qr_title": {
+    "message": "Tunjukkan kode QR untuk menerima"
+  },
+  "receive_received_title": {
+    "message": "Anda telah menerima\\n%{amount} %{currency}"
+  },
+  "receive_share": {
+    "message": "Bagikan"
+  },
+  "receive_title": {
+    "message": "Terima %{currency}"
+  },
+  "receive_ton_and_jettons": {
+    "message": "Terima TON dan token lainnya"
+  },
+  "recovery_phrase_caption": {
+    "message": "Tuliskan kata-kata ini beserta nomornya dan simpan di tempat yang aman."
+  },
+  "recovery_phrase_check_button": {
+    "message": "Periksa Cadangan"
+  },
+  "recovery_phrase_copy_button": {
+    "message": "Salin"
+  },
+  "recovery_phrase_title": {
+    "message": "Frasa Pemulihan"
+  },
+  "refresh_app": {
+    "message": "Muat Ulang"
+  },
+  "region_nokyc": {
+    "message": "Perairan Netral"
+  },
+  "reminder_notifications_caption": {
+    "message": "Dapatkan notifikasi saat Anda menerima TON, token, dan NFT."
+  },
+  "reminder_notifications_enable_button": {
+    "message": "Aktifkan notifikasi"
+  },
+  "reminder_notifications_later_button": {
+    "message": "Nanti"
+  },
+  "reminder_notifications_title": {
+    "message": "Dapatkan pemberitahuan instan"
+  },
+  "renew_in_progress": {
+    "message": "Sedang memperbarui…"
+  },
+  "renew_progress_of": {
+    "message": "%{current} dari %{count}"
+  },
+  "require_create_wallet_modal_caption": {
+    "message": "Anda memerlukan dompet yang terhubung untuk menggunakan Tonkeeper. Buat dompet baru atau impor dompet yang sudah ada."
+  },
+  "require_create_wallet_modal_create_new": {
+    "message": "Buat dompet baru"
+  },
+  "require_create_wallet_modal_import": {
+    "message": "Impor dompet yang ada"
+  },
+  "require_create_wallet_modal_title": {
+    "message": "Mari kita atur dompet Anda"
+  },
+  "restake_banner_stake_into_step": {
+    "message": "Taruh TON yang tersedia ke dalam Tonstakers."
+  },
+  "restake_banner_stake_into_tonstakers_action": {
+    "message": "Taruhkan ke Tonstakers"
+  },
+  "restake_banner_title": {
+    "message": "Dapatkan lebih banyak TON dengan %apy dalam staking likuid Tonstakers"
+  },
+  "restake_banner_unstake_action_all": {
+    "message": "Unstake %{amount}"
+  },
+  "restake_banner_unstake_action_manual": {
+    "message": "Masukkan secara manual"
+  },
+  "restake_banner_unstake_step": {
+    "message": "Tarik TON dari penyedia staking Anda saat ini."
+  },
+  "restake_banner_wait_step": {
+    "message": "Tunggu hingga TON Anda tersedia."
+  },
+  "restake_banner_wait_step_collect": {
+    "message": "Kumpulkan"
+  },
+  "restake_banner_wait_step_cooldown": {
+    "message": "TON Anda akan segera tersedia. Anda akan bisa mengumpulkannya sebentar lagi."
+  },
+  "restake_banner_wait_step_pending": {
+    "message": "TON Anda akan tersedia dalam %{0, number}uration. Setelah itu Anda bisa mengumpulkannya."
+  },
+  "restake_banner_wait_step_withdraw": {
+    "message": "Kumpulkan TON yang tersedia dari penyedia staking sebelumnya."
+  },
+  "scan_qr_open_settings": {
+    "message": "Buka pengaturan"
+  },
+  "scan_qr_permission_error": {
+    "message": "Izinkan akses kamera untuk memindai kode QR"
+  },
+  "scan_qr_title": {
+    "message": "Pindai kode QR"
+  },
+  "secret_words_caption": {
+    "message": "Catatlah 24 kata ini sesuai urutan yang diberikan di bawah ini dan simpan di tempat yang rahasia dan aman."
+  },
+  "secret_words_title": {
+    "message": "Frasa Pemulihan Rahasia Anda"
+  },
+  "security_change_passcode": {
+    "message": "Ubah kode sandi"
+  },
+  "security_lock_screen_switch": {
+    "message": "Layar Kunci"
+  },
+  "security_lock_screen_tip": {
+    "message": "Memerlukan kata sandi untuk melihat isi dompet."
+  },
+  "security_migration_caption": {
+    "message": "Sekarang, saldo Anda dan semua transaksi dilindungi oleh kata sandi. Anda juga dapat menggunakan kontrol biometrik untuk mempercepat operasi."
+  },
+  "security_migration_skip_button": {
+    "message": "Jangan perbarui sekarang"
+  },
+  "security_migration_submit_button": {
+    "message": "Perbarui pengaturan keamanan"
+  },
+  "security_migration_title": {
+    "message": "Perbarui keamanan dompet"
+  },
+  "security_reset_passcode": {
+    "message": "Setel ulang kode sandi"
+  },
+  "security_title": {
+    "message": "Keamanan"
+  },
+  "security_use_biometry_switch": {
+    "message": "Gunakan %{biometryType}"
+  },
+  "security_use_biometry_tip": {
+    "message": "Anda selalu dapat membuka dompet Anda dengan kode sandi."
+  },
+  "send_address_placeholder": {
+    "message": "Alamat atau nama"
+  },
+  "send_all_warning_title": {
+    "message": "Apakah Anda yakin ingin mengirim semua saldo Anda?"
+  },
+  "send_build_tx_error": {
+    "message": "Transaksi Anda gagal"
+  },
+  "send_comment_label": {
+    "message": "Tambahkan komentar"
+  },
+  "send_fee_estimation_error": {
+    "message": "Gagal menghitung biaya"
+  },
+  "send_get_wallet_info_error": {
+    "message": "Gagal mendapatkan informasi dompet"
+  },
+  "send_insufficient_funds": {
+    "message": "Dana tidak mencukupi"
+  },
+  "send_invalid_recipient_caption": {
+    "message": "Domain tidak ada atau alamat dompet tidak tertaut padanya"
+  },
+  "send_invalid_recipient_title": {
+    "message": "Penerima tidak valid"
+  },
+  "send_liquid_jetton_warning_title": {
+    "message": "Apakah Anda yakin ingin mengirimkan sebagian saldo jaminan?"
+  },
+  "send_lockup_warning_caption": {
+    "message": "Harap periksa bahwa Anda mengirim ke alamat yang diizinkan.\\n\\nBiaya akan tetap dipotong meskipun transaksi gagal."
+  },
+  "send_lockup_warning_submit_button": {
+    "message": "Kirim"
+  },
+  "send_lockup_warning_title": {
+    "message": "Jumlah melebihi saldo likuid"
+  },
+  "send_publish_tx_error": {
+    "message": "Gagal mengirim transaksi"
+  },
+  "send_screen_steps_address_delete_alert_text": {
+    "message": "Apakah Anda yakin ingin menghapus «%{name}» dari favorit Anda?"
+  },
+  "send_screen_steps_address_placeholder": {
+    "message": "Alamat dompet atau domain"
+  },
+  "send_screen_steps_address_recent_label": {
+    "message": "Baru-baru ini"
+  },
+  "send_screen_steps_address_suggest_actions_add": {
+    "message": "Tambahkan ke favorit"
+  },
+  "send_screen_steps_address_suggest_actions_delete": {
+    "message": "Hapus"
+  },
+  "send_screen_steps_address_suggest_actions_edit": {
+    "message": "Edit favorit"
+  },
+  "send_screen_steps_address_suggest_actions_hide": {
+    "message": "Sembunyikan"
+  },
+  "send_screen_steps_address_suggests_label": {
+    "message": "Favorit dan terbaru"
+  },
+  "send_screen_steps_address_title": {
+    "message": "Penerima"
+  },
+  "send_screen_steps_amount_insufficient_balance": {
+    "message": "Saldo tidak mencukupi"
+  },
+  "send_screen_steps_amount_less_than_min": {
+    "message": "Minimum %{minAmount} TON"
+  },
+  "send_screen_steps_amount_less_than_min_with_symbol": {
+    "message": "Minimum %{minAmount} %{symbol}"
+  },
+  "send_screen_steps_amount_liquid_jetton_note": {
+    "message": "Mengirim token likuiditas tsTON"
+  },
+  "send_screen_steps_amount_max": {
+    "message": "MAKS"
+  },
+  "send_screen_steps_amount_recipient_label": {
+    "message": "Kepada:"
+  },
+  "send_screen_steps_amount_remaining": {
+    "message": "Tersedia: %{amount}"
+  },
+  "send_screen_steps_amount_title": {
+    "message": "Jumlah"
+  },
+  "send_screen_steps_choose_coin_subtitle": {
+    "message": "Selanjutnya, Anda akan memasukkan penerima dan jumlahnya."
+  },
+  "send_screen_steps_choose_coin_title": {
+    "message": "Pilih token untuk dikirim"
+  },
+  "send_screen_steps_comfirm_action": {
+    "message": "Transfer %{coin}"
+  },
+  "send_screen_steps_comfirm_comment_ascii_text": {
+    "message": "Gunakan hanya karakter ASCII: digit, huruf alfabet Latin, dan tanda baca."
+  },
+  "send_screen_steps_comfirm_comment_characters_exceeded": {
+    "message": "Ukuran pesan melebihi %{count} karakter."
+  },
+  "send_screen_steps_comfirm_comment_characters_left": {
+    "message": "Tersisa %{count} karakter."
+  },
+  "send_screen_steps_comfirm_comment_decrypt": {
+    "message": "Dekripsi"
+  },
+  "send_screen_steps_comfirm_comment_description": {
+    "message": "Akan terlihat oleh semua orang."
+  },
+  "send_screen_steps_comfirm_comment_description_encrypted": {
+    "message": "Hanya penerima dan Anda yang dapat melihat."
+  },
+  "send_screen_steps_comfirm_comment_encrypt": {
+    "message": "Enkripsi komentar"
+  },
+  "send_screen_steps_comfirm_comment_label": {
+    "message": "Komentar"
+  },
+  "send_screen_steps_comfirm_comment_label_encrypted": {
+    "message": "Komentar terenkripsi"
+  },
+  "send_screen_steps_comfirm_comment_label_required": {
+    "message": "Komentar yang diperlukan"
+  },
+  "send_screen_steps_comfirm_comment_placeholder": {
+    "message": "Pesan atau referensi (opsional)"
+  },
+  "send_screen_steps_comfirm_comment_placeholder_required": {
+    "message": "Catatan atau tag"
+  },
+  "send_screen_steps_comfirm_comment_required_text": {
+    "message": "Anda harus menyertakan catatan dari bursa untuk transfer. Tanpanya, dana Anda akan hilang."
+  },
+  "send_screen_steps_comfirm_details_label": {
+    "message": "Detail"
+  },
+  "send_screen_steps_comfirm_details_max_balance_label": {
+    "message": "Mengirim saldo maksimum %{currency}"
+  },
+  "send_screen_steps_comfirm_title": {
+    "message": "Konfirmasi tindakan"
+  },
+  "send_screen_steps_comfirm_wallet": {
+    "message": "Dompet"
+  },
+  "send_screen_steps_comfirm_will_be_paid_with_battery": {
+    "message": "Akan dibayar dengan Baterai"
+  },
+  "send_screen_steps_done_add_favorite": {
+    "message": "Simpan alamat ke favorit"
+  },
+  "send_screen_steps_done_address": {
+    "message": "Alamat: %{address}"
+  },
+  "send_screen_steps_done_comment": {
+    "message": "Komentar: %{comment}"
+  },
+  "send_screen_steps_done_description": {
+    "message": "Transaksi Anda telah dikirim ke jaringan dan akan diproses dalam beberapa detik."
+  },
+  "send_screen_steps_done_done_label": {
+    "message": "Selesai"
+  },
+  "send_screen_steps_done_favorite_saved": {
+    "message": "Disimpan ke favorit"
+  },
+  "send_screen_steps_done_fee": {
+    "message": "Biaya: %{fee}"
+  },
+  "send_screen_steps_done_title": {
+    "message": "%{currency} terkirim!"
+  },
+  "send_screen_steps_done_to": {
+    "message": "Kepada: %{name}"
+  },
+  "send_sending_failed": {
+    "message": "Pengiriman gagal"
+  },
+  "send_sending_wrong_time_description": {
+    "message": "Aktifkan waktu dan tanggal otomatis di pengaturan perangkat Anda. Kemudian coba lagi transfer Anda."
+  },
+  "send_sending_wrong_time_title": {
+    "message": "Terjadi kesalahan"
+  },
+  "send_title": {
+    "message": "Kirim %{currency}"
+  },
+  "settings_appearance": {
+    "message": "Penampilan"
+  },
+  "settings_backup_seed": {
+    "message": "Cadangan"
+  },
+  "settings_bank_card": {
+    "message": "Kartu bank"
+  },
+  "settings_contact_support": {
+    "message": "Hubungi Kami"
+  },
+  "settings_delete_account": {
+    "message": "Hapus Akun"
+  },
+  "settings_delete_signer_account": {
+    "message": "Hapus Akun?"
+  },
+  "settings_delete_watch_account": {
+    "message": "Hapus Akun Tontonan?"
+  },
+  "settings_delete_watch_account_button": {
+    "message": "Hapus"
+  },
+  "settings_faq": {
+    "message": "Pertanyaan Umum"
+  },
+  "settings_jettons_list": {
+    "message": "Jeton"
+  },
+  "settings_legal_documents": {
+    "message": "Hukum"
+  },
+  "settings_network_alert_title": {
+    "message": "Pilih jaringan"
+  },
+  "settings_news": {
+    "message": "Berita Tonkeeper"
+  },
+  "settings_news_url": {
+    "message": "https://t.me/tonkeeper"
+  },
+  "settings_notifications": {
+    "message": "Notifikasi"
+  },
+  "settings_primary_currency": {
+    "message": "Mata uang"
+  },
+  "settings_rate": {
+    "message": "Beri peringkat Tonkeeper"
+  },
+  "settings_recovery_phrase": {
+    "message": "Frasa Pemulihan"
+  },
+  "settings_reset": {
+    "message": "Keluar"
+  },
+  "settings_reset_alert_button": {
+    "message": "Keluar"
+  },
+  "settings_reset_alert_caption": {
+    "message": "Ini akan menghapus kunci ke dompet Anda. Pastikan Anda telah mencadangkan frasa pemulihan Anda."
+  },
+  "settings_reset_alert_caption_all": {
+    "message": "Ini akan menghapus kunci untuk semua dompet. Pastikan Anda telah mencadangkan frasa pemulihan Anda."
+  },
+  "settings_reset_alert_title": {
+    "message": "🚧 🚨 Keluar? 🚨 🚧"
+  },
+  "settings_reset_alert_title_all": {
+    "message": "🚧 🚨🚨🚨 🚧\\\\nKeluar dari semua dompet?"
+  },
+  "settings_search_engine": {
+    "message": "Cari"
+  },
+  "settings_security": {
+    "message": "Keamanan"
+  },
+  "settings_subscriptions": {
+    "message": "Langganan"
+  },
+  "settings_support": {
+    "message": "Dukungan"
+  },
+  "settings_theme": {
+    "message": "Tema"
+  },
+  "settings_theme_names_blue": {
+    "message": "Biru Tua"
+  },
+  "settings_theme_names_dark": {
+    "message": "Gelap"
+  },
+  "settings_theme_names_light": {
+    "message": "Terang"
+  },
+  "settings_theme_names_system": {
+    "message": "Sistem"
+  },
+  "settings_title": {
+    "message": "Pengaturan"
+  },
+  "settings_to_mainnet": {
+    "message": "Beralih ke Mainnet"
+  },
+  "settings_to_testnet": {
+    "message": "Beralih ke Testnet"
+  },
+  "settings_version": {
+    "message": "Versi"
+  },
+  "settings_wallet_version": {
+    "message": "Alamat Aktif"
+  },
+  "setup_biometry_caption": {
+    "message": "%{biometryType} memungkinkan Anda membuka dompet lebih cepat tanpa harus memasukkan kata sandi."
+  },
+  "setup_biometry_enable_button": {
+    "message": "Aktifkan %{biometryType}"
+  },
+  "setup_biometry_title": {
+    "message": "Masuk cepat dengan %{biometryType}"
+  },
+  "setup_notifications_caption": {
+    "message": "Dapatkan pemberitahuan saat Anda menerima TON, token, dan NFT"
+  },
+  "setup_notifications_enable_button": {
+    "message": "Aktifkan notifikasi"
+  },
+  "setup_notifications_title": {
+    "message": "Dapatkan pemberitahuan instan"
+  },
+  "signerConfirm_confirm": {
+    "message": "Konfirmasi transaksi Anda di Signer"
+  },
+  "signerConfirm_scan_qr": {
+    "message": "Pindai kode QR dengan Signer"
+  },
+  "signerConfirm_scan_signed_qr": {
+    "message": "Pindai kode QR transaksi yang ditandatangani dari Signer"
+  },
+  "signerConfirm_step": {
+    "message": "Langkah %{value}"
+  },
+  "signerConfirm_title": {
+    "message": "Konfirmasi Tindakan"
+  },
+  "signer_scan_result": {
+    "message": "Pindai transaksi yang ditandatangani"
+  },
+  "signer_scan_tx_description": {
+    "message": "Silakan buka Signer dan pindai transaksi dengan kode QR"
+  },
+  "skip": {
+    "message": "Lewati"
+  },
+  "spam_action": {
+    "message": "Spam"
+  },
+  "staking_active": {
+    "message": "Aktif"
+  },
+  "staking_confirm_address_label": {
+    "message": "Alamat penerima"
+  },
+  "staking_confirm_amount_label": {
+    "message": "Jumlah"
+  },
+  "staking_confirm_amount_value": {
+    "message": "%{value} TON"
+  },
+  "staking_confirm_fee_label": {
+    "message": "Biaya"
+  },
+  "staking_confirm_fee_value": {
+    "message": "≈ %{value} TON"
+  },
+  "staking_confirm_recipient_label": {
+    "message": "Penerima"
+  },
+  "staking_confirm_withdraw_amount_label": {
+    "message": "Jumlah penarikan"
+  },
+  "staking_confirm_withdraw_amount_value": {
+    "message": "%{value} TON"
+  },
+  "staking_confirm_deposit": {
+    "message": "Konfirmasi dan Taruh"
+  },
+  "staking_confirm_unstake": {
+    "message": "Konfirmasi dan Lepaskan"
+  },
+  "staking_deposit": {
+    "message": "Setor"
+  },
+  "staking_desc_large": {
+    "message": "Bergabunglah dengan staking dan dapatkan hadiah. Staking membantu memelihara jaringan TON."
+  },
+  "staking_details_about_pool": {
+    "message": "Rincian"
+  },
+  "staking_details_apy_highest_tag": {
+    "message": "MAKS"
+  },
+  "staking_details_apy_label": {
+    "message": "Persentase Pendapatan Tahunan"
+  },
+  "staking_details_apy_value": {
+    "message": "≈ %{value}%"
+  },
+  "staking_details_balance": {
+    "message": "Saldo staking"
+  },
+  "staking_details_cooldown_active": {
+    "message": "Aktif"
+  },
+  "staking_details_cooldown_desc": {
+    "message": "Periode dua jam yang diterapkan di awal setiap siklus staking untuk meningkatkan proses penarikan dan setoran antar siklus"
+  },
+  "staking_details_cooldown_title": {
+    "message": "Masa pendinginan"
+  },
+  "staking_details_frequency_label": {
+    "message": "Frekuensi hadiah"
+  },
+  "staking_details_frequency_value": {
+    "message": "Setiap %{count} jam"
+  },
+  "staking_details_frequency_value_few": {
+    "message": "Setiap %{count} jam"
+  },
+  "staking_details_frequency_value_many": {
+    "message": "Setiap %{count} jam"
+  },
+  "staking_details_frequency_value_one": {
+    "message": "Setiap %{count} jam"
+  },
+  "staking_details_frequency_value_zero": {
+    "message": "Setiap %{count} jam"
+  },
+  "staking_details_links_title": {
+    "message": "Tautan"
+  },
+  "staking_details_liquidity_token_label": {
+    "message": "%{token} token likuiditas"
+  },
+  "staking_details_liquidity_token_value": {
+    "message": "Pelajari lebih lanjut"
+  },
+  "staking_details_min_deposit_label": {
+    "message": "Setoran minimal"
+  },
+  "staking_details_min_deposit_value": {
+    "message": "%{value} TON"
+  },
+  "staking_details_next_cycle_desc": {
+    "message": "Semua transaksi akan berlaku setelah siklus berakhir."
+  },
+  "staking_details_next_cycle_desc_liquid": {
+    "message": "Semua permintaan penarikan akan berlaku pada akhir siklus."
+  },
+  "staking_details_next_cycle_in": {
+    "message": "dalam"
+  },
+  "staking_details_next_cycle_message": {
+    "message": "Permintaan pembukaan saham akan diproses setelah akhir siklus validasi dalam %{value}"
+  },
+  "staking_details_next_cycle_reward_title": {
+    "message": "Hadiah berikutnya"
+  },
+  "staking_details_next_cycle_time": {
+    "message": "dalam %{time}"
+  },
+  "staking_details_next_cycle_title": {
+    "message": "Siklus berikutnya"
+  },
+  "staking_details_note": {
+    "message": "Staking didasarkan pada smart contracts dari pihak ketiga. Tonkeeper tidak bertanggung jawab atas pengalaman staking."
+  },
+  "staking_details_pendingDeposit": {
+    "message": "Setoran Tertunda"
+  },
+  "staking_details_pendingWithdraw": {
+    "message": "Penarikan Tertunda"
+  },
+  "staking_details_pendingWithdrawDesc": {
+    "message": "setelah akhir siklus"
+  },
+  "staking_details_pool_address_label": {
+    "message": "Alamat pool"
+  },
+  "staking_details_readyWithdraw": {
+    "message": "Siap untuk dicabut"
+  },
+  "staking_details_show_details": {
+    "message": "Rincian"
+  },
+  "staking_details_socials_telegram": {
+    "message": "Komunitas"
+  },
+  "staking_details_socials_twitter": {
+    "message": "Twitter"
+  },
+  "staking_details_tap_to_collect": {
+    "message": "Ketuk untuk mengumpulkan"
+  },
+  "staking_estimated_profit": {
+    "message": "%{amount} TON – keuntungan tahunan jika kamu mempertaruhkan TON hari ini"
+  },
+  "staking_estimated_profit_compare": {
+    "message": "Lebih menguntungkan %{amount} TON per tahun dibandingkan staking Anda saat ini"
+  },
+  "staking_get_withdrawal": {
+    "message": "Dapatkan penarikan"
+  },
+  "staking_highest_apy": {
+    "message": "MAX APY"
+  },
+  "staking_jetton_note": {
+    "message": "Saat Anda mempertaruhkan TON di kolam %{poolName}, Anda akan menerima token bernama %{token} yang mewakili bagian Anda di kolam tersebut. Seiring kolam tersebut mengumpulkan keuntungan, %{token} Anda akan mewakili jumlah TON yang lebih besar."
+  },
+  "staking_learn_more": {
+    "message": "Pelajari lebih lanjut"
+  },
+  "staking_message_pendingDeposit": {
+    "message": "%{amount} TON menunggu"
+  },
+  "staking_message_pendingWithdraw": {
+    "message": "%{amount} TON dicairkan"
+  },
+  "staking_message_pendingWithdrawLiquid": {
+    "message": "%{amount} TON akan dicairkan setelah siklus berakhir"
+  },
+  "staking_message_readyWithdraw": {
+    "message": "%{amount} TON siap ditarik.\\nKetuk untuk mengumpulkan"
+  },
+  "staking_no_funds": {
+    "message": "Tidak ada dana yang tersedia untuk unstake"
+  },
+  "staking_not_exists": {
+    "message": "Alamat kolam tidak valid"
+  },
+  "staking_other": {
+    "message": "Lainnya"
+  },
+  "staking_recommended": {
+    "message": "Direkomendasikan"
+  },
+  "staking_rewards_after_top_up": {
+    "message": "Setelah top up"
+  },
+  "staking_rewards_current": {
+    "message": "Saat ini"
+  },
+  "staking_rewards_title": {
+    "message": "APY Anda"
+  },
+  "staking_rewards_value": {
+    "message": "≈ %{value} TON"
+  },
+  "staking_send_staked_ton": {
+    "message": "TON yang dipertaruhkan"
+  },
+  "staking_staked": {
+    "message": "Dipertaruhkan"
+  },
+  "staking_staked_ton": {
+    "message": "TON yang di-stake"
+  },
+  "staking_staking_desc": {
+    "message": "Deposito minimum %{minStake} TON.\\nDapatkan hingga %{maxApy}%."
+  },
+  "staking_staking_pool_desc": {
+    "message": "APY ≈ %{apy}%"
+  },
+  "staking_title": {
+    "message": "Staking"
+  },
+  "staking_title_large": {
+    "message": "Staking TON"
+  },
+  "staking_top_up": {
+    "message": "Isi ulang"
+  },
+  "staking_transaction": {
+    "message": "Konfirmasi tindakan"
+  },
+  "staking_warning_about": {
+    "message": "Tentang %{name}"
+  },
+  "staking_warning_beta_desc": {
+    "message": "Kami tidak bertanggung jawab atas stabilitas dan pengalaman staking. Gunakan dengan risiko Anda sendiri."
+  },
+  "staking_warning_desc": {
+    "message": "Staking berbasis pada kontrak pintar pihak ketiga. Kami tidak bertanggung jawab atas pekerjaan mereka."
+  },
+  "staking_warning_title": {
+    "message": "Peringatan"
+  },
+  "staking_widget_desc": {
+    "message": "APY hingga %{apy}%"
+  },
+  "staking_widget_staking_options": {
+    "message": "Opsi staking"
+  },
+  "staking_widget_title": {
+    "message": "Stake TON"
+  },
+  "staking_withdraw": {
+    "message": "Tarik Dana"
+  },
+  "staking_withdrawal_fee_warning_continue": {
+    "message": "Tetap lanjutkan"
+  },
+  "staking_withdrawal_fee_warning_message": {
+    "message": "Silakan tinggalkan setidaknya {{amount}} TON di saldo Anda."
+  },
+  "staking_withdrawal_fee_warning_title": {
+    "message": "Anda akan kekurangan dana untuk pencairan"
+  },
+  "staking_withdrawal_request": {
+    "message": "Permintaan penarikan"
+  },
+  "start_screen_caption": {
+    "message": "Buat dompet baru atau tambahkan \\nyang sudah ada"
+  },
+  "start_screen_create_wallet_button": {
+    "message": "Buat Dompet Baru"
+  },
+  "start_screen_import_wallet_button": {
+    "message": "Impor Dompet yang Ada"
+  },
+  "stop_watch": {
+    "message": "Hapus Akun Jam Tangan"
+  },
+  "subscription_back_to_merchant_button": {
+    "message": "Kembali"
+  },
+  "subscription_back_to_merchant_caption": {
+    "message": "Transaksi sedang diproses. Langganan Anda akan segera aktif."
+  },
+  "subscription_back_to_merchant_name": {
+    "message": "Kembali ke %{merchantName}"
+  },
+  "subscription_back_to_merchant_title": {
+    "message": "Kembali ke channel?"
+  },
+  "subscription_cancel": {
+    "message": "Batalkan langganan"
+  },
+  "subscription_cancel_alert_cancel_btn": {
+    "message": "Tidak sekarang"
+  },
+  "subscription_cancel_alert_caption": {
+    "message": "Jika Anda membatalkan sekarang, Anda masih dapat mengakses langganan Anda hingga %{nextBill}"
+  },
+  "subscription_cancel_alert_submit_btn": {
+    "message": "Ya, batalkan"
+  },
+  "subscription_cancel_alert_title": {
+    "message": "Batalkan langganan?"
+  },
+  "subscription_expiring": {
+    "message": "Hampir Habis"
+  },
+  "subscription_fee": {
+    "message": "Biaya"
+  },
+  "subscription_next_bill": {
+    "message": "Tagihan berikutnya"
+  },
+  "subscription_open_merchant": {
+    "message": "Buka di Telegram"
+  },
+  "subscription_period": {
+    "message": "Interval"
+  },
+  "subscription_period_custom": {
+    "message": "Setiap %{period}"
+  },
+  "subscription_period_day": {
+    "message": "Harian"
+  },
+  "subscription_period_half_year": {
+    "message": "Setengah tahunan"
+  },
+  "subscription_period_hour": {
+    "message": "Per Jam"
+  },
+  "subscription_period_month": {
+    "message": "Bulanan"
+  },
+  "subscription_period_quarter": {
+    "message": "Per Kuartal"
+  },
+  "subscription_period_week": {
+    "message": "Mingguan"
+  },
+  "subscription_period_weeks": {
+    "message": "Setiap %{count} minggu"
+  },
+  "subscription_period_year": {
+    "message": "Tahunan"
+  },
+  "subscription_price": {
+    "message": "Harga"
+  },
+  "subscription_sent": {
+    "message": "Transaksi dikirim"
+  },
+  "subscriptions_item_caption": {
+    "message": "%{price} TON, tagihan berikutnya pada %{nextBill}"
+  },
+  "subscriptions_item_caption_expired": {
+    "message": "Kadaluarsa %{date}"
+  },
+  "subscriptions_item_caption_expiring": {
+    "message": "%{price} TON, kedaluwarsa %{date}"
+  },
+  "subscriptions_section_active": {
+    "message": "Aktif"
+  },
+  "subscriptions_section_expired": {
+    "message": "Kedaluwarsa"
+  },
+  "subscription_started": {
+    "message": "Langganan dimulai"
+  },
+  "subscriptions_title": {
+    "message": "Langganan"
+  },
+  "subscription_subscribe": {
+    "message": "Langganan"
+  },
+  "subscription_title": {
+    "message": "Langganan"
+  },
+  "subscription_unsubscribe": {
+    "message": "Berhenti Berlangganan"
+  },
+  "success": {
+    "message": "Berhasil!"
+  },
+  "suspicious_buttons_not_spam": {
+    "message": "Bukan Spam"
+  },
+  "suspicious_buttons_report": {
+    "message": "Laporkan Spam"
+  },
+  "suspicious_label_full": {
+    "message": "NFT yang tidak diverifikasi"
+  },
+  "suspicious_label_short": {
+    "message": "Tidak Terverifikasi"
+  },
+  "suspicious_status_update_hidden_collection": {
+    "message": "Koleksi disembunyikan"
+  },
+  "suspicious_status_update_hidden_nft": {
+    "message": "NFT tersembunyi"
+  },
+  "suspicious_status_update_spam_collection": {
+    "message": "Koleksi ditandai sebagai Spam"
+  },
+  "suspicious_status_update_spam_nft": {
+    "message": "NFT ditandai sebagai Spam"
+  },
+  "suspiciousNFTDetails_buttons_not_spam": {
+    "message": "Bukan Spam"
+  },
+  "suspiciousNFTDetails_buttons_report": {
+    "message": "Laporkan Spam"
+  },
+  "suspiciousNFTDetails_paragraphs_p1": {
+    "message": "Digunakan untuk spam. Digunakan untuk mengirim pesan yang tidak diinginkan dan seringkali tidak relevan dalam skala besar."
+  },
+  "suspiciousNFTDetails_paragraphs_p2": {
+    "message": "Digunakan untuk penipuan. Nama, deskripsi, atau gambar NFT dapat menyesatkan pengguna."
+  },
+  "suspiciousNFTDetails_paragraphs_p3": {
+    "message": "Kami tahu sedikit tentang penulis dan sejarah NFT ini."
+  },
+  "suspiciousNFTDetails_subtitle": {
+    "message": "NFT mungkin tidak aman digunakan karena salah satu dari alasan berikut."
+  },
+  "suspiciousNFTDetails_title": {
+    "message": "NFT yang belum diverifikasi"
+  },
+  "swap_title": {
+    "message": "Tukar"
+  },
+  "tab_browser": {
+    "message": "Peramban"
+  },
+  "tab_collectibles": {
+    "message": "Koleksi"
+  },
+  "tab_nft": {
+    "message": "NFT"
+  },
+  "tab_settings": {
+    "message": "Pengaturan"
+  },
+  "tab_swap": {
+    "message": "Tukar"
+  },
+  "tab_wallet": {
+    "message": "Dompet"
+  },
+  "today": {
+    "message": "Hari ini"
+  },
+  "tokenDetails_name": {
+    "message": "Nama"
+  },
+  "tokenDetails_title": {
+    "message": "Detail Token"
+  },
+  "tokenDetails_token_id": {
+    "message": "ID token"
+  },
+  "tokenDetails_tonviewer_button": {
+    "message": "Lihat di Tonviewer"
+  },
+  "tonconnect_error_bad_request": {
+    "message": "Permintaan buruk"
+  },
+  "tonconnect_error_wrong_from": {
+    "message": "Kesalahan parameter 'from''"
+  },
+  "tonconnect_error_wrong_network": {
+    "message": "Jaringan salah"
+  },
+  "tonkeeper_pro": {
+    "message": "Tonkeeper Pro"
+  },
+  "tonkeeper_pro_description": {
+    "message": "Langganan Tonkeeper Pro dilengkapi dengan fitur dompet yang diperluas, menawarkan seperangkat alat untuk manajemen kripto"
+  },
+  "ton_login_back_to_button": {
+    "message": "Kembali ke %{name}"
+  },
+  "ton_login_caption": {
+    "message": "%{name} meminta akses ke alamat dompet Anda"
+  },
+  "ton_login_connect_button": {
+    "message": "Hubungkan dompet"
+  },
+  "ton_login_notice": {
+    "message": "Pastikan untuk memeriksa alamat layanan sebelum menghubungkan dompet."
+  },
+  "ton_login_success": {
+    "message": "Selesai"
+  },
+  "ton_login_title": {
+    "message": "Terhubung ke %{0, number}omain?"
+  },
+  "transaction_bid_collection_name": {
+    "message": "Penerbit"
+  },
+  "transaction_bid_date": {
+    "message": "Penawaran %{date}"
+  },
+  "transaction_bid_dns": {
+    "message": "Nama"
+  },
+  "transaction_buy_date": {
+    "message": "Tanggal pembelian %{date}"
+  },
+  "transaction_buy_status_failed": {
+    "message": "Gagal"
+  },
+  "transaction_buy_status_pending": {
+    "message": "Tertunda"
+  },
+  "transaction_buy_status_success": {
+    "message": "Berhasil"
+  },
+  "transaction_confirmations": {
+    "message": "Konfirmasi"
+  },
+  "transaction_confirm_bid": {
+    "message": "Konfirmasi tawaran"
+  },
+  "transaction_contract_deploy_date": {
+    "message": "%{date}"
+  },
+  "transaction_copy_caution": {
+    "message": "Hati-hati dengan tautan eksternal. Jangan pernah memberikan frasa rahasia Anda ke sumber pihak ketiga — Anda dapat kehilangan semua dana Anda.\n\n- - -"
+  },
+  "transactionDetails_address": {
+    "message": "Alamat"
+  },
+  "transactionDetails_bid_collection_name": {
+    "message": "Penerbit"
+  },
+  "transactionDetails_bid_date": {
+    "message": "Penawaran pada %{time}"
+  },
+  "transactionDetails_bid_name": {
+    "message": "Nama"
+  },
+  "transactionDetails_call_contract_date": {
+    "message": "Panggilan kontrak %{time}"
+  },
+  "transactionDetails_comment": {
+    "message": "Komentar"
+  },
+  "transactionDetails_description": {
+    "message": "Deskripsi"
+  },
+  "transactionDetails_operation": {
+    "message": "Operasi"
+  },
+  "transactionDetails_payload": {
+    "message": "Payload"
+  },
+  "transactionDetails_purchase_date": {
+    "message": "Dibeli pada %{time}"
+  },
+  "transactionDetails_received_date": {
+    "message": "Diterima %{time}"
+  },
+  "transactionDetails_recipient": {
+    "message": "Penerima"
+  },
+  "transactionDetails_recipient_address": {
+    "message": "Alamat penerima"
+  },
+  "transactionDetails_sender": {
+    "message": "Pengirim"
+  },
+  "transactionDetails_sender_address": {
+    "message": "Alamat pengirim"
+  },
+  "transactionDetails_sent_date": {
+    "message": "Dikirim pada %{time}"
+  },
+  "transactionDetails_spam": {
+    "message": "SPAM"
+  },
+  "transactionDetails_subscription_merchant_label": {
+    "message": "Pedagang"
+  },
+  "transactionDetails_subscription_product_label": {
+    "message": "Langganan"
+  },
+  "transactionDetails_swapped_date": {
+    "message": "Ditransaksikan %{time}"
+  },
+  "transactionDetails_transaction": {
+    "message": "Transaksi"
+  },
+  "transactionDetails_unsubscription_title": {
+    "message": "Berhenti Berlangganan"
+  },
+  "transactionDetails_withdraw_amount": {
+    "message": "Jumlah penarikan"
+  },
+  "transaction_exchange_from_currency": {
+    "message": "Dari"
+  },
+  "transaction_fee": {
+    "message": "Biaya"
+  },
+  "transaction_hash": {
+    "message": "Transaksi"
+  },
+  "transaction_merchant": {
+    "message": "Pedagang"
+  },
+  "transaction_message": {
+    "message": "Pesan"
+  },
+  "transaction_purchase_id": {
+    "message": "ID Pembelian"
+  },
+  "transaction_receive_date": {
+    "message": "Diterima pada %{date}"
+  },
+  "transaction_recipient": {
+    "message": "Penerima"
+  },
+  "transaction_recipient_address": {
+    "message": "Alamat Penerima"
+  },
+  "transaction_refund": {
+    "message": "Pengembalian Dana"
+  },
+  "transactions_bid": {
+    "message": "Tawaran"
+  },
+  "transactions_burned": {
+    "message": "Dibakar"
+  },
+  "transactions_contract_deploy": {
+    "message": "Deploy Kontrak"
+  },
+  "transactions_deposit": {
+    "message": "Setoran"
+  },
+  "transactions_failed": {
+    "message": "Gagal"
+  },
+  "transactions_failed_with_reason_swap_refund_no_liq": {
+    "message": "Gagal. Tingkatkan toleransi selip di pengaturan swap untuk menghindari kesalahan ini."
+  },
+  "transactions_nft_purchase": {
+    "message": "Pembelian NFT"
+  },
+  "transactions_smartcontract_exec": {
+    "message": "Panggil kontrak"
+  },
+  "transactions_spam": {
+    "message": "Spam"
+  },
+  "transactions_subscription": {
+    "message": "Berlangganan"
+  },
+  "transactions_swap": {
+    "message": "Swap"
+  },
+  "transactions_unknown": {
+    "message": "Tidak Diketahui"
+  },
+  "transactions_unknown_description": {
+    "message": "Terjadi sesuatu tetapi kami tidak bisa mengenalinya"
+  },
+  "transactions_unsubscription": {
+    "message": "Berhenti langganan"
+  },
+  "transactions_wallet_initialized": {
+    "message": "Dompet diinisialisasi"
+  },
+  "transactions_withdraw": {
+    "message": "Penarikan"
+  },
+  "transactions_withdrawal_request": {
+    "message": "Permintaan Penarikan"
+  },
+  "transaction_sender": {
+    "message": "Pengirim"
+  },
+  "transaction_sender_address": {
+    "message": "Alamat pengirim"
+  },
+  "transaction_send_more_button": {
+    "message": "Kirim lebih banyak ke penerima ini"
+  },
+  "transaction_sent_date": {
+    "message": "Dikirim pada %{date}"
+  },
+  "transaction_show_subscription_button": {
+    "message": "Lihat langganan"
+  },
+  "transaction_status": {
+    "message": "Status"
+  },
+  "transaction_subscription": {
+    "message": "Langganan"
+  },
+  "transaction_subscription_date": {
+    "message": "Dikenakan pada %{date}"
+  },
+  "transaction_transfer_name": {
+    "message": "Nama transfer"
+  },
+  "transaction_type_bid": {
+    "message": "Penawaran"
+  },
+  "transaction_type_bounced": {
+    "message": "Dikembalikan"
+  },
+  "transaction_type_buy": {
+    "message": "Dibeli"
+  },
+  "transaction_type_contract_deploy": {
+    "message": "Penerapan Kontrak"
+  },
+  "transaction_type_from": {
+    "message": "Dari"
+  },
+  "transaction_type_new_subscriber": {
+    "message": "Pelanggan baru"
+  },
+  "transaction_type_pending": {
+    "message": "Tertunda"
+  },
+  "transaction_type_receive": {
+    "message": "Diterima"
+  },
+  "transaction_type_sent": {
+    "message": "Terkirim"
+  },
+  "transaction_type_subscriber_lost": {
+    "message": "Pelanggan hilang"
+  },
+  "transaction_type_subscription": {
+    "message": "Berlangganan"
+  },
+  "transaction_type_to": {
+    "message": "Ke"
+  },
+  "transaction_type_unsubscription": {
+    "message": "Berhenti Berlangganan"
+  },
+  "transaction_type_wallet_initialized": {
+    "message": "Dompet diinisialisasi"
+  },
+  "transaction_unsubscription": {
+    "message": "Berhenti Berlangganan"
+  },
+  "transaction_unsubscription_date": {
+    "message": "Tanggal berhenti berlangganan %{date}"
+  },
+  "transaction_view_in_explorer": {
+    "message": "Lihat di penjelajah"
+  },
+  "transaction_wallet_initialized_date": {
+    "message": "%{date}"
+  },
+  "transaction_your_bid": {
+    "message": "Tawaran Anda"
+  },
+  "transfer_deeplink_address_error": {
+    "message": "Alamat penerima tidak benar"
+  },
+  "transfer_deeplink_amount_error": {
+    "message": "Permintaan jumlah tidak valid"
+  },
+  "transfer_deeplink_expired_error": {
+    "message": "Tautan kedaluwarsa"
+  },
+  "transfer_deeplink_nft_address_error": {
+    "message": "Alamat NFT salah"
+  },
+  "transfer_deeplink_unknown_jetton_error": {
+    "message": "Token tidak dikenal"
+  },
+  "transfer_deeplink_unknown_token": {
+    "message": "Token tidak dikenal"
+  },
+  "transfer_deeplink_wrong_params": {
+    "message": "Parameter salah"
+  },
+  "transfer_from_old_wallet_btn": {
+    "message": "Transfer"
+  },
+  "transfer_from_old_wallet_caption": {
+    "message": "Tonkeeper akan mentransfer semua koin dari alamat lama Anda ke alamat Anda yang sekarang."
+  },
+  "transfer_from_old_wallet_in_progress": {
+    "message": "Transfer sedang berlangsung"
+  },
+  "transfer_from_old_wallet_title": {
+    "message": "Transfer ke alamat saat ini"
+  },
+  "transfer_pending_by_battery_error": {
+    "message": "Transaksi lain sedang ditangani oleh baterai"
+  },
+  "txActions_amount": {
+    "message": "Jumlah"
+  },
+  "txActions_fee": {
+    "message": "Biaya"
+  },
+  "txActions_refund": {
+    "message": "Pengembalian Dana"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_close": {
+    "message": "Batalkan"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_description": {
+    "message": "Ganti dompet untuk mengonfirmasi tindakan."
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_switch": {
+    "message": "Ganti dan Lanjutkan"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_title": {
+    "message": "Tindakan untuk dompet Anda %{value}"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_close": {
+    "message": "Batal"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_description": {
+    "message": "Ubah alamat aktif Anda menjadi %{version} untuk mengonfirmasi tindakan ini."
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_switch": {
+    "message": "Ubah dan lanjutkan"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_title": {
+    "message": "Aksi untuk alamat lain dalam dompet Anda"
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_close": {
+    "message": "OK"
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_description": {
+    "message": "Masuk ke dompet lain %{address} lalu coba lagi."
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_title": {
+    "message": "Tindakan untuk dompet lain"
+  },
+  "txActions_signRaw_comment": {
+    "message": "Komentar"
+  },
+  "txActions_signRaw_insufficientFunds_rechargeBattery": {
+    "message": "Isi ulang Baterai"
+  },
+  "txActions_signRaw_insufficientFunds_rechargeWallet": {
+    "message": "Isi ulang dompet"
+  },
+  "txActions_signRaw_insufficientFunds_stakingDeposit": {
+    "message": "Saldo minimum untuk berpartisipasi:\\n%{amount} %{currency}\\n"
+  },
+  "txActions_signRaw_insufficientFunds_stakingFee": {
+    "message": "Transaksi membutuhkan %{count} TON. Perkiraan biaya %{fee} TON akan dipotong, sisanya akan dikembalikan."
+  },
+  "txActions_signRaw_insufficientFunds_title": {
+    "message": "Dana tidak mencukupi"
+  },
+  "txActions_signRaw_insufficientFunds_title_multiwallet": {
+    "message": "Dana di dompet tidak mencukupi"
+  },
+  "txActions_signRaw_insufficientFunds_toBePaid": {
+    "message": "Perlu dibayar: %{amount} %{currency}"
+  },
+  "txActions_signRaw_insufficientFunds_withFees": {
+    "message": "+ biaya blockchain.\\n"
+  },
+  "txActions_signRaw_insufficientFunds_yourBalance": {
+    "message": "Saldo Anda: %{balance} %{currency}."
+  },
+  "txActions_signRaw_recipient": {
+    "message": "Penerima"
+  },
+  "txActions_signRaw_title": {
+    "message": "Konfirmasi transaksi"
+  },
+  "txActions_signRaw_totalFee": {
+    "message": "Biaya total"
+  },
+  "txActions_signRaw_totalRefund": {
+    "message": "Total pengembalian dana"
+  },
+  "txActions_signRaw_types_contractDeploy": {
+    "message": "Penerapan Kontrak"
+  },
+  "txActions_signRaw_types_jettonTransfer": {
+    "message": "Transfer Token"
+  },
+  "txActions_signRaw_types_nftItemTransfer": {
+    "message": "Transfer NFT"
+  },
+  "txActions_signRaw_types_subscribe": {
+    "message": "Berlangganan"
+  },
+  "txActions_signRaw_types_tonTransfer": {
+    "message": "Transfer TON"
+  },
+  "txActions_signRaw_types_unknownTransaction": {
+    "message": "Transaksi tidak dikenal"
+  },
+  "txActions_signRaw_types_unSubscribe": {
+    "message": "Berhenti Langganan"
+  },
+  "txActions_signRaw_warning_caption": {
+    "message": "Tonkeeper tidak dapat sepenuhnya memverifikasi hasil transaksi ini. Pastikan Anda percaya kepada penerima."
+  },
+  "txActions_signRaw_warning_title": {
+    "message": "Peringatan"
+  },
+  "txActions_signRaw_wrongTime_button": {
+    "message": "Buka Pengaturan"
+  },
+  "txActions_signRaw_wrongTime_description": {
+    "message": "Sepertinya jam perangkat Anda tidak sinkron dengan jaringan. Buka pengaturan perangkat dan aktifkan waktu dan tanggal otomatis."
+  },
+  "txActions_signRaw_wrongTime_title": {
+    "message": "Jam tidak sinkron"
+  },
+  "unverifiedTokenDetails_button": {
+    "message": "OK"
+  },
+  "unverifiedTokenDetails_description": {
+    "message": "Token ini terlihat mencurigakan karena satu atau beberapa alasan."
+  },
+  "unverifiedTokenDetails_paragraphs_p1": {
+    "message": "Likuiditas rendah. Token mungkin memiliki nilai, tetapi nilainya sangat rendah."
+  },
+  "unverifiedTokenDetails_paragraphs_p2": {
+    "message": "Token tidak terdaftar di platform perdagangan dan memiliki permintaan terbatas."
+  },
+  "unverifiedTokenDetails_paragraphs_p3": {
+    "message": "Digunakan untuk spam. Digunakan untuk mengirim pesan yang tidak diinginkan dan sering kali tidak relevan dalam skala besar."
+  },
+  "unverifiedTokenDetails_paragraphs_p4": {
+    "message": "Digunakan untuk penipuan. Nama atau gambar token dapat menipu pengguna."
+  },
+  "unverifiedTokenDetails_title": {
+    "message": "Token Tidak Terverifikasi"
+  },
+  "update_description": {
+    "message": "Versi baru Tonkeeper tersedia. Anda dapat mengunduhnya sekarang."
+  },
+  "update_download": {
+    "message": "Unduh"
+  },
+  "update_downloading": {
+    "message": "Mengunduh… {{progress}}%"
+  },
+  "update_mb": {
+    "message": "{{size}} MB"
+  },
+  "update_remindLater": {
+    "message": "Ingatkan saya nanti"
+  },
+  "update_retry": {
+    "message": "Kesalahan unduhan. Ketuk untuk mencoba lagi."
+  },
+  "update_tap": {
+    "message": "Ketuk untuk memperbarui"
+  },
+  "update_title": {
+    "message": "Perbarui Tonkeeper"
+  },
+  "update_version": {
+    "message": "Versi {{version}}"
+  },
+  "upgrade_to_w5_about_button": {
+    "message": "Tentang Dompet W5"
+  },
+  "upgrade_to_w5_description": {
+    "message": "Cobalah standar dompet W5 yang baru dengan dukungan pembayaran USDT tanpa gas dan fitur keren lainnya."
+  },
+  "upgrade_to_w5_downgrade": {
+    "message": "Dompet v4R2"
+  },
+  "upgrade_to_w5_hide_button": {
+    "message": "Sembunyikan"
+  },
+  "upgrade_to_w5_settings": {
+    "message": "Dompet W5"
+  },
+  "upgrade_to_w5_title": {
+    "message": "Transfer Tanpa Gas"
+  },
+  "upgrade_to_w5_try_button": {
+    "message": "Coba Dompet W5"
+  },
+  "username_issued_by_telegram": {
+    "message": "Diterbitkan oleh Telegram."
+  },
+  "username_manage_name_button": {
+    "message": "Kelola nama"
+  },
+  "w5_stories_0_description": {
+    "message": "W5 menggunakan pendekatan pemrosesan transaksi yang lebih efisien, yang berarti biaya gas lebih rendah hingga 25%."
+  },
+  "w5_stories_0_title": {
+    "message": "Biaya Blockchain yang Dikurangi"
+  },
+  "w5_stories_1_description": {
+    "message": "W5 meningkatkan jumlah operasi simultan dari 4 menjadi 255, yang dapat menghemat biaya."
+  },
+  "w5_stories_1_title": {
+    "message": "Hingga 255 Operasi dalam Satu Transaksi"
+  },
+  "w5_stories_2_description": {
+    "message": "Kirim USDT tanpa perlu memiliki TON – biaya transaksi akan otomatis ditanggung oleh beberapa sen USDT."
+  },
+  "w5_stories_2_title": {
+    "message": "Transfer USDT tanpa Gas"
+  },
+  "w5_stories_3_description": {
+    "message": "Akun lama dan W5 menggunakan frasa pemulihan yang sama - saat memulihkan akun pada perangkat baru, akun lama dan baru akan muncul secara otomatis."
+  },
+  "w5_stories_3_title": {
+    "message": "Frasa Pemulihan Tidak Berubah"
+  },
+  "w5_stories_4_button": {
+    "message": "Tambahkan Dompet W5"
+  },
+  "w5_stories_4_title": {
+    "message": "W5"
+  },
+  "wallet_about": {
+    "message": "Tentang"
+  },
+  "wallet_buy": {
+    "message": "Beli"
+  },
+  "wallet_buy_btn": {
+    "message": "Beli & Jual"
+  },
+  "wallet_collectibles_tab_lable": {
+    "message": "Koleksi"
+  },
+  "wallet_edit_tokens_btn": {
+    "message": "Ubah"
+  },
+  "wallet_inscriptions_tab_label": {
+    "message": "Inskripsi"
+  },
+  "wallet_nft_tab_lable": {
+    "message": "Koleksi"
+  },
+  "wallet_old_wallets_title": {
+    "message": "Dompet lama"
+  },
+  "wallet_old_wallet_title": {
+    "message": "Dompet lama"
+  },
+  "wallet_receive_btn": {
+    "message": "Terima"
+  },
+  "wallet_scan_btn": {
+    "message": "Pindai"
+  },
+  "wallet_screen_title": {
+    "message": "Dompet"
+  },
+  "wallet_sell_btn": {
+    "message": "Jual"
+  },
+  "wallet_send_btn": {
+    "message": "Kirim"
+  },
+  "wallet_stake_btn": {
+    "message": "Taruh"
+  },
+  "wallet_swap_btn": {
+    "message": "Tukar"
+  },
+  "wallet_tonkens_tab_lable": {
+    "message": "Token"
+  },
+  "wallet_updated_at": {
+    "message": "Diperbarui pada %{value}"
+  },
+  "wallet_chat": {
+    "message": "Obrolan"
+  },
+  "wallet_community": {
+    "message": "Komunitas"
+  },
+  "wallet_hours_symbol": {
+    "message": "j"
+  },
+  "wallet_old_balance": {
+    "message": "Dompet lama:"
+  },
+  "wallet_receive": {
+    "message": "Terima"
+  },
+  "wallets": {
+    "message": "Dompet"
+  },
+  "wallet_sell": {
+    "message": "Jual"
+  },
+  "wallet_send": {
+    "message": "Kirim"
+  },
+  "wallet_source_code": {
+    "message": "Kode sumber"
+  },
+  "wallet_swap": {
+    "message": "Tukar"
+  },
+  "wallet_title": {
+    "message": "Dompet"
+  },
+  "wallet_toncommunity_chat_link": {
+    "message": "https://t.me/toncoin_id_chat"
+  },
+  "wallet_toncommunity_link": {
+    "message": "https://t.me/toncoin"
+  },
+  "watch_only": {
+    "message": "Hanya menonton"
+  },
+  "yesterday": {
+    "message": "Kemarin"
+  },
+  "about_tonkeeper_pro": {
+    "message": "Tentang Tonkeeper Pro"
+  },
+  "actionTitle": {
+    "message": "Buka dompet"
+  },
+  "add": {
+    "message": "Tambah"
+  },
+  "add_dns_address": {
+    "message": "Tambahkan alamat dompet yang akan dihubungkan dengan domain %."
+  },
+  "add_wallet_modal_mam_subtitle": {
+    "message": "Kelola beberapa dompet dengan satu frasa pemulihan rahasia"
+  },
+  "add_wallet_modal_mam_title": {
+    "message": "Akun Multi-Wallet Baru"
+  },
+  "all_assets_jettons": {
+    "message": "Semua Aset"
+  },
+  "appExtensionDescription": {
+    "message": "Dompet ekstensi Anda di The Open Network"
+  },
+  "appName": {
+    "message": "Tonkeeper"
+  },
+  "appTitle": {
+    "message": "Tonkeeper — dompet untuk TON"
+  },
+  "App_version_copied": {
+    "message": "Versi aplikasi disalin"
+  },
+  "aside_add_wallet": {
+    "message": "Tambah Dompet"
+  },
+  "aside_dashboard": {
+    "message": "Dasbor"
+  },
+  "aside_discover": {
+    "message": "Temukan"
+  },
+  "aside_expires_on": {
+    "message": "Berlaku hingga %date%"
+  },
+  "aside_header_number_wallets": {
+    "message": "%'%{'number'}' dompet"
+  },
+  "aside_pro_subscription_is_active": {
+    "message": "Langganan Pro aktif."
+  },
+  "aside_pro_trial_is_active": {
+    "message": "Uji coba Pro aktif."
+  },
+  "aside_settings": {
+    "message": "Preferensi"
+  },
+  "auto": {
+    "message": "Otomatis"
+  },
+  "Back_up_now": {
+    "message": "Cadangkan sekarang"
+  },
+  "Change": {
+    "message": "Ubah"
+  },
+  "Change_password": {
+    "message": "Ubah kata sandi"
+  },
+  "close": {
+    "message": "Tutup"
+  },
+  "collectibles_empty_header": {
+    "message": "Koleksi Anda akan ditampilkan di sini"
+  },
+  "confirm_modal_transfer": {
+    "message": "Transfer"
+  },
+  "ConfirmPassword": {
+    "message": "Masukkan kata sandi lagi"
+  },
+  "confirm_unlink": {
+    "message": "Konfirmasi putuskan sambungan"
+  },
+  "connected_apps_short": {
+    "message": "Aplikasi Terhubung"
+  },
+  "connect_telegram": {
+    "message": "Hubungkan Telegram"
+  },
+  "Copy_address": {
+    "message": "Salin alamat"
+  },
+  "country": {
+    "message": "Negara"
+  },
+  "Create_password": {
+    "message": "Buat kata sandi"
+  },
+  "dashboard_column_name": {
+    "message": "Nama"
+  },
+  "dashboard_manage_modal_title": {
+    "message": "Dasbor"
+  },
+  "delete": {
+    "message": "Hapus"
+  },
+  "Delete_all_accounts_and_logout": {
+    "message": "Hapus semua akun dan keluar"
+  },
+  "Delete_keystone_wallet_data_description": {
+    "message": "Data dompet dan semua data pribadi akan dihapus dari perangkat ini."
+  },
+  "Delete_wallet_data": {
+    "message": "Hapus data dompet"
+  },
+  "Delete_wallet_data_description": {
+    "message": "Kunci dompet dan semua data pribadi akan dihapus dari perangkat ini."
+  },
+  "disconnect": {
+    "message": "Putuskan sambungan"
+  },
+  "disconnect_all_apps": {
+    "message": "Putuskan Sambungan Semua Aplikasi"
+  },
+  "disconnect_all_apps_confirm": {
+    "message": "Putuskan sambungan semua aplikasi?"
+  },
+  "dns_linked_with_another_address_warn": {
+    "message": "Domain ini tidak terhubung dengan alamat Anda saat ini. Hati-hati dengan transaksi ke domain ini."
+  },
+  "domains_empty_header": {
+    "message": "Domain Anda akan ditampilkan di sini"
+  },
+  "Edit_jettons": {
+    "message": "Edit"
+  },
+  "Enable_storing_config": {
+    "message": "Aktifkan penyimpanan konfigurasi"
+  },
+  "enter_password": {
+    "message": "Masukkan kata sandi"
+  },
+  "export_dot_csv": {
+    "message": "Ekspor .CSV"
+  },
+  "hide": {
+    "message": "Sembunyikan"
+  },
+  "history_spam_nft": {
+    "message": "Spam NFT"
+  },
+  "I_have_a_backup_copy_of_recovery_phrase": {
+    "message": "Saya memiliki salinan cadangan frasa pemulihan"
+  },
+  "import_csv": {
+    "message": "Impor CSV"
+  },
+  "import_csv_description": {
+    "message": "Seret dan jatuhkan file atau klik tombol di bawah untuk mengunggahnya. Harap tinjau struktur tabel contoh di bawah untuk menghindari kesalahan."
+  },
+  "import_dot_csv": {
+    "message": "Impor .CSV"
+  },
+  "import_multisend_dnd_error": {
+    "message": "Tidak dapat memproses file yang dijatuhkan"
+  },
+  "import_multisend_drop_file": {
+    "message": "Jatuhkan file"
+  },
+  "import_multisend_error_column": {
+    "message": "kolom"
+  },
+  "import_multisend_error_invalid_amount": {
+    "message": "Jumlah transfer tidak valid"
+  },
+  "import_multisend_error_invalid_asset": {
+    "message": "Aset transfer tidak valid"
+  },
+  "import_multisend_error_invalid_csv": {
+    "message": "Format file CSV tidak valid"
+  },
+  "import_multisend_error_invalid_receiver": {
+    "message": "Format penerima transfer tidak valid"
+  },
+  "import_multisend_error_invalid_row_length": {
+    "message": "Panjang baris CSV tidak valid"
+  },
+  "import_multisend_error_line": {
+    "message": "baris"
+  },
+  "import_multisend_error_list_empty": {
+    "message": "Tabel CSV kosong"
+  },
+  "import_multisend_error_too_many_crypto_assets": {
+    "message": "Terlalu banyak aset kripto berbeda yang akan ditransfer dalam daftar. Pastikan bahwa semua baris di mana aset kripto ditentukan menggunakan aset kripto yang sama."
+  },
+  "import_multisend_error_too_many_fiat_assets": {
+    "message": "Terlalu banyak aset fiat berbeda yang akan ditransfer dalam daftar. Pastikan bahwa semua baris di mana aset fiat ditentukan menggunakan aset fiat yang sama."
+  },
+  "import_multisend_error_unknown": {
+    "message": "Kesalahan pemrosesan tidak dikenal"
+  },
+  "import_multisend_fiat_warn_description": {
+    "message": "Ganti atau ganti mata uang untuk melanjutkan."
+  },
+  "import_multisend_fiat_warn_switch_button": {
+    "message": "Ganti mata uang dompet ke"
+  },
+  "import_multisend_fiat_warn_title": {
+    "message": "Mata uang di dompet dan mata uang di file tidak cocok."
+  },
+  "import_multisend_table_comment": {
+    "message": "Komentar"
+  },
+  "import_multisend_table_example": {
+    "message": "Contoh Tabel"
+  },
+  "import_multisend_table_heading_address": {
+    "message": "Alamat EQ atau UQ / alamat hex / domain .ton"
+  },
+  "import_multisend_table_heading_amount": {
+    "message": "Jumlah"
+  },
+  "import_multisend_table_heading_asset": {
+    "message": "Ticker fiat / TON / hex, alamat EQ atau UQ dari token-master"
+  },
+  "import_multisend_table_heading_comment": {
+    "message": "Komentar opsional"
+  },
+  "import_wallet_title_web": {
+    "message": "Masukkan frase pemulihan diri Anda"
+  },
+  "IncorrectCurrentPassword": {
+    "message": "Kata sandi saat ini tidak benar."
+  },
+  "keystone_pair_subtitle": {
+    "message": "Tingkat keamanan yang lebih tinggi dengan dompet perangkat keras AIR-GAP"
+  },
+  "keystone_pair_title": {
+    "message": "Pasangkan dengan Keystone"
+  },
+  "keystone_sign_subtitle": {
+    "message": "Silakan buka Keystone dan pindai kode QR dengan transaksi"
+  },
+  "keystone_sign_title": {
+    "message": "Hubungkan Keystone"
+  },
+  "learn_more": {
+    "message": "Pelajari Lebih Lanjut"
+  },
+  "ledger_choose_wallets": {
+    "message": "Pilih Dompet"
+  },
+  "ledger_connect_header": {
+    "message": "Hubungkan Ledger"
+  },
+  "ledger_continue_with_ledger": {
+    "message": "Lanjutkan dengan Ledger"
+  },
+  "ledger_pair_subtitle": {
+    "message": "Modul perangkat keras, Bluetooth atau USB-C, fitur TON terbatas"
+  },
+  "ledger_pair_title": {
+    "message": "Pasangkan dengan Ledger"
+  },
+  "ledger_steps_confirm_tx": {
+    "message": "Konfirmasi transaksi Anda di Ledger"
+  },
+  "ledger_steps_connect": {
+    "message": "Hubungkan Ledger ke perangkat Anda"
+  },
+  "ledger_steps_install_ton": {
+    "message": "Instal Aplikasi TON"
+  },
+  "ledger_steps_open_ton": {
+    "message": "Buka kunci dan buka Aplikasi TON"
+  },
+  "Localization": {
+    "message": "Bahasa"
+  },
+  "Lock_screen": {
+    "message": "Layar kunci"
+  },
+  "logout_on_unlock_many": {
+    "message": "Ini akan menghapus kunci untuk semua dompet Anda. Pastikan Anda telah mencadangkan frasa pemulihan rahasia Anda."
+  },
+  "logout_on_unlock_one": {
+    "message": "Ini akan menghapus kunci untuk dompet. Pastikan Anda telah mencadangkan frasa pemulihan rahasia Anda."
+  },
+  "mam_account_explanation": {
+    "message": "Frasa pemulihan akun memberikan akses ke semua dompet yang dibuat dengan itu dan hanya didukung di Tonkeeper Pro. Jika Anda ingin mengekspor dompet tertentu, gunakan cadangan frasa pemulihan dompet sebagai gantinya."
+  },
+  "Manage": {
+    "message": "Kelola"
+  },
+  "Manage_wallets": {
+    "message": "Kelola dompet"
+  },
+  "MinPassword": {
+    "message": "Harus setidaknya 6 karakter."
+  },
+  "multi_send_about_w5": {
+    "message": "Tentang W5"
+  },
+  "multi_send_add_more": {
+    "message": "Tambahkan Lagi"
+  },
+  "multisend_confirm_error_insufficient_ton_for_fee": {
+    "message": "Saldo dompet %balance% tidak cukup untuk menutupi biaya blockchain. Saldo minimum yang dibutuhkan: %required%. TON yang tidak digunakan akan dikembalikan ke dompet Anda setelah transaksi."
+  },
+  "multi_send_continue_with_pro": {
+    "message": "Lanjutkan dengan Pro"
+  },
+  "multi_send_delete_description": {
+    "message": "Tindakan ini tidak dapat dibatalkan, dan semua data akan hilang."
+  },
+  "multi_send_delete_list": {
+    "message": "Hapus Daftar"
+  },
+  "multi_send_discard_and_close": {
+    "message": "Buang dan Tutup"
+  },
+  "multi_send_edit": {
+    "message": "Edit"
+  },
+  "multi_send_edit_list_name": {
+    "message": "Edit Nama Daftar"
+  },
+  "multi_send_enter_a_name": {
+    "message": "Masukkan nama baru untuk daftar Anda:"
+  },
+  "multi_send_header": {
+    "message": "Pengiriman Multi Baru"
+  },
+  "multi_send_insufficient_balance": {
+    "message": "Saldo tidak mencukupi"
+  },
+  "multi_send_list": {
+    "message": "Daftar"
+  },
+  "multi_send_maximum_255_reached": {
+    "message": "Maksimum 255 bidang tercapai"
+  },
+  "multi_send_maximum_reached": {
+    "message": "Maksimum tercapai. Hingga 255 bidang dengan versi dompet W5"
+  },
+  "multi_send_new_list": {
+    "message": "Daftar Baru"
+  },
+  "multi_send_remaining": {
+    "message": "Sisa"
+  },
+  "multi_send_save_as_new": {
+    "message": "Simpan sebagai Baru"
+  },
+  "multi_send_save_description": {
+    "message": "Simpan daftar dengan alamat, jumlah, dan komentar untuk penggunaan di masa mendatang."
+  },
+  "multi_send_save_list": {
+    "message": "Simpan Daftar"
+  },
+  "multi_send_save_title": {
+    "message": "Simpan Daftar ini?"
+  },
+  "multi_send_show_all": {
+    "message": "Tampilkan semua"
+  },
+  "multi_send_switch_to_w5": {
+    "message": "Beralih ke W5"
+  },
+  "multi_send_update_description": {
+    "message": "Perbarui informasi dalam daftar saat ini."
+  },
+  "multi_send_wallets": {
+    "message": "dompet"
+  },
+  "multi_send_will_be_sent": {
+    "message": "Akan dikirim"
+  },
+  "Name_your_wallet": {
+    "message": "Nama dompet Anda"
+  },
+  "Name_your_wallet_description": {
+    "message": "Beri nama dompet Anda agar mudah dikenali saat menggunakan Tonkeeper. Nama-nama ini disimpan secara lokal dan hanya dapat dilihat oleh Anda."
+  },
+  "NFT_collection_id": {
+    "message": "ID koleksi NFT"
+  },
+  "NFT_creation": {
+    "message": "Pembuatan NFT"
+  },
+  "nft_empty_description": {
+    "message": "Beli, jual, tukar, dan koleksi."
+  },
+  "nft_empty_go_discover_button": {
+    "message": "Jelajahi aplikasi dan layanan di Temukan"
+  },
+  "nft_empty_header": {
+    "message": "Pembelian Anda akan ditampilkan di sini"
+  },
+  "NFT_item_id": {
+    "message": "ID item NFT"
+  },
+  "no_connected_apps": {
+    "message": "Tidak ada aplikasi yang terhubung"
+  },
+  "Old_password": {
+    "message": "Kata sandi saat ini"
+  },
+  "open": {
+    "message": "Buka"
+  },
+  "operation_not_supported": {
+    "message": "Operasi ini tidak tersedia untuk dompet ini. Pilih dompet lain dan coba lagi."
+  },
+  "page_header_history": {
+    "message": "Riwayat"
+  },
+  "page_header_purchases": {
+    "message": "Pembelian"
+  },
+  "Password": {
+    "message": "Kata sandi"
+  },
+  "PasswordChanged": {
+    "message": "Kata sandi diubah"
+  },
+  "PasswordDoNotMatch": {
+    "message": "Kata sandi tidak cocok."
+  },
+  "pinned_jettons": {
+    "message": "Disematkan"
+  },
+  "preferences_aside_dev_menu": {
+    "message": "Menu Pengembang"
+  },
+  "preferences_aside_faq": {
+    "message": "FAQ"
+  },
+  "preferences_aside_sign_out": {
+    "message": "Keluar"
+  },
+  "preferences_aside_sign_out_all": {
+    "message": "Keluar dari semua Akun"
+  },
+  "preferences_aside_theme": {
+    "message": "Tema"
+  },
+  "pro_banner_buy": {
+    "message": "Beli Pro"
+  },
+  "pro_banner_days_left": {
+    "message": "Uji coba berakhir dalam %{0, number}ays%"
+  },
+  "pro_banner_start_trial": {
+    "message": "Coba Pro secara Gratis"
+  },
+  "pro_banner_subtitle": {
+    "message": "Akses fitur dan alat canggih untuk meningkatkan pekerjaan Anda"
+  },
+  "pro_banner_title": {
+    "message": "Dapatkan lebih banyak dengan Tonkeeper Pro"
+  },
+  "pro_feature_multisend": {
+    "message": "Kirim Semua"
+  },
+  "pro_feature_multisend_description": {
+    "message": "Dengan fitur kirim semua, Anda dapat mengirim dana hingga 255 alamat sekaligus. Tonkeeper Pro menghemat waktu dan menyederhanakan proses transaksi massal."
+  },
+  "pro_features_dashboard": {
+    "message": "Di dalam Tonkeeper Pro – Dasbor"
+  },
+  "pro_features_dashboard_description": {
+    "message": "Di Dasbor, Anda akan memiliki akses ke analisis dompet. Fitur ini akan bermanfaat bagi pengguna profesional yang menggunakan Tonkeeper dalam bisnis harian mereka."
+  },
+  "pro_features_description": {
+    "message": "Langganan Tonkeeper Pro mencakup fungsionalitas dompet lanjutan, menawarkan serangkaian alat untuk mengelola cryptocurrency Anda."
+  },
+  "pro_other_features": {
+    "message": "Dan fitur keren lainnya sedang dalam proses."
+  },
+  "pro_subscription_get_pro": {
+    "message": "Dapatkan Pro"
+  },
+  "publish_message": {
+    "message": "Mempublikasikan Pesan ke Internet"
+  },
+  "receive_ton": {
+    "message": "Terima Toncoin"
+  },
+  "receive_ton_description": {
+    "message": "Kirim hanya Toncoin TON dan token\ndi jaringan TON ke alamat ini, atau\nAnda mungkin kehilangan dana Anda."
+  },
+  "receive_trc20": {
+    "message": "Terima USDT TRC20"
+  },
+  "receive_trc20_description": {
+    "message": "Kirim hanya USDT TRC20\nke alamat ini, atau Anda\nmungkin kehilangan dana Anda."
+  },
+  "recipients": {
+    "message": "Penerima"
+  },
+  "Rename": {
+    "message": "Ubah Nama"
+  },
+  "renew_nft_expiration_date": {
+    "message": "Berakhir %"
+  },
+  "renew_nft_in_progress": {
+    "message": "Perpanjangan domain sedang berlangsung…"
+  },
+  "renew_nft_renewed": {
+    "message": "Domain diperpanjang selama 1 tahun"
+  },
+  "replace": {
+    "message": "Ganti"
+  },
+  "reset_tron_cache": {
+    "message": "Reset cache Tron"
+  },
+  "save": {
+    "message": "Simpan"
+  },
+  "settings_backup_account": {
+    "message": "Cadangkan Akun"
+  },
+  "settings_backup_account_mam_description": {
+    "message": "Digunakan untuk memulihkan akses ke akun multi-wallet Anda dan semua dompet terkait"
+  },
+  "settings_backup_wallet": {
+    "message": "Cadangkan Dompet"
+  },
+  "settings_collectibles_list": {
+    "message": "Koleksi"
+  },
+  "settings_connected_apps": {
+    "message": "Aplikasi Terhubung"
+  },
+  "settings_hide_current_wallet": {
+    "message": "Sembunyikan Dompet Saat Ini"
+  },
+  "settings_ledger_indexes": {
+    "message": "Subdompet Ledger"
+  },
+  "settings_mam_add_wallet": {
+    "message": "Tambahkan Dompet Baru"
+  },
+  "settings_mam_indexes": {
+    "message": "Dompet yang Ditambahkan"
+  },
+  "settings_mam_number_wallets": {
+    "message": "%'%{'number'}' dompet"
+  },
+  "start_trial_notification_description": {
+    "message": "Koneksi Telegram hanya diperlukan untuk tujuan verifikasi bahwa Anda bukan bot."
+  },
+  "start_trial_notification_heading": {
+    "message": "Hubungkan Telegram ke Pro secara Gratis"
+  },
+  "swap_balance": {
+    "message": "Saldo"
+  },
+  "swap_best_price": {
+    "message": "Harga Terbaik"
+  },
+  "swap_blockchain_fee": {
+    "message": "Biaya Blockchain"
+  },
+  "swap_blockchain_fee_tooltip": {
+    "message": "Perkiraan biaya yang dikenakan oleh blockchain untuk memproses transaksi."
+  },
+  "swap_enter_amount": {
+    "message": "Masukkan jumlah"
+  },
+  "swap_import": {
+    "message": "Impor"
+  },
+  "swap_import_token_title": {
+    "message": "Impor token %token%?"
+  },
+  "swap_ledger_not_supported": {
+    "message": "Swap dengan dompet Ledger tidak didukung"
+  },
+  "swap_max": {
+    "message": "MAX"
+  },
+  "swap_minimum_received": {
+    "message": "Minimal diterima"
+  },
+  "swap_minimum_received_tooltip": {
+    "message": "Jumlah minimum yang akan Anda terima setelah perdagangan selesai."
+  },
+  "swap_not_enough_funds": {
+    "message": "Dana tidak cukup"
+  },
+  "swap_price_impact": {
+    "message": "Dampak Harga"
+  },
+  "swap_price_impact_too_high": {
+    "message": "Dampak harga terlalu tinggi"
+  },
+  "swap_price_impact_tooltip": {
+    "message": "Dampak swap terhadap harga pasar token setelah perdagangan selesai."
+  },
+  "swap_provider": {
+    "message": "Provider"
+  },
+  "swap_receive": {
+    "message": "Terima"
+  },
+  "swap_route": {
+    "message": "Route"
+  },
+  "swap_search": {
+    "message": "Pencarian"
+  },
+  "swap_send": {
+    "message": "Kirim"
+  },
+  "swap_settings": {
+    "message": "Pengaturan Swap"
+  },
+  "swap_slippage": {
+    "message": "Slippage"
+  },
+  "swap_slippage_description": {
+    "message": "Perbedaan maksimum yang diijinkan antara perkiraan harga dan harga sebenarnya. Jika selisih harga melebihi batas ini, swap otomatis akan dikembalikan."
+  },
+  "swap_slippage_tooltip": {
+    "message": "Perbedaan maksimum yang diperbolehkan antara harga perkiraan dan harga sebenarnya. Jika selisih harga melebihi batas ini, swap otomatis akan dikembalikan. Anda dapat mengonfigurasi pengaturan ini di menu pengaturan swap."
+  },
+  "swap_tokens": {
+    "message": "Token"
+  },
+  "swap_tokens_not_found": {
+    "message": "Token tidak ditemukan"
+  },
+  "swap_trade_is_not_available": {
+    "message": "Perdagangan tidak tersedia"
+  },
+  "swap_tx_info": {
+    "message": "Informasi Transaksi"
+  },
+  "swap_unknown_price_impact": {
+    "message": "Dampak harga tidak diketahui"
+  },
+  "swap_unknown_token_description": {
+    "message": "Token ini tidak disertakan dalam daftar token aktif. Pastikan Anda mengetahui risiko yang terkait dengan token yang diimpor."
+  },
+  "tme_linked_with_another_address_warn": {
+    "message": "Nama tersebut tidak terkait dengan alamat Dompet Anda saat ini. Hati-hati dalam melakukan transaksi menggunakan nama yang tidak dapat di konfirmasi dengan alamat Dompet Anda."
+  },
+  "tokens_hide_statistics_btn": {
+    "message": "Sembunyikan Statistik"
+  },
+  "tokens_show_statistics_btn": {
+    "message": "Tampilkan Statistik"
+  },
+  "Toncoin": {
+    "message": "Toncoin"
+  },
+  "ton_login_title_web": {
+    "message": "Hubungkan ke '%{'name'}'?"
+  },
+  "Ton_page_description": {
+    "message": "TON adalah blockchain layer-1 yang sepenuhnya terdesentralisasi yang dirancang oleh Telegram untuk mendukung miliaran pengguna. Menawarkan kecepatan dalam transaksi dengan biaya yang murah dan aplikasi yang mudah digunakan serta ramah lingkungan."
+  },
+  "total": {
+    "message": "Total"
+  },
+  "total_balance": {
+    "message": "Total saldo"
+  },
+  "touch_id_unlock_wallet": {
+    "message": "membuka kunci dompet"
+  },
+  "transaction_call_date": {
+    "message": "Panggilan Kontrak %'%{'date'}'"
+  },
+  "transaction_type_mint": {
+    "message": "Cetak"
+  },
+  "transaction_type_purchase": {
+    "message": "Pembelian"
+  },
+  "try_again": {
+    "message": "Coba Lagi"
+  },
+  "txActions_USDT_transfer": {
+    "message": "Kirim USDT"
+  },
+  "Unexpected_QR_Code": {
+    "message": "Kode QR tidak sesuai"
+  },
+  "Unlock": {
+    "message": "Membuka Kunci"
+  },
+  "update": {
+    "message": "Perbarui"
+  },
+  "update_ledger_error": {
+    "message": "Pastikan perangkat lunak Ledger Anda diperbarui"
+  },
+  "upload_file": {
+    "message": "Unggah File"
+  },
+  "wallet_address": {
+    "message": "Alamat Dompet"
+  },
+  "wallet_aside_collectibles": {
+    "message": "Koleksi"
+  },
+  "wallet_aside_domains": {
+    "message": "Domain"
+  },
+  "wallet_aside_history": {
+    "message": "Riwayat"
+  },
+  "wallet_aside_purchases": {
+    "message": "Pembelian"
+  },
+  "wallet_aside_settings": {
+    "message": "Pengaturan"
+  },
+  "wallet_aside_tokens": {
+    "message": "Token"
+  },
+  "wallet_multi_send": {
+    "message": "Kirim Semua"
+  },
+  "Wallet_name": {
+    "message": "Nama Dompet"
+  },
+  "wallet_version_and_tokens": {
+    "message": ", token"
+  },
+  "battery_description_other_few": {
+    "message": "Your battery has %{count} charges"
+  },
+  "battery_description_other_many": {
+    "message": "Your battery has %{count} charges"
+  },
+  "battery_description_other_one": {
+    "message": "Your battery has %{count} charge"
+  },
+  "battery_description_other_other": {
+    "message": "Your battery has %{count} charges"
+  },
+  "battery_packages_title_large": {
+    "message": "Large"
+  },
+  "battery_packages_title_medium": {
+    "message": "Medium"
+  },
+  "battery_packages_title_small": {
+    "message": "Small"
+  },
+  "confirmSendModal_title_multiwallets": {
+    "message": "Action for %{walletName}"
+  },
+  "it_expires_on": {
+    "message": "It expires on"
+  },
+  "pro_subscription_is_active": {
+    "message": "Pro Subscription is active."
+  },
+  "pro_trial_is_active": {
+    "message": "Pro Trial is active."
+  },
+  "purchases_screen_title": {
+    "message": "Purchases"
+  },
+  "select_wallet_for_authorization": {
+    "message": "Select Wallet for authorization"
+  },
+  "settings_delete_alert_button": {
+    "message": "Delete account and data"
+  },
+  "settings_delete_alert_caption": {
+    "message": "This action will delete your account and all data from this application."
+  },
+  "settings_delete_alert_title": {
+    "message": "Are you sure you want to delete your account?"
+  },
+  "w5_stories_4_description": {
+    "message": "W5 standard is not final. Gasless transactions are offered as an experimental feature to test how it works. Do not move all your assets to the W5 wallet until final release."
+  },
+  "account_is_already_added_action": {
+    "message": "Open wallet"
+  },
+  "account_is_already_added_label": {
+    "message": "This wallet is already added as"
+  },
+  "accounts_delete_folder": {
+    "message": "Ungroup Folder"
+  },
+  "accounts_manage_folder": {
+    "message": "Edit Folder"
+  },
+  "accounts_manage_folder_move_from_other": {
+    "message": "Move from other Folders"
+  },
+  "accounts_manage_folder_name": {
+    "message": "Folder Name"
+  },
+  "accounts_new_folder": {
+    "message": "New Folder"
+  },
+  "add_wallet_existing_multisig_description": {
+    "message": "%{number} wallets managed by your wallet list"
+  },
+  "add_wallet_existing_multisig_title": {
+    "message": "Existing Multisig Wallet"
+  },
+  "add_wallet_group_hardware_title": {
+    "message": "Hardware Wallets"
+  },
+  "add_wallet_group_other_options": {
+    "message": "Other Options"
+  },
+  "add_wallet_new_multisig_description": {
+    "message": "For joint management and protection of cryptocurrency funds"
+  },
+  "add_wallet_new_multisig_title": {
+    "message": "New Multisig Wallet"
+  },
+  "battery_buy_error_min": {
+    "message": "Min: %{amount}"
+  },
+  "battery_buy_error_not_enough_balance": {
+    "message": "Not enough funds"
+  },
+  "battery_buy_remaining": {
+    "message": "Remaining: %{value}"
+  },
+  "battery_capabilities_description": {
+    "message": "Swap via Tonkeeper, send tokens and unstake TON."
+  },
+  "battery_capabilities_supported_transactions_label": {
+    "message": "Supported Transactions"
+  },
+  "battery_charges": {
+    "message": "%{charges} charges"
+  },
+  "battery_info_will_be_paid": {
+    "message": "Will be paid: %{items}"
+  },
+  "battery_n_battery_charges": {
+    "message": "%{charges} battery charges"
+  },
+  "battery_out_of_num_available": {
+    "message": "out of %{number} available"
+  },
+  "battery_refunds_link": {
+    "message": "Recharges and Refunds"
+  },
+  "battery_settings_nft_price": {
+    "message": "≈ %{charges} charges per transfer"
+  },
+  "battery_settings_nft_title": {
+    "message": "NFT transfers"
+  },
+  "battery_settings_swap_price": {
+    "message": "≈ %{charges} charges per swap"
+  },
+  "battery_settings_swap_title": {
+    "message": "Swaps via Tonkeeper"
+  },
+  "battery_settings_token_transfer_price": {
+    "message": "≈ %{charges} charges per transfer"
+  },
+  "battery_settings_token_transfer_title": {
+    "message": "Token transfer"
+  },
+  "bring_all_to_front": {
+    "message": "Bring All to Front"
+  },
+  "check_for_updates": {
+    "message": "Check for Updates"
+  },
+  "confirm_discard_btn_continue_editing": {
+    "message": "Continue Editing"
+  },
+  "confirm_discard_btn_discard": {
+    "message": "Discard Changes"
+  },
+  "confirm_discard_description": {
+    "message": "You have unsaved changes. If you close this window, your progress will be lost. Do you want to continue?"
+  },
+  "confirm_discard_title": {
+    "message": "Are you sure you want to leave?"
+  },
+  "confirm_error_insufficient_balance": {
+    "message": "Wallet balance %{balance} is not enough. Minimum balance required: %{required}."
+  },
+  "confirm_sending_sign": {
+    "message": "Sign"
+  },
+  "Copy": {
+    "message": "Copy"
+  },
+  "create_multisig_add_participant": {
+    "message": "Add Participant"
+  },
+  "create_multisig_await_deployment_description": {
+    "message": "It may take couple of minutes."
+  },
+  "create_multisig_await_deployment_help_explorer_button": {
+    "message": "View contract on explorer"
+  },
+  "create_multisig_await_deployment_help_support_button": {
+    "message": "Get Help"
+  },
+  "create_multisig_await_deployment_help_title": {
+    "message": "Nothing happened?"
+  },
+  "create_multisig_await_deployment_title": {
+    "message": "Awaiting your wallet deployment"
+  },
+  "create_multisig_can_change_hint": {
+    "message": "You can always change the number of participants, their roles, and the number of signatures required for a successful transaction."
+  },
+  "create_multisig_create_wallet": {
+    "message": "Create Wallet"
+  },
+  "create_multisig_duplicated_address_error": {
+    "message": "Address has already been added"
+  },
+  "create_multisig_error_already_deployed": {
+    "message": "Such multisig contract already exists. Try using another wallet to deploy the multisig contract."
+  },
+  "create_multisig_invalid_address_error": {
+    "message": "Invalid address"
+  },
+  "create_multisig_participants": {
+    "message": "Participants"
+  },
+  "create_multisig_quorum": {
+    "message": "Quorum"
+  },
+  "create_multisig_quorum_invalid_number_participants_error": {
+    "message": "Invalid number of participants"
+  },
+  "create_multisig_quorum_participants": {
+    "message": "participants"
+  },
+  "create_multisig_quorum_zero_participants_error": {
+    "message": "At least one participant is required"
+  },
+  "create_multisig_what_are_signers": {
+    "message": "All participants can confirm transactions and propose changes, such as adding or removing participants."
+  },
+  "Cut": {
+    "message": "Cut"
+  },
+  "Edit": {
+    "message": "Edit"
+  },
+  "force_reload": {
+    "message": "Force Reload"
+  },
+  "hide_others": {
+    "message": "Hide Others"
+  },
+  "hide_tonkeeper_pro": {
+    "message": "Hide Tonkeeper Pro"
+  },
+  "history_filters_all_assets": {
+    "message": "All Tokens"
+  },
+  "history_filters_hide_spam": {
+    "message": "Hide Spam"
+  },
+  "history_filters_hide_spam_description": {
+    "message": "Filter is not reset on restart"
+  },
+  "history_filters_initiator": {
+    "message": "Initiator"
+  },
+  "import_chose_mnemonic_option_bip39": {
+    "message": "Bip39 Mnemonic"
+  },
+  "import_chose_mnemonic_option_tonKeychain": {
+    "message": "Ton Keychain"
+  },
+  "import_chose_mnemonic_option_tonMnemonic": {
+    "message": "Standard Ton Mnemonic"
+  },
+  "import_chose_mnemonic_type_description": {
+    "message": "This secret key can be used for different types of wallets. Choose the one you need from the list below."
+  },
+  "import_chose_mnemonic_type_title": {
+    "message": "Chose Secret Key Type"
+  },
+  "import_existing_wallet_description_extended": {
+    "message": "Import wallet with a 24 or 12 secret recovery words"
+  },
+  "import_wallet_12_words": {
+    "message": "12 words"
+  },
+  "import_wallet_24_words": {
+    "message": "24 words"
+  },
+  "import_wallet_caption_12": {
+    "message": "To restore access to your wallet, enter the 12 secret recovery words given to you when you created your wallet."
+  },
+  "Minimize": {
+    "message": "Minimize"
+  },
+  "multisig_add_description": {
+    "message": "Specify the participants who can manage this wallet."
+  },
+  "multisig_add_title": {
+    "message": "Set up your wallet"
+  },
+  "multisig_config_diff_add_participant": {
+    "message": "Add Participant"
+  },
+  "multisig_config_diff_quorum_updates": {
+    "message": "Quorum Update"
+  },
+  "multisig_config_diff_remove_participant": {
+    "message": "Remove Participant"
+  },
+  "multisig_create_order_title": {
+    "message": "New Multi Signature Request"
+  },
+  "multisig_deploy": {
+    "message": "Deploy Multisig"
+  },
+  "multisig_edit_submit_hint": {
+    "message": "Changes will require signatures from %{number} other participants."
+  },
+  "multisig_edit_suggest_changes": {
+    "message": "Suggest Changes"
+  },
+  "multisig_lifetime_1440_minutes": {
+    "message": "24 hours"
+  },
+  "multisig_lifetime_30_minutes": {
+    "message": "30 minutes"
+  },
+  "multisig_lifetime_360_minutes": {
+    "message": "6 hours"
+  },
+  "multisig_lifetime_60_minutes": {
+    "message": "1 hour"
+  },
+  "multisig_lifetime_720_minutes": {
+    "message": "12 hours"
+  },
+  "multisig_order_details": {
+    "message": "Request details"
+  },
+  "multisig_order_details_explore": {
+    "message": "Request details"
+  },
+  "multisig_order_details_pending_signatures": {
+    "message": "Pending Signatures"
+  },
+  "multisig_order_details_signed_wallets": {
+    "message": "Signed Wallets"
+  },
+  "multisig_order_notification_title": {
+    "message": "Multi Signature Request"
+  },
+  "multisig_order_select_time_description": {
+    "message": "Select time for quorum to sign your transaction."
+  },
+  "multisig_orders_th_created": {
+    "message": "Created"
+  },
+  "multisig_orders_th_send": {
+    "message": "Send"
+  },
+  "multisig_orders_th_signatures": {
+    "message": "Signatures"
+  },
+  "multisig_orders_th_status": {
+    "message": "Status"
+  },
+  "multisig_order_view": {
+    "message": "View"
+  },
+  "multisig_participant_you": {
+    "message": "You:"
+  },
+  "multisig_signed_label": {
+    "message": "Signers"
+  },
+  "multisig_signed_value": {
+    "message": "%{signed} of %{total} signers"
+  },
+  "multisig_signed_value_short": {
+    "message": "%{signed} of %{total}"
+  },
+  "multisig_status_completed": {
+    "message": "Completed"
+  },
+  "multisig_status_expired": {
+    "message": "Expired"
+  },
+  "multisig_status_label": {
+    "message": "Status"
+  },
+  "multisig_status_progress": {
+    "message": "In Progress"
+  },
+  "multisig_time_left": {
+    "message": "Time Left"
+  },
+  "multisig_time_to_sign_transaction": {
+    "message": "Time to sign a transaction"
+  },
+  "multisig_update_config_confirm_title": {
+    "message": "Confirm update multisig parameters"
+  },
+  "multisig_you_have_signed_the_request": {
+    "message": "You have signed this Request"
+  },
+  "new_transfer_order_button": {
+    "message": "New Transfer Request"
+  },
+  "no_multisig_description": {
+    "message": "Only multisigs linked to the current Ton wallet are displayed"
+  },
+  "no_multisig_heading": {
+    "message": "Your multisig wallets will be shown here"
+  },
+  "no_multisig_learn_more": {
+    "message": "Learn more about multisig"
+  },
+  "no_multisig_orders_description": {
+    "message": "All requests from all participants of the multisig wallet are displayed."
+  },
+  "no_multisig_orders_heading": {
+    "message": "Your multisig wallet's requests will be shown here"
+  },
+  "order_send_token": {
+    "message": "Send Token"
+  },
+  "order_send_token_and_ton": {
+    "message": "Send TON and Token"
+  },
+  "order_send_ton": {
+    "message": "Send TON"
+  },
+  "quit_tonkeeper_pro": {
+    "message": "Quit Tonkeeper Pro"
+  },
+  "Redo": {
+    "message": "Redo"
+  },
+  "Reload": {
+    "message": "Reload"
+  },
+  "secret_words_account_title": {
+    "message": "Your Account Recovery Phrase"
+  },
+  "secret_words_caption_12": {
+    "message": "Write down these 12 words in the order given below and store them in a secret, safe place."
+  },
+  "select_all": {
+    "message": "Select All"
+  },
+  "send_change_fee_payment_method": {
+    "message": "Change Payment Method"
+  },
+  "settings_hide_multisig": {
+    "message": "Hide Multisig Wallet"
+  },
+  "settings_mam_add_wallet_with_pro": {
+    "message": "Add More with Pro Subscription"
+  },
+  "settings_multisig_settings": {
+    "message": "Multisig Settings"
+  },
+  "show": {
+    "message": "Show"
+  },
+  "show_all": {
+    "message": "Show All"
+  },
+  "toggle_developer_tools": {
+    "message": "Toggle Developer Tools"
+  },
+  "toggle_full_screen": {
+    "message": "Toggle Full Screen"
+  },
+  "tonkeeper_pro_authorization": {
+    "message": "To access the Pro features, server authorization is required via Ton Proof. Please ensure you import a wallet that supports this technology. This step is crucial for enabling the full range of Pro functionalities securely and effectively."
+  },
+  "Undo": {
+    "message": "Undo"
+  },
+  "View": {
+    "message": "View"
+  },
+  "view_on_tonviewer": {
+    "message": "View on Tonviewer"
+  },
+  "wallet_aside_multisig_wallets": {
+    "message": "Multisig Wallets"
+  },
+  "wallet_aside_orders": {
+    "message": "Requests"
+  },
+  "Window": {
+    "message": "Window"
+  }
+}

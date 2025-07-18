@@ -63,10 +63,17 @@ class U2DeviceManager:
     def _connect_with_retry(self, device_id: str, auto_setup: bool) -> bool:
         """Kết nối U2 với retry và auto-setup"""
         try:
-            # Bước 1: Thử kết nối trực tiếp
+            # Tăng timeout lên 60 giây
+            import uiautomator2 as u2
+            # Set timeout
+            u2.DEBUG = True  # Enable debug logs
+            
             logger.info(f"Attempting direct U2 connection to {device_id}...")
             
-            d = u2.connect(device_id)
+            # Thêm timeout setting
+            d = u2.connect(device_id, timeout=60)
+            
+            # d = u2.connect(device_id)
             
             # Test connection bằng cách lấy device info
             device_info = d.device_info

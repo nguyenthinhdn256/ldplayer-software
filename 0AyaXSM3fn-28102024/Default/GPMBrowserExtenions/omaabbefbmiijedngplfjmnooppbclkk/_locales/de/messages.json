@@ -1,0 +1,4751 @@
+{
+  "about_risk_modal_description": {
+    "message": "Das ist die gesamte Summe der Token, die von Ihrem Wallet gesendet werden. Rückerstattungen sind in der Gesamtsumme nicht enthalten."
+  },
+  "about_risk_modal_description_with_nft": {
+    "message": "Das ist die gesamte Summe der Token, die von Ihrem Wallet gesendet werden. Rückerstattungen sind in der Gesamtsumme nicht enthalten."
+  },
+  "about_risk_modal_ok_button": {
+    "message": "OK"
+  },
+  "about_ton": {
+    "message": "TON ist eine vollständig dezentralisierte Layer-1-Blockchain, die von Telegram entwickelt wurde, um Milliarden von Benutzern zu unterstützen. Sie bietet ultraschnelle Transaktionen, geringe Gebühren, benutzerfreundliche Apps und ist umweltfreundlich."
+  },
+  "access_confirmation_logout": {
+    "message": "Abmelden"
+  },
+  "access_confirmation_reset": {
+    "message": "Zurücksetzen"
+  },
+  "access_confirmation_title": {
+    "message": "Passwort eingeben"
+  },
+  "access_confirmation_update_biometry": {
+    "message": "Geben Sie das Passwort ein, um die biometrischen Authentifizierungsdaten zu verwenden"
+  },
+  "access_denied": {
+    "message": "Zugriff verweigert"
+  },
+  "account_deleted": {
+    "message": "Das Konto wurde gelöscht"
+  },
+  "activityActionModal_bid": {
+    "message": "Gebot"
+  },
+  "activityActionModal_burned": {
+    "message": "Verbrannt"
+  },
+  "activityActionModal_call_contract": {
+    "message": "Call Vertrag"
+  },
+  "activityActionModal_deposit": {
+    "message": "Einzahlung"
+  },
+  "activityActionModal_purchase": {
+    "message": "Kauf"
+  },
+  "activityActionModal_received": {
+    "message": "Empfangt"
+  },
+  "activityActionModal_sent": {
+    "message": "Gesendet"
+  },
+  "activityActionModal_swapped": {
+    "message": "Getauscht"
+  },
+  "activityActionModal_time_on": {
+    "message": "am %{time}"
+  },
+  "activityActionModal_withdraw": {
+    "message": "Auszahlen"
+  },
+  "activityActionModal_withdrawal_request": {
+    "message": "Auszahlungsanfrage"
+  },
+  "activity_buy_toncoin_btn": {
+    "message": "Kaufe Toncoin"
+  },
+  "activity_empty_transaction_caption": {
+    "message": "Mach deine erste Transaktion!"
+  },
+  "activity_empty_transaction_title": {
+    "message": "Der Verlauf wird hier angezeigt"
+  },
+  "activity_failed_transaction": {
+    "message": "Transaktion fehlgeschlagt"
+  },
+  "activity_receive_btn": {
+    "message": "Empfang"
+  },
+  "activity_received": {
+    "message": "Empfangen"
+  },
+  "activity_screen_title": {
+    "message": "Aktivität"
+  },
+  "activity_sent": {
+    "message": "Gesendet"
+  },
+  "add_edit_favorite_address_label": {
+    "message": "Adresse"
+  },
+  "add_edit_favorite_add_title": {
+    "message": "Favorit hinzufügen"
+  },
+  "add_edit_favorite_delete": {
+    "message": "Löschen"
+  },
+  "add_edit_favorite_edit_title": {
+    "message": "Favorit bearbeiten"
+  },
+  "add_edit_favorite_name_placeholder": {
+    "message": "Name"
+  },
+  "add_edit_favorite_save": {
+    "message": "Speichern"
+  },
+  "add_other_coins": {
+    "message": "Andere Kryptowährungen hinzufügen"
+  },
+  "address_copied": {
+    "message": "Adresse kopiert"
+  },
+  "address_update_first_option": {
+    "message": "Höchstwahrscheinlich wird das Ziel-Wallet bereits aktiv verwendet und Sie werden keinen Unterschied bemerken."
+  },
+  "address_update_learn_more": {
+    "message": "Mehr erfahren"
+  },
+  "address_update_new_style": {
+    "message": "Neue Adresse"
+  },
+  "address_update_notification_desc_did_change": {
+    "message": "Ihre Wallet-Adresse wurde auf das UQ-Format aktualisiert. Die alte Adresse funktioniert weiterhin."
+  },
+  "address_update_notification_desc_will_change": {
+    "message": "Am 5. Oktober wird Ihre Wallet-Adresse auf das UQ-Format aktualisiert, was einfach besser ist. Die alte Adresse funktioniert auch weiterhin. Sie müssen nichts tun."
+  },
+  "address_update_old_style": {
+    "message": "Alte Adresse"
+  },
+  "address_update_post_dates": {
+    "message": "\n5 October, 2023: Alle Adressen ändern sich zum UQ-Format in Tonkeeper.\n\n1 January, 2024: Tonkeeper hört auf, den Vertragsstatus zu überprüfen und verwendet das „bounceable“-Flag in der Adresse. Münzen, die an nicht veröffentlichte Verträge mit einer EQ-Adresse gesendet werden, werden an den Absender zurückgeschickt."
+  },
+  "address_update_post_published_date": {
+    "message": "Gesendet: 27 September, 2023"
+  },
+  "address_update_post_rest": {
+    "message": "Auf der TON-Blockchain gibt es zwei Adressarten, von denen bisher nur eine für Apps und Wallets verwendet wurde.\n\nDas EQ-Format ist am besten für Smart Contracts geeignet, die eingehende Gelder verarbeiten. Wenn ein intelligenter Vertrag noch nicht veröffentlicht ist - d.h. der Code ist nicht auf der Blockchain - dann werden die TONs, die an diese Adresse gesendet werden, an den Absender zurückgeschickt. Und das ist eine Sicherheitsfunktion: Wenn ein Fehler auftritt, werden die TONs zurückgeschickt.\n\nDas UQ-Format ist am besten für Wallets geeignet. Münzen werden nie zurückgeschickt, weil Wallets einfach dazu gedacht sind, Geld zu speichern. Jedes Wallet beginnt als einfache Adresse ohne Code auf der Blockchain. Es würde also keinen Sinn machen, wenn Münzen zurückspringen würden.\n\nIn diesem Jahr stellen wir die Wallets auf das besser geeignete UQ-Format um. Wenn Sie weiterhin Geld an eine alte EQ-Adresse senden, die Ihnen jemand gegeben hat, gibt es zwei Möglichkeiten:\n"
+  },
+  "address_update_post_top": {
+    "message": "Bis zum Ende dieses Jahres wird das gesamte TON-Netzwerk Wallet-Adressen anders anzeigen. Die neue Adresse beginnt mit UQ anstelle von EQ. Und die letzten vier Buchstaben werden sich ebenfalls ändern. Die alte Adresse funktioniert weiterhin und leitet zur gleichen Wallet weiter. Dies hat keinerlei Auswirkungen auf die Sicherheit der in Ihrer Wallet gespeicherten Gelder."
+  },
+  "address_update_second_option": {
+    "message": "Es ist unwahrscheinlicher, dass das Wallet noch nie für Zahlungen verwendet wurde. Und Tonkeeper wird nächstes Jahr keine Münzen an diese Adresse senden. Sie müssen den Empfänger um eine neue UQ-Adresse bitten."
+  },
+  "address_update_title": {
+    "message": "Addresse ändern"
+  },
+  "address_update_why_change": {
+    "message": "Warum ändern?"
+  },
+  "address_update_your_wallet": {
+    "message": "Ihr Wallet"
+  },
+  "add_wallet": {
+    "message": "Fügen Sie das Wallet hinzu"
+  },
+  "add_wallet_modal_create_subtitle": {
+    "message": "Erstellen Sie ein neues Wallet"
+  },
+  "add_wallet_modal_create_title": {
+    "message": "Neues Wallet"
+  },
+  "add_wallet_modal_import_subtitle": {
+    "message": "Wählen Sie aus den folgenden Optionen."
+  },
+  "add_wallet_modal_import_title": {
+    "message": "Wallet importieren"
+  },
+  "add_wallet_modal_ledger_subtitle": {
+    "message": "Hardware-Modul, Bluetooth, limitierte TON Funktionen"
+  },
+  "add_wallet_modal_ledger_title": {
+    "message": "Verbinden mit Ledger"
+  },
+  "add_wallet_modal_other_options": {
+    "message": "Andere Optionen"
+  },
+  "add_wallet_modal_signer_subtitle": {
+    "message": "Komplett offline, air-gapped, alle TON Funktionen"
+  },
+  "add_wallet_modal_signer_title": {
+    "message": "Verbinden mit Signer"
+  },
+  "add_wallet_modal_subtitle": {
+    "message": "Erstellen Sie ein neues Wallet oder fügen Sie ein bestehendes hinzu."
+  },
+  "add_wallet_modal_testnet_subtitle": {
+    "message": "Importieren Sie ein Wallet mit 24 geheimen Wörtern zu Testnet"
+  },
+  "add_wallet_modal_testnet_title": {
+    "message": "Testnet Account"
+  },
+  "add_wallet_modal_title": {
+    "message": "Fügen Sie Wallet hinzu"
+  },
+  "add_wallet_modal_watch_only_subtitle": {
+    "message": "Beobachtung von Wallet-Aktivitäten ohne Wiederherstellungsphrase."
+  },
+  "add_wallet_modal_watch_only_title": {
+    "message": "Beobachtungskonto"
+  },
+  "add_watch_only_subtitle": {
+    "message": "Beobachtung von Wallet-Aktivitäten ohne Wiederherstellungsphrase. Sie werden über alle Transaktionen von diesem Wallet benachrichtigt."
+  },
+  "add_watch_only_title": {
+    "message": "Beobachtungsaccount"
+  },
+  "add_watch_only_wallet_not_found": {
+    "message": "Wallet-Addresse nicht gefunden"
+  },
+  "all_regions": {
+    "message": "Alle Regionen"
+  },
+  "appearance_accent_name_andromeda": {
+    "message": "Andromeda"
+  },
+  "appearance_accent_name_arctic": {
+    "message": "Antarktik"
+  },
+  "appearance_accent_name_azure": {
+    "message": "Azure"
+  },
+  "appearance_accent_name_coral": {
+    "message": "Koralle"
+  },
+  "appearance_accent_name_cosmos": {
+    "message": "Kosmos"
+  },
+  "appearance_accent_name_default": {
+    "message": "Tonkeeper"
+  },
+  "appearance_accent_name_flamingo": {
+    "message": "Flamingo"
+  },
+  "appearance_accent_name_fluid": {
+    "message": "Fluid"
+  },
+  "appearance_accent_name_galaxy": {
+    "message": "Galaxie"
+  },
+  "appearance_accent_name_iris": {
+    "message": "Iris"
+  },
+  "appearance_accent_name_marine": {
+    "message": "Marine"
+  },
+  "appearance_accent_name_ocean": {
+    "message": "Ozean"
+  },
+  "appearance_accent_name_sky": {
+    "message": "Himmel"
+  },
+  "appearance_confirm": {
+    "message": "Speichern"
+  },
+  "appearance_description": {
+    "message": "Das TON Diamonds NFT wird Ihr Wallet bunter und einzigartiger machen."
+  },
+  "appearance_title": {
+    "message": "Schema"
+  },
+  "app_name": {
+    "message": "Tonkeeper"
+  },
+  "approval_accept": {
+    "message": "Akzeptieren"
+  },
+  "approval_accepted": {
+    "message": "Akzeptiert"
+  },
+  "approval_accepted_at_collection": {
+    "message": "Akzeptiert am %{date}"
+  },
+  "approval_accepted_at_token": {
+    "message": "Akzeptiert am %{date}"
+  },
+  "approval_accepted_collection": {
+    "message": "Akzeptierte Sammlung"
+  },
+  "approval_accepted_token": {
+    "message": "Akzeptierter Token"
+  },
+  "approval_approve_all": {
+    "message": "Alles bestätigen"
+  },
+  "approval_approve_collection_many": {
+    "message": "Bestätigen Sie eingehende Token aus der \"%{collection}\" -Sammlung"
+  },
+  "approval_approve_collection_one": {
+    "message": "Bestätigen Sie eingehendes Token aus der \"%{collection}\" -Sammlung"
+  },
+  "approval_approve_many": {
+    "message": "%{count} eingehende Token genehmigen"
+  },
+  "approval_approve_many_one": {
+    "message": "Ein eingehendes Token genehmigen"
+  },
+  "approval_approve_token": {
+    "message": "Eingehenden Token „%{name}“ genehmigen"
+  },
+  "approval_approve_two_collections": {
+    "message": "Eingehende Token aus \"%{collection1}\", \"%{collection2}\"-Sammlungen genehmigen"
+  },
+  "approval_approve_two_tokens": {
+    "message": "Eingehende Token \"%{name1}\" und \"%{name2}\" genehmigen"
+  },
+  "approval_blacklisted_collection": {
+    "message": "Verbotene Sammlung"
+  },
+  "approval_blacklisted_token": {
+    "message": "Verbotener Token"
+  },
+  "approval_decline": {
+    "message": "Ablehnen"
+  },
+  "approval_declined": {
+    "message": "Abgelehnt"
+  },
+  "approval_declined_at_collection": {
+    "message": "Abgelehnt am %{date}"
+  },
+  "approval_declined_at_token": {
+    "message": "Abgelehnt am %{date}"
+  },
+  "approval_details_collection": {
+    "message": "Sammlungsdetails"
+  },
+  "approval_details_token": {
+    "message": "Tokendetails"
+  },
+  "approval_id_collection": {
+    "message": "Sammlungs-ID"
+  },
+  "approval_id_token": {
+    "message": "Token-ID"
+  },
+  "approval_manage_tokens": {
+    "message": "Token verwalten"
+  },
+  "approval_move_to_accepted": {
+    "message": "Zu „Akzeptiert“ verschieben"
+  },
+  "approval_move_to_accepted_collection": {
+    "message": "Sammlung im Wallet anzeigen"
+  },
+  "approval_move_to_accepted_token": {
+    "message": "Token im Wallet anzeigen"
+  },
+  "approval_move_to_declined": {
+    "message": "Zu „Abgelehnt“ verschieben"
+  },
+  "approval_move_to_declined_collection": {
+    "message": "Sammlung aus Wallet ausblenden"
+  },
+  "approval_move_to_declined_token": {
+    "message": "Token aus Wallet ausblenden"
+  },
+  "approval_name": {
+    "message": "Name"
+  },
+  "approval_not_spam": {
+    "message": "Kein Spam"
+  },
+  "approval_pending": {
+    "message": "Anhängig"
+  },
+  "approval_show_all": {
+    "message": "Alle anzeigen"
+  },
+  "approval_single_token": {
+    "message": "Einziger Token"
+  },
+  "approval_spam": {
+    "message": "Spam"
+  },
+  "approval_token_copied": {
+    "message": "Token ID kopiert"
+  },
+  "approval_token_count_one": {
+    "message": "%{count} Token"
+  },
+  "approval_token_count_other": {
+    "message": "%{count} Token"
+  },
+  "approval_unverified_token": {
+    "message": "Unverifizierter Token"
+  },
+  "approval_verify_collection": {
+    "message": "Verifizieren Sie die Sammlung"
+  },
+  "approval_verify_description_collection": {
+    "message": "Diese Tokens stammen von einem unbekannten Herausgeber. Um Fälschungen zu erkennen, überprüfen Sie die Sammlungs-ID mit der offiziellen Quelle des Herausgebers. Sie können die Sichtbarkeit der Tokens später in den Einstellungen ändern."
+  },
+  "approval_verify_description_token": {
+    "message": "Dieser Token stammt von einem unbekannten Herausgeber. Um Fälschungen zu erkennen, überprüfen Sie die Token-ID mit der offiziellen Quelle des Herausgebers. Sie können die Sichtbarkeit des Tokens später in den Einstellungen ändern."
+  },
+  "approval_verify_token": {
+    "message": "Verifizieren Sie Token"
+  },
+  "approval_whitelisted_collection": {
+    "message": "Erlaubte Sammlung"
+  },
+  "approval_whitelisted_token": {
+    "message": "Erlaubte Token"
+  },
+  "auth_failed": {
+    "message": "Authentifizierung ausgefallen"
+  },
+  "backup_check_caption": {
+    "message": "Lassen Sie uns, bitte, sehen, ob Sie alles richtig abgeschrieben haben. Geben Sie die Wörter %{one}, %{two} und %{three} ein."
+  },
+  "backup_check_done_button": {
+    "message": "Fertig"
+  },
+  "backup_check_title": {
+    "message": "Backup überprüfen"
+  },
+  "backup_screen_backup_warning": {
+    "message": "Ihr Guthaben beträgt %{totalFiat} und wird nur durch eine Wiederherstellungsphrase geschützt, die Sie noch nicht aufgeschrieben haben. Sichern Sie die Phrase, um zu verhindern, dass Sie bei Problemen mit dem Gerät Geld verlieren."
+  },
+  "backup_screen_last_backup_time": {
+    "message": "Letztes Backup am %{time}"
+  },
+  "backup_screen_manual_backup_on": {
+    "message": "Manuelles Backup On"
+  },
+  "backup_screen_manual_button": {
+    "message": "Manuell sichern"
+  },
+  "backup_screen_manual_caption": {
+    "message": "Sichern Sie Ihr Wallet manuell, indem Sie die Wiederherstellungsphrase aufschreiben."
+  },
+  "backup_screen_manual_title": {
+    "message": "Manuell"
+  },
+  "backup_screen_show_recovery_phrase": {
+    "message": "Wiederherstellungsphrase anzeigen"
+  },
+  "backup_screen_title": {
+    "message": "Backup"
+  },
+  "backup_warning_cancel_button": {
+    "message": "Abbrechen"
+  },
+  "backup_warning_caption": {
+    "message": "Bitte lesen Sie die folgenden Informationen sorgfältig durch, bevor Sie Ihre Wiederherstellungsphrase anzeigen."
+  },
+  "backup_warning_continue_button": {
+    "message": "Weiter"
+  },
+  "backup_warning_p1": {
+    "message": "Geben Sie Ihre Wiederherstellungsphrase NIEMALS an einem anderen Ort als Tonkeeper ein, um auf Ihr Wallet zuzugreifen."
+  },
+  "backup_warning_p2": {
+    "message": "Der Tonkeeper Support wird Sie NIEMALS nach Ihrer Wiederherstellungsphrase fragen."
+  },
+  "backup_warning_p3": {
+    "message": "JEDER mit ihrer Wiederherstellungsphrase hatt ABSOLUTEN Zugriff zu ihrem Wallet und kann PROBLEMLOS all ihre Geld stehlen."
+  },
+  "backup_warning_title": {
+    "message": "ACHTUNG!"
+  },
+  "balances_setup_wallet": {
+    "message": "Wallet einrichten"
+  },
+  "battery_description_empty": {
+    "message": "Tausche und sende Token und NFTs."
+  },
+  "battery_description_less_10": {
+    "message": "Sie haben genug Batterieladung für weniger als 10 Transaktionen."
+  },
+  "battery_description_other": {
+    "message": "Sie haben genug Batterieladung für mehr als %{cnt} Transaktionen."
+  },
+  "battery_description_other_few": {
+    "message": "Ihre Batterie hat nur %{count} Ladungen"
+  },
+  "battery_description_other_many": {
+    "message": "Ihre Batterie hat %{count} Ladungen"
+  },
+  "battery_description_other_one": {
+    "message": "Ihre Batterie hat nur %{count} Ladung"
+  },
+  "battery_description_other_other": {
+    "message": "Ihre Batterie hat %{count} Ladungen"
+  },
+  "battery_max_input_amount": {
+    "message": "Maximale Eingabemenge ist %{amount}"
+  },
+  "battery_ok": {
+    "message": "OK"
+  },
+  "battery_other_ways_by_crypto_subtitle": {
+    "message": "Mit %{methods}"
+  },
+  "battery_other_ways_by_crypto_title": {
+    "message": "Mit %{symbol} aufladen"
+  },
+  "battery_other_ways_gift_subtitle": {
+    "message": "Teilen Sie mit Freunden"
+  },
+  "battery_other_ways_gift_title": {
+    "message": "Batterie Geschenk"
+  },
+  "battery_other_ways_promo_subtitle": {
+    "message": "Sie haben Glück"
+  },
+  "battery_other_ways_promo_title": {
+    "message": "Geben Sie Ihren Aktionscode ein"
+  },
+  "battery_packages_buy": {
+    "message": "Kaufen"
+  },
+  "battery_packages_disclaimer": {
+    "message": "Eine Ladung deckt die durchschnittliche Transaktionsgebühr ab. Einige Transaktionen können mehr kosten."
+  },
+  "battery_packages_ok": {
+    "message": "OK"
+  },
+  "battery_packages_refilled": {
+    "message": "Ihre Batterie wurde aufgeladen"
+  },
+  "battery_packages_refund": {
+    "message": "Rückerstattung"
+  },
+  "battery_packages_restore": {
+    "message": "Einkäufe wiederherstellen"
+  },
+  "battery_packages_subtitle_few": {
+    "message": "Nur %{count} Ladungen"
+  },
+  "battery_packages_subtitle_many": {
+    "message": "%{count} Ladungen"
+  },
+  "battery_packages_subtitle_one": {
+    "message": "Nur %{count} Ladung"
+  },
+  "battery_packages_subtitle_other": {
+    "message": "%{count} Ladungen"
+  },
+  "battery_packages_title_large": {
+    "message": "Groß"
+  },
+  "battery_packages_title_medium": {
+    "message": "Mittel"
+  },
+  "battery_packages_title_small": {
+    "message": "Klein"
+  },
+  "battery_please_wait": {
+    "message": "Bitte warten, Ihre Batterie wird in den nächsten Minuten aufgeladen"
+  },
+  "battery_promocode_apply": {
+    "message": "Anwenden"
+  },
+  "battery_promocode_button": {
+    "message": "Aufladen durch Aktionscode"
+  },
+  "battery_promocode_placeholder": {
+    "message": "Aktionscode"
+  },
+  "battery_promocode_success": {
+    "message": "Ihre Batterie wurde aufgeladen"
+  },
+  "battery_promocode_title": {
+    "message": "Aktionscode"
+  },
+  "battery_recharge_by_crypto_continue": {
+    "message": "Weiter"
+  },
+  "battery_recharge_by_crypto_other_subtitle": {
+    "message": "Menge manuell eingeben"
+  },
+  "battery_recharge_by_crypto_other_title": {
+    "message": "Andere Menge"
+  },
+  "battery_recharge_by_crypto_title": {
+    "message": "Batterie laden"
+  },
+  "battery_recharge_by_crypto_title_gift": {
+    "message": "Geschenk"
+  },
+  "battery_recharge_by_crypto_tokens": {
+    "message": "Token"
+  },
+  "battery_refilled": {
+    "message": "Ihre Batterie wurde aufgeladen"
+  },
+  "battery_refund_subtitle": {
+    "message": "Aufladungen und Transaktionen"
+  },
+  "battery_refund_title": {
+    "message": "Ladungshistorie"
+  },
+  "battery_screen_title": {
+    "message": "Batterie"
+  },
+  "battery_send_widget_battery": {
+    "message": "Batterie"
+  },
+  "battery_settings": {
+    "message": "Batterie"
+  },
+  "battery_title": {
+    "message": "Tonkeeper Batterie"
+  },
+  "battery_transactions_charges_per_action_few": {
+    "message": "≈ %{count} Ladungen pro %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_many": {
+    "message": "≈ %{count} Ladungen pro %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_one": {
+    "message": "≈ %{count} Ladung für %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_other": {
+    "message": "≈ %{count} Ladungen pro %{transactionName}"
+  },
+  "battery_transactions_description": {
+    "message": "Ausgewählte Transaktionen werden von der Tonkeeper Batterie bezahlt."
+  },
+  "battery_transactions_settings": {
+    "message": "Batterie-Einstellungen"
+  },
+  "battery_transactions_supported": {
+    "message": "Unterstützte Transaktionen"
+  },
+  "battery_transactions_title": {
+    "message": "Transaktionen"
+  },
+  "battery_transactions_types_jetton": {
+    "message": "Jettonübertragung"
+  },
+  "battery_transactions_types_nft": {
+    "message": "NFT-Übertragung"
+  },
+  "battery_transactions_types_swap": {
+    "message": "Swaps"
+  },
+  "battery_transactions_types_ton": {
+    "message": "TON-Überweisungen"
+  },
+  "battery_transactions_type_swap": {
+    "message": "Tausch"
+  },
+  "battery_transactions_type_transfer": {
+    "message": "Überweisung"
+  },
+  "battery_transactions_will_be_paid": {
+    "message": "Wird bezahlt: %{enabledTransactions}"
+  },
+  "biometry_android_face_recognition": {
+    "message": "Gesichtserkennung"
+  },
+  "biometry_android_face_recognition_genitive": {
+    "message": "Gesichtserkennung"
+  },
+  "biometry_android_face_recognition_instrumental": {
+    "message": "Gesichtserkennung"
+  },
+  "biometry_android_fingerprint": {
+    "message": "Fingerabdruck"
+  },
+  "biometry_android_fingerprint_genitive": {
+    "message": "Fingerabdruck"
+  },
+  "biometry_android_fingerprint_instrumental": {
+    "message": "Fingerabdruck"
+  },
+  "biometry_default": {
+    "message": "Biometrie"
+  },
+  "biometry_default_accusative": {
+    "message": "Biometrie"
+  },
+  "biometry_default_genitive": {
+    "message": "Biometrie"
+  },
+  "biometry_default_instrumental": {
+    "message": "Biometrie"
+  },
+  "biometry_ios_face_recognition": {
+    "message": "Face ID"
+  },
+  "biometry_ios_face_recognition_genitive": {
+    "message": "Face ID"
+  },
+  "biometry_ios_face_recognition_instrumental": {
+    "message": "Face ID"
+  },
+  "biometry_ios_fingerprint": {
+    "message": "Touch ID"
+  },
+  "biometry_ios_fingerprint_genitive": {
+    "message": "Touch ID"
+  },
+  "biometry_ios_fingerprint_instrumental": {
+    "message": "Touch ID"
+  },
+  "bluetooth_permissions_alert_cancel": {
+    "message": "Ablehnen"
+  },
+  "bluetooth_permissions_alert_message": {
+    "message": "Bitte aktivieren Sie Bluetooth-Berechtigungen in Ihren Einstellungen, um diese Fuktion zu benutzen"
+  },
+  "bluetooth_permissions_alert_open_settings": {
+    "message": "Einstellungen öffnen"
+  },
+  "bluetooth_permissions_alert_title": {
+    "message": "Bluetooth-Berechtigungen"
+  },
+  "bluetooth_powered_off_alert_cancel": {
+    "message": "Ablehnen"
+  },
+  "bluetooth_powered_off_alert_message": {
+    "message": "Bitte aktivieren Sie Bluetooth-Berechtigungen in Ihren Einstellungen, um diese Funktion zu benutzen"
+  },
+  "bluetooth_powered_off_alert_open_settings": {
+    "message": "Einstellungen öffnen"
+  },
+  "bluetooth_powered_off_alert_title": {
+    "message": "Bluetooth-Berechtigungen"
+  },
+  "browser_about_dapps_caption": {
+    "message": "Entdecken Sie Apps und Dienste, bei denen Sie Tonkeeper für die Anmeldung und Zahlungen verwenden können."
+  },
+  "browser_about_dapps_learn_more": {
+    "message": "Mehr erfahren"
+  },
+  "browser_about_dapps_title": {
+    "message": "Benutzen Sie Tonkeeper mit allen TON Apps und Diensten"
+  },
+  "browser_actions_copy_link": {
+    "message": "Link kopieren"
+  },
+  "browser_actions_disconnect": {
+    "message": "Trennen"
+  },
+  "browser_actions_mute": {
+    "message": "Stummschalten"
+  },
+  "browser_actions_refresh": {
+    "message": "Aktualisieren"
+  },
+  "browser_actions_share": {
+    "message": "Teilen"
+  },
+  "browser_apps_all": {
+    "message": "Alle"
+  },
+  "browser_connected": {
+    "message": "Verbunden"
+  },
+  "browser_connected_empty_text": {
+    "message": "Erkunden Sie Apps und Dienste im Tonkeeper Browser."
+  },
+  "browser_connected_empty_title": {
+    "message": "Verbundene Apps werden hier angezeigt"
+  },
+  "browser_connected_title": {
+    "message": "Verbunden"
+  },
+  "browser_empty_search": {
+    "message": "Ihre Suche ergab keine Ergebnisse"
+  },
+  "browser_explore": {
+    "message": "Erkunden Sie"
+  },
+  "browser_explore_all": {
+    "message": "Alles erkunden"
+  },
+  "browser_more_description": {
+    "message": "Märkte, Austausch und mehr"
+  },
+  "browser_more_title": {
+    "message": "Erkunden Sie alle Dienste"
+  },
+  "browser_open_link": {
+    "message": "Link öffnen"
+  },
+  "browser_popular_title": {
+    "message": "Beliebtes"
+  },
+  "browser_remove_alert_approve_button": {
+    "message": "Löschen"
+  },
+  "browser_remove_alert_title": {
+    "message": "Wollen Sie das wirklich “%{name}” löschen?"
+  },
+  "browser_search_label": {
+    "message": "Suchen Sie oder geben die Adresse ein"
+  },
+  "browser_start_typing": {
+    "message": "Geben eine Adresse ein oder suchen Sie im Web"
+  },
+  "browser_title": {
+    "message": "Browser"
+  },
+  "browser_web_search_title": {
+    "message": "%{searchEngine} suchen"
+  },
+  "buy_ton_subtitle": {
+    "message": "Sofort mit einer Kreditkarte"
+  },
+  "buy_ton_title": {
+    "message": "Kaufen Sie TON"
+  },
+  "cancel": {
+    "message": "Abbrechen"
+  },
+  "chart_check_connection": {
+    "message": "Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+  },
+  "chart_no_internet": {
+    "message": "Keine Internetverbindung"
+  },
+  "chart_periods_1D": {
+    "message": "T"
+  },
+  "chart_periods_1H": {
+    "message": "S"
+  },
+  "chart_periods_1M": {
+    "message": "M"
+  },
+  "chart_periods_1Y": {
+    "message": "J"
+  },
+  "chart_periods_6M": {
+    "message": "6M"
+  },
+  "chart_periods_7D": {
+    "message": "W"
+  },
+  "chart_price": {
+    "message": "Preis"
+  },
+  "check_words_caption": {
+    "message": "Um zu überprüfen, ob Sie Ihre Wiederherstellungsphrase korrekt aufgeschrieben haben, geben Sie bitte das %1%, %2% und %3% Wort ein."
+  },
+  "check_words_success": {
+    "message": "Glückwunsch! Ihr Wallet ist jetzt sicher."
+  },
+  "check_words_title": {
+    "message": "Super! Lass uns das überprüfen"
+  },
+  "choose_country_auto": {
+    "message": "Automatisch"
+  },
+  "choose_country_cancel": {
+    "message": "Abbrechen"
+  },
+  "choose_country_empty_placeholder": {
+    "message": "Ihre Suche ergab keine Ergebnisse"
+  },
+  "choose_country_search": {
+    "message": "Suche"
+  },
+  "choose_country_title": {
+    "message": "Wählen Sie Ihr Land"
+  },
+  "choose_currency_currencies_AED": {
+    "message": "Vereinigte Arabische Emiraten Dirham"
+  },
+  "choose_currency_currencies_BDT": {
+    "message": "Bangladesch Taka"
+  },
+  "choose_currency_currencies_BRL": {
+    "message": "Brasilianischer Real"
+  },
+  "choose_currency_currencies_BYN": {
+    "message": "Belarussischer Rubel"
+  },
+  "choose_currency_currencies_CAD": {
+    "message": "Kannadischer Dollar"
+  },
+  "choose_currency_currencies_CHF": {
+    "message": "Schweizerfranken"
+  },
+  "choose_currency_currencies_CNY": {
+    "message": "Chinesischer Yuan"
+  },
+  "choose_currency_currencies_EUR": {
+    "message": "Euro"
+  },
+  "choose_currency_currencies_GBP": {
+    "message": "Pfund Sterling"
+  },
+  "choose_currency_currencies_GEL": {
+    "message": "Gregorianischer Lari"
+  },
+  "choose_currency_currencies_IDR": {
+    "message": "Indonesischer Rupiah"
+  },
+  "choose_currency_currencies_ILS": {
+    "message": "Israelischer Shekel"
+  },
+  "choose_currency_currencies_INR": {
+    "message": "Indischer Rupee"
+  },
+  "choose_currency_currencies_IRR": {
+    "message": "Iranischer Rial"
+  },
+  "choose_currency_currencies_JPY": {
+    "message": "Japanischer Yen"
+  },
+  "choose_currency_currencies_KRW": {
+    "message": "Südkoreanischer Won"
+  },
+  "choose_currency_currencies_KZT": {
+    "message": "Kasachischer Tenge"
+  },
+  "choose_currency_currencies_NGN": {
+    "message": "Niegerianischer Naira"
+  },
+  "choose_currency_currencies_RUB": {
+    "message": "Russischer Rubel"
+  },
+  "choose_currency_currencies_THB": {
+    "message": "Baht"
+  },
+  "choose_currency_currencies_TON": {
+    "message": "Toncoin"
+  },
+  "choose_currency_currencies_TRY": {
+    "message": "Türkischer Lira"
+  },
+  "choose_currency_currencies_UAH": {
+    "message": "Ukrainischer hryvnia"
+  },
+  "choose_currency_currencies_USD": {
+    "message": "US-Dollar"
+  },
+  "choose_currency_currencies_UZS": {
+    "message": "Usbekistanischer sum"
+  },
+  "choose_currency_currencies_VND": {
+    "message": "Vietnamesischer Dong"
+  },
+  "choose_currency_header_title": {
+    "message": "Hauptwährung"
+  },
+  "choose_wallets_already_added": {
+    "message": "Schon hinzugefügt"
+  },
+  "choose_wallets_subtitle": {
+    "message": "Wählen Sie Wallets aus, die Sie hinzufügen möchten."
+  },
+  "choose_wallets_title": {
+    "message": "Wählen sie Wallets"
+  },
+  "choose_wallets_tokens": {
+    "message": "Token"
+  },
+  "choose_wallets_w5_subtitle": {
+    "message": "Billigere Blockchain-Gebühren, gaslose Transaktionen und Multi-Transfers."
+  },
+  "choose_wallets_w5_subtitle_link": {
+    "message": "Mehr erfahren"
+  },
+  "confirm": {
+    "message": "Bestätigen"
+  },
+  "confirm_renew_all_domains_title": {
+    "message": "Alle Domains erneuern"
+  },
+  "confirm_sending_amount": {
+    "message": "Betrag"
+  },
+  "confirm_sending_fee": {
+    "message": "Gebühr"
+  },
+  "confirm_sending_inactive_warn_about": {
+    "message": "Was sollten Sie tun?"
+  },
+  "confirm_sending_inactive_warn_description": {
+    "message": "Fahren sie nicht fort, wenn Sie erwarten, dass Blockchain-Magie passiert. Es wird nicht."
+  },
+  "confirm_sending_inactive_warn_title": {
+    "message": "Inaktiver Vertrag"
+  },
+  "confirm_sending_liquid_warn_description": {
+    "message": "Sie erhalten keine Belohnungen mehr für die gesendeten gestakten TON. Der neue Besitzer wird Belohnungen erhalten."
+  },
+  "confirm_sending_liquid_warn_title": {
+    "message": "Bemerkung"
+  },
+  "confirm_sending_message": {
+    "message": "Kommentar"
+  },
+  "confirm_sending_method_title": {
+    "message": "Senden Sie an %{name}?"
+  },
+  "confirm_sending_recipient": {
+    "message": "Empfänger"
+  },
+  "confirm_sending_recipient_address": {
+    "message": "Empfängersadresse"
+  },
+  "confirm_sending_sent_caption_btc": {
+    "message": "Ihre Transaktion wird an das Netzwerk gesendet und innerhalb einer Stunde verarbeitet."
+  },
+  "confirm_sending_sent_caption_ton": {
+    "message": "Ihre Transaktion wird an das Netzwerk gesendet und innerhalb ein paar Sekunden verarbeitet."
+  },
+  "confirm_sending_submit": {
+    "message": "Bestätigen und senden"
+  },
+  "confirm_sending_title": {
+    "message": "Bestätigen Sie die Transaktion"
+  },
+  "confirmSendModal_network_fee": {
+    "message": "Netzwerk Gebühr"
+  },
+  "confirmSendModal_refund": {
+    "message": "Rückerstattung"
+  },
+  "confirmSendModal_title": {
+    "message": "Bestätigen Sie die Aktion"
+  },
+  "confirmSendModal_title_multiwallets": {
+    "message": "Aktion für %{walletName}"
+  },
+  "confirmSendModal_total_risk": {
+    "message": "Gesamt: %{totalAmount}"
+  },
+  "confirmSendModal_to_your_address": {
+    "message": "Zu Ihrer Adresse"
+  },
+  "confirmSendModal_transaction_type_burn": {
+    "message": "Verbrennen"
+  },
+  "confirmSendModal_transaction_type_receive": {
+    "message": "Empfangen"
+  },
+  "confirmSendModal_transaction_type_send": {
+    "message": "Senden"
+  },
+  "confirmSendModal_wallet": {
+    "message": "Wallet:"
+  },
+  "confirmSendModal_will_be_paid_with_battery": {
+    "message": "Wird mit der Tonkeeper Batterie bezahlt"
+  },
+  "continue": {
+    "message": "Weiter"
+  },
+  "copied": {
+    "message": "Kopiert"
+  },
+  "copy_error_log": {
+    "message": "Fehlerprotokoll kopieren"
+  },
+  "create_pin_current_title": {
+    "message": "Geben Sie den aktuellen Passcode ein"
+  },
+  "create_pin_new_title": {
+    "message": "Neuen Passwort erstellen"
+  },
+  "create_pin_repeat_title": {
+    "message": "Passwort erneut eingeben"
+  },
+  "create_wallet_caption": {
+    "message": "Wir empfehlen Ihnen dringend, den Wiederherstellungssatz aufzuschreiben, da dies die einzige Möglichkeit ist, auf Ihr Wallet zuzugreifen und es wiederherzustellen, falls Sie Ihr Gerät verlieren. Senden Sie es sich nicht per E-Mail oder machen Sie einen Screenshot. Es ist sicherer, wenn es offline bleibt."
+  },
+  "create_wallet_continue_button": {
+    "message": "Weiter"
+  },
+  "create_wallet_generated": {
+    "message": "Ihr Wallen wurde gerade erstellt!"
+  },
+  "create_wallet_generating": {
+    "message": "Wallet-Erzeugung..."
+  },
+  "create_wallet_title": {
+    "message": "Nehmen Sie einen Stift und ein Blatt Papier"
+  },
+  "customize": {
+    "message": "Anpassen"
+  },
+  "customize_modal_save": {
+    "message": "Speichern"
+  },
+  "customize_modal_subtitle": {
+    "message": "Walletname und -symbol werden lokal auf Ihrem Gerät gespeichert."
+  },
+  "customize_modal_title": {
+    "message": "Passen Sie Ihr Wallen an"
+  },
+  "customize_modal_wallet_name": {
+    "message": "Walletname"
+  },
+  "decryption_error": {
+    "message": "Entschlüsselungsfehler"
+  },
+  "deploy_contract_button": {
+    "message": "Bestätigen und bereitstellen"
+  },
+  "deploy_contract_title": {
+    "message": "Vertrag bereitstellen"
+  },
+  "disable_nft_marketplace_banner_description": {
+    "message": "Sammeln und umtauschen."
+  },
+  "dns_addresses_few": {
+    "message": "%{count} Addressen"
+  },
+  "dns_addresses_many": {
+    "message": "%{count} Addressen"
+  },
+  "dns_addresses_one": {
+    "message": "%{count} Addresse"
+  },
+  "dns_addresses_other": {
+    "message": "%{count} Addressen"
+  },
+  "dns_address_linked": {
+    "message": "Adresse verlinkt"
+  },
+  "dns_address_unlinked": {
+    "message": "Adresse nicht verknüpft"
+  },
+  "dns_alert_expiring_many_few": {
+    "message": "Sie haben %{count} auslaufende Domains. Alles verlängern bis %{untilDate}"
+  },
+  "dns_alert_expiring_many_many": {
+    "message": "Sie haben %{count} auslaufende Domains. Alles verlängern bis %{untilDate}"
+  },
+  "dns_alert_expiring_many_one": {
+    "message": "Sie haben %{count} auslaufende Domains. Alles verlängern bis %{untilDate}"
+  },
+  "dns_alert_expiring_many_other": {
+    "message": "Sie haben %{count} auslaufende Domains. Alles verlängern bis %{untilDate}"
+  },
+  "dns_alert_expiring_one": {
+    "message": "%{domain} läuft sich in %{count} Tage aus. Verlängern Sie es bis %{untilDate}"
+  },
+  "dns_current_address": {
+    "message": "Ihre aktuelle Adresse"
+  },
+  "dns_expiration_date": {
+    "message": "Ablaufdatum"
+  },
+  "dns_link_title": {
+    "message": "Transaktion bestätigen"
+  },
+  "dns_on_sale_text": {
+    "message": "Die Domain steht jetzt auf dem Marktplatz zum Verkauf. Für die Übertragung sollten Sie es zuerst aus dem Verkauf entfernen."
+  },
+  "dns_renew_all_until_btn": {
+    "message": "Alles verlängern bis %{untilDate}"
+  },
+  "dns_renew_in_progress_btn": {
+    "message": "Domain-Verlängerung läuft…"
+  },
+  "dns_renew_toast_success": {
+    "message": "Domain erneuert"
+  },
+  "dns_renew_until_btn": {
+    "message": "Verlängern bis %{untilDate}"
+  },
+  "dns_renew_valid_caption_one": {
+    "message": "Läuft ab in %{count} Tag"
+  },
+  "dns_renew_valid_caption_other": {
+    "message": "Läuft ab in %{count} Tage"
+  },
+  "dns_replace_button": {
+    "message": "Ersetzen"
+  },
+  "dns_replace_description": {
+    "message": "Fügen Sie die Walletsadresse hinzu, mit der die Domain {{domain}} verknüpft wird."
+  },
+  "dns_replace_save": {
+    "message": "Speichern"
+  },
+  "dns_unlink_title": {
+    "message": "Verknüpfungaufhebung bestätigen"
+  },
+  "dns_wallet_address": {
+    "message": "Walletsaddresse"
+  },
+  "domains_renewed": {
+    "message": "Domains erneuert"
+  },
+  "edit_coins_add": {
+    "message": "Hinzufügen"
+  },
+  "edit_coins_added": {
+    "message": "Aktualisiert"
+  },
+  "edit_coins_added_toast": {
+    "message": "Aktualisiert"
+  },
+  "edit_coins_hide": {
+    "message": "Verstecken"
+  },
+  "edit_coins_title": {
+    "message": "Krypto hinzufügen"
+  },
+  "encryptedComments_encryptedComment": {
+    "message": "Verschlüsselter Kommentar"
+  },
+  "encryptedComments_encryptedCommentModal_button": {
+    "message": "Entschlüsseln Sie den Kommentar"
+  },
+  "encryptedComments_encryptedCommentModal_checkboxLabel": {
+    "message": "Nicht mehr anzeigen"
+  },
+  "encryptedComments_encryptedCommentModal_description": {
+    "message": "Der Kommentar wird vom Absender verschlüsselt und kann nur von Ihnen entschlüsselt werden. Bitte seien Sie vorsichtig mit dem Inhalt und hüten Sie sich vor Betrug."
+  },
+  "encryptedComments_encryptedCommentModal_title": {
+    "message": "Verschlüsselter Kommentar"
+  },
+  "encryptedComments_show": {
+    "message": "Zeigen"
+  },
+  "error_network": {
+    "message": "Netzwerkfehler"
+  },
+  "error_occurred": {
+    "message": "Ein Fehler ist aufgetreten"
+  },
+  "exchange_method_dont_show_again": {
+    "message": "Nicht mehr anzeigen"
+  },
+  "exchange_method_open_warning": {
+    "message": "Sie öffnen eine externe App, die nicht von Tonkeeper betrieben wird."
+  },
+  "exchange_modal_buy": {
+    "message": "Kaufen"
+  },
+  "exchange_modal_hide": {
+    "message": "Verstecken"
+  },
+  "exchange_modal_other_ways_to_buy": {
+    "message": "Andere Möglichkeiten zu kaufen"
+  },
+  "exchange_modal_sell": {
+    "message": "Verkaufen"
+  },
+  "exchange_modal_show_all": {
+    "message": "Alle zeigen"
+  },
+  "exchange_modal_title": {
+    "message": "Kaufen oder verkaufen"
+  },
+  "exchange_not_exists": {
+    "message": "Ungültige Exchange-ID"
+  },
+  "exchange_other_ways": {
+    "message": "Andere Möglichkeiten, TON zu kaufen oder zu verkaufen"
+  },
+  "exchange_telegram_bot": {
+    "message": "TELEGRAM BOT"
+  },
+  "exchange_title": {
+    "message": "TON kaufen"
+  },
+  "expiring_domains": {
+    "message": "Ablaufende Domains"
+  },
+  "finish_setup_backup": {
+    "message": "Sichern Sie die Wallet-Wiederherstellungsphrase"
+  },
+  "finish_setup_done_button": {
+    "message": "Fertig"
+  },
+  "finish_setup_enable_notifications": {
+    "message": "Transaktionsbenachrichtigungen aktivieren"
+  },
+  "finish_setup_header_title": {
+    "message": "Einrichtung abschließen"
+  },
+  "finish_setup_join_tg": {
+    "message": "Tonkeeper-Kanal beitreten"
+  },
+  "finish_setup_use_biometry": {
+    "message": "Verwenden %{name} zur Transaktiongenehmigung"
+  },
+  "form_optional_indicator": {
+    "message": "Optional"
+  },
+  "gasless_switch_label": {
+    "message": "Tippen Sie auf, um %{currency} einzuzahlen"
+  },
+  "import_add_wallet": {
+    "message": "Wallet hinzufügen"
+  },
+  "import_add_wallet_description": {
+    "message": "Ein neues Wallet erstellen oder ein vorhandenes hinzufügen"
+  },
+  "import_existing_wallet": {
+    "message": "Vorhandenes Wallet"
+  },
+  "import_existing_wallet_description": {
+    "message": "Import-Wallet mit 24 geheimen Wiederherstellungswörtern"
+  },
+  "import_new_wallet": {
+    "message": "Neues Wallet"
+  },
+  "import_new_wallet_description": {
+    "message": "Neues Wallet erstellen"
+  },
+  "import_signer": {
+    "message": "Koppeln mit Signer"
+  },
+  "import_signer_description": {
+    "message": "Komplett offline, air-gapped, alle TON-Funktionen"
+  },
+  "import_wallet_caption": {
+    "message": "Um den Zugriff auf Ihr Wallet wiederherzustellen, geben Sie die 24 geheimen Wiederherstellungswörter ein, die Sie beim Erstellen Ihres Wallets erhalten haben."
+  },
+  "import_wallet_reset_caption": {
+    "message": "Bitte stellen Sie den Zugriff auf Ihr Wallet wieder her durch Eingabe von 24 geheimen Wörtern, die Sie aufgeschrieben und dann das Wallet erstellt haben."
+  },
+  "import_wallet_title": {
+    "message": "Geben Sie Ihre Wiederherstellungsphrase ein"
+  },
+  "import_wallet_wrong_words_err": {
+    "message": "Falscher Ausdruck"
+  },
+  "indexer_latency_error": {
+    "message": "Sendefehler, versuchen Sie es später erneut"
+  },
+  "info_about_inactive_back": {
+    "message": "Zurück"
+  },
+  "info_about_inactive_desc1": {
+    "message": "Tonkeeper ist unbekannt, ob es sich bei dieser Adresse um ein Wallet oder einen intelligenten Vertrag handelt."
+  },
+  "info_about_inactive_desc2": {
+    "message": "Wenn Sie einfach Geld ins Wallet einzahlen möchten— können Sie fortfahren"
+  },
+  "info_about_inactive_desc3_1": {
+    "message": "Wenn Sie eine automatische Aktion von einem intelligenten Vertrag erwarten,"
+  },
+  "info_about_inactive_desc3_2": {
+    "message": "— Ihre Überweisung könnte an dieser Adresse hängen bleiben."
+  },
+  "info_about_inactive_desc3_bold": {
+    "message": "FAHREN Sie NICHT fort"
+  },
+  "info_about_inactive_title": {
+    "message": "Inaktiver Vertrag"
+  },
+  "intro_continue_btn": {
+    "message": "Erste Schritte"
+  },
+  "intro_item1_caption": {
+    "message": "Dank der einzigartigen Architektur des offenen Netzwerks werden Transaktionen in Sekundenschnelle abgewickelt."
+  },
+  "intro_item1_title": {
+    "message": "Geschwindigkeit von Weltklasse"
+  },
+  "intro_item2_caption": {
+    "message": "Tonkeeper speichert Ihre kryptografischen Schlüssel auf Ihrem Gerät. Alle Trades werden über dezentrale Protokolle ausgeführt, so dass Ihre Krypto niemals in die Hände zentraler Börsen gelangt."
+  },
+  "intro_item2_title": {
+    "message": "Ende-zu-Ende-Sicherheit"
+  },
+  "intro_title": {
+    "message": "Herzlich willkommen zu"
+  },
+  "it_expires_on": {
+    "message": "Es läuft ab am"
+  },
+  "jetton_buy_tether": {
+    "message": "USDT kaufen"
+  },
+  "jetton_id": {
+    "message": "Token ID: %{jettonAddress}"
+  },
+  "jetton_id_copied": {
+    "message": "Token-ID kopiert"
+  },
+  "jetton_locked_till": {
+    "message": "Gesperrt bis%{date}"
+  },
+  "jetton_migrate_tether": {
+    "message": "Swap jUSDT zu USD₮"
+  },
+  "jetton_name": {
+    "message": "%{name} Token"
+  },
+  "jetton_open_explorer": {
+    "message": "Details anzeigen"
+  },
+  "jetton_price": {
+    "message": "Preis:"
+  },
+  "jettons_list_title": {
+    "message": "Tokens"
+  },
+  "jettons_manage_tokens": {
+    "message": "Token verwalten"
+  },
+  "jettons_show_jettons": {
+    "message": "Token im Wallet anzeigen"
+  },
+  "jetton_token": {
+    "message": "Token"
+  },
+  "language_language_alert_cancel": {
+    "message": "Abbrechen"
+  },
+  "language_language_alert_open": {
+    "message": "Einstellung"
+  },
+  "language_language_alert_title": {
+    "message": "Um die Sprache der App zu ändern, gehen Sie zu den Geräteeinstellungen"
+  },
+  "language_languagesList_en": {
+    "message": "Englisch"
+  },
+  "language_languagesList_es": {
+    "message": "Spanisch"
+  },
+  "language_languagesList_id": {
+    "message": "Indonesisch"
+  },
+  "language_languagesList_ru": {
+    "message": "Russisch"
+  },
+  "language_languagesList_system": {
+    "message": "System"
+  },
+  "language_languagesList_tr": {
+    "message": "Türkisch"
+  },
+  "language_languagesList_uk": {
+    "message": "Ukrainisch"
+  },
+  "language_languagesList_uz": {
+    "message": "Usbekisch"
+  },
+  "language_languagesList_zh_Hans": {
+    "message": "Chinesisch"
+  },
+  "language_list_item_title": {
+    "message": "Sprache"
+  },
+  "language_list_item_value": {
+    "message": "Englisch"
+  },
+  "language_title": {
+    "message": "Sprache"
+  },
+  "later": {
+    "message": "Später"
+  },
+  "ledger_confirm_title": {
+    "message": "Aktion bestätigen"
+  },
+  "ledger_confirm_tx": {
+    "message": "Transaktion auf Ledger bestätigen"
+  },
+  "ledger_connect": {
+    "message": "Verbinden Sie Ledger über Bluetooth mit Ihrem Gerät"
+  },
+  "ledger_connect_title": {
+    "message": "Ledger verbinden"
+  },
+  "ledger_install_ton_app": {
+    "message": "TON-App installieren"
+  },
+  "ledger_open_ton_app": {
+    "message": "Schalten Sie es frei und öffnen TON Apps"
+  },
+  "ledger_operation_not_supported": {
+    "message": "Der Vorgang ist für Ledger-Wallets nicht verfügbar. Wählen Sie ein anderes Wallet und versuchen Sie es erneut."
+  },
+  "legal_font_license": {
+    "message": "Montserrat Schriftart"
+  },
+  "legal_header_title": {
+    "message": "Rechtliches"
+  },
+  "legal_licenses_title": {
+    "message": "Softwarelizenzen"
+  },
+  "legal_privacy": {
+    "message": "Datenschutzerklärung"
+  },
+  "legal_terms": {
+    "message": "Servicebedingungen"
+  },
+  "link_copied": {
+    "message": "Link kopiert"
+  },
+  "loading": {
+    "message": "Es läuft"
+  },
+  "logout_modal_agreement": {
+    "message": "Ich habe eine Sicherungskopie der Wiederherstellungsphrase für"
+  },
+  "logout_modal_backup_button": {
+    "message": "Sichern"
+  },
+  "logout_modal_caption": {
+    "message": "Brieftaschenschlüssel werden von diesem Gerät gelöscht."
+  },
+  "logout_modal_delete_button": {
+    "message": "Wallet-Daten löschen"
+  },
+  "logout_modal_delete_caption": {
+    "message": "Walletschlüssel und alle persönlichen Daten werden von diesem Gerät gelöscht."
+  },
+  "logout_modal_delete_title": {
+    "message": "Wallet-Daten löschen"
+  },
+  "logout_modal_logout_button": {
+    "message": "Abmelden"
+  },
+  "logout_modal_title": {
+    "message": "Abmelden"
+  },
+  "manage_other_coins": {
+    "message": "Meine Kryptowährung verwalten"
+  },
+  "migration_cancel_btn": {
+    "message": "Später aktualisieren"
+  },
+  "migration_caption": {
+    "message": "Tonkeeper führt ein neues Wallet-Format ein, das Abonnementzahlungen unterstützt. Ihr Guthaben wird auf eine neue Adresse übertragen. Ihre Wiederherstellungsphrase bleibt gleich."
+  },
+  "migration_failed": {
+    "message": "Migration fehlgeschlagen. Ihr Guthaben kann nicht übertragen werden."
+  },
+  "migration_fee_info": {
+    "message": "Netzwerk Gebühr ≈%{tonFee} TON (%{fiatFee})"
+  },
+  "migration_in_progress": {
+    "message": "Migration zu Wallet v4 läuft"
+  },
+  "migration_migrate_btn": {
+    "message": "Wallet aktualisieren"
+  },
+  "migration_new_wallet": {
+    "message": "Neue Adresse"
+  },
+  "migration_old_wallet": {
+    "message": "Alte Adresse"
+  },
+  "migration_subtitle": {
+    "message": "Wallet entsperren, um fortzufahren."
+  },
+  "migration_title": {
+    "message": "Aktualisieren Sie Ihr Wallet"
+  },
+  "migration_with_biometry": {
+    "message": "Weiter mit %{type}"
+  },
+  "migration_with_passcode": {
+    "message": "Passcode eingeben"
+  },
+  "nft_about_collection": {
+    "message": "Über die Sammlung"
+  },
+  "nft_about_dns": {
+    "message": "TON DNS ist ein Dienst, der es Benutzern ermöglicht, Krypto-Wallets, Smart Contracts und Websites einen menschenlesbaren Namen zuzuweisen. \n\nMit TON DNS ist der Zugriff auf dezentrale Dienste analog zum Zugriff auf Websites im Internet."
+  },
+  "nft_actions_hide_and_report": {
+    "message": "Verbergen und Spam melden"
+  },
+  "nft_actions_hide_collection": {
+    "message": "Sammlung ausblenden"
+  },
+  "nft_actions_hide_nft": {
+    "message": "NFT verstecken"
+  },
+  "nft_actions_view_on_explorer": {
+    "message": "Auf Tonviewer anzeigen"
+  },
+  "nft_browse_markets": {
+    "message": "Märkte durchsuchen"
+  },
+  "nft_chain": {
+    "message": "Kette"
+  },
+  "nft_change_owner_title": {
+    "message": "Sammlungsbesitzer ändern"
+  },
+  "nft_change_theme": {
+    "message": "Thema ändern"
+  },
+  "nft_collection": {
+    "message": "Sammlung"
+  },
+  "nft_collection_name": {
+    "message": "Sammlungsname"
+  },
+  "nft_confirm_operation": {
+    "message": "Bestätigen"
+  },
+  "nft_contract_address": {
+    "message": "Vertragsadresse"
+  },
+  "nft_deploy_collection_title": {
+    "message": "NFT-Sammlung erstellen"
+  },
+  "nft_details": {
+    "message": "Details"
+  },
+  "nft_diamonds_description": {
+    "message": "TON Diamonds besitzen die Kraft, das Thema in Ihrem Tonkeeper-Wallet zu ändern und es an die Farbe Ihres NFT anzupassen."
+  },
+  "nft_features": {
+    "message": "Funktionen"
+  },
+  "nft_fee": {
+    "message": "Gebühr"
+  },
+  "nft_fee_and_royalties": {
+    "message": "Gebühren & Lizenzgebühren"
+  },
+  "nft_hide_details": {
+    "message": "Details ausblenden"
+  },
+  "nft_item_deploy_title": {
+    "message": "NFT prägen"
+  },
+  "nft_item_name": {
+    "message": "NFT-Name"
+  },
+  "nft_link_domain_button": {
+    "message": "Domain verknüpfen"
+  },
+  "nft_link_domain_caption": {
+    "message": "Nachdem Sie die Domain verknüpft haben, können Sie sie übertragen und als Alias für Ihre Adresse verwenden."
+  },
+  "nft_link_domain_mismatch_warn": {
+    "message": "Die Domain ist nicht mit Ihrer aktuellen Adresse verknüpft. Seien Sie vorsichtig bei Transaktionen mit dieser Domain."
+  },
+  "nft_link_username_button": {
+    "message": "Name verknüpfen"
+  },
+  "nft_link_username_caption": {
+    "message": "Nachdem Sie den Namen verknüpft haben, können Sie ihn übertragen und als Alias für Ihre Adresse verwenden."
+  },
+  "nft_link_username_mismatch_warn": {
+    "message": "Der Name ist nicht mit Ihrer aktuellen Adresse verknüpft. Seien Sie vorsichtig bei Transaktionen mit diesem Namen."
+  },
+  "nft_marketplace_address": {
+    "message": "Marktplatz"
+  },
+  "nft_marketplace_banner_description": {
+    "message": "Kaufen, verkaufen, sammeln und umtauschen."
+  },
+  "nft_marketplace_banner_title": {
+    "message": "Ihre NFT-Token werden hier gespeichert"
+  },
+  "nft_marketplaces": {
+    "message": "Entdecken"
+  },
+  "nft_marketplaces_title": {
+    "message": "NFT-Märkte"
+  },
+  "nft_metadata": {
+    "message": "Metadaten"
+  },
+  "nft_more": {
+    "message": "Mehr"
+  },
+  "nft_new_owner_address": {
+    "message": "Neue Adresse des neuen Eigentümers"
+  },
+  "nft_on_sale": {
+    "message": "Im Angebot"
+  },
+  "nft_on_sale_text": {
+    "message": "NFT ist jetzt auf dem Marktplatz erhältlich.\nFür die Übertragung sollten Sie es zuerst aus dem Verkauf nehmen."
+  },
+  "nft_open_in_marketplace": {
+    "message": "Auf dem NFT-Markt ansehen"
+  },
+  "nft_operations_expired": {
+    "message": "Zeitüberschreitung der Anforderung, bitte versuchen Sie es erneut"
+  },
+  "nft_operation_slide_to_confirm": {
+    "message": "Zum Bestätigen schieben"
+  },
+  "nft_operation_success": {
+    "message": "Fertig"
+  },
+  "nft_owner_address": {
+    "message": "Besitzer"
+  },
+  "nft_price": {
+    "message": "Preis"
+  },
+  "nft_proceeds": {
+    "message": "Ihre Erlöse"
+  },
+  "nft_properties": {
+    "message": "Eigenschaften"
+  },
+  "nft_royalty": {
+    "message": "Lizenzgebühr"
+  },
+  "nft_royalty_address": {
+    "message": "Lizenzgebühr Adresse"
+  },
+  "nft_sale_cancel_title": {
+    "message": "Vom Verkauf entfernen"
+  },
+  "nft_sale_place_title": {
+    "message": "NFT verkaufen"
+  },
+  "nft_show_details": {
+    "message": "Details anzeigen"
+  },
+  "nft_single_nft": {
+    "message": "Einzelnes NFT"
+  },
+  "nft_standard": {
+    "message": "Token-Standard"
+  },
+  "nft_title": {
+    "message": "NFTs"
+  },
+  "nft_token_id": {
+    "message": "Token-ID"
+  },
+  "nft_transaction_head_placeholder": {
+    "message": "NFT"
+  },
+  "nft_transfer_comment": {
+    "message": "Kommentar"
+  },
+  "nft_transfer_confirm_fee_label": {
+    "message": "Gebühr"
+  },
+  "nft_transfer_confirm_fee_refund_label": {
+    "message": "Rückerstattung"
+  },
+  "nft_transfer_confirm_fee_value": {
+    "message": "≈ %{value} TON"
+  },
+  "nft_transfer_title": {
+    "message": "NFT Überweisung"
+  },
+  "nft_transfer_description": {
+    "message": "Das NFT wird an diese Adresse gesendet. Seien Sie vorsichtig, wenn Sie ein NFT an einen anderen Benutzer senden."
+  },
+  "nft_transfer_dns": {
+    "message": "Überweisung"
+  },
+  "nft_transfer_nft": {
+    "message": "Überweisung"
+  },
+  "nft_transfer_recipient": {
+    "message": "Empfänger"
+  },
+  "nft_unlink_domain_button": {
+    "message": "Verknüpft mit {{address}} "
+  },
+  "nft_unnamed_collection": {
+    "message": "Unbenannte Sammlung"
+  },
+  "nft_view_in_explorer": {
+    "message": "Im Explorer anzeigen"
+  },
+  "nokyc": {
+    "message": "kein KYC"
+  },
+  "notcoin_all": {
+    "message": "Alles in Tonkeeper Pro umtauschen"
+  },
+  "notcoin_burn_not_available_hours": {
+    "message": "Der Austausch wird in %{count} Stunden verfügbar sein"
+  },
+  "notcoin_burn_not_available_minutes": {
+    "message": "Der Austausch wird in %{count} Minuten verfügbar sein"
+  },
+  "notcoin_burn_not_available_seconds": {
+    "message": "Der Austausch wird in %{count} Sekunden verfügbar sein"
+  },
+  "notcoin_count": {
+    "message": "Anzahl der Gutscheine"
+  },
+  "notcoin_count_max": {
+    "message": "Maximal 4 pro Austausch"
+  },
+  "notcoin_exchange": {
+    "message": "Gutscheine\nin NOT umtauschen"
+  },
+  "notcoin_exchange_all": {
+    "message": "Alles in Tonkeeper Pro umtauschen"
+  },
+  "notcoin_exchange_subtitle": {
+    "message": "NOT wird kurz nach dem Austausch auf Ihrem Guthaben verfügbar sein."
+  },
+  "notcoin_exchange_title": {
+    "message": "Tauschen Sie Ihre Gutscheine in NOT um"
+  },
+  "notcoin_exchange_to_not": {
+    "message": "In NOT umtauschen"
+  },
+  "notcoin_name": {
+    "message": "Notcoin"
+  },
+  "notcoin_not_vouchers": {
+    "message": "NOT-Gutscheine"
+  },
+  "notcoin_open": {
+    "message": "Öffnen"
+  },
+  "notcoin_open_bot": {
+    "message": "Notcoin-Bot öffnen"
+  },
+  "notcoin_slogan": {
+    "message": "Wahrscheinlich nichts"
+  },
+  "notcoin_total_amount": {
+    "message": "Gesamtbetrag"
+  },
+  "notcoin_verify_subtitle": {
+    "message": "Die Verifizierung kann einige Stunden dauern."
+  },
+  "notcoin_verify_title": {
+    "message": "Wallet mit dem Notcoin Bot verbinden, um das Verbrennen zu verifizieren"
+  },
+  "notifications_alert_cancel": {
+    "message": "Abbrechen"
+  },
+  "notifications_alert_description": {
+    "message": "Die Linkadresse aus der Benachrichtigung stimmt nicht mit der App-Adresse überein."
+  },
+  "notifications_alert_open": {
+    "message": "Trotzdem öffnen"
+  },
+  "notifications_alert_title": {
+    "message": "Sind Sie sicher, dass Sie einen externen Link öffnen möchten?"
+  },
+  "notifications_allow_notifications": {
+    "message": "Benachrichtigungen aktivieren"
+  },
+  "notifications_apps": {
+    "message": "Apps"
+  },
+  "notifications_apps_description": {
+    "message": "Benachrichtigungen von verbundenen Apps in Ihrer Aktivität"
+  },
+  "notifications_disconnect_app": {
+    "message": "%{app_name} trennen"
+  },
+  "notifications_disconnected_app": {
+    "message": "App getrennt"
+  },
+  "notifications_earlier": {
+    "message": "Früher"
+  },
+  "notifications_from_connected": {
+    "message": "Von verbundenen Apps"
+  },
+  "notifications_muted": {
+    "message": "Benachrichtigungen wurden stummgeschaltet"
+  },
+  "notifications_mute_notifications": {
+    "message": "Benachrichtigungen stummschalten"
+  },
+  "notifications_notifications": {
+    "message": "Benachrichtigungen"
+  },
+  "notifications_placeholder_description": {
+    "message": "Erkunden Sie Apps und Dienste im Tonkeeper Browser."
+  },
+  "notifications_placeholder_title": {
+    "message": "Benachrichtigungen werden hier angezeigt"
+  },
+  "notifications_report": {
+    "message": "Bericht"
+  },
+  "notifications_disabled_action": {
+    "message": "Einstellungen öffnen"
+  },
+  "notifications_disabled_description": {
+    "message": "Sie haben Benachrichtigungen in den Einstellungen Ihres Telefons deaktiviert. Um Benachrichtigungen zu aktivieren, gehen Sie zu den Einstellungen auf diesem Gerät."
+  },
+  "notifications_disabled_title": {
+    "message": "Benachrichtigungen sind deaktiviert"
+  },
+  "notifications_not_supported": {
+    "message": "Benachrichtigungen werden auf Ihrem Gerät nicht unterstützt"
+  },
+  "notifications_switch_title": {
+    "message": "Push-Benachrichtigungen"
+  },
+  "notifications_title": {
+    "message": "Benachrichtigungen"
+  },
+  "notification_switch_description": {
+    "message": "Erhalte Benachrichtigungen, wenn du TON, Token und NFTs erhältst. Benachrichtigungen von verbundenen Apps."
+  },
+  "notify_connection_err_caption": {
+    "message": "%{host} reagiert nicht. Bitte versuchen Sie es später erneut."
+  },
+  "notify_connection_err_caption_few": {
+    "message": "%{hosts} und %{lastHost} reagieren nicht. Bitte versuchen Sie es später erneut."
+  },
+  "notify_connection_err_title": {
+    "message": "Verbindung zum Server konnte nicht hergestellt werden"
+  },
+  "notify_incorrect_time_err_caption": {
+    "message": "Aktivieren Sie in den Geräteeinstellungen die automatische Zeit- und Datumseinstellung. Wenn die Zeit nicht automatisch eingestellt wird, kann dies Überweisungen beeinträchtigen."
+  },
+  "notify_incorrect_time_err_title": {
+    "message": "Zeit und Datum sind falsch"
+  },
+  "notify_no_signal_caption": {
+    "message": "Bitte überprüfen Sie Ihre Internetverbindung."
+  },
+  "notify_no_signal_title": {
+    "message": "Kein Signal"
+  },
+  "old_wallet_error": {
+    "message": "Verwenden Sie das Wallet mit Version v4R2"
+  },
+  "pairSigner_about": {
+    "message": "Über Signer"
+  },
+  "pairSigner_open_signer": {
+    "message": "Signer auf diesem Gerät öffnen"
+  },
+  "pairSigner_subtitle": {
+    "message": "Signer öffnen » Erforderlichen Schlüssel auswählen » QR-Code scannen"
+  },
+  "pairSigner_title": {
+    "message": "QR-Code scannen"
+  },
+  "passcode_changed": {
+    "message": "Passcode geändert"
+  },
+  "paste": {
+    "message": "Einfügen"
+  },
+  "pin_enter_faceid_err": {
+    "message": "Biometrische Überprüfung fehlgeschlagen"
+  },
+  "pin_enter_skip_faceid_err": {
+    "message": "Biometrie ist erforderlich"
+  },
+  "platform_android_capitalized_face_recognition": {
+    "message": "Gesichtserkennung"
+  },
+  "platform_android_capitalized_fingerprint": {
+    "message": "Fingerabdruck"
+  },
+  "platform_android_face_recognition": {
+    "message": "Gesichtserkennung"
+  },
+  "platform_android_face_recognition_genitive": {
+    "message": "Gesichtserkennung"
+  },
+  "platform_android_fingerprint": {
+    "message": "Fingerabdruck"
+  },
+  "platform_android_fingerprint_genitive": {
+    "message": "Fingerabdruck"
+  },
+  "platform_ios_capitalized_face_recognition": {
+    "message": "Face ID"
+  },
+  "platform_ios_capitalized_fingerprint": {
+    "message": "Touch ID"
+  },
+  "platform_ios_face_recognition": {
+    "message": "Face ID"
+  },
+  "platform_ios_face_recognition_genitive": {
+    "message": "Face ID"
+  },
+  "platform_ios_fingerprint": {
+    "message": "Touch ID"
+  },
+  "platform_ios_fingerprint_genitive": {
+    "message": "Touch ID"
+  },
+  "programmable_nfts_alert_cancel": {
+    "message": "Abbrechen"
+  },
+  "programmable_nfts_alert_description": {
+    "message": "Besuchen Sie diesen externen Link nur, wenn Sie dem Autor der Sammlung vertrauen.\n\n{{uri}}"
+  },
+  "programmable_nfts_alert_open": {
+    "message": "Trotzdem öffnen"
+  },
+  "programmable_nfts_alert_title": {
+    "message": "Sind Sie sicher, dass Sie einen externen Link öffnen möchten?"
+  },
+  "pro_subscription_is_active": {
+    "message": "Pro-Abonnement ist aktiv."
+  },
+  "pro_trial_is_active": {
+    "message": "Pro-Testversion ist aktiv."
+  },
+  "purchases_screen_title": {
+    "message": "Einkäufe"
+  },
+  "receive_address_title": {
+    "message": "Oder Walletsaddresse verwenden"
+  },
+  "receive_copy": {
+    "message": "Kopieren"
+  },
+  "receiveModal_copy": {
+    "message": "Kopieren"
+  },
+  "receiveModal_receive": {
+    "message": "Empfang"
+  },
+  "receiveModal_receive_description": {
+    "message": "Senden Sie nur %{tokenName} und Tokens im TON-Netzwerk an diese Adresse, sonst könnten Sie Ihr Geld verlieren."
+  },
+  "receiveModal_receive_title": {
+    "message": "Empfangen %{tokenName}"
+  },
+  "receiveModal_receive_ton": {
+    "message": "Senden Sie nur Toncoin TON und Tokens im TON-Netzwerk an diese Adresse, sonst könnten Sie Ihr Geld verlieren."
+  },
+  "receive_qr_title": {
+    "message": "QR-Code anzeigen, um zu empfangen"
+  },
+  "receive_received_title": {
+    "message": "Sie haben\n%{amount} %{currency} erhalten"
+  },
+  "receive_share": {
+    "message": "Teilen"
+  },
+  "receive_title": {
+    "message": "Erhalten %{currency}"
+  },
+  "receive_ton_and_jettons": {
+    "message": "TON und andere Token empfangen"
+  },
+  "recovery_phrase_caption": {
+    "message": "Schreiben Sie diese Wörter mit ihren Nummern auf und bewahren Sie sie an einem sicheren Ort auf."
+  },
+  "recovery_phrase_check_button": {
+    "message": "Backup überprüfen"
+  },
+  "recovery_phrase_copy_button": {
+    "message": "Kopieren"
+  },
+  "recovery_phrase_title": {
+    "message": "Wiederherstellungsphrase"
+  },
+  "refresh_app": {
+    "message": "Neustart"
+  },
+  "region_nokyc": {
+    "message": "Neutrale Gewässer"
+  },
+  "reminder_notifications_caption": {
+    "message": "Erhalten Sie Benachrichtigungen, wenn Sie TON, Token und NFTs erhalten."
+  },
+  "reminder_notifications_enable_button": {
+    "message": "Benachrichtigungen aktivieren"
+  },
+  "reminder_notifications_later_button": {
+    "message": "Später"
+  },
+  "reminder_notifications_title": {
+    "message": "Erhalten Sie sofortige Benachrichtigungen"
+  },
+  "renew_in_progress": {
+    "message": "Verlängerung läuft…"
+  },
+  "renew_progress_of": {
+    "message": "%{current} von %{count}"
+  },
+  "require_create_wallet_modal_caption": {
+    "message": "Sie benötigen ein verbundenes Wallet, um Tonkeeper zu verwenden. Erstellen Sie entweder ein neues Wallet oder importieren Sie ein vorhandenes."
+  },
+  "require_create_wallet_modal_create_new": {
+    "message": "Neues Wallet erstellen"
+  },
+  "require_create_wallet_modal_import": {
+    "message": "Vorhandenes Wallet importieren"
+  },
+  "require_create_wallet_modal_title": {
+    "message": "Richten wir Ihr Wallet ein"
+  },
+  "restake_banner_stake_into_step": {
+    "message": "Verfügbare TON in Tonstakers staken."
+  },
+  "restake_banner_stake_into_tonstakers_action": {
+    "message": "In Tonstakers staken"
+  },
+  "restake_banner_title": {
+    "message": "Verdienen Sie mehr TON mit %apy im Tonstakers Liquid Staking"
+  },
+  "restake_banner_unstake_action_all": {
+    "message": "Auszahlen %{amount}"
+  },
+  "restake_banner_unstake_action_manual": {
+    "message": "Manuell eingeben"
+  },
+  "restake_banner_unstake_step": {
+    "message": "TON von Ihrem aktuellen Staking-Anbieter abziehen."
+  },
+  "restake_banner_wait_step": {
+    "message": "Warten Sie, bis Ihre TON verfügbar sind."
+  },
+  "restake_banner_wait_step_collect": {
+    "message": "Sammeln"
+  },
+  "restake_banner_wait_step_cooldown": {
+    "message": "Ihr TON wird bald verfügbar sein. Sie können ihn in Kürze abholen."
+  },
+  "restake_banner_wait_step_pending": {
+    "message": "Ihre TON werden in %{0, number}uration verfügbar sein. Nach dieser Zeit können Sie sie einsammeln."
+  },
+  "restake_banner_wait_step_withdraw": {
+    "message": "Verfügbare TON von Ihrem vorherigen Staking-Anbieter einsammeln."
+  },
+  "scan_qr_open_settings": {
+    "message": "Einstellungen öffnen"
+  },
+  "scan_qr_permission_error": {
+    "message": "Kamerazugriff erlauben, um QR-Codes zu scannen"
+  },
+  "scan_qr_title": {
+    "message": "QR-Code scannen"
+  },
+  "secret_words_caption": {
+    "message": "Schreiben Sie diese 24 Wörter in der unten angegebenen Reihenfolge auf und bewahren Sie sie an einem geheimen, sicheren Ort auf."
+  },
+  "secret_words_title": {
+    "message": "Ihre Wiederherstellungsphrase"
+  },
+  "security_change_passcode": {
+    "message": "Passcode ändern"
+  },
+  "security_lock_screen_switch": {
+    "message": "Bildschirm sperren"
+  },
+  "security_lock_screen_tip": {
+    "message": "Passcode erforderlich, um Wallet-Inhalte anzuzeigen."
+  },
+  "security_migration_caption": {
+    "message": "Jetzt sind Ihr Guthaben und alle Vorgänge durch einen Passcode gesichert. Sie können auch mit einer biometrischen Überprüfung beschleunigen."
+  },
+  "security_migration_skip_button": {
+    "message": "Jetzt nicht aktualisieren"
+  },
+  "security_migration_submit_button": {
+    "message": "Sicherheitseinstellungen aktualisieren"
+  },
+  "security_migration_title": {
+    "message": "Wallet-Sicherheit aktualisieren"
+  },
+  "security_reset_passcode": {
+    "message": "Passwort zurücksetzen"
+  },
+  "security_title": {
+    "message": "Sicherheit"
+  },
+  "security_use_biometry_switch": {
+    "message": "%{biometryType} verwenden"
+  },
+  "security_use_biometry_tip": {
+    "message": "Sie können Ihre Brieftasche immer mit einem Passcode entsperren."
+  },
+  "select_wallet_for_authorization": {
+    "message": "Wallet zur Autorisierung auswählen"
+  },
+  "send_address_placeholder": {
+    "message": "Adresse oder Name"
+  },
+  "send_all_warning_title": {
+    "message": "Sind Sie sicher, dass Sie Ihr gesamtes Guthaben senden möchten?"
+  },
+  "send_build_tx_error": {
+    "message": "Ihre Transaktion ist fehlgeschlagen"
+  },
+  "send_comment_label": {
+    "message": "Kommentar hinzufügen"
+  },
+  "send_fee_estimation_error": {
+    "message": "Gebühr konnte nicht berechnet werden"
+  },
+  "send_get_wallet_info_error": {
+    "message": "Abrufen der Wallet-Informationen fehlgeschlagen"
+  },
+  "send_insufficient_funds": {
+    "message": "Unzureichende Mittel"
+  },
+  "send_invalid_recipient_caption": {
+    "message": "Die Domain existiert nicht oder die Wallet-Adresse ist nicht damit verknüpft"
+  },
+  "send_invalid_recipient_title": {
+    "message": "Ungültiger Empfänger"
+  },
+  "send_lockup_warning_caption": {
+    "message": "Bitte überprüfen Sie, ob Sie an die erlaubte Adresse senden.\n\nDie Gebühr wird auch dann abgezogen, wenn die Transaktion fehlschlägt."
+  },
+  "send_lockup_warning_submit_button": {
+    "message": "Senden"
+  },
+  "send_lockup_warning_title": {
+    "message": "Betrag übersteigt verfügbares Guthaben"
+  },
+  "send_publish_tx_error": {
+    "message": "Senden der Transaktion fehlgeschlagen"
+  },
+  "send_screen_steps_address_delete_alert_text": {
+    "message": "Möchten Sie «%{name}» wirklich aus Ihren Favoriten löschen?"
+  },
+  "send_screen_steps_address_placeholder": {
+    "message": "Walletsaddresse oder Domain"
+  },
+  "send_screen_steps_address_recent_label": {
+    "message": "Kürzlich"
+  },
+  "send_screen_steps_address_suggest_actions_add": {
+    "message": "Zu Favoriten hinzufügen"
+  },
+  "send_screen_steps_address_suggest_actions_delete": {
+    "message": "Löschen"
+  },
+  "send_screen_steps_address_suggest_actions_edit": {
+    "message": "Favorit bearbeiten"
+  },
+  "send_screen_steps_address_suggest_actions_hide": {
+    "message": "Verstecken"
+  },
+  "send_screen_steps_address_suggests_label": {
+    "message": "Favoriten und Aktuelles"
+  },
+  "send_screen_steps_address_title": {
+    "message": "Empfänger"
+  },
+  "send_screen_steps_amount_insufficient_balance": {
+    "message": "Unzureichendes Guthaben"
+  },
+  "send_screen_steps_amount_less_than_min": {
+    "message": "Minimum %{minAmount} TON"
+  },
+  "send_screen_steps_amount_less_than_min_with_symbol": {
+    "message": "Minimum %{minAmount} %{symbol}"
+  },
+  "send_screen_steps_amount_liquid_jetton_note": {
+    "message": "tsTON-Liquiditätstoken senden"
+  },
+  "send_screen_steps_amount_max": {
+    "message": "MAX"
+  },
+  "send_screen_steps_amount_recipient_label": {
+    "message": "An:"
+  },
+  "send_screen_steps_amount_remaining": {
+    "message": "Verfügbar: %{amount}"
+  },
+  "send_screen_steps_amount_title": {
+    "message": "Betrag"
+  },
+  "send_screen_steps_comfirm_action": {
+    "message": "%{coin} Überweisung"
+  },
+  "send_screen_steps_comfirm_comment_ascii_text": {
+    "message": "Verwenden Sie nur ASCII-Zeichen: Ziffern, Buchstaben des lateinischen Alphabets und Satzzeichen."
+  },
+  "send_screen_steps_comfirm_comment_decrypt": {
+    "message": "Entschlüsseln"
+  },
+  "send_screen_steps_comfirm_comment_description": {
+    "message": "Wird für alle sichtbar sein."
+  },
+  "send_screen_steps_comfirm_comment_description_encrypted": {
+    "message": "Wird nur für den Empfänger und Sie sichtbar sein."
+  },
+  "send_screen_steps_comfirm_comment_encrypt": {
+    "message": "Kommentar verschlüsseln"
+  },
+  "send_screen_steps_comfirm_comment_label": {
+    "message": "Kommentar"
+  },
+  "send_screen_steps_comfirm_comment_label_encrypted": {
+    "message": "Verschlüsselter Kommentar"
+  },
+  "send_screen_steps_comfirm_comment_label_required": {
+    "message": "Erforderlicher Kommentar"
+  },
+  "send_screen_steps_comfirm_comment_required_text": {
+    "message": "Sie müssen die Notiz vom Austausch für die Übertragung einfügen. Ohne diese gehen Ihre Gelder verloren"
+  },
+  "send_screen_steps_comfirm_details_label": {
+    "message": "Details"
+  },
+  "send_screen_steps_comfirm_details_max_balance_label": {
+    "message": "Maximalen Kontostand von %{currency} senden"
+  },
+  "send_screen_steps_comfirm_title": {
+    "message": "Aktion bestätigen"
+  },
+  "send_screen_steps_comfirm_wallet": {
+    "message": "Wallet"
+  },
+  "send_screen_steps_comfirm_will_be_paid_with_battery": {
+    "message": "Wird mit der Tonkeeper Batterie bezahlt"
+  },
+  "send_screen_steps_done_add_favorite": {
+    "message": "Adresse zu Favoriten speichern"
+  },
+  "send_screen_steps_done_address": {
+    "message": "Adresse: %{address}"
+  },
+  "send_screen_steps_done_comment": {
+    "message": "Kommentar: %{comment}"
+  },
+  "send_screen_steps_done_description": {
+    "message": "Ihre Transaktion wurde an das Netzwerk gesendet und wird innerhalb ein paar Sekunden verarbeitet."
+  },
+  "send_screen_steps_done_done_label": {
+    "message": "Fertig"
+  },
+  "send_screen_steps_done_favorite_saved": {
+    "message": "Zu Favoriten gespeichert"
+  },
+  "send_screen_steps_done_fee": {
+    "message": "Gebühr: %{fee}"
+  },
+  "send_screen_steps_done_title": {
+    "message": "%{currency} gesendet!"
+  },
+  "send_screen_steps_done_to": {
+    "message": "An: %{name}"
+  },
+  "send_sending_failed": {
+    "message": "Senden fehlgeschlagen"
+  },
+  "send_sending_wrong_time_description": {
+    "message": "Schalten Sie die automatische Zeit- und Datumseinstellung in Ihren Geräteeinstellungen ein. Versuchen Sie dann erneut, Ihre Übertragung durchzuführen."
+  },
+  "send_sending_wrong_time_title": {
+    "message": "Ein Fehler ist aufgetreten"
+  },
+  "settings_appearance": {
+    "message": "Thema"
+  },
+  "settings_backup_seed": {
+    "message": "Backup"
+  },
+  "settings_bank_card": {
+    "message": "Bankkarte"
+  },
+  "settings_contact_support": {
+    "message": "Kontaktieren Sie uns"
+  },
+  "settings_delete_account": {
+    "message": "Konto löschen"
+  },
+  "settings_delete_alert_button": {
+    "message": "Konto und Daten löschen"
+  },
+  "settings_delete_alert_caption": {
+    "message": "Diese Aktion löscht Ihr Konto und alle Daten aus dieser Anwendung."
+  },
+  "settings_delete_alert_title": {
+    "message": "Möchten Sie Ihr Konto wirklich löschen?"
+  },
+  "settings_delete_signer_account": {
+    "message": "Konto löschen?"
+  },
+  "settings_delete_watch_account": {
+    "message": "Beobachtungsaccount löschen?"
+  },
+  "settings_delete_watch_account_button": {
+    "message": "Löschen"
+  },
+  "settings_faq": {
+    "message": "Häufig gestellte Fragen"
+  },
+  "settings_jettons_list": {
+    "message": "Tokens"
+  },
+  "settings_legal_documents": {
+    "message": "Rechtliches"
+  },
+  "settings_network_alert_title": {
+    "message": "Netzwerk auswählen"
+  },
+  "settings_news": {
+    "message": "Tonkeeper Nachrichten"
+  },
+  "settings_notifications": {
+    "message": "Benachrichtigungen"
+  },
+  "settings_primary_currency": {
+    "message": "Währung"
+  },
+  "settings_rate": {
+    "message": "Bewerten Sie Tonkeeper"
+  },
+  "settings_recovery_phrase": {
+    "message": "Wiederherstellungsphrase"
+  },
+  "settings_reset": {
+    "message": "Abmelden"
+  },
+  "settings_reset_alert_button": {
+    "message": "Abmelden"
+  },
+  "settings_reset_alert_caption": {
+    "message": "Dies wird den Schlüssel zu Ihrer Wallet löschen. Stellen Sie sicher, dass Sie Ihre Wiederherstellungsphrase gesichert haben."
+  },
+  "settings_reset_alert_caption_all": {
+    "message": "Dies wird die Schlüssel zu allen Wallets löschen. Stellen Sie sicher, dass Sie Ihre Wiederherstellungsphrasen gesichert haben."
+  },
+  "settings_reset_alert_title": {
+    "message": "Abmelden?"
+  },
+  "settings_reset_alert_title_all": {
+    "message": "Von allen Wallets abmelden?"
+  },
+  "settings_search_engine": {
+    "message": "Suche"
+  },
+  "settings_security": {
+    "message": "Sicherheit"
+  },
+  "settings_subscriptions": {
+    "message": "Abonnements"
+  },
+  "settings_support": {
+    "message": "Unterstützung"
+  },
+  "settings_theme": {
+    "message": "Thema"
+  },
+  "settings_theme_names_blue": {
+    "message": "Tiefblau"
+  },
+  "settings_theme_names_dark": {
+    "message": "Dunkel"
+  },
+  "settings_theme_names_light": {
+    "message": "Hell"
+  },
+  "settings_theme_names_system": {
+    "message": "System"
+  },
+  "settings_title": {
+    "message": "Einstellung"
+  },
+  "settings_to_mainnet": {
+    "message": "Zum Mainnet wechseln"
+  },
+  "settings_to_testnet": {
+    "message": "Zum Testnet wechseln"
+  },
+  "settings_version": {
+    "message": "Version"
+  },
+  "settings_wallet_version": {
+    "message": "Aktive Adresse"
+  },
+  "setup_biometry_caption": {
+    "message": "%{biometryType} ermöglicht es Ihnen, Ihr Wallet schneller zu öffnen, ohne Ihr Passwort eingeben zu müssen."
+  },
+  "setup_biometry_enable_button": {
+    "message": "%{biometryType} aktivieren"
+  },
+  "setup_biometry_title": {
+    "message": "Schnelles Anmelden mit %{biometryType}"
+  },
+  "setup_notifications_caption": {
+    "message": "Lassen Sie sich benachrichtigen, wenn Sie TON, Token und NFTs erhalten"
+  },
+  "setup_notifications_enable_button": {
+    "message": "Benachrichtigungen aktivieren"
+  },
+  "setup_notifications_title": {
+    "message": "Erhalten Sie sofortige Benachrichtigungen"
+  },
+  "signerConfirm_confirm": {
+    "message": "Transaktion in Signer bestätigen"
+  },
+  "signerConfirm_scan_qr": {
+    "message": "Scannen Sie den QR-Code mit Signer"
+  },
+  "signerConfirm_scan_signed_qr": {
+    "message": "Signierten Transaktions-QR-Code vom Signer scannen"
+  },
+  "signerConfirm_step": {
+    "message": "Schritt %{value}"
+  },
+  "signerConfirm_title": {
+    "message": "Aktion bestätigen"
+  },
+  "signer_scan_result": {
+    "message": "Signierte Transaktion scannen"
+  },
+  "signer_scan_tx_description": {
+    "message": "Bitte öffnen Sie Signer und scannen Sie den QR-Code mit der Transaktion"
+  },
+  "skip": {
+    "message": "Überspringen"
+  },
+  "spam_action": {
+    "message": "Spam"
+  },
+  "staking_active": {
+    "message": "Aktiv"
+  },
+  "staking_confirm_address_label": {
+    "message": "Empfängersadresse"
+  },
+  "staking_confirm_amount_label": {
+    "message": "Betrag"
+  },
+  "staking_confirm_amount_value": {
+    "message": "%{value} TON"
+  },
+  "staking_confirm_fee_label": {
+    "message": "Gebühr"
+  },
+  "staking_confirm_fee_value": {
+    "message": "≈ %{value} TON"
+  },
+  "staking_confirm_recipient_label": {
+    "message": "Empfänger"
+  },
+  "staking_confirm_withdraw_amount_label": {
+    "message": "Auszahlungsbetrag"
+  },
+  "staking_confirm_deposit": {
+    "message": "Bestätigen und staken"
+  },
+  "staking_confirm_unstake": {
+    "message": "Bestätigen und unstaken"
+  },
+  "staking_deposit": {
+    "message": "Einzahlung"
+  },
+  "staking_desc_large": {
+    "message": "Nehmen Sie am Staking teil und erhalten Sie Belohnungen. Staking hilft, das TON-Netzwerk zu unterstützen."
+  },
+  "staking_details_about_pool": {
+    "message": "Details"
+  },
+  "staking_details_apy_highest_tag": {
+    "message": "MAX"
+  },
+  "staking_details_apy_label": {
+    "message": "APY"
+  },
+  "staking_details_apy_value": {
+    "message": "≈ %{value}%"
+  },
+  "staking_details_balance": {
+    "message": "Staking-Guthaben"
+  },
+  "staking_details_cooldown_active": {
+    "message": "Aktiv"
+  },
+  "staking_details_cooldown_desc": {
+    "message": "Zweistündiger Zeitraum, der zu Beginn jedes Staking-Zyklus angewendet wird, um den Prozess von Abhebungen und Einzahlungen zwischen den Zyklen zu verbessern"
+  },
+  "staking_details_cooldown_title": {
+    "message": "Abkühlungszeitraum"
+  },
+  "staking_details_frequency_label": {
+    "message": "Belohnungshäufigkeit"
+  },
+  "staking_details_frequency_value": {
+    "message": "Alle %{count} Stunden"
+  },
+  "staking_details_links_title": {
+    "message": "Links"
+  },
+  "staking_details_liquidity_token_label": {
+    "message": "%{token}-Liquiditätstoken"
+  },
+  "staking_details_liquidity_token_value": {
+    "message": "Mehr erfahren"
+  },
+  "staking_details_min_deposit_label": {
+    "message": "Minimale Einzahlung"
+  },
+  "staking_details_min_deposit_value": {
+    "message": "%{value} TON"
+  },
+  "staking_details_next_cycle_desc": {
+    "message": "Alle Transaktionen treten in Kraft, sobald der Zyklus endet."
+  },
+  "staking_details_next_cycle_desc_liquid": {
+    "message": "Unstake-Anfragen sind abgeschlossen, nachdem der Zyklus endet."
+  },
+  "staking_details_next_cycle_in": {
+    "message": "In"
+  },
+  "staking_details_next_cycle_message": {
+    "message": "Die Unstake-Anfrage wird nach dem Ende des Validierungszyklus in %{value} bearbeitet"
+  },
+  "staking_details_next_cycle_reward_title": {
+    "message": "Nächste Belohnung"
+  },
+  "staking_details_next_cycle_title": {
+    "message": "Nächster Zyklus"
+  },
+  "staking_details_note": {
+    "message": "Staking basiert auf Smart Contracts von Drittanbietern. Tonkeeper ist nicht für das Staking-Erlebnis verantwortlich."
+  },
+  "staking_details_pendingDeposit": {
+    "message": "Ausstehender Einsatz"
+  },
+  "staking_details_pendingWithdraw": {
+    "message": "Ausstehende Auszahlung"
+  },
+  "staking_details_pendingWithdrawDesc": {
+    "message": "nach dem Ende des Zyklus"
+  },
+  "staking_details_pool_address_label": {
+    "message": "Pool-Adresse"
+  },
+  "staking_details_readyWithdraw": {
+    "message": "Bereit zum Abstecken"
+  },
+  "staking_details_socials_telegram": {
+    "message": "Gemeinschaft"
+  },
+  "staking_details_socials_twitter": {
+    "message": "Twitter"
+  },
+  "staking_details_tap_to_collect": {
+    "message": "Zum Sammeln tippen"
+  },
+  "staking_estimated_profit": {
+    "message": "%{amount} TON – jährlicher Gewinn wenn Sie TON heute staken"
+  },
+  "staking_estimated_profit_compare": {
+    "message": "Profitabler um %{amount} TON pro Jahr als Ihr aktuelles Staking"
+  },
+  "staking_get_withdrawal": {
+    "message": "Abhebung erhalten"
+  },
+  "staking_highest_apy": {
+    "message": "MAX APY"
+  },
+  "staking_jetton_note": {
+    "message": "Wenn Sie TON in einem %{poolName}-Pool einsetzen, erhalten Sie einen Token namens %{token}, der Ihren Anteil am Pool darstellt. Wenn der Pool Gewinne anhäuft, stellt Ihr %{token} eine größere Menge an TON dar."
+  },
+  "staking_learn_more": {
+    "message": "Mehr erfahren"
+  },
+  "staking_message_pendingDeposit": {
+    "message": "%{amount} TON eingesetzt\n"
+  },
+  "staking_message_pendingWithdraw": {
+    "message": "%{amount} TON nicht abgesteckt\n"
+  },
+  "staking_message_pendingWithdrawLiquid": {
+    "message": "%{amount} TON nicht eingesetzt nach dem Ende des Zyklus"
+  },
+  "staking_message_readyWithdraw": {
+    "message": "%{amount} TON bereit.\nTippen zum Sammeln"
+  },
+  "staking_no_funds": {
+    "message": "Keine Mittel zum Unstaking verfügbar"
+  },
+  "staking_not_exists": {
+    "message": "Ungültige Pool-Adresse"
+  },
+  "staking_other": {
+    "message": "Andere Menge"
+  },
+  "staking_rewards_after_top_up": {
+    "message": "Nach Einzahlung"
+  },
+  "staking_rewards_current": {
+    "message": "Aktuell"
+  },
+  "staking_rewards_title": {
+    "message": "Ihr APY"
+  },
+  "staking_rewards_value": {
+    "message": "≈ %{value} TON"
+  },
+  "staking_send_staked_ton": {
+    "message": "Eingesetzte TON"
+  },
+  "staking_staked": {
+    "message": "Eingesetzt"
+  },
+  "staking_staked_ton": {
+    "message": "Eingesetzte TON"
+  },
+  "staking_staking_desc": {
+    "message": "Mindestbetrag %{minStake} TON.\nVerdienen Sie bis zu %{maxApy}%."
+  },
+  "staking_staking_pool_desc": {
+    "message": "APY ≈ %{apy}%"
+  },
+  "staking_title": {
+    "message": "Staking"
+  },
+  "staking_title_large": {
+    "message": "TON Staking"
+  },
+  "staking_top_up": {
+    "message": "Einzahlung"
+  },
+  "staking_transaction": {
+    "message": "Aktion bestätigen"
+  },
+  "staking_warning_about": {
+    "message": "Über %{name}"
+  },
+  "staking_warning_beta_desc": {
+    "message": "Wir sind nicht verantwortlich für die Stabilität und das Staking-Erlebnis. Nutzung auf eigene Gefahr."
+  },
+  "staking_warning_desc": {
+    "message": "Staking basiert auf Smart Contracts von Drittanbietern. Wir sind nicht für deren Arbeit verantwortlich."
+  },
+  "staking_warning_title": {
+    "message": "Warnung"
+  },
+  "staking_widget_desc": {
+    "message": "APY bis zu %{apy}%"
+  },
+  "staking_widget_staking_options": {
+    "message": "Einsatzmöglichkeiten"
+  },
+  "staking_widget_title": {
+    "message": "Einzahlung TON"
+  },
+  "staking_withdraw": {
+    "message": "Unstake"
+  },
+  "staking_withdrawal_fee_warning_continue": {
+    "message": "Trotzdem fortfahren"
+  },
+  "staking_withdrawal_fee_warning_message": {
+    "message": "Bitte lassen Sie mindestens {{amount}} TON auf Ihrem Guthaben."
+  },
+  "staking_withdrawal_fee_warning_title": {
+    "message": "Sie haben nicht genügend Mittel für die Abhebung"
+  },
+  "staking_withdrawal_request": {
+    "message": "Unstake"
+  },
+  "start_screen_caption": {
+    "message": "Erstellen Sie ein neues Wallet oder fügen Sie ein bestehendes hinzu"
+  },
+  "start_screen_create_wallet_button": {
+    "message": "Neues Wallet erstellen"
+  },
+  "start_screen_import_wallet_button": {
+    "message": "Vorhandenes Wallet importieren"
+  },
+  "stop_watch": {
+    "message": "Beobachtungsaccount löschen"
+  },
+  "subscription_back_to_merchant_button": {
+    "message": "Zurück"
+  },
+  "subscription_back_to_merchant_caption": {
+    "message": "Die Transaktion wird verarbeitet. Ihr Abonnement wird bald aktiv sein."
+  },
+  "subscription_back_to_merchant_name": {
+    "message": "Zurück zu %{merchantName}"
+  },
+  "subscription_back_to_merchant_title": {
+    "message": "Zurück zum Kanal?"
+  },
+  "subscription_cancel": {
+    "message": "Abonnement kündigen"
+  },
+  "subscription_cancel_alert_cancel_btn": {
+    "message": "Nicht jetzt"
+  },
+  "subscription_cancel_alert_caption": {
+    "message": "Wenn Sie jetzt kündigen, können Sie Ihr Abonnement noch bis %{nextBill} nutzen"
+  },
+  "subscription_cancel_alert_submit_btn": {
+    "message": "Ja, abbrechen"
+  },
+  "subscription_cancel_alert_title": {
+    "message": "Abonnement kündigen?"
+  },
+  "subscription_expiring": {
+    "message": "Ablaufend"
+  },
+  "subscription_fee": {
+    "message": "Gebühr"
+  },
+  "subscription_next_bill": {
+    "message": "Nächste Rechnung"
+  },
+  "subscription_open_merchant": {
+    "message": "In Telegram öffnen"
+  },
+  "subscription_period": {
+    "message": "Intervall"
+  },
+  "subscription_period_custom": {
+    "message": "Jede %{period}"
+  },
+  "subscription_period_day": {
+    "message": "Täglich"
+  },
+  "subscription_period_half_year": {
+    "message": "Halbjährlich"
+  },
+  "subscription_period_hour": {
+    "message": "Stündlich"
+  },
+  "subscription_period_month": {
+    "message": "Monatlich"
+  },
+  "subscription_period_quarter": {
+    "message": "Vierteljährlich"
+  },
+  "subscription_period_week": {
+    "message": "Wöchentlich"
+  },
+  "subscription_period_weeks": {
+    "message": "Alle %{count} Wochen"
+  },
+  "subscription_period_year": {
+    "message": "Jährlich"
+  },
+  "subscription_price": {
+    "message": "Preis"
+  },
+  "subscription_sent": {
+    "message": "Transaktion gesendet"
+  },
+  "subscriptions_item_caption": {
+    "message": "%{price} TON, nächste Rechnung am %{nextBill}"
+  },
+  "subscriptions_item_caption_expired": {
+    "message": "Abgelaufen %{date}"
+  },
+  "subscriptions_item_caption_expiring": {
+    "message": "%{price} TON, läuft ab %{date}"
+  },
+  "subscriptions_section_active": {
+    "message": "Aktiv"
+  },
+  "subscriptions_section_expired": {
+    "message": "Abgelaufen"
+  },
+  "subscription_started": {
+    "message": "Abonnement gestartet"
+  },
+  "subscriptions_title": {
+    "message": "Abonnements"
+  },
+  "subscription_subscribe": {
+    "message": "Abonnieren"
+  },
+  "subscription_title": {
+    "message": "Abonnement"
+  },
+  "subscription_unsubscribe": {
+    "message": "Abbestellen"
+  },
+  "success": {
+    "message": "Erfolgreich!"
+  },
+  "suspicious_buttons_not_spam": {
+    "message": "Kein Spam"
+  },
+  "suspicious_buttons_report": {
+    "message": "Spam melden"
+  },
+  "suspicious_label_full": {
+    "message": "Unverifiziertes NFT"
+  },
+  "suspicious_label_short": {
+    "message": "Unverifiziert"
+  },
+  "suspicious_status_update_hidden_collection": {
+    "message": "Sammlung ausgeblendet"
+  },
+  "suspicious_status_update_hidden_nft": {
+    "message": "NFT versteckt"
+  },
+  "suspicious_status_update_spam_collection": {
+    "message": "Sammlung als Spam markiert"
+  },
+  "suspicious_status_update_spam_nft": {
+    "message": "NFT als Spam markiert"
+  },
+  "suspiciousNFTDetails_buttons_not_spam": {
+    "message": "Kein Spam"
+  },
+  "suspiciousNFTDetails_buttons_report": {
+    "message": "Spam melden"
+  },
+  "suspiciousNFTDetails_paragraphs_p1": {
+    "message": "Wird für Spam verwendet. Wird zum Versenden unerwünschter und oft irrelevanter Nachrichten in großem Umfang eingesetzt."
+  },
+  "suspiciousNFTDetails_paragraphs_p2": {
+    "message": "Wird für Betrug verwendet. Der Name, die Beschreibung oder das Bild des NFT kann Benutzer in die Irre führen."
+  },
+  "suspiciousNFTDetails_paragraphs_p3": {
+    "message": "Wir wissen wenig über den Autor und die Geschichte dieses NFTs."
+  },
+  "suspiciousNFTDetails_subtitle": {
+    "message": "NFT ist möglicherweise aus einem der folgenden Gründe nicht sicher zu verwenden."
+  },
+  "suspiciousNFTDetails_title": {
+    "message": "Unverifiziertes NFT"
+  },
+  "swap_title": {
+    "message": "Tauschen"
+  },
+  "tab_browser": {
+    "message": "Browser"
+  },
+  "tab_collectibles": {
+    "message": "Sammlerstücke"
+  },
+  "tab_nft": {
+    "message": "NFTs"
+  },
+  "tab_settings": {
+    "message": "Einstellungen"
+  },
+  "tab_swap": {
+    "message": "Tauschen"
+  },
+  "tab_wallet": {
+    "message": "Wallet"
+  },
+  "today": {
+    "message": "Heute"
+  },
+  "tokenDetails_name": {
+    "message": "Name"
+  },
+  "tokenDetails_title": {
+    "message": "Token-Details"
+  },
+  "tokenDetails_token_id": {
+    "message": "Token-ID"
+  },
+  "tokenDetails_tonviewer_button": {
+    "message": "Auf Tonviewer anzeigen"
+  },
+  "tonconnect_error_bad_request": {
+    "message": "Ungültige Anfrage"
+  },
+  "tonconnect_error_wrong_from": {
+    "message": "Falscher 'from'-Parameter"
+  },
+  "tonconnect_error_wrong_network": {
+    "message": "Falsches Netzwerk"
+  },
+  "tonkeeper_pro": {
+    "message": "Tonkeeper Pro"
+  },
+  "tonkeeper_pro_description": {
+    "message": "Das Abonnement von Tonkeeper Pro beinhaltet eine erweiterte Wallet-Funktion und bietet ein Toolset für das Krypto-Management"
+  },
+  "ton_login_back_to_button": {
+    "message": "Zurück zu %{name}"
+  },
+  "ton_login_caption": {
+    "message": "%{name} möchte auf Ihre Wallet-Adresse zugreifen"
+  },
+  "ton_login_connect_button": {
+    "message": "Wallet verbinden"
+  },
+  "ton_login_notice": {
+    "message": "Überprüfen Sie die Serviceadresse, bevor Sie die Wallet verbinden."
+  },
+  "ton_login_success": {
+    "message": "Fertig"
+  },
+  "ton_login_title": {
+    "message": "Mit %{0, number}omain verbinden?"
+  },
+  "transaction_bid_collection_name": {
+    "message": "Emittent"
+  },
+  "transaction_bid_date": {
+    "message": "Gebot %{date}"
+  },
+  "transaction_bid_dns": {
+    "message": "Name"
+  },
+  "transaction_buy_date": {
+    "message": "Gekauft am %{date}"
+  },
+  "transaction_buy_status_failed": {
+    "message": "Fehlgeschlagen"
+  },
+  "transaction_buy_status_pending": {
+    "message": "Anhängig"
+  },
+  "transaction_buy_status_success": {
+    "message": "Erfolgreich"
+  },
+  "transaction_confirmations": {
+    "message": "Bestätigungen"
+  },
+  "transaction_confirm_bid": {
+    "message": "Gebot bestätigen"
+  },
+  "transaction_contract_deploy_date": {
+    "message": "%{date}"
+  },
+  "transaction_copy_caution": {
+    "message": "Seien Sie vorsichtig mit externen Links. Geben Sie Ihre geheime Phrase niemals an Drittanbieter-Ressourcen weiter – Sie können Ihr gesamtes Geld verlieren.\n\n- - -\n\n"
+  },
+  "transactionDetails_address": {
+    "message": "Adresse"
+  },
+  "transactionDetails_bid_collection_name": {
+    "message": "Emittent"
+  },
+  "transactionDetails_bid_name": {
+    "message": "Name"
+  },
+  "transactionDetails_comment": {
+    "message": "Kommentar"
+  },
+  "transactionDetails_description": {
+    "message": "Beschreibung"
+  },
+  "transactionDetails_operation": {
+    "message": "Vorgang"
+  },
+  "transactionDetails_payload": {
+    "message": "Nutzlast"
+  },
+  "transactionDetails_recipient": {
+    "message": "Empfänger"
+  },
+  "transactionDetails_recipient_address": {
+    "message": "Empfängersadresse"
+  },
+  "transactionDetails_sender": {
+    "message": "Absender"
+  },
+  "transactionDetails_sender_address": {
+    "message": "Absenderadresse"
+  },
+  "transactionDetails_spam": {
+    "message": "SPAM"
+  },
+  "transactionDetails_subscription_merchant_label": {
+    "message": "Händler"
+  },
+  "transactionDetails_subscription_product_label": {
+    "message": "Abonnement"
+  },
+  "transactionDetails_transaction": {
+    "message": "Transaktion"
+  },
+  "transactionDetails_unsubscription_title": {
+    "message": "Abgemeldet"
+  },
+  "transactionDetails_withdraw_amount": {
+    "message": "Auszahlungsbetrag"
+  },
+  "transaction_exchange_from_currency": {
+    "message": "Von"
+  },
+  "transaction_fee": {
+    "message": "Gebühr"
+  },
+  "transaction_hash": {
+    "message": "Transaktion"
+  },
+  "transaction_merchant": {
+    "message": "Händler"
+  },
+  "transaction_message": {
+    "message": "Nachricht"
+  },
+  "transaction_purchase_id": {
+    "message": "Kauf-ID"
+  },
+  "transaction_receive_date": {
+    "message": "Empfangen am %{date}"
+  },
+  "transaction_recipient": {
+    "message": "Empfänger"
+  },
+  "transaction_recipient_address": {
+    "message": "Empfängersadresse"
+  },
+  "transaction_refund": {
+    "message": "Rückerstattung"
+  },
+  "transactions_bid": {
+    "message": "Gebot"
+  },
+  "transactions_burned": {
+    "message": "Verbrannt"
+  },
+  "transactions_contract_deploy": {
+    "message": "Vertrag bereitstellen"
+  },
+  "transactions_deposit": {
+    "message": "Einzahlung"
+  },
+  "transactions_failed": {
+    "message": "Fehlgeschlagen"
+  },
+  "transactions_failed_with_reason_swap_refund_no_liq": {
+    "message": "Fehlgeschlagen. Erhöhen Sie die Slippage-Toleranz in den Swap-Einstellungen, um diesen Fehler zu vermeiden."
+  },
+  "transactions_nft_purchase": {
+    "message": "NFT-Kauf"
+  },
+  "transactions_smartcontract_exec": {
+    "message": "Vertrag anrufen"
+  },
+  "transactions_spam": {
+    "message": "Spam"
+  },
+  "transactions_subscription": {
+    "message": "Abonniert"
+  },
+  "transactions_swap": {
+    "message": "Tauschen"
+  },
+  "transactions_unknown": {
+    "message": "Unbekannt"
+  },
+  "transactions_unknown_description": {
+    "message": "Etwas ist passiert, aber wir konnten es nicht erkennen"
+  },
+  "transactions_unsubscription": {
+    "message": "Abgemeldet"
+  },
+  "transactions_wallet_initialized": {
+    "message": "Wallet initialisiert"
+  },
+  "transactions_withdraw": {
+    "message": "Auszahlung"
+  },
+  "transactions_withdrawal_request": {
+    "message": "Auszahlungsanfrage"
+  },
+  "transaction_sender": {
+    "message": "Absender"
+  },
+  "transaction_sender_address": {
+    "message": "Absenderadresse"
+  },
+  "transaction_send_more_button": {
+    "message": "Mehr an diesen Empfänger senden"
+  },
+  "transaction_sent_date": {
+    "message": "Gesendet am %{date}"
+  },
+  "transaction_show_subscription_button": {
+    "message": "Abonnement anzeigen"
+  },
+  "transaction_status": {
+    "message": "Status"
+  },
+  "transaction_subscription": {
+    "message": "Abonnement"
+  },
+  "transaction_subscription_date": {
+    "message": "Berechnet am %{date}"
+  },
+  "transaction_transfer_name": {
+    "message": "Überweisungsname"
+  },
+  "transaction_type_bid": {
+    "message": "Gebot"
+  },
+  "transaction_type_bounced": {
+    "message": "Zurückgekommen"
+  },
+  "transaction_type_buy": {
+    "message": "Gekauft"
+  },
+  "transaction_type_contract_deploy": {
+    "message": "Vertrag bereitstellen"
+  },
+  "transaction_type_from": {
+    "message": "Von"
+  },
+  "transaction_type_new_subscriber": {
+    "message": "Neuer Abonnent"
+  },
+  "transaction_type_pending": {
+    "message": "Anhängig"
+  },
+  "transaction_type_receive": {
+    "message": "Empfangen"
+  },
+  "transaction_type_sent": {
+    "message": "Gesendet"
+  },
+  "transaction_type_subscriber_lost": {
+    "message": "Abonnent verloren"
+  },
+  "transaction_type_subscription": {
+    "message": "Abonniert"
+  },
+  "transaction_type_to": {
+    "message": "An"
+  },
+  "transaction_type_unsubscription": {
+    "message": "Abgemeldet"
+  },
+  "transaction_type_wallet_initialized": {
+    "message": "Wallet initialisiert"
+  },
+  "transaction_unsubscription": {
+    "message": "Kündigung"
+  },
+  "transaction_unsubscription_date": {
+    "message": "%{date}"
+  },
+  "transaction_view_in_explorer": {
+    "message": "Im Explorer anzeigen"
+  },
+  "transaction_wallet_initialized_date": {
+    "message": "%{date}"
+  },
+  "transaction_your_bid": {
+    "message": "Ihr Gebot"
+  },
+  "transfer_deeplink_address_error": {
+    "message": "Falsche Empfängersadresse"
+  },
+  "transfer_deeplink_amount_error": {
+    "message": "Falsche Betragsanfrage"
+  },
+  "transfer_deeplink_expired_error": {
+    "message": "Abgelaufener Link"
+  },
+  "transfer_deeplink_nft_address_error": {
+    "message": "Falsche NFT-Adresse"
+  },
+  "transfer_deeplink_unknown_jetton_error": {
+    "message": "Unbekanntes Token"
+  },
+  "transfer_deeplink_unknown_token": {
+    "message": "Unbekanntes Token"
+  },
+  "transfer_deeplink_wrong_params": {
+    "message": "Falsche Parameter"
+  },
+  "transfer_from_old_wallet_btn": {
+    "message": "Überweisung"
+  },
+  "transfer_from_old_wallet_caption": {
+    "message": "Tonkeeper wird alle Coins von Ihrer alten Adresse auf Ihre aktuelle Adresse übertragen."
+  },
+  "transfer_from_old_wallet_in_progress": {
+    "message": "Übertragung läuft"
+  },
+  "transfer_from_old_wallet_title": {
+    "message": "Übertragung an aktuelle Adresse"
+  },
+  "transfer_pending_by_battery_error": {
+    "message": "Eine andere Transaktion wird von der Batterie bearbeitet"
+  },
+  "txActions_amount": {
+    "message": "Betrag"
+  },
+  "txActions_fee": {
+    "message": "Gebühr"
+  },
+  "txActions_refund": {
+    "message": "Rückerstattung"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_close": {
+    "message": "Abbrechen"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_description": {
+    "message": "Wechseln Sie die Wallet, um die Aktion zu bestätigen."
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_switch": {
+    "message": "Wechseln und fortfahren"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_title": {
+    "message": "Aktion für Ihre Wallet %{value}"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_close": {
+    "message": "Abbrechen"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_description": {
+    "message": "Wechseln Sie Ihre aktive Adresse zu %{version}, um die Aktion zu bestätigen."
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_switch": {
+    "message": "Wechseln und fortfahren"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_title": {
+    "message": "Aktion für eine andere Adresse Ihrer Wallet"
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_close": {
+    "message": "OK"
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_description": {
+    "message": "Melden Sie sich bei einer anderen Wallet %{address} an und versuchen Sie es erneut."
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_title": {
+    "message": "Aktion für ein anderes Wallet"
+  },
+  "txActions_signRaw_comment": {
+    "message": "Kommentar"
+  },
+  "txActions_signRaw_insufficientFunds_rechargeBattery": {
+    "message": "Batterie aufladen"
+  },
+  "txActions_signRaw_insufficientFunds_rechargeWallet": {
+    "message": "%{currency} kaufen"
+  },
+  "txActions_signRaw_insufficientFunds_stakingDeposit": {
+    "message": "Mindestguthaben für die Teilnahme:\n%{amount} %{currency}\n"
+  },
+  "txActions_signRaw_insufficientFunds_stakingFee": {
+    "message": "%{count} TON für die Transaktion benötigt. Geschätzte Gebühr %{fee} TON wird abgezogen, der Rest wird zurückerstattet."
+  },
+  "txActions_signRaw_insufficientFunds_title": {
+    "message": "Unzureichende Mittel"
+  },
+  "txActions_signRaw_insufficientFunds_title_multiwallet": {
+    "message": "Unzureichende Mittel im Wallet"
+  },
+  "txActions_signRaw_insufficientFunds_toBePaid": {
+    "message": "Zu zahlen: %{amount} %{currency}\n"
+  },
+  "txActions_signRaw_insufficientFunds_withFees": {
+    "message": "+ Blockchain-Gebühren.\n"
+  },
+  "txActions_signRaw_insufficientFunds_yourBalance": {
+    "message": "Ihr Guthaben: %{balance} %{currency}."
+  },
+  "txActions_signRaw_recipient": {
+    "message": "Empfänger"
+  },
+  "txActions_signRaw_title": {
+    "message": "Transaktion bestätigen"
+  },
+  "txActions_signRaw_totalFee": {
+    "message": "Gesamtgebühr"
+  },
+  "txActions_signRaw_totalRefund": {
+    "message": "Gesamtbetrag der Rückerstattung"
+  },
+  "txActions_signRaw_types_contractDeploy": {
+    "message": "Vertrag bereitstellen"
+  },
+  "txActions_signRaw_types_jettonTransfer": {
+    "message": "Token Überweisung"
+  },
+  "txActions_signRaw_types_nftItemTransfer": {
+    "message": "NFT Überweisung"
+  },
+  "txActions_signRaw_types_subscribe": {
+    "message": "Abonnement"
+  },
+  "txActions_signRaw_types_tonTransfer": {
+    "message": "TON-Überweisung"
+  },
+  "txActions_signRaw_types_unknownTransaction": {
+    "message": "Unbekannte Transaktion"
+  },
+  "txActions_signRaw_types_unSubscribe": {
+    "message": "Kündigung"
+  },
+  "txActions_signRaw_warning_caption": {
+    "message": "Tonkeeper kann das Ergebnis dieser Transaktion nicht vollständig überprüfen. Bitte stellen Sie sicher, dass Sie dem Empfänger vertrauen."
+  },
+  "txActions_signRaw_warning_title": {
+    "message": "Warnung"
+  },
+  "txActions_signRaw_wrongTime_button": {
+    "message": "Einstellungen öffnen"
+  },
+  "txActions_signRaw_wrongTime_description": {
+    "message": "Es scheint, dass die Uhr Ihres Geräts nicht mit dem Netzwerk synchronisiert ist. Öffnen Sie die Geräteeinstellungen und aktivieren Sie die automatische Zeit- und Datumseinstellung."
+  },
+  "txActions_signRaw_wrongTime_title": {
+    "message": "Die Uhren sind nicht synchronisiert"
+  },
+  "unverifiedTokenDetails_button": {
+    "message": "OK"
+  },
+  "unverifiedTokenDetails_description": {
+    "message": "Dieses Token sieht aus mehreren Gründen verdächtig aus."
+  },
+  "unverifiedTokenDetails_paragraphs_p1": {
+    "message": "Geringe Liquidität. Token kann einen gewissen Wert haben, aber er ist extrem niedrig."
+  },
+  "unverifiedTokenDetails_paragraphs_p2": {
+    "message": "Token ist nicht auf Handelsplattformen gelistet und hat eine begrenzte Nachfrage."
+  },
+  "unverifiedTokenDetails_paragraphs_p3": {
+    "message": "Wird für Spam verwendet. Wird zum Versenden unerwünschter und oft irrelevanter Nachrichten in großem Umfang eingesetzt."
+  },
+  "unverifiedTokenDetails_paragraphs_p4": {
+    "message": "Wird für Betrug verwendet. Der Name oder das Bild des Tokens kann Benutzer in die Irre führen."
+  },
+  "unverifiedTokenDetails_title": {
+    "message": "Unverifiziertes Token"
+  },
+  "update_description": {
+    "message": "Eine neue Version von Tonkeeper ist verfügbar. Sie können sie jetzt herunterladen."
+  },
+  "update_download": {
+    "message": "Herunterladen"
+  },
+  "update_downloading": {
+    "message": "Wird heruntergeladen… {{'progress}}'%"
+  },
+  "update_mb": {
+    "message": "{{size}} MB"
+  },
+  "update_remindLater": {
+    "message": "Erinnere mich später"
+  },
+  "update_retry": {
+    "message": "Download-Fehler. Tippen Sie, um es erneut zu versuchen."
+  },
+  "update_tap": {
+    "message": "Tippen zum Aktualisieren"
+  },
+  "update_title": {
+    "message": "Tonkeeper aktualisieren"
+  },
+  "update_version": {
+    "message": "Version {{version}}"
+  },
+  "upgrade_to_w5_about_button": {
+    "message": "Über W5 Wallet"
+  },
+  "upgrade_to_w5_description": {
+    "message": "Probieren Sie den brandneuen W5-Wallet-Standard mit Unterstützung für gaslose USDT-Zahlungen und anderen coolen Funktionen aus."
+  },
+  "upgrade_to_w5_hide_button": {
+    "message": "Verstecken"
+  },
+  "upgrade_to_w5_settings": {
+    "message": "Wallet W5"
+  },
+  "upgrade_to_w5_title": {
+    "message": "Gasfreie Überweisungen"
+  },
+  "upgrade_to_w5_try_button": {
+    "message": "Versuchen Sie Wallet W5"
+  },
+  "username_issued_by_telegram": {
+    "message": "Ausgestellt von Telegram"
+  },
+  "username_manage_name_button": {
+    "message": "Name verwalten"
+  },
+  "w5_stories_0_description": {
+    "message": "W5 verwendet einen effizienteren Transaktionsverarbeitungsansatz, was bis zu 25 % niedrigere Gaskosten bedeutet."
+  },
+  "w5_stories_0_title": {
+    "message": "Reduzierte Blockchain-Gebühren"
+  },
+  "w5_stories_1_description": {
+    "message": "W5 erhöht die Anzahl gleichzeitiger Operationen von 4 auf 255, was Gebührenkosten sparen kann."
+  },
+  "w5_stories_1_title": {
+    "message": "Bis zu 255 Operationen in einer Transaktion"
+  },
+  "w5_stories_2_description": {
+    "message": "Senden Sie USDT, ohne TON zu haben – die Transaktionsgebühren werden automatisch durch ein paar Cent USDT gedeckt."
+  },
+  "w5_stories_2_title": {
+    "message": "Gasfreie USDT-Überweisungen"
+  },
+  "w5_stories_3_description": {
+    "message": "Alte Konten und W5 verwenden denselben Wiederherstellungssatz – beim Wiederherstellen von Konten auf einem neuen Gerät werden sowohl alte als auch neue automatisch angezeigt."
+  },
+  "w5_stories_3_title": {
+    "message": "Wiederherstellungsphrase ändert sich nicht"
+  },
+  "w5_stories_4_button": {
+    "message": "W5 Wallet hinzufügen"
+  },
+  "w5_stories_4_description": {
+    "message": "Der W5-Standard ist nicht endgültig. Gaslose Transaktionen werden als experimentelle Funktion angeboten, um zu testen, wie es funktioniert. Verschieben Sie nicht alle Ihre Vermögenswerte in die W5-Wallet, bis die endgültige Veröffentlichung erfolgt ist."
+  },
+  "w5_stories_4_title": {
+    "message": "W5 ist Beta"
+  },
+  "wallet_about": {
+    "message": "Über"
+  },
+  "wallet_buy": {
+    "message": "Kaufen"
+  },
+  "wallet_buy_btn": {
+    "message": "Kaufen & Verkaufen"
+  },
+  "wallet_collectibles_tab_lable": {
+    "message": "Sammlerstücke"
+  },
+  "wallet_edit_tokens_btn": {
+    "message": "Bearbeiten"
+  },
+  "wallet_inscriptions_tab_label": {
+    "message": "Inschriften"
+  },
+  "wallet_nft_tab_lable": {
+    "message": "Sammlerstücke"
+  },
+  "wallet_old_wallets_title": {
+    "message": "Alte Wallets"
+  },
+  "wallet_old_wallet_title": {
+    "message": "Altes Wallet"
+  },
+  "wallet_receive_btn": {
+    "message": "Empfangen"
+  },
+  "wallet_scan_btn": {
+    "message": "Scannen"
+  },
+  "wallet_screen_title": {
+    "message": "Wallet"
+  },
+  "wallet_send_btn": {
+    "message": "Senden"
+  },
+  "wallet_stake_btn": {
+    "message": "Einzahlung"
+  },
+  "wallet_swap_btn": {
+    "message": "Tauschen"
+  },
+  "wallet_tonkens_tab_lable": {
+    "message": "Tokens"
+  },
+  "wallet_updated_at": {
+    "message": "Aktualisiert am %{value}"
+  },
+  "wallet_chat": {
+    "message": "Chat"
+  },
+  "wallet_community": {
+    "message": "Gemeinschaft"
+  },
+  "wallet_hours_symbol": {
+    "message": "s"
+  },
+  "wallet_old_balance": {
+    "message": "Altes Wallet:"
+  },
+  "wallet_receive": {
+    "message": "Empfangen"
+  },
+  "wallets": {
+    "message": "Wallets"
+  },
+  "wallet_sell": {
+    "message": "Verkaufen"
+  },
+  "wallet_send": {
+    "message": "Senden"
+  },
+  "wallet_source_code": {
+    "message": "Quellcode"
+  },
+  "wallet_swap": {
+    "message": "Tauschen"
+  },
+  "wallet_title": {
+    "message": "Wallet"
+  },
+  "watch_only": {
+    "message": "Nur beobachten"
+  },
+  "yesterday": {
+    "message": "Gestern"
+  },
+  "about_tonkeeper_pro": {
+    "message": "Über Tonkeeper Pro"
+  },
+  "account_is_already_added_action": {
+    "message": "Wallet öffnen"
+  },
+  "account_is_already_added_label": {
+    "message": "Dieses Wallet wurde bereits hinzugefügt als"
+  },
+  "actionTitle": {
+    "message": "Wallet öffnen"
+  },
+  "add": {
+    "message": "Hinzufügen"
+  },
+  "add_dns_address": {
+    "message": "Fügen Sie die Walletsadresse hinzu, mit der die Domain %1% verknüpft wird."
+  },
+  "add_wallet_existing_multisig_description": {
+    "message": "%{number} Wallets werden von Ihrer Wallet-Liste verwaltet"
+  },
+  "add_wallet_existing_multisig_title": {
+    "message": "Bestehendes Multisig-Wallet"
+  },
+  "add_wallet_group_hardware_title": {
+    "message": "Hardware-Wallets"
+  },
+  "add_wallet_group_other_options": {
+    "message": "Andere Optionen"
+  },
+  "add_wallet_modal_mam_subtitle": {
+    "message": "Verwalten Sie mehrere Wallets mit einer einzigen geheimen Wiederherstellungsphrase"
+  },
+  "add_wallet_modal_mam_title": {
+    "message": "Neues Multi-Wallet-Konto"
+  },
+  "add_wallet_new_multisig_description": {
+    "message": "Für die gemeinsame Verwaltung und den Schutz von Kryptowährungsfonds"
+  },
+  "add_wallet_new_multisig_title": {
+    "message": "Neues Multisig-Wallet"
+  },
+  "all_assets_jettons": {
+    "message": "Alle Vermögenswerte"
+  },
+  "appExtensionDescription": {
+    "message": "Ihr Erweiterungs-Wallet im The Open Network"
+  },
+  "appName": {
+    "message": "Tonkeeper"
+  },
+  "appTitle": {
+    "message": "Tonkeeper — Wallet für TON"
+  },
+  "App_version_copied": {
+    "message": "App-Version kopiert"
+  },
+  "aside_add_wallet": {
+    "message": "Wallet hinzufügen"
+  },
+  "aside_dashboard": {
+    "message": "Dashboard"
+  },
+  "aside_discover": {
+    "message": "Entdecken"
+  },
+  "aside_expires_on": {
+    "message": "Es läuft ab am %date%"
+  },
+  "aside_header_number_wallets": {
+    "message": "%{number} Wallets"
+  },
+  "aside_pro_subscription_is_active": {
+    "message": "Pro-Abonnement ist aktiv."
+  },
+  "aside_pro_trial_is_active": {
+    "message": "Pro-Testversion ist aktiv."
+  },
+  "aside_settings": {
+    "message": "Präferenzen"
+  },
+  "auto": {
+    "message": "Automatisch"
+  },
+  "Back_up_now": {
+    "message": "Jetzt sichern"
+  },
+  "Change": {
+    "message": "Ändern"
+  },
+  "Change_password": {
+    "message": "Passwort ändern"
+  },
+  "close": {
+    "message": "Schließen"
+  },
+  "collectibles_empty_header": {
+    "message": "Ihre Sammlerstücke werden hier angezeigt"
+  },
+  "confirm_modal_transfer": {
+    "message": "Überweisung"
+  },
+  "ConfirmPassword": {
+    "message": "Passwort erneut eingeben"
+  },
+  "confirm_unlink": {
+    "message": "Verknüpfungaufhebung bestätigen"
+  },
+  "connected_apps_short": {
+    "message": "Verbundene Apps"
+  },
+  "connect_telegram": {
+    "message": "Telegram verbinden"
+  },
+  "Copy_address": {
+    "message": "Adresse kopieren"
+  },
+  "country": {
+    "message": "Land"
+  },
+  "create_multisig_add_participant": {
+    "message": "Teilnehmer hinzufügen"
+  },
+  "create_multisig_await_deployment_description": {
+    "message": "Es kann ein paar Minuten dauern."
+  },
+  "create_multisig_await_deployment_help_explorer_button": {
+    "message": "Vertrag im Explorer anzeigen"
+  },
+  "create_multisig_await_deployment_help_support_button": {
+    "message": "Hilfe erhalten"
+  },
+  "create_multisig_await_deployment_help_title": {
+    "message": "Nichts passiert?"
+  },
+  "create_multisig_await_deployment_title": {
+    "message": "Warten auf die Bereitstellung Ihres Wallets"
+  },
+  "create_multisig_can_change_hint": {
+    "message": "Sie können jederzeit die Anzahl der Teilnehmer, deren Rollen und die Anzahl der für eine erfolgreiche Transaktion erforderlichen Signaturen ändern."
+  },
+  "create_multisig_create_wallet": {
+    "message": "Neues Wallet erstellen"
+  },
+  "create_multisig_duplicated_address_error": {
+    "message": "Adresse wurde bereits hinzugefügt"
+  },
+  "create_multisig_error_already_deployed": {
+    "message": "Ein solcher Multisig-Vertrag bereits existiert. Versuchen Sie, den Multisig-Vertrag mit einer anderen Wallet bereitzustellen."
+  },
+  "create_multisig_invalid_address_error": {
+    "message": "Ungültige Adresse"
+  },
+  "create_multisig_participants": {
+    "message": "Teilnehmer"
+  },
+  "create_multisig_quorum": {
+    "message": "Quorum"
+  },
+  "create_multisig_quorum_invalid_number_participants_error": {
+    "message": "Ungültige Anzahl von Teilnehmern"
+  },
+  "create_multisig_quorum_participants": {
+    "message": "Teilnehmer"
+  },
+  "create_multisig_quorum_zero_participants_error": {
+    "message": "Mindestens ein Teilnehmer ist erforderlich"
+  },
+  "create_multisig_what_are_signers": {
+    "message": "Alle Teilnehmer können Transaktionen bestätigen und Änderungen vorschlagen, beispielsweise Teilnehmer hinzufügen oder entfernen."
+  },
+  "Create_password": {
+    "message": "Passwort erstellen"
+  },
+  "dashboard_column_name": {
+    "message": "Name"
+  },
+  "dashboard_manage_modal_title": {
+    "message": "Dashboard"
+  },
+  "delete": {
+    "message": "Löschen"
+  },
+  "Delete_all_accounts_and_logout": {
+    "message": "Alle Konten löschen und abmelden"
+  },
+  "Delete_keystone_wallet_data_description": {
+    "message": "Wallet-Daten und alle persönlichen Daten werden von diesem Gerät gelöscht."
+  },
+  "Delete_wallet_data": {
+    "message": "Wallet-Daten löschen"
+  },
+  "Delete_wallet_data_description": {
+    "message": "Wallet-Schlüssel und alle persönlichen Daten werden von diesem Gerät gelöscht."
+  },
+  "disconnect": {
+    "message": "Trennen"
+  },
+  "disconnect_all_apps": {
+    "message": "Alle Apps trennen"
+  },
+  "disconnect_all_apps_confirm": {
+    "message": "Alle Apps trennen?"
+  },
+  "dns_linked_with_another_address_warn": {
+    "message": "Die Domain ist nicht mit Ihrer aktuellen Adresse verknüpft. Seien Sie bei Transaktionen mit dieser Domain vorsichtig."
+  },
+  "domains_empty_header": {
+    "message": "Ihre Domains werden hier angezeigt"
+  },
+  "Edit_jettons": {
+    "message": "Bearbeiten"
+  },
+  "Enable_storing_config": {
+    "message": "Speichern der Konfiguration aktivieren"
+  },
+  "enter_password": {
+    "message": "Passwort eingeben"
+  },
+  "export_dot_csv": {
+    "message": ".CSV exportieren"
+  },
+  "hide": {
+    "message": "Verstecken"
+  },
+  "history_spam_nft": {
+    "message": "Spam-NFT"
+  },
+  "I_have_a_backup_copy_of_recovery_phrase": {
+    "message": "Ich habe eine Sicherungskopie der Wiederherstellungsphrase"
+  },
+  "import_csv": {
+    "message": "CSV importieren"
+  },
+  "import_csv_description": {
+    "message": "Ziehen Sie die Datei per Drag & Drop oder klicken Sie auf die Schaltfläche unten, um sie hochzuladen. Bitte überprüfen Sie die unten stehende Beispieltabellenstruktur, um Fehler zu vermeiden."
+  },
+  "import_dot_csv": {
+    "message": ".CSV importieren"
+  },
+  "import_existing_wallet_description_extended": {
+    "message": "Wallet mit 24 oder 12 geheimen Wiederherstellungswörtern importieren"
+  },
+  "import_multisend_dnd_error": {
+    "message": "Die abgelegte Datei kann nicht analysiert werden"
+  },
+  "import_multisend_drop_file": {
+    "message": "Legen Sie die Datei ab"
+  },
+  "import_multisend_error_column": {
+    "message": "Spalte"
+  },
+  "import_multisend_error_invalid_amount": {
+    "message": "Ungültiger Überweisungsbetrag"
+  },
+  "import_multisend_error_invalid_asset": {
+    "message": "Ungültiges Transfervermögen"
+  },
+  "import_multisend_error_invalid_csv": {
+    "message": "Ungültiges CSV-Dateiformat"
+  },
+  "import_multisend_error_invalid_receiver": {
+    "message": "Ungültiges Format des Übertragungsempfängers"
+  },
+  "import_multisend_error_invalid_row_length": {
+    "message": "Ungültige CSV-Zeilenlänge"
+  },
+  "import_multisend_error_line": {
+    "message": "Linie"
+  },
+  "import_multisend_error_list_empty": {
+    "message": "CSV-Tabelle ist leer"
+  },
+  "import_multisend_error_too_many_crypto_assets": {
+    "message": "Es gibt zu viele verschiedene Krypto-Assets auf der Liste zu übertragen. Stellen Sie sicher, dass alle Zeilen, in denen ein Krypto-Asset angegeben ist, dasselbe Krypto-Asset verwenden."
+  },
+  "import_multisend_error_too_many_fiat_assets": {
+    "message": "Es gibt zu viele verschiedene Fiat-Assets auf der Liste zu übertragen. Stellen Sie sicher, dass alle Zeilen, in denen ein Fiat-Asset angegeben ist, dasselbe Fiat-Asset verwenden."
+  },
+  "import_multisend_error_unknown": {
+    "message": "Unbekannter Parsing-Fehler"
+  },
+  "import_multisend_fiat_warn_description": {
+    "message": "Wechseln oder ersetzen Sie die Währung, um fortzufahren."
+  },
+  "import_multisend_fiat_warn_switch_button": {
+    "message": "Wechseln Sie die Wallet-Währung zu"
+  },
+  "import_multisend_fiat_warn_title": {
+    "message": "Die Währung im Wallet und die Währung in der Datei stimmen nicht überein."
+  },
+  "import_multisend_table_comment": {
+    "message": "Kommentar"
+  },
+  "import_multisend_table_example": {
+    "message": "Tabellenbeispiel"
+  },
+  "import_multisend_table_heading_address": {
+    "message": "EQ- oder UQ-Adresse / Hex-Adresse / Domain .ton"
+  },
+  "import_multisend_table_heading_amount": {
+    "message": "Betrag"
+  },
+  "import_multisend_table_heading_asset": {
+    "message": "Fiat-Ticker / TON / Hex, EQ oder UQ Adresse des Token-Masters"
+  },
+  "import_multisend_table_heading_comment": {
+    "message": "Optionaler Kommentar"
+  },
+  "import_wallet_12_words": {
+    "message": "12 Wörter"
+  },
+  "import_wallet_24_words": {
+    "message": "24 Wörter"
+  },
+  "import_wallet_caption_12": {
+    "message": "Um den Zugriff auf Ihr Wallet wiederherzustellen, geben Sie die 12 geheimen Wiederherstellungswörter ein, die Sie beim Erstellen Ihres Wallets erhalten haben."
+  },
+  "import_wallet_title_web": {
+    "message": "Geben Sie Ihre Wiederherstellungsphrase ein"
+  },
+  "IncorrectCurrentPassword": {
+    "message": "Falsches aktuelles Passwort."
+  },
+  "keystone_pair_subtitle": {
+    "message": "Ein höheres Maß an Sicherheit mit AIR-GAP-Hardware-Wallet"
+  },
+  "keystone_pair_title": {
+    "message": "Mit Keystone koppeln"
+  },
+  "keystone_sign_subtitle": {
+    "message": "Bitte öffnen Sie Keystone und scannen Sie den QR-Code mit der Transaktion"
+  },
+  "keystone_sign_title": {
+    "message": "Keystone verbinden"
+  },
+  "learn_more": {
+    "message": "Mehr erfahren"
+  },
+  "ledger_choose_wallets": {
+    "message": "Wählen Sie Wallets"
+  },
+  "ledger_connect_header": {
+    "message": "Ledger verbinden"
+  },
+  "ledger_continue_with_ledger": {
+    "message": "Weiter mit Ledger"
+  },
+  "ledger_pair_subtitle": {
+    "message": "Hardware-Modul, Bluetooth oder USB-C, limitierte TON Funktionen"
+  },
+  "ledger_pair_title": {
+    "message": "Mit Ledger koppeln"
+  },
+  "ledger_steps_confirm_tx": {
+    "message": "Transaktion auf Ledger bestätigen"
+  },
+  "ledger_steps_connect": {
+    "message": "Verbinden Sie Ledger mit Ihrem Gerät"
+  },
+  "ledger_steps_install_ton": {
+    "message": "TON-App installieren"
+  },
+  "ledger_steps_open_ton": {
+    "message": "Entsperren Sie es und öffnen Sie die TON App"
+  },
+  "Localization": {
+    "message": "Sprache"
+  },
+  "Lock_screen": {
+    "message": "Bildschirm sperren"
+  },
+  "logout_on_unlock_many": {
+    "message": "Dadurch werden die Schlüssel zu all Ihren Geldbörsen gelöscht. Stellen Sie sicher, dass Sie Ihre geheimen Wiederherstellungsphrasen gesichert haben."
+  },
+  "logout_on_unlock_one": {
+    "message": "Dadurch werden die Schlüssel zur Brieftasche gelöscht. Stellen Sie sicher, dass Sie Ihre geheime Wiederherstellungsphrase gesichert haben."
+  },
+  "mam_account_explanation": {
+    "message": "Die Kontowiederherstellungsphrase bietet Zugriff auf alle damit erstellten Wallets und wird nur in Tonkeeper Pro unterstützt. Wenn du ein bestimmtes Wallet exportieren möchtest, verwende stattdessen Wallet Recovery Phrase Backup."
+  },
+  "Manage": {
+    "message": "Verwalten"
+  },
+  "Manage_wallets": {
+    "message": "Wallets verwalten"
+  },
+  "MinPassword": {
+    "message": "Muss mindestens 6 Zeichen lang sein."
+  },
+  "multi_send_about_w5": {
+    "message": "Über W5"
+  },
+  "multi_send_add_more": {
+    "message": "Mehr hinzufügen"
+  },
+  "multisend_confirm_error_insufficient_ton_for_fee": {
+    "message": "Der Wallet-Saldo von %balance% reicht nicht aus, um die Blockchain-Gebühren zu decken. Erforderlicher Mindestsaldo: %required%. Nicht genutzte TON werden nach der Transaktion an Ihr Wallet zurückerstattet."
+  },
+  "multi_send_continue_with_pro": {
+    "message": "Weiter mit Pro"
+  },
+  "multi_send_delete_description": {
+    "message": "Diese Aktion ist irreversibel und alle Daten gehen verloren."
+  },
+  "multi_send_delete_list": {
+    "message": "Liste löschen"
+  },
+  "multi_send_discard_and_close": {
+    "message": "Verwerfen und schließen"
+  },
+  "multi_send_edit": {
+    "message": "Bearbeiten"
+  },
+  "multi_send_edit_list_name": {
+    "message": "Listennamen bearbeiten"
+  },
+  "multi_send_enter_a_name": {
+    "message": "Geben Sie einen neuen Namen für Ihre Liste ein:"
+  },
+  "multi_send_header": {
+    "message": "Neue Mehrfachsendung"
+  },
+  "multi_send_insufficient_balance": {
+    "message": "Ungenügendes Gleichgewicht"
+  },
+  "multi_send_list": {
+    "message": "Liste"
+  },
+  "multi_send_maximum_255_reached": {
+    "message": "Maximal 255 Felder erreicht"
+  },
+  "multi_send_maximum_reached": {
+    "message": "Maximum erreicht. Bis zu 255 Felder mit der W5-Wallet-Version"
+  },
+  "multi_send_new_list": {
+    "message": "Neue Liste"
+  },
+  "multi_send_remaining": {
+    "message": "Verbleibend"
+  },
+  "multi_send_save_as_new": {
+    "message": "Als neu speichern"
+  },
+  "multi_send_save_description": {
+    "message": "Speichern Sie die Liste mit Adressen, Beträgen und Kommentaren für die zukünftige Verwendung."
+  },
+  "multi_send_save_list": {
+    "message": "Liste speichern"
+  },
+  "multi_send_save_title": {
+    "message": "Diese Liste speichern?"
+  },
+  "multi_send_show_all": {
+    "message": "Alle anzeigen"
+  },
+  "multi_send_switch_to_w5": {
+    "message": "Zu W5 wechseln"
+  },
+  "multi_send_update_description": {
+    "message": "Aktualisieren Sie die Informationen in der aktuellen Liste."
+  },
+  "multi_send_wallets": {
+    "message": "Wallets"
+  },
+  "multi_send_will_be_sent": {
+    "message": "Wird gesendet"
+  },
+  "multisig_add_description": {
+    "message": "Geben Sie die Teilnehmer an, die diese Wallet verwalten können."
+  },
+  "multisig_add_title": {
+    "message": "Wallet einrichten"
+  },
+  "multisig_config_diff_add_participant": {
+    "message": "Teilnehmer hinzufügen"
+  },
+  "multisig_config_diff_quorum_updates": {
+    "message": "Quorum-Aktualisierung"
+  },
+  "multisig_config_diff_remove_participant": {
+    "message": "Teilnehmer entfernen"
+  },
+  "multisig_create_order_title": {
+    "message": "Neue Anfrage"
+  },
+  "multisig_edit_submit_hint": {
+    "message": "Änderungen erfordern Unterschriften von %{number} anderen Teilnehmern."
+  },
+  "multisig_edit_suggest_changes": {
+    "message": "Änderungen vorschlagen"
+  },
+  "multisig_lifetime_1440_minutes": {
+    "message": "24 Stunden"
+  },
+  "multisig_lifetime_30_minutes": {
+    "message": "30 Minuten"
+  },
+  "multisig_lifetime_360_minutes": {
+    "message": "6 Stunden"
+  },
+  "multisig_lifetime_60_minutes": {
+    "message": "1 Stunde"
+  },
+  "multisig_lifetime_720_minutes": {
+    "message": "12 Stunden"
+  },
+  "multisig_order_details": {
+    "message": "Anfragedetails"
+  },
+  "multisig_order_details_explore": {
+    "message": "Anfragedetails"
+  },
+  "multisig_order_details_pending_signatures": {
+    "message": "Ausstehende Signaturen"
+  },
+  "multisig_order_details_signed_wallets": {
+    "message": "Signierte Wallets"
+  },
+  "multisig_order_notification_title": {
+    "message": "Multisig-Anfrage"
+  },
+  "multisig_order_select_time_description": {
+    "message": "Wählen Sie den Zeitpunkt aus, zu dem das Quorum Ihre Transaktion signieren soll."
+  },
+  "multisig_orders_th_created": {
+    "message": "Erstellt"
+  },
+  "multisig_orders_th_send": {
+    "message": "Senden"
+  },
+  "multisig_orders_th_signatures": {
+    "message": "Unterschriften"
+  },
+  "multisig_orders_th_status": {
+    "message": "Status"
+  },
+  "multisig_order_view": {
+    "message": "Ansehen"
+  },
+  "multisig_participant_you": {
+    "message": "Sie:"
+  },
+  "multisig_signed_label": {
+    "message": "Unterzeichner"
+  },
+  "multisig_signed_value": {
+    "message": "%{signed} von %{total} Unterzeichnern"
+  },
+  "multisig_status_completed": {
+    "message": "Abgeschlossen"
+  },
+  "multisig_status_expired": {
+    "message": "Abgelaufen"
+  },
+  "multisig_status_label": {
+    "message": "Status"
+  },
+  "multisig_status_progress": {
+    "message": "Anhängig"
+  },
+  "multisig_time_left": {
+    "message": "Verbleibende Zeit"
+  },
+  "multisig_time_to_sign_transaction": {
+    "message": "Zeit, eine Transaktion zu unterzeichnen"
+  },
+  "multisig_update_config_confirm_title": {
+    "message": "Bestätigen Sie die Aktualisierung der Multisig-Parameter"
+  },
+  "multisig_you_have_signed_the_request": {
+    "message": "Sie haben diese Anfrage unterschrieben"
+  },
+  "Name_your_wallet": {
+    "message": "Benennen Sie Ihr Wallet"
+  },
+  "Name_your_wallet_description": {
+    "message": "Benennen Sie Ihr Wallet, um es im Tonkeeper leicht zu identifizieren. Diese Namen werden lokal gespeichert und sind nur für Sie sichtbar."
+  },
+  "new_transfer_order_button": {
+    "message": "Neue Überweisungsanfrage"
+  },
+  "NFT_collection_id": {
+    "message": "NFT-Sammlungs-ID"
+  },
+  "NFT_creation": {
+    "message": "NFT-Erstellung"
+  },
+  "nft_empty_description": {
+    "message": "Kaufen, verkaufen, umtauschen und sammeln."
+  },
+  "nft_empty_go_discover_button": {
+    "message": "Erkunden Sie Apps und Dienste in Discover"
+  },
+  "nft_empty_header": {
+    "message": "Ihre Einkäufe werden hier angezeigt"
+  },
+  "NFT_item_id": {
+    "message": "NFT-Artikel-ID"
+  },
+  "no_connected_apps": {
+    "message": "Keine verbundenen Apps"
+  },
+  "no_multisig_description": {
+    "message": "Es werden nur Multisigs angezeigt, die mit der aktuellen Ton-Wallet verknüpft sind"
+  },
+  "no_multisig_heading": {
+    "message": "Ihre Multisig-Wallets werden hier angezeigt"
+  },
+  "no_multisig_learn_more": {
+    "message": "Erfahren Sie mehr über Multisig"
+  },
+  "no_multisig_orders_description": {
+    "message": "Alle Anfragen von allen Teilnehmern der Multisig-Wallet werden angezeigt."
+  },
+  "no_multisig_orders_heading": {
+    "message": "Die Anfragen Ihrer Multisig-Wallet werden hier angezeigt"
+  },
+  "Old_password": {
+    "message": "Aktuelles Passwort"
+  },
+  "open": {
+    "message": "Offen"
+  },
+  "operation_not_supported": {
+    "message": "Der Vorgang ist für diese Wallets nicht verfügbar. Wählen Sie ein anderes Wallet und versuchen Sie es erneut."
+  },
+  "order_send_token": {
+    "message": "Token senden"
+  },
+  "order_send_token_and_ton": {
+    "message": "TON und Token senden"
+  },
+  "order_send_ton": {
+    "message": "TON senden"
+  },
+  "page_header_history": {
+    "message": "Geschichte"
+  },
+  "page_header_purchases": {
+    "message": "Käufe"
+  },
+  "Password": {
+    "message": "Passwort"
+  },
+  "PasswordChanged": {
+    "message": "Passwort geändert"
+  },
+  "PasswordDoNotMatch": {
+    "message": "Passwörter stimmen nicht überein."
+  },
+  "pinned_jettons": {
+    "message": "Angeheftet"
+  },
+  "preferences_aside_dev_menu": {
+    "message": "Entwicklermenü"
+  },
+  "preferences_aside_faq": {
+    "message": "Häufig gestellte Fragen"
+  },
+  "preferences_aside_sign_out": {
+    "message": "Abmelden"
+  },
+  "preferences_aside_sign_out_all": {
+    "message": "Von allen Konten abmelden"
+  },
+  "preferences_aside_theme": {
+    "message": "Thema"
+  },
+  "pro_banner_buy": {
+    "message": "Pro kaufen"
+  },
+  "pro_banner_days_left": {
+    "message": "Testversion endet in %days%"
+  },
+  "pro_banner_start_trial": {
+    "message": "Pro kostenlos testen"
+  },
+  "pro_banner_subtitle": {
+    "message": "Greifen Sie auf erweiterte Funktionen und Tools zu, um Ihre Arbeit zu beschleunigen"
+  },
+  "pro_banner_title": {
+    "message": "Holen Sie mehr heraus mit Tonkeeper Pro"
+  },
+  "pro_feature_multisend": {
+    "message": "Mehrfachsendung"
+  },
+  "pro_feature_multisend_description": {
+    "message": "Mit der Multi-Send-Funktion können Sie Geld an bis zu 255 Adressen gleichzeitig senden. Tonkeeper Pro spart Zeit und vereinfacht den Prozess von Massentransaktionen."
+  },
+  "pro_features_dashboard": {
+    "message": "In Tonkeeper Pro – Dashboard"
+  },
+  "pro_features_dashboard_description": {
+    "message": "Im Dashboard haben Sie Zugriff auf die Wallet-Analyse. Diese Funktion wird professionellen Benutzern zugute kommen, die Tonkeeper in ihrem täglichen Geschäft verwenden."
+  },
+  "pro_features_description": {
+    "message": "Ein Tonkeeper Pro-Abonnement umfasst erweiterte Wallet-Funktionen und bietet eine Reihe von Tools zur Verwaltung Ihrer Kryptowährung."
+  },
+  "pro_other_features": {
+    "message": "Und weitere coole Funktionen sind auf dem Weg."
+  },
+  "pro_subscription_get_pro": {
+    "message": "Holen Sie sich Pro"
+  },
+  "publish_message": {
+    "message": "Nachricht im Internet veröffentlichen"
+  },
+  "receive_ton": {
+    "message": "Toncoin erhalten"
+  },
+  "receive_ton_description": {
+    "message": "Senden Sie nur Toncoin TON und Tokens\nim TON-Netzwerk an diese Adresse, sonst\nkönnten Sie Ihr Geld verlieren."
+  },
+  "receive_trc20": {
+    "message": "USDT TRC20 empfangen"
+  },
+  "receive_trc20_description": {
+    "message": "Senden Sie nur USDT TRC20\nan diese Adresse, sonst könnten\nSie Ihr Geld verlieren."
+  },
+  "recipients": {
+    "message": "Empfänger"
+  },
+  "Rename": {
+    "message": "Umbenennen"
+  },
+  "renew_nft_expiration_date": {
+    "message": "Läuft ab %1%"
+  },
+  "renew_nft_in_progress": {
+    "message": "Domain-Verlängerung läuft…"
+  },
+  "renew_nft_renewed": {
+    "message": "Domain für 1 Jahr erneuert"
+  },
+  "replace": {
+    "message": "Ersetzen"
+  },
+  "reset_tron_cache": {
+    "message": "Tron-Cache zurücksetzen"
+  },
+  "save": {
+    "message": "Speichern"
+  },
+  "secret_words_account_title": {
+    "message": "Ihre Kontowiederherstellungsphrase"
+  },
+  "secret_words_caption_12": {
+    "message": "Schreiben Sie diese 12 Wörter in der unten angegebenen Reihenfolge auf und bewahren Sie sie an einem geheimen, sicheren Ort auf."
+  },
+  "settings_backup_account": {
+    "message": "Backup-Konto"
+  },
+  "settings_backup_account_mam_description": {
+    "message": "Wird verwendet, um den Zugriff auf Ihr Multi-Wallet-Konto und alle zugehörigen Wallets wiederherzustellen"
+  },
+  "settings_backup_wallet": {
+    "message": "Backup Wallet"
+  },
+  "settings_collectibles_list": {
+    "message": "Sammlerstücke"
+  },
+  "settings_connected_apps": {
+    "message": "Verbundene Apps"
+  },
+  "settings_hide_current_wallet": {
+    "message": "Aktuelles Wallet ausblenden"
+  },
+  "settings_hide_multisig": {
+    "message": "Multisig-Wallet ausblenden"
+  },
+  "settings_ledger_indexes": {
+    "message": "Ledger-Subwallets"
+  },
+  "settings_mam_add_wallet": {
+    "message": "Neues Wallet hinzufügen"
+  },
+  "settings_mam_add_wallet_with_pro": {
+    "message": "Mit dem Pro-Abonnement mehr hinzufügen"
+  },
+  "settings_mam_indexes": {
+    "message": "Hinzugefügte Wallets"
+  },
+  "settings_mam_number_wallets": {
+    "message": "%{number} Wallets"
+  },
+  "settings_multisig_settings": {
+    "message": "Multisig-Einstellungen"
+  },
+  "start_trial_notification_description": {
+    "message": "Die Telegram-Verbindung ist ausschließlich erforderlich, um zu überprüfen, dass Sie kein Bot sind."
+  },
+  "start_trial_notification_heading": {
+    "message": "Telegram kostenlos mit Pro verbinden"
+  },
+  "swap_balance": {
+    "message": "Guthaben"
+  },
+  "swap_best_price": {
+    "message": "Der beste Preis"
+  },
+  "swap_blockchain_fee": {
+    "message": "Blockchain-Gebühr"
+  },
+  "swap_blockchain_fee_tooltip": {
+    "message": "Geschätzte Gebühr, die von der Blockchain für die Bearbeitung der Transaktion erhoben wird."
+  },
+  "swap_enter_amount": {
+    "message": "Geben Sie einen Betrag ein"
+  },
+  "swap_import": {
+    "message": "Importieren"
+  },
+  "swap_import_token_title": {
+    "message": "%token% Token importieren?"
+  },
+  "swap_ledger_not_supported": {
+    "message": "Swaps mit Ledger-Wallets werden nicht unterstützt"
+  },
+  "swap_max": {
+    "message": "MAX"
+  },
+  "swap_minimum_received": {
+    "message": "Mindestbetrag erhalten"
+  },
+  "swap_minimum_received_tooltip": {
+    "message": "Der Mindestbetrag, den Sie nach Abschluss des Handels garantiert erhalten."
+  },
+  "swap_not_enough_funds": {
+    "message": "Nicht genug Geld"
+  },
+  "swap_price_impact": {
+    "message": "Preisauswirkungen"
+  },
+  "swap_price_impact_too_high": {
+    "message": "Preisbeeinflussung zu hoch"
+  },
+  "swap_price_impact_tooltip": {
+    "message": "Die Auswirkungen, die der Swap nach Abschluss des Handels auf den Marktpreis des Tokens haben wird."
+  },
+  "swap_provider": {
+    "message": "Anbieter"
+  },
+  "swap_receive": {
+    "message": "Empfangen"
+  },
+  "swap_route": {
+    "message": "Route"
+  },
+  "swap_search": {
+    "message": "Suche"
+  },
+  "swap_send": {
+    "message": "Senden"
+  },
+  "swap_settings": {
+    "message": "Einstellungen tauschen"
+  },
+  "swap_slippage": {
+    "message": "Slippage"
+  },
+  "swap_slippage_description": {
+    "message": "Die maximal zulässige Differenz zwischen dem geschätzten Preis und dem tatsächlichen Preis. Wenn der Preisunterschied dieses Limit überschreitet, wird der Swap automatisch rückgängig gemacht."
+  },
+  "swap_slippage_tooltip": {
+    "message": "Die maximal zulässige Differenz zwischen dem geschätzten Preis und dem tatsächlichen Preis. Wenn der Preisunterschied dieses Limit überschreitet, wird der Swap automatisch rückgängig gemacht. Sie können diese Einstellung im Swaps-Einstellungsmenü konfigurieren."
+  },
+  "swap_tokens": {
+    "message": "Tokens"
+  },
+  "swap_tokens_not_found": {
+    "message": "Token nicht gefunden"
+  },
+  "swap_trade_is_not_available": {
+    "message": "Handel ist nicht verfügbar"
+  },
+  "swap_tx_info": {
+    "message": "Informationen zur Transaktion"
+  },
+  "swap_unknown_price_impact": {
+    "message": "Unbekannte Preisauswirkung"
+  },
+  "swap_unknown_token_description": {
+    "message": "Dieses Token ist nicht in der Liste der aktiven Token enthalten. Stellen Sie sicher, dass Sie sich der Risiken bewusst sind, die mit importierten Token verbunden sind."
+  },
+  "tme_linked_with_another_address_warn": {
+    "message": "Der Name ist nicht mit Ihrer aktuellen Adresse verknüpft. Seien Sie vorsichtig bei Transaktionen mit diesem Namen."
+  },
+  "tokens_hide_statistics_btn": {
+    "message": "Statistik ausblenden"
+  },
+  "tokens_show_statistics_btn": {
+    "message": "Statistik anzeigen"
+  },
+  "Toncoin": {
+    "message": "Toncoin"
+  },
+  "ton_login_title_web": {
+    "message": "Mit %{name} verbinden?"
+  },
+  "Ton_page_description": {
+    "message": "TON ist eine vollständig dezentrale Layer-1-Blockchain, die von Telegram für das Onboarding von Milliarden von Benutzern entwickelt wurde. Sie bietet ultraschnelle Transaktionen, geringe Gebühren, einfach zu bedienende Apps und ist umweltfreundlich."
+  },
+  "total": {
+    "message": "Insgesamt"
+  },
+  "total_balance": {
+    "message": "Saldo insgesamt"
+  },
+  "touch_id_unlock_wallet": {
+    "message": "Entsperren Sie Ihr Wallet"
+  },
+  "transaction_call_date": {
+    "message": "Vertragsanruf %{date}"
+  },
+  "transaction_type_mint": {
+    "message": "Prägen"
+  },
+  "transaction_type_purchase": {
+    "message": "Kauf"
+  },
+  "try_again": {
+    "message": "Versuchen Sie es erneut"
+  },
+  "txActions_USDT_transfer": {
+    "message": "USDT Überweisung"
+  },
+  "Unexpected_QR_Code": {
+    "message": "Unerwarteter QR-Code"
+  },
+  "Unlock": {
+    "message": "Entsperren"
+  },
+  "update": {
+    "message": "Aktualisieren"
+  },
+  "update_ledger_error": {
+    "message": "Stellen Sie sicher, dass Ihre Ledger-Software aktualisiert ist"
+  },
+  "upload_file": {
+    "message": "Datei hochladen"
+  },
+  "view_on_tonviewer": {
+    "message": "Auf Tonviewer ansehen"
+  },
+  "wallet_address": {
+    "message": "Wallet-Adresse"
+  },
+  "wallet_aside_collectibles": {
+    "message": "Sammlerstücke"
+  },
+  "wallet_aside_domains": {
+    "message": "Domänen"
+  },
+  "wallet_aside_history": {
+    "message": "Geschichte"
+  },
+  "wallet_aside_multisig_wallets": {
+    "message": "Multisig-Wallets"
+  },
+  "wallet_aside_orders": {
+    "message": "Anfragen"
+  },
+  "wallet_aside_purchases": {
+    "message": "Käufe"
+  },
+  "wallet_aside_settings": {
+    "message": "Einstellungen"
+  },
+  "wallet_aside_tokens": {
+    "message": "Tokens"
+  },
+  "wallet_multi_send": {
+    "message": "Mehrfachversand"
+  },
+  "Wallet_name": {
+    "message": "Walletname"
+  },
+  "wallet_version_and_tokens": {
+    "message": ", Tokens"
+  },
+  "intro_item3_caption": {
+    "message": "-"
+  },
+  "intro_item3_title": {
+    "message": "-"
+  },
+  "send_title": {
+    "message": "Send %{currency}"
+  },
+  "accounts_delete_folder": {
+    "message": "Ungroup Folder"
+  },
+  "accounts_manage_folder": {
+    "message": "Edit Folder"
+  },
+  "accounts_manage_folder_move_from_other": {
+    "message": "Move from other Folders"
+  },
+  "accounts_manage_folder_name": {
+    "message": "Folder Name"
+  },
+  "accounts_new_folder": {
+    "message": "New Folder"
+  },
+  "battery_buy_error_min": {
+    "message": "Min: %{amount}"
+  },
+  "battery_buy_error_not_enough_balance": {
+    "message": "Not enough funds"
+  },
+  "battery_buy_remaining": {
+    "message": "Remaining: %{value}"
+  },
+  "battery_capabilities_description": {
+    "message": "Swap via Tonkeeper, send tokens and unstake TON."
+  },
+  "battery_capabilities_supported_transactions_label": {
+    "message": "Supported Transactions"
+  },
+  "battery_charges": {
+    "message": "%{charges} charges"
+  },
+  "battery_info_will_be_paid": {
+    "message": "Will be paid: %{items}"
+  },
+  "battery_n_battery_charges": {
+    "message": "%{charges} battery charges"
+  },
+  "battery_out_of_num_available": {
+    "message": "out of %{number} available"
+  },
+  "battery_refunds_link": {
+    "message": "Recharges and Refunds"
+  },
+  "battery_settings_nft_price": {
+    "message": "≈ %{charges} charges per transfer"
+  },
+  "battery_settings_nft_title": {
+    "message": "NFT transfers"
+  },
+  "battery_settings_swap_price": {
+    "message": "≈ %{charges} charges per swap"
+  },
+  "battery_settings_swap_title": {
+    "message": "Swaps via Tonkeeper"
+  },
+  "battery_settings_token_transfer_price": {
+    "message": "≈ %{charges} charges per transfer"
+  },
+  "battery_settings_token_transfer_title": {
+    "message": "Token transfer"
+  },
+  "bring_all_to_front": {
+    "message": "Bring All to Front"
+  },
+  "check_for_updates": {
+    "message": "Check for Updates"
+  },
+  "confirm_discard_btn_continue_editing": {
+    "message": "Continue Editing"
+  },
+  "confirm_discard_btn_discard": {
+    "message": "Discard Changes"
+  },
+  "confirm_discard_description": {
+    "message": "You have unsaved changes. If you close this window, your progress will be lost. Do you want to continue?"
+  },
+  "confirm_discard_title": {
+    "message": "Are you sure you want to leave?"
+  },
+  "confirm_error_insufficient_balance": {
+    "message": "Wallet balance %{balance} is not enough. Minimum balance required: %{required}."
+  },
+  "confirm_sending_sign": {
+    "message": "Sign"
+  },
+  "Copy": {
+    "message": "Copy"
+  },
+  "Cut": {
+    "message": "Cut"
+  },
+  "Edit": {
+    "message": "Edit"
+  },
+  "force_reload": {
+    "message": "Force Reload"
+  },
+  "hide_others": {
+    "message": "Hide Others"
+  },
+  "hide_tonkeeper_pro": {
+    "message": "Hide Tonkeeper Pro"
+  },
+  "history_filters_all_assets": {
+    "message": "All Tokens"
+  },
+  "history_filters_hide_spam": {
+    "message": "Hide Spam"
+  },
+  "history_filters_hide_spam_description": {
+    "message": "Filter is not reset on restart"
+  },
+  "history_filters_initiator": {
+    "message": "Initiator"
+  },
+  "import_chose_mnemonic_option_bip39": {
+    "message": "Bip39 Mnemonic"
+  },
+  "import_chose_mnemonic_option_tonKeychain": {
+    "message": "Ton Keychain"
+  },
+  "import_chose_mnemonic_option_tonMnemonic": {
+    "message": "Standard Ton Mnemonic"
+  },
+  "import_chose_mnemonic_type_description": {
+    "message": "This secret key can be used for different types of wallets. Choose the one you need from the list below."
+  },
+  "import_chose_mnemonic_type_title": {
+    "message": "Chose Secret Key Type"
+  },
+  "Minimize": {
+    "message": "Minimize"
+  },
+  "multisig_deploy": {
+    "message": "Deploy Multisig"
+  },
+  "multisig_signed_value_short": {
+    "message": "%{signed} of %{total}"
+  },
+  "quit_tonkeeper_pro": {
+    "message": "Quit Tonkeeper Pro"
+  },
+  "Redo": {
+    "message": "Redo"
+  },
+  "Reload": {
+    "message": "Reload"
+  },
+  "select_all": {
+    "message": "Select All"
+  },
+  "send_change_fee_payment_method": {
+    "message": "Change Payment Method"
+  },
+  "show": {
+    "message": "Show"
+  },
+  "show_all": {
+    "message": "Show All"
+  },
+  "toggle_developer_tools": {
+    "message": "Toggle Developer Tools"
+  },
+  "toggle_full_screen": {
+    "message": "Toggle Full Screen"
+  },
+  "tonkeeper_pro_authorization": {
+    "message": "To access the Pro features, server authorization is required via Ton Proof. Please ensure you import a wallet that supports this technology. This step is crucial for enabling the full range of Pro functionalities securely and effectively."
+  },
+  "Undo": {
+    "message": "Undo"
+  },
+  "View": {
+    "message": "View"
+  },
+  "Window": {
+    "message": "Window"
+  }
+}

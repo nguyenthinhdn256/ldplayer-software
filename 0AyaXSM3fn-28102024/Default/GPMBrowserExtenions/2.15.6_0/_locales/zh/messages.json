@@ -1,0 +1,20 @@
+{
+   "appDescription": {
+      "description": "chang",
+      "message": "为用户提供包括钱包、Swap 、NFT 交易、DApp 交互等链上产品和 DeFi 服务。"
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "Bitget Wallet（原 BitKeep）：全球领先的 Web3 多链钱包"
+   },
+   "demo": {
+      "description": "插件名称",
+      "message": "Bitget $URL$",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://developer.mozilla.org"
+         }
+      }
+   }
+}

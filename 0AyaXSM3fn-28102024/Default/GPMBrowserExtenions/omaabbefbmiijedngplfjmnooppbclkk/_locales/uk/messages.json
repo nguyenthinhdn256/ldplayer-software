@@ -1,0 +1,4880 @@
+{
+  "about_risk_modal_description": {
+    "message": "Загальна вартість токенів, які будуть відправлені з вашого гаманця. Повернення не включені в загальну вартість."
+  },
+  "about_risk_modal_description_with_nft": {
+    "message": "Загальна вартість токенів, за винятком вартості NFT, які будуть надіслані з вашого гаманця. Повернення не враховуються в загальній вартості."
+  },
+  "about_risk_modal_ok_button": {
+    "message": "Зрозуміло"
+  },
+  "about_ton": {
+    "message": "TON — це повністю децентралізований блокчейн першого рівня, розроблений Telegram для інтеграції мільярдів користувачів. Він забезпечує ультрашвидкі транзакції, низькі комісії, зручні додатки та є екологічно чистим."
+  },
+  "access_confirmation_logout": {
+    "message": "Вийти"
+  },
+  "access_confirmation_reset": {
+    "message": "Скинути"
+  },
+  "access_confirmation_title": {
+    "message": "Введіть пін-код"
+  },
+  "access_confirmation_update_biometry": {
+    "message": "Введите пароль, щоб використовувати біометричні дані для автентифікації"
+  },
+  "access_denied": {
+    "message": "Доступ заборонений"
+  },
+  "account_deleted": {
+    "message": "Обліковий запис видалено"
+  },
+  "activityActionModal_bid": {
+    "message": "Ставка"
+  },
+  "activityActionModal_burned": {
+    "message": "Спалено"
+  },
+  "activityActionModal_call_contract": {
+    "message": "Виклик контракту"
+  },
+  "activityActionModal_deposit": {
+    "message": "Депозит"
+  },
+  "activityActionModal_purchase": {
+    "message": "Покупка"
+  },
+  "activityActionModal_received": {
+    "message": "Отримано"
+  },
+  "activityActionModal_sent": {
+    "message": "Надіслано"
+  },
+  "activityActionModal_swapped": {
+    "message": "Обміняно"
+  },
+  "activityActionModal_time_on": {
+    "message": "%{time}"
+  },
+  "activityActionModal_withdraw": {
+    "message": "Виведення"
+  },
+  "activityActionModal_withdrawal_request": {
+    "message": "Запит на зняття"
+  },
+  "activity_buy_toncoin_btn": {
+    "message": "Купити Toncoin"
+  },
+  "activity_empty_transaction_caption": {
+    "message": "Здійсніть вашу першу транзакцію!"
+  },
+  "activity_empty_transaction_title": {
+    "message": "Ваша активність буде показана тут"
+  },
+  "activity_failed_transaction": {
+    "message": "Неуспішно"
+  },
+  "activity_receive_btn": {
+    "message": "Отримати"
+  },
+  "activity_received": {
+    "message": "Отримано"
+  },
+  "activity_screen_title": {
+    "message": "Історія"
+  },
+  "activity_sent": {
+    "message": "Відправлено"
+  },
+  "add_edit_favorite_address_label": {
+    "message": "Адреса"
+  },
+  "add_edit_favorite_add_title": {
+    "message": "Новий обранець"
+  },
+  "add_edit_favorite_delete": {
+    "message": "Видалити"
+  },
+  "add_edit_favorite_edit_title": {
+    "message": "Редагувати вибране"
+  },
+  "add_edit_favorite_name_placeholder": {
+    "message": "Ім'я"
+  },
+  "add_edit_favorite_save": {
+    "message": "Зберегти"
+  },
+  "add_other_coins": {
+    "message": "Додати інші криптовалюти"
+  },
+  "address_copied": {
+    "message": "Адрес скопійовано"
+  },
+  "address_update_first_option": {
+    "message": "На ймовірніше, гаманцем отримувача вже активно користуються і ви не помітите жодної різниці."
+  },
+  "address_update_learn_more": {
+    "message": "Докладніше"
+  },
+  "address_update_new_style": {
+    "message": "Новий адрес"
+  },
+  "address_update_notification_desc_did_change": {
+    "message": "Адреса вашого гаманця оновлено до формату UQ. Стара адреса також продовжує працювати."
+  },
+  "address_update_notification_desc_will_change": {
+    "message": "5 жовтня ваша адреса гаманця оновиться до формату UQ, який є кращим. Стара адреса також буде працювати. Нічого робити не потрібно."
+  },
+  "address_update_old_style": {
+    "message": "Стара адреса"
+  },
+  "address_update_post_dates": {
+    "message": "\n5 жовтня 2023: всі адреси в Tonkeeper перейдуть на формат UQ.\n\n1 січня 2024: Tonkeeper припинить перевірку статусу контракту та використовуватиме у адресі прапорець \"bounceable\". Монети, відправлені на неопубліковані контракти з адресою EQ, повернуться назад відправнику."
+  },
+  "address_update_post_published_date": {
+    "message": "Опубліковано: 27 вересня 2023"
+  },
+  "address_update_post_rest": {
+    "message": "У блокчейні TON існує два стилі адрес, і до сих пір для додатків і гаманців використовувався лише один з них.\n\nФормат EQ найкраще підходить для смарт-контрактів, що обробляють вхідні кошти. Якщо смарт-контракт ще не опублікований — тобто коду немає в блокчейні — то TONи, відправлені на цю адресу, повернуться назад до відправника. Це така функція безпеки: у разі будь-якої помилки TONи повертаються назад.\n\nФормат UQ найкраще підходить для гаманців. Монети ніколи не повертаються, тому що гаманці призначені для зберігання коштів. Кожен гаманець починається як звичайна адреса без коду в блокчейні. Тому немає сенсу у поверненні монет назад.\n\nЦього року ми переходимо на більш підходящий формат UQ для гаманців. Якщо ви продовжите відправляти кошти на стару адресу EQ, яку вам хтось дав, існує два варіанти:"
+  },
+  "address_update_post_top": {
+    "message": "До кінця цього року вся мережа TON відображатиме адреси гаманців інакше. Нова адреса починатиметься з UQ замість EQ. Також зміняться останні чотири літери. Стара адреса також працюватиме і направлятиме до того ж гаманця. Це жодним чином не вплине на безпеку коштів, які зберігаються у вашому гаманці."
+  },
+  "address_update_second_option": {
+    "message": "Менш ймовірно, що гаманець ніколи не використовувався для платежів. І Tonkeeper не надсилатиме монети на цю адресу наступного року. Вам потрібно буде попросити отримувача надати нову UQ-адресу."
+  },
+  "address_update_title": {
+    "message": "Оновлення адреси"
+  },
+  "address_update_why_change": {
+    "message": "Чому змінити?"
+  },
+  "address_update_your_wallet": {
+    "message": "Ваш гаманець"
+  },
+  "add_wallet": {
+    "message": "Додати гаманець"
+  },
+  "add_wallet_modal_create_subtitle": {
+    "message": "Створити новий гаманець"
+  },
+  "add_wallet_modal_create_title": {
+    "message": "Новий гаманець"
+  },
+  "add_wallet_modal_import_subtitle": {
+    "message": "Виберіть один із варіантів нижче."
+  },
+  "add_wallet_modal_import_title": {
+    "message": "Імпортувати гаманець"
+  },
+  "add_wallet_modal_ledger_subtitle": {
+    "message": "Вищий рівень безпеки з апаратним гаманцем"
+  },
+  "add_wallet_modal_ledger_title": {
+    "message": "Підключити Ledger"
+  },
+  "add_wallet_modal_other_options": {
+    "message": "Інші варіанти"
+  },
+  "add_wallet_modal_signer_subtitle": {
+    "message": "Більш високий рівень контролю та безпеки"
+  },
+  "add_wallet_modal_signer_title": {
+    "message": "Підключити Signer"
+  },
+  "add_wallet_modal_subtitle": {
+    "message": "Створіть новий гаманець або додайте існуючий."
+  },
+  "add_wallet_modal_testnet_subtitle": {
+    "message": "Імпортуйте гаманець за допомогою секретного ключа з 24 слів до Testnet"
+  },
+  "add_wallet_modal_testnet_title": {
+    "message": "Тестова мережа акаунт"
+  },
+  "add_wallet_modal_title": {
+    "message": "Додати гаманець"
+  },
+  "add_wallet_modal_watch_only_subtitle": {
+    "message": "Для відстеження активності гаманця без фрази відновлення"
+  },
+  "add_wallet_modal_watch_only_title": {
+    "message": "Тільки для перегляду"
+  },
+  "add_watch_only_subtitle": {
+    "message": "Відстежуйте активність гаманця без фрази відновлення. Ви будете отримувати сповіщення про будь-які транзакції з цього гаманця."
+  },
+  "add_watch_only_title": {
+    "message": "Обліковий запис для перегляду"
+  },
+  "add_watch_only_wallet_not_found": {
+    "message": "Адреса гаманця не знайдено"
+  },
+  "all_regions": {
+    "message": "Всі регіони"
+  },
+  "appearance_accent_name_andromeda": {
+    "message": "Андромеда"
+  },
+  "appearance_accent_name_arctic": {
+    "message": "Арктика"
+  },
+  "appearance_accent_name_azure": {
+    "message": "Лазурний"
+  },
+  "appearance_accent_name_coral": {
+    "message": "Кораловий"
+  },
+  "appearance_accent_name_cosmos": {
+    "message": "Космос"
+  },
+  "appearance_accent_name_default": {
+    "message": "Tonkeeper"
+  },
+  "appearance_accent_name_flamingo": {
+    "message": "Фламінго"
+  },
+  "appearance_accent_name_fluid": {
+    "message": "Флюїд"
+  },
+  "appearance_accent_name_galaxy": {
+    "message": "Галактика"
+  },
+  "appearance_accent_name_iris": {
+    "message": "Ірис"
+  },
+  "appearance_accent_name_marine": {
+    "message": "Море"
+  },
+  "appearance_accent_name_ocean": {
+    "message": "Океан"
+  },
+  "appearance_accent_name_sky": {
+    "message": "Небо"
+  },
+  "appearance_confirm": {
+    "message": "Застосувати"
+  },
+  "appearance_description": {
+    "message": "TON Diamonds NFT зробить ваш гаманець більш яскравим і унікальним."
+  },
+  "appearance_title": {
+    "message": "Тема"
+  },
+  "app_name": {
+    "message": "Tonkeeper"
+  },
+  "approval_accept": {
+    "message": "Прийняти"
+  },
+  "approval_accepted": {
+    "message": "Прийнято"
+  },
+  "approval_accepted_at_collection": {
+    "message": "Прийнято %{date}"
+  },
+  "approval_accepted_at_token": {
+    "message": "Прийнято %{date}"
+  },
+  "approval_accepted_collection": {
+    "message": "Прийнята колекція"
+  },
+  "approval_accepted_token": {
+    "message": "Прийнятий токен"
+  },
+  "approval_approve_all": {
+    "message": "Прийняти все"
+  },
+  "approval_approve_collection_many": {
+    "message": "Затвердити вхідні токени з колекції \"%{collection}\""
+  },
+  "approval_approve_collection_one": {
+    "message": "Схвалити вхідний токен із колекції \"%{collection}\","
+  },
+  "approval_approve_many": {
+    "message": "Підтвердьте %{count} вхідних токенів"
+  },
+  "approval_approve_many_few": {
+    "message": "Затвердьте %{count} вхідних токенів"
+  },
+  "approval_approve_many_many": {
+    "message": "Підтвердіть %{count} вхідних токенів"
+  },
+  "approval_approve_many_one": {
+    "message": "Підтвердіть %{count} вхідний токен"
+  },
+  "approval_approve_many_other": {
+    "message": "Погодьте %{count} вхідних токенів"
+  },
+  "approval_approve_token": {
+    "message": "Підтвердьте вхідний токен \"%{name}\""
+  },
+  "approval_approve_two_collections": {
+    "message": "Схвалити вхідні токени з колекцій \"%{collection1}\" \"%{collection2}\""
+  },
+  "approval_approve_two_tokens": {
+    "message": "Схваліть вхідні токени \",%{name1}\", та \"%{name2}\""
+  },
+  "approval_blacklisted_collection": {
+    "message": "Колекція в чорному списку"
+  },
+  "approval_blacklisted_token": {
+    "message": "Заблокований токен"
+  },
+  "approval_decline": {
+    "message": "Приховане"
+  },
+  "approval_declined": {
+    "message": "Приховано"
+  },
+  "approval_declined_at_collection": {
+    "message": "Відхилено %{date}"
+  },
+  "approval_declined_at_token": {
+    "message": "Відхилено %{date}"
+  },
+  "approval_details_collection": {
+    "message": "Деталі колекції"
+  },
+  "approval_details_token": {
+    "message": "Докладніше про токен"
+  },
+  "approval_id_collection": {
+    "message": "ID колекції"
+  },
+  "approval_id_token": {
+    "message": "Ідентифікатор токена"
+  },
+  "approval_manage_tokens": {
+    "message": "Керувати токенами"
+  },
+  "approval_move_to_accepted": {
+    "message": "Перемістити в Прийняті"
+  },
+  "approval_move_to_accepted_collection": {
+    "message": "Показувати колекцію в гаманці"
+  },
+  "approval_move_to_accepted_token": {
+    "message": "Показати токен у гаманці"
+  },
+  "approval_move_to_declined": {
+    "message": "Перемістити в Відхилені"
+  },
+  "approval_move_to_declined_collection": {
+    "message": "Приховати колекцію в гаманці"
+  },
+  "approval_move_to_declined_token": {
+    "message": "Приховати токен з гаманця"
+  },
+  "approval_name": {
+    "message": "Ім'я"
+  },
+  "approval_not_spam": {
+    "message": "Це не спам"
+  },
+  "approval_pending": {
+    "message": "В очікуванні"
+  },
+  "approval_show_all": {
+    "message": "Показати всі"
+  },
+  "approval_single_token": {
+    "message": "Одинарний токен"
+  },
+  "approval_spam": {
+    "message": "Спам"
+  },
+  "approval_token_copied": {
+    "message": "ID токена скопійовано"
+  },
+  "approval_token_count_few": {
+    "message": "%{count} токена"
+  },
+  "approval_token_count_many": {
+    "message": "%{count} токенів"
+  },
+  "approval_token_count_one": {
+    "message": "%{count} токен"
+  },
+  "approval_token_count_other": {
+    "message": "%{count} токенів"
+  },
+  "approval_unverified_token": {
+    "message": "Непідтверджений токен"
+  },
+  "approval_verify_collection": {
+    "message": "Перевірте колекцію"
+  },
+  "approval_verify_description_collection": {
+    "message": "Ці токени випущені невідомим емітентом. Для виявлення підробок перевірте ID колекції за офіційним джерелом емітента. Ви можете змінити видимість токенів пізніше в налаштуваннях."
+  },
+  "approval_verify_description_token": {
+    "message": "Цей токен випущений невідомим емітентом. Для виявлення підробок перевірте ID токену в офіційному джерелі емітента. Ви завжди можете змінити видимість токену в налаштуваннях."
+  },
+  "approval_verify_token": {
+    "message": "Перевірте токен"
+  },
+  "approval_whitelisted_collection": {
+    "message": "Колекція з білого списку"
+  },
+  "approval_whitelisted_token": {
+    "message": "Токен у білому списку"
+  },
+  "auth_failed": {
+    "message": "Автентифікація не вдалася"
+  },
+  "backup_check_caption": {
+    "message": "Давайте перевіримо, чи все у вас вийшло правильно. Введіть слова %{one}, %{two} і %{three}."
+  },
+  "backup_check_done_button": {
+    "message": "Готово"
+  },
+  "backup_check_title": {
+    "message": "Перевірка резервної копії"
+  },
+  "backup_screen_backup_warning": {
+    "message": "Ваш баланс %{totalFiat}, і його захищає лише секретний ключ, яку ви ще не записали. Зробіть резервну копію фрази, щоб уникнути втрати коштів у разі проблем з пристроєм."
+  },
+  "backup_screen_last_backup_time": {
+    "message": "Останнє резервне копіювання %{time}"
+  },
+  "backup_screen_manual_backup_on": {
+    "message": "Резервне копіювання ввімкнено"
+  },
+  "backup_screen_manual_button": {
+    "message": "Зробити резервну копію вручну"
+  },
+  "backup_screen_manual_caption": {
+    "message": "Створіть резервну копію свого гаманця вручну, записавши ключову фразу."
+  },
+  "backup_screen_manual_title": {
+    "message": "Ручне"
+  },
+  "backup_screen_show_recovery_phrase": {
+    "message": "Показати відновлювальну фразу"
+  },
+  "backup_screen_title": {
+    "message": "Резервна копія"
+  },
+  "backup_warning_cancel_button": {
+    "message": "Скасувати"
+  },
+  "backup_warning_caption": {
+    "message": "Будь ласка, уважно прочитайте наступне перед переглядом вашої фрази відновлення."
+  },
+  "backup_warning_continue_button": {
+    "message": "Продовжити"
+  },
+  "backup_warning_p1": {
+    "message": "Ніколи не вводьте свою ключову фразу в будь-якому іншому місці, окрім Tonkeeper, щоб отримати доступ до свого гаманця."
+  },
+  "backup_warning_p2": {
+    "message": "Підтримка Tonkeeper ніколи не запитує ключову фразу."
+  },
+  "backup_warning_p3": {
+    "message": "Усі, хто знає вашу фразу відновлення, можуть отримати доступ до вашого гаманця."
+  },
+  "backup_warning_title": {
+    "message": "Увага"
+  },
+  "balances_setup_wallet": {
+    "message": "Налаштувати гаманець"
+  },
+  "battery_description_empty": {
+    "message": "Обмінюйте через Tonkeeper, надсилайте токени та NFT."
+  },
+  "battery_description_less_10": {
+    "message": "У вас достатньо заряду батареї для менше ніж 10 транзакцій."
+  },
+  "battery_description_other_few": {
+    "message": "%{count} заряди"
+  },
+  "battery_description_other_many": {
+    "message": "%{count} зарядів"
+  },
+  "battery_description_other_one": {
+    "message": "%{count} заряд"
+  },
+  "battery_description_other_other": {
+    "message": "%{count} зарядів"
+  },
+  "battery_max_input_amount": {
+    "message": "Максимальна сума %{amount}"
+  },
+  "battery_ok": {
+    "message": "OK"
+  },
+  "battery_other_ways_by_crypto_subtitle": {
+    "message": "Використовуємо %{methods}"
+  },
+  "battery_other_ways_by_crypto_title": {
+    "message": "Поповнити за %{symbol}"
+  },
+  "battery_other_ways_gift_subtitle": {
+    "message": "Поділіться з друзями"
+  },
+  "battery_other_ways_gift_title": {
+    "message": "Батарейка в подарунок"
+  },
+  "battery_other_ways_promo_subtitle": {
+    "message": "Вам пощастило"
+  },
+  "battery_other_ways_promo_title": {
+    "message": "Введіть промо-код"
+  },
+  "battery_packages_buy": {
+    "message": "Купити"
+  },
+  "battery_packages_disclaimer": {
+    "message": "Одна зарядка покриває середню комісію за транзакцію. Деякі транзакції можуть коштувати більше."
+  },
+  "battery_packages_ok": {
+    "message": "OK"
+  },
+  "battery_packages_refilled": {
+    "message": "Ваша батарейка заряджена"
+  },
+  "battery_packages_refund": {
+    "message": "Історія зарядів"
+  },
+  "battery_packages_restore": {
+    "message": "Відновити покупки"
+  },
+  "battery_packages_subtitle_few": {
+    "message": "%{count} заряди"
+  },
+  "battery_packages_subtitle_many": {
+    "message": "%{count} зарядів"
+  },
+  "battery_packages_subtitle_one": {
+    "message": "%{count} заряд"
+  },
+  "battery_packages_subtitle_other": {
+    "message": "%{count} зарядів"
+  },
+  "battery_packages_title_large": {
+    "message": "Великий"
+  },
+  "battery_packages_title_medium": {
+    "message": "Середній"
+  },
+  "battery_packages_title_small": {
+    "message": "Малий"
+  },
+  "battery_please_wait": {
+    "message": "Батарейка зарядиться за пару хвилин"
+  },
+  "battery_promocode_apply": {
+    "message": "Застосувати"
+  },
+  "battery_promocode_button": {
+    "message": "Поповнити за промокоду"
+  },
+  "battery_promocode_placeholder": {
+    "message": "Промокод"
+  },
+  "battery_promocode_success": {
+    "message": "Ваша батарейка заряджена"
+  },
+  "battery_promocode_title": {
+    "message": "Промокод"
+  },
+  "battery_recharge_by_crypto_continue": {
+    "message": "Продовжити"
+  },
+  "battery_recharge_by_crypto_other_subtitle": {
+    "message": "Ввести суму вручну"
+  },
+  "battery_recharge_by_crypto_other_title": {
+    "message": "Інше"
+  },
+  "battery_recharge_by_crypto_title": {
+    "message": "Зарядка"
+  },
+  "battery_recharge_by_crypto_title_gift": {
+    "message": "Подарунок"
+  },
+  "battery_recharge_by_crypto_tokens": {
+    "message": "Токени"
+  },
+  "battery_refilled": {
+    "message": "Батарейка поповнена"
+  },
+  "battery_refund_subtitle": {
+    "message": "Поповнення та повернення коштів"
+  },
+  "battery_refund_title": {
+    "message": "Історія Платежів"
+  },
+  "battery_screen_title": {
+    "message": "Батарейка"
+  },
+  "battery_send_widget_battery": {
+    "message": "Батарейка"
+  },
+  "battery_settings": {
+    "message": "Батарейка"
+  },
+  "battery_title": {
+    "message": "Батарейка Tonkeeper"
+  },
+  "battery_transactions_charges_per_action_few": {
+    "message": "≈ %{count} зарядів за %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_many": {
+    "message": "≈ %{count} зарядок за %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_one": {
+    "message": "≈ %{count} заряд за %{transactionName}"
+  },
+  "battery_transactions_charges_per_action_other": {
+    "message": "≈ %{count} зарядок за %{transactionName}"
+  },
+  "battery_transactions_description": {
+    "message": "Обрані транзакції будуть оплачені батарейкою Tonkeeper."
+  },
+  "battery_transactions_settings": {
+    "message": "Налаштування батареї"
+  },
+  "battery_transactions_supported": {
+    "message": "Підтримувані транзакції"
+  },
+  "battery_transactions_title": {
+    "message": "Транзакції"
+  },
+  "battery_transactions_types_jetton": {
+    "message": "трансфер токенів"
+  },
+  "battery_transactions_types_nft": {
+    "message": "трансфер NFT"
+  },
+  "battery_transactions_types_swap": {
+    "message": "обмін через Tonkeeper"
+  },
+  "battery_transactions_types_ton": {
+    "message": "трансфер TON"
+  },
+  "battery_transactions_type_swap": {
+    "message": "обмін"
+  },
+  "battery_transactions_type_transfer": {
+    "message": "трансфер"
+  },
+  "battery_transactions_will_be_paid": {
+    "message": "Будуть сплачені: %{enabledTransactions}"
+  },
+  "biometry_android_face_recognition": {
+    "message": "розпізнавання обличчя"
+  },
+  "biometry_android_face_recognition_genitive": {
+    "message": "розпізнавання обличчя"
+  },
+  "biometry_android_face_recognition_instrumental": {
+    "message": "розпізнавання обличчя"
+  },
+  "biometry_android_fingerprint": {
+    "message": "відбиток пальця"
+  },
+  "biometry_android_fingerprint_genitive": {
+    "message": "відбитка пальця"
+  },
+  "biometry_android_fingerprint_instrumental": {
+    "message": "відбитком пальця"
+  },
+  "biometry_default": {
+    "message": "біометрія"
+  },
+  "biometry_default_accusative": {
+    "message": "біометрію"
+  },
+  "biometry_default_genitive": {
+    "message": "біометрії"
+  },
+  "biometry_default_instrumental": {
+    "message": "біометрією"
+  },
+  "biometry_ios_face_recognition": {
+    "message": "Face ID"
+  },
+  "biometry_ios_face_recognition_genitive": {
+    "message": "Face ID"
+  },
+  "biometry_ios_face_recognition_instrumental": {
+    "message": "Face ID"
+  },
+  "biometry_ios_fingerprint": {
+    "message": "Touch ID"
+  },
+  "biometry_ios_fingerprint_genitive": {
+    "message": "Touch ID"
+  },
+  "biometry_ios_fingerprint_instrumental": {
+    "message": "Touch ID"
+  },
+  "bluetooth_permissions_alert_cancel": {
+    "message": "Скасувати"
+  },
+  "bluetooth_permissions_alert_message": {
+    "message": "Будь ласка, увімкніть дозволи Bluetooth у налаштуваннях, щоб використовувати цю функцію"
+  },
+  "bluetooth_permissions_alert_open_settings": {
+    "message": "Відкрити налаштування"
+  },
+  "bluetooth_permissions_alert_title": {
+    "message": "Дозволи Bluetooth"
+  },
+  "bluetooth_powered_off_alert_cancel": {
+    "message": "Скасувати"
+  },
+  "bluetooth_powered_off_alert_message": {
+    "message": "Будь ласка, увімкніть Bluetooth, щоб використовувати цю функцію"
+  },
+  "bluetooth_powered_off_alert_open_settings": {
+    "message": "Відкрити налаштування"
+  },
+  "bluetooth_powered_off_alert_title": {
+    "message": "Bluetooth вимкнено"
+  },
+  "browser_about_dapps_caption": {
+    "message": "Відкривайте додатки та сервіси, де можна використовувати Tonkeeper для входу та платежів."
+  },
+  "browser_about_dapps_learn_more": {
+    "message": "Дізнатися більше"
+  },
+  "browser_about_dapps_title": {
+    "message": "Використовуйте Tonkeeper з додатками та сервісами TON"
+  },
+  "browser_actions_copy_link": {
+    "message": "Скопіювати посилання"
+  },
+  "browser_actions_disconnect": {
+    "message": "Відключити"
+  },
+  "browser_actions_mute": {
+    "message": "Вимкнути звук"
+  },
+  "browser_actions_refresh": {
+    "message": "Оновити"
+  },
+  "browser_actions_share": {
+    "message": "Поділитися"
+  },
+  "browser_apps_all": {
+    "message": "Усі"
+  },
+  "browser_connected": {
+    "message": "Підключені"
+  },
+  "browser_connected_empty_text": {
+    "message": "Досліджуйте програми і сервіси в браузері Tonkeeper."
+  },
+  "browser_connected_empty_title": {
+    "message": "Ваші підключені додатки з'являться тут"
+  },
+  "browser_connected_title": {
+    "message": "Підключено"
+  },
+  "browser_empty_search": {
+    "message": "Ваш пошук не дав результатів"
+  },
+  "browser_explore": {
+    "message": "Перегляд"
+  },
+  "browser_explore_all": {
+    "message": "Переглянути всі"
+  },
+  "browser_more_description": {
+    "message": "Ринки, біржі та інше"
+  },
+  "browser_more_title": {
+    "message": "Досліджуйте всі послуги"
+  },
+  "browser_open_link": {
+    "message": "Відкрити посилання"
+  },
+  "browser_popular_title": {
+    "message": "Популярні"
+  },
+  "browser_remove_alert_approve_button": {
+    "message": "Видалити"
+  },
+  "browser_remove_alert_title": {
+    "message": "Видалити «%{name}»?"
+  },
+  "browser_search_label": {
+    "message": "Пошук або введіть адресу"
+  },
+  "browser_start_typing": {
+    "message": "Введите адрес или поиск в интернете"
+  },
+  "browser_title": {
+    "message": "Браузер"
+  },
+  "browser_web_search_title": {
+    "message": "Пошук у %{searchEngine}"
+  },
+  "buy_ton_subtitle": {
+    "message": "Миттєво з банківською картою"
+  },
+  "buy_ton_title": {
+    "message": "Купити TON"
+  },
+  "cancel": {
+    "message": "Скасувати"
+  },
+  "chart_check_connection": {
+    "message": "Перевірте підключення та спробуйте знову."
+  },
+  "chart_no_internet": {
+    "message": "Немає підключення до інтернету"
+  },
+  "chart_periods_1D": {
+    "message": "Д"
+  },
+  "chart_periods_1H": {
+    "message": "Г"
+  },
+  "chart_periods_1M": {
+    "message": "М"
+  },
+  "chart_periods_1Y": {
+    "message": "Р"
+  },
+  "chart_periods_6M": {
+    "message": "6М"
+  },
+  "chart_periods_7D": {
+    "message": "Т"
+  },
+  "chart_price": {
+    "message": "Ціна"
+  },
+  "check_words_caption": {
+    "message": "Щоб переконатися, що ви записали секретний ключ правильно, введіть слова %1%, %2% и %3%."
+  },
+  "check_words_success": {
+    "message": "Вітаємо! Ви налаштували свій гаманець"
+  },
+  "check_words_title": {
+    "message": "Давайте перевіримо"
+  },
+  "choose_country_auto": {
+    "message": "Автоматично"
+  },
+  "choose_country_cancel": {
+    "message": "Скасувати"
+  },
+  "choose_country_empty_placeholder": {
+    "message": "Ваш пошук не дав результатів"
+  },
+  "choose_country_search": {
+    "message": "Пошук"
+  },
+  "choose_country_title": {
+    "message": "Виберіть вашу країну"
+  },
+  "choose_currency_currencies_AED": {
+    "message": "Дирхам ОАЕ"
+  },
+  "choose_currency_currencies_BDT": {
+    "message": "Бангладеська така"
+  },
+  "choose_currency_currencies_BRL": {
+    "message": "Бразильський реал"
+  },
+  "choose_currency_currencies_BYN": {
+    "message": "Білоруський рубль"
+  },
+  "choose_currency_currencies_CAD": {
+    "message": "Канадський долар"
+  },
+  "choose_currency_currencies_CHF": {
+    "message": "Швейцарський франк"
+  },
+  "choose_currency_currencies_CNY": {
+    "message": "Китайський юань"
+  },
+  "choose_currency_currencies_EUR": {
+    "message": "Євро"
+  },
+  "choose_currency_currencies_GBP": {
+    "message": "Фунт стерлінгів Великобританії"
+  },
+  "choose_currency_currencies_GEL": {
+    "message": "Грузинський ларі"
+  },
+  "choose_currency_currencies_IDR": {
+    "message": "Індонезійська рупія"
+  },
+  "choose_currency_currencies_ILS": {
+    "message": "Ізраїльський шекель"
+  },
+  "choose_currency_currencies_INR": {
+    "message": "Індійська рупія"
+  },
+  "choose_currency_currencies_IRR": {
+    "message": "Іранський ріал"
+  },
+  "choose_currency_currencies_JPY": {
+    "message": "Японська єна"
+  },
+  "choose_currency_currencies_KRW": {
+    "message": "Південнокорейська вона"
+  },
+  "choose_currency_currencies_KZT": {
+    "message": "Казахстанський тенге"
+  },
+  "choose_currency_currencies_NGN": {
+    "message": "Нігерійська найра"
+  },
+  "choose_currency_currencies_RUB": {
+    "message": "Російський рубль"
+  },
+  "choose_currency_currencies_THB": {
+    "message": "Тайський бат"
+  },
+  "choose_currency_currencies_TON": {
+    "message": "Toncoin"
+  },
+  "choose_currency_currencies_TRY": {
+    "message": "Турецька ліра"
+  },
+  "choose_currency_currencies_UAH": {
+    "message": "Українська гривня"
+  },
+  "choose_currency_currencies_USD": {
+    "message": "Долар США"
+  },
+  "choose_currency_currencies_UZS": {
+    "message": "Узбецький сум"
+  },
+  "choose_currency_currencies_VND": {
+    "message": "В’єтнамський донг"
+  },
+  "choose_currency_header_title": {
+    "message": "Основна валюта"
+  },
+  "choose_wallets_already_added": {
+    "message": "Вже додано"
+  },
+  "choose_wallets_subtitle": {
+    "message": "Виберіть гаманці, які хочете додати."
+  },
+  "choose_wallets_title": {
+    "message": "Виберіть гаманці"
+  },
+  "choose_wallets_tokens": {
+    "message": "токени"
+  },
+  "choose_wallets_w5_subtitle": {
+    "message": "Зменшені комісії, безгазові транзакції та мультиперекази."
+  },
+  "choose_wallets_w5_subtitle_link": {
+    "message": "Дізнатися більше"
+  },
+  "confirm": {
+    "message": "Підтвердити"
+  },
+  "confirm_renew_all_domains_title": {
+    "message": "Підтвердити дію"
+  },
+  "confirm_sending_amount": {
+    "message": "Сума"
+  },
+  "confirm_sending_fee": {
+    "message": "Комісія"
+  },
+  "confirm_sending_inactive_warn_about": {
+    "message": "Що потрібно знати"
+  },
+  "confirm_sending_inactive_warn_description": {
+    "message": "Не продовжуйте, якщо очікуєте магії від блокчейну. Цього не станеться."
+  },
+  "confirm_sending_inactive_warn_title": {
+    "message": "Неактивний контракт"
+  },
+  "confirm_sending_liquid_warn_description": {
+    "message": "Ви більше не будете отримувати нагороди за надіслані застейкані TON. Нагороди почне отримувати новий власник."
+  },
+  "confirm_sending_liquid_warn_title": {
+    "message": "Примітка"
+  },
+  "confirm_sending_message": {
+    "message": "Коментар"
+  },
+  "confirm_sending_method_title": {
+    "message": "Відправити ваші кошти до %{name}?"
+  },
+  "confirm_sending_recipient": {
+    "message": "Отримувач"
+  },
+  "confirm_sending_recipient_address": {
+    "message": "Адреса отримувача"
+  },
+  "confirm_sending_sent_caption_btc": {
+    "message": "Ваша транзакція відправлена в мережу і буде оброблена протягом години."
+  },
+  "confirm_sending_sent_caption_other": {
+    "message": "Вашу транзакцію надіслано в мережу і вона буде оброблена протягом хвилини."
+  },
+  "confirm_sending_sent_caption_ton": {
+    "message": "Ваша транзакція відправлена ​​в мережу і буде оброблена за кілька секунд."
+  },
+  "confirm_sending_sent_jetton_title": {
+    "message": "Токен відправлено"
+  },
+  "confirm_sending_sent_title": {
+    "message": "Відправлено валюту"
+  },
+  "confirm_sending_submit": {
+    "message": "Підтвердити й відправити"
+  },
+  "confirm_sending_title": {
+    "message": "Підтвердити відправку"
+  },
+  "confirmSendModal_network_fee": {
+    "message": "Мережевий збір"
+  },
+  "confirmSendModal_refund": {
+    "message": "Повернення коштів"
+  },
+  "confirmSendModal_title": {
+    "message": "Підтвердити дію"
+  },
+  "confirmSendModal_total_risk": {
+    "message": "Всього: %{totalAmount}"
+  },
+  "confirmSendModal_to_your_address": {
+    "message": "На вашу адресу"
+  },
+  "confirmSendModal_transaction_type_burn": {
+    "message": "Спалити"
+  },
+  "confirmSendModal_transaction_type_receive": {
+    "message": "Отримати"
+  },
+  "confirmSendModal_transaction_type_send": {
+    "message": "Надіслати"
+  },
+  "confirmSendModal_wallet": {
+    "message": "Гаманець:"
+  },
+  "confirmSendModal_will_be_paid_with_battery": {
+    "message": "Буде оплачено батареєю"
+  },
+  "continue": {
+    "message": "Продовжити"
+  },
+  "copied": {
+    "message": "Скопійовано"
+  },
+  "copy_error_log": {
+    "message": "Скопіювати журнал помилки"
+  },
+  "create_pin_current_title": {
+    "message": "Введіть поточний пін-код"
+  },
+  "create_pin_new_title": {
+    "message": "Створіть новий пін-код"
+  },
+  "create_pin_repeat_title": {
+    "message": "Повторно введіть пін-код"
+  },
+  "create_wallet_caption": {
+    "message": "Ми наполегливо рекомендуємо вам «записати» фразу відновлення, оскільки це єдиний спосіб отримати доступ і відновити ваш гаманець у випадку втрати пристрою. Не надсилайте її собі електронною поштою чи зберігайте скріншот; також не завантажуйте її в онлайн-чати! Офлайн зберігання є безпечнішим."
+  },
+  "create_wallet_continue_button": {
+    "message": "Продовжити"
+  },
+  "create_wallet_generated": {
+    "message": "Вітаємо! Ваш гаманець успішно створено!"
+  },
+  "create_wallet_generating": {
+    "message": "Генерація гаманця..."
+  },
+  "create_wallet_title": {
+    "message": "Візьміть ручку і аркуш паперу"
+  },
+  "customize": {
+    "message": "Налаштувати"
+  },
+  "customize_modal_save": {
+    "message": "Зберегти"
+  },
+  "customize_modal_subtitle": {
+    "message": "Ім'я та іконка гаманця зберігаються локально на вашому пристрої."
+  },
+  "customize_modal_title": {
+    "message": "Налаштуйте свій гаманець"
+  },
+  "customize_modal_wallet_name": {
+    "message": "Ім'я гаманця"
+  },
+  "decryption_error": {
+    "message": "Помилка розшифровки"
+  },
+  "deploy_contract_button": {
+    "message": "Підтвердити та розгорнути"
+  },
+  "deploy_contract_title": {
+    "message": "Розгорнути контракт"
+  },
+  "disable_nft_marketplace_banner_description": {
+    "message": "Колекціонуйте і обмінюйте."
+  },
+  "dns_addresses_few": {
+    "message": "%{count} адреси"
+  },
+  "dns_addresses_many": {
+    "message": "%{count} адреси"
+  },
+  "dns_addresses_one": {
+    "message": "%{count} адресa"
+  },
+  "dns_addresses_other": {
+    "message": "%{count} адрес"
+  },
+  "dns_address_linked": {
+    "message": "Адрес пов'язаний"
+  },
+  "dns_address_unlinked": {
+    "message": "Адрес відв'язано"
+  },
+  "dns_alert_expiring_many_few": {
+    "message": "У вас %{count} доменів, що скоро закінчуються. Оновіть їх до %{untilDate}."
+  },
+  "dns_alert_expiring_many_many": {
+    "message": "У вас є %{count} доменів, що скоро протермінуються. Поновіть усі до %{untilDate}."
+  },
+  "dns_alert_expiring_many_one": {
+    "message": "У вас є %{count} домен із закінченням строку. Продовжіть усі до %{untilDate}."
+  },
+  "dns_alert_expiring_many_other": {
+    "message": "У вас є %{count} доменів, термін дії яких спливає. Поновіть усі до %{untilDate}."
+  },
+  "dns_alert_expiring_one": {
+    "message": "%{domain} закінчується через %{count} днів. Поновіть до %{untilDate}."
+  },
+  "dns_current_address": {
+    "message": "Ваш поточний адреса"
+  },
+  "dns_expiration_date": {
+    "message": "Дата закінчення"
+  },
+  "dns_link_title": {
+    "message": "Підтвердити транзакцію"
+  },
+  "dns_on_sale_text": {
+    "message": "Домен зараз виставлений на продаж на ринку. Для передачі ви повинні спершу зняти його з продажу."
+  },
+  "dns_renew_all_until_btn": {
+    "message": "Оновити все до %{untilDate}"
+  },
+  "dns_renew_in_progress_btn": {
+    "message": "Виконується поновлення домену..."
+  },
+  "dns_renew_toast_success": {
+    "message": "Домен продовжено"
+  },
+  "dns_renew_until_btn": {
+    "message": "Продовжити до %{untilDate}"
+  },
+  "dns_renew_valid_caption_few": {
+    "message": "Закінчується через %{count} дні"
+  },
+  "dns_renew_valid_caption_many": {
+    "message": "Закінчується через %{count} днів"
+  },
+  "dns_renew_valid_caption_one": {
+    "message": "Закінчується через %{count} день"
+  },
+  "dns_renew_valid_caption_other": {
+    "message": "Закінчується через %{count} днів"
+  },
+  "dns_replace_button": {
+    "message": "Замінити"
+  },
+  "dns_replace_description": {
+    "message": "Додайте адресу гаманця, на яку буде посилатися домен {{domain}}."
+  },
+  "dns_replace_save": {
+    "message": "Зберегти"
+  },
+  "dns_unlink_title": {
+    "message": "Підтвердьте відв'язування"
+  },
+  "dns_wallet_address": {
+    "message": "Адреса гаманця"
+  },
+  "domains_renewed": {
+    "message": "Оновлені домени"
+  },
+  "edit_coins_add": {
+    "message": "Додати"
+  },
+  "edit_coins_added": {
+    "message": "Додано"
+  },
+  "edit_coins_added_toast": {
+    "message": "Додано"
+  },
+  "edit_coins_hide": {
+    "message": "Приховати"
+  },
+  "edit_coins_title": {
+    "message": "Додати криптовалюту"
+  },
+  "encryptedComments_encryptedComment": {
+    "message": "Зашифрований коментар"
+  },
+  "encryptedComments_encryptedCommentModal_button": {
+    "message": "Розшифрувати коментар"
+  },
+  "encryptedComments_encryptedCommentModal_checkboxLabel": {
+    "message": "Більше не показувати"
+  },
+  "encryptedComments_encryptedCommentModal_description": {
+    "message": "Коментар зашифровано відправником і може бути розшифровано тільки вами. Будь ласка, уважно ставтеся до вмісту та остерігайтеся шахрайства."
+  },
+  "encryptedComments_encryptedCommentModal_title": {
+    "message": "Зашифрований коментарій"
+  },
+  "encryptedComments_show": {
+    "message": "Показати"
+  },
+  "error_network": {
+    "message": "Помилка мережі"
+  },
+  "error_occurred": {
+    "message": "Сталася помилка"
+  },
+  "exchange_method_dont_show_again": {
+    "message": "Більше не показувати"
+  },
+  "exchange_method_open_warning": {
+    "message": "Ви відкриваєте зовнішній додаток, яким не керує Tonkeeper."
+  },
+  "exchange_modal_buy": {
+    "message": "Купити"
+  },
+  "exchange_modal_buy_title": {
+    "message": "Купити Toncoin"
+  },
+  "exchange_modal_hide": {
+    "message": "Приховати"
+  },
+  "exchange_modal_other_ways_to_buy": {
+    "message": "Інші способи покупки"
+  },
+  "exchange_modal_other_ways_to_sell": {
+    "message": "Інші способи продажу"
+  },
+  "exchange_modal_sell": {
+    "message": "Продати"
+  },
+  "exchange_modal_sell_title": {
+    "message": "Продати Toncoin"
+  },
+  "exchange_modal_show_all": {
+    "message": "Показати все"
+  },
+  "exchange_modal_title": {
+    "message": "Придбати чи Продати"
+  },
+  "exchange_not_exists": {
+    "message": "Невірний ID обмінника"
+  },
+  "exchange_other_ways": {
+    "message": "Інші способи купівлі або продажу TON"
+  },
+  "exchange_telegram_bot": {
+    "message": "TELEGRAM БОТ"
+  },
+  "exchange_title": {
+    "message": "Купити TON"
+  },
+  "expiring_domains": {
+    "message": "Термін дії доменів закінчується"
+  },
+  "finish_setup_backup": {
+    "message": "Створіть резервну копію секретної фрази гаманця"
+  },
+  "finish_setup_done_button": {
+    "message": "Готово"
+  },
+  "finish_setup_enable_notifications": {
+    "message": "Увімкніть сповіщення про транзакції"
+  },
+  "finish_setup_header_title": {
+    "message": "Завершити налаштування"
+  },
+  "finish_setup_join_tg": {
+    "message": "Приєднуйтесь до каналу Tonkeeper"
+  },
+  "finish_setup_use_biometry": {
+    "message": "Використовуйте %{name} для підтвердження транзакції"
+  },
+  "form_optional_indicator": {
+    "message": "Необов'язково"
+  },
+  "gasless_switch_label": {
+    "message": "Натисніть, щоб оплатити в %{currency}"
+  },
+  "import_add_wallet": {
+    "message": "Додати гаманець"
+  },
+  "import_add_wallet_description": {
+    "message": "Створіть новий гаманець або додайте існуючий."
+  },
+  "import_existing_wallet": {
+    "message": "Існуючий Гаманець"
+  },
+  "import_existing_wallet_description": {
+    "message": "Імпорт гаманця за допомогою 24 секретних фраз відновлення"
+  },
+  "import_new_wallet": {
+    "message": "Новий Гаманець"
+  },
+  "import_new_wallet_description": {
+    "message": "Створіть новий гаманець"
+  },
+  "import_signer": {
+    "message": "Відповідність Підписантів"
+  },
+  "import_signer_description": {
+    "message": "Підвищений рівень контролю та безпеки"
+  },
+  "import_wallet_caption": {
+    "message": "Щоб відновити доступ до вашого гаманця, введіть 24 секретні слова, які ви отримали при створенні гаманця."
+  },
+  "import_wallet_reset_caption": {
+    "message": "Поверніть доступ до свого гаманця, ввівши 24 секретні слова, які ви записали при створенні гаманця."
+  },
+  "import_wallet_title": {
+    "message": "Введіть секретну\nфразу для відновлення"
+  },
+  "import_wallet_wrong_words_err": {
+    "message": "Неправильна фраза"
+  },
+  "indexer_latency_error": {
+    "message": "Помилка відправлення. Спробуйте пізніше"
+  },
+  "info_about_inactive_back": {
+    "message": "Повернутися назад"
+  },
+  "info_about_inactive_desc1": {
+    "message": "Tonkeeper не знає, чи ця адреса є гаманцем або смарт-контрактом."
+  },
+  "info_about_inactive_desc2": {
+    "message": "Якщо ви хочете просто перевести гроші на гаманець — ви можете продовжити."
+  },
+  "info_about_inactive_desc3_1": {
+    "message": "Якщо ви очікуєте автоматичної дії від смарт-контракту,"
+  },
+  "info_about_inactive_desc3_2": {
+    "message": "— ваш переказ може зупинитися на цій адресі."
+  },
+  "info_about_inactive_desc3_bold": {
+    "message": " НЕ ПРОДОВЖУЙТЕ "
+  },
+  "info_about_inactive_title": {
+    "message": "Неактивний контракт"
+  },
+  "intro_continue_btn": {
+    "message": "Почати"
+  },
+  "intro_item1_caption": {
+    "message": "Завдяки унікальній архітектурі The Open Network, TON-транзакції виконуються за секунди."
+  },
+  "intro_item1_title": {
+    "message": "Світова швидкість"
+  },
+  "intro_item2_caption": {
+    "message": "Tonkeeper зберігає ваші криптографічні ключі на вашому пристрої. Усі транзакції виконуються через децентралізовані протоколи, тому ваша криптовалюта ніколи не потрапить до централізованих бірж."
+  },
+  "intro_item2_title": {
+    "message": "Сквозна безпека"
+  },
+  "intro_item3_caption": {
+    "message": "-"
+  },
+  "intro_item3_title": {
+    "message": "-"
+  },
+  "intro_title": {
+    "message": "Вітаємо в"
+  },
+  "jetton_buy_tether": {
+    "message": "Купити USD₮"
+  },
+  "jetton_id": {
+    "message": "ID токена: %{jettonAddress}"
+  },
+  "jetton_id_copied": {
+    "message": "ID токена скопійовано"
+  },
+  "jetton_locked_till": {
+    "message": "Заблоковано до %{date}"
+  },
+  "jetton_migrate_tether": {
+    "message": "Обміняти jUSDT на USD₮"
+  },
+  "jetton_name": {
+    "message": "%{name} Токен"
+  },
+  "jetton_open_explorer": {
+    "message": "Переглянути деталі"
+  },
+  "jetton_price": {
+    "message": "Ціна:"
+  },
+  "jettons_list_title": {
+    "message": "Токени"
+  },
+  "jettons_manage_tokens": {
+    "message": "Керувати токенами"
+  },
+  "jettons_show_jettons": {
+    "message": "Показати токени в гаманці"
+  },
+  "jetton_token": {
+    "message": "Токен"
+  },
+  "language_language_alert_cancel": {
+    "message": "Скасувати"
+  },
+  "language_language_alert_open": {
+    "message": "Налаштування"
+  },
+  "language_language_alert_title": {
+    "message": "Щоб змінити мову додатка, перейдіть у налаштування пристрою"
+  },
+  "language_languagesList_en": {
+    "message": "Англійська"
+  },
+  "language_languagesList_es": {
+    "message": "Іспанська"
+  },
+  "language_languagesList_id": {
+    "message": "Індонезійська"
+  },
+  "language_languagesList_ru": {
+    "message": "Російська"
+  },
+  "language_languagesList_system": {
+    "message": "Система"
+  },
+  "language_languagesList_tr": {
+    "message": "Турецька"
+  },
+  "language_languagesList_uk": {
+    "message": "Українська"
+  },
+  "language_languagesList_uz": {
+    "message": "Узбецька"
+  },
+  "language_languagesList_zh_Hans": {
+    "message": "Китайська"
+  },
+  "language_list_item_title": {
+    "message": "Мова"
+  },
+  "language_list_item_value": {
+    "message": "українська"
+  },
+  "language_title": {
+    "message": "Мова"
+  },
+  "later": {
+    "message": "Пізніше"
+  },
+  "ledger_confirm_title": {
+    "message": "Підтвердити дію"
+  },
+  "ledger_confirm_tx": {
+    "message": "Підтвердіть транзакцію в Ledger"
+  },
+  "ledger_connect": {
+    "message": "Підключіть Ledger до вашого пристрою за допомогою Bluetooth"
+  },
+  "ledger_connect_title": {
+    "message": "Підключити Ledger"
+  },
+  "ledger_install_ton_app": {
+    "message": "Встановити додаток"
+  },
+  "ledger_min_required_version_button": {
+    "message": "OK"
+  },
+  "ledger_min_required_version_subtitle": {
+    "message": "Цей тип транзакції не підтримується у вашій поточній версії додатку."
+  },
+  "ledger_min_required_version_title": {
+    "message": "Оновіть додаток TON у Ledger до версії %{version}"
+  },
+  "ledger_open_ton_app": {
+    "message": "Розблокуйте його і відкрийте додаток TON"
+  },
+  "ledger_operation_not_supported": {
+    "message": "Операція недоступна для гаманців Ledger. Виберіть інший гаманець і повторіть спробу."
+  },
+  "legal_font_license": {
+    "message": "Шрифт Montserrat"
+  },
+  "legal_header_title": {
+    "message": "Юридичні документи"
+  },
+  "legal_licenses_title": {
+    "message": "Ліцензії"
+  },
+  "legal_privacy": {
+    "message": "Політика конфіденційності"
+  },
+  "legal_terms": {
+    "message": "Умови використання"
+  },
+  "link_copied": {
+    "message": "Посилання скопійовано"
+  },
+  "loading": {
+    "message": "Завантаження"
+  },
+  "logout_modal_agreement": {
+    "message": "У мене є резервна копія фрази відновлення"
+  },
+  "logout_modal_backup_button": {
+    "message": "Зберегти копію"
+  },
+  "logout_modal_caption": {
+    "message": "Ключі гаманця будуть видалені з цього пристрою."
+  },
+  "logout_modal_delete_button": {
+    "message": "Видалити дані гаманця"
+  },
+  "logout_modal_delete_caption": {
+    "message": "Ключі гаманця і всі особисті дані будуть видалені з цього пристрою."
+  },
+  "logout_modal_delete_title": {
+    "message": "Видалити дані гаманця"
+  },
+  "logout_modal_logout_button": {
+    "message": "Вийти"
+  },
+  "logout_modal_title": {
+    "message": "Вийти"
+  },
+  "manage_other_coins": {
+    "message": "Керувати моїми криптовалютами"
+  },
+  "migration_cancel_btn": {
+    "message": "Не оновлювати зараз"
+  },
+  "migration_caption": {
+    "message": "Tonkeeper запроваджує новий формат гаманця з підтримкою регулярних платежів. Ваш баланс буде перенесено на нову адресу. Ваша секретна фраза залишиться без змін."
+  },
+  "migration_failed": {
+    "message": "Помилка міграції. Ваш баланс не вдалося перенести."
+  },
+  "migration_fee_info": {
+    "message": "Комісія за транзакцію ≈%{tonFee} TON (%{fiatFee})"
+  },
+  "migration_in_progress": {
+    "message": "Йде оновлення до версії гаманця v4"
+  },
+  "migration_migrate_btn": {
+    "message": "Оновити гаманець"
+  },
+  "migration_new_wallet": {
+    "message": "Новий гаманець"
+  },
+  "migration_old_wallet": {
+    "message": "Старий гаманець"
+  },
+  "migration_subtitle": {
+    "message": "Розблокуйте гаманець, щоб продовжити."
+  },
+  "migration_title": {
+    "message": "Оновіть гаманець"
+  },
+  "migration_with_biometry": {
+    "message": "Продовжити з %{type}"
+  },
+  "migration_with_passcode": {
+    "message": "Введіть пароль"
+  },
+  "nft_about_collection": {
+    "message": "Про колекцію"
+  },
+  "nft_about_dns": {
+    "message": "TON DNS — це сервіс, який дозволяє призначати криптогаманцям, смарт-контрактам і сайтам зрозумілі для людини назви. \n\nЗ TON DNS доступ до децентралізованих сервісів аналогічний доступу до веб-сайтів в інтернеті."
+  },
+  "nft_actions_hide_and_report": {
+    "message": "Сховати та поскаржитися"
+  },
+  "nft_actions_hide_collection": {
+    "message": "Сховати колекцію"
+  },
+  "nft_actions_hide_nft": {
+    "message": "Приховати NFT"
+  },
+  "nft_actions_view_on_explorer": {
+    "message": "Переглянути в Tonviewer"
+  },
+  "nft_browse_markets": {
+    "message": "Переглянути ринки"
+  },
+  "nft_chain": {
+    "message": "Ланцюг"
+  },
+  "nft_change_owner_title": {
+    "message": "Змінити власника колекції"
+  },
+  "nft_change_theme": {
+    "message": "Змінити тему"
+  },
+  "nft_collection": {
+    "message": "Колекція"
+  },
+  "nft_collection_name": {
+    "message": "Назва колекції"
+  },
+  "nft_confirm_operation": {
+    "message": "Підтвердити"
+  },
+  "nft_contract_address": {
+    "message": "Адреса контракту"
+  },
+  "nft_deploy_collection_title": {
+    "message": "Створити NFT колекцію"
+  },
+  "nft_details": {
+    "message": "Подробиці"
+  },
+  "nft_diamonds_description": {
+    "message": "TON Diamonds мають здатність змінювати тему у вашому гаманці Tonkeeper та співставляти її з кольором вашого NFT."
+  },
+  "nft_features": {
+    "message": "Функції"
+  },
+  "nft_fee": {
+    "message": "Комісія"
+  },
+  "nft_fee_and_royalties": {
+    "message": "Комісії та роялті"
+  },
+  "nft_hide_details": {
+    "message": "Приховати деталі"
+  },
+  "nft_item_deploy_title": {
+    "message": "Випустити NFT"
+  },
+  "nft_item_name": {
+    "message": "Назва NFT"
+  },
+  "nft_link_domain_button": {
+    "message": "Прив'язати домен"
+  },
+  "nft_link_domain_caption": {
+    "message": "После того як ви зв'яжете домен, ви зможете перенести його та використовувати як псевдонім для вашої адреси."
+  },
+  "nft_link_domain_mismatch_warn": {
+    "message": "Домен не пов'язаний з вашою поточною адресою. Будьте обережні з транзакціями на цей домен."
+  },
+  "nft_link_username_button": {
+    "message": "Приєднати ім'я"
+  },
+  "nft_link_username_caption": {
+    "message": "После того, як ви зв'яжете ім'я, ви зможете передати його та використовувати як псевдонім для своєї адреси."
+  },
+  "nft_link_username_mismatch_warn": {
+    "message": "Ім'я не пов'язане з вашою поточною адресою. Будьте обережні з транзакціями на це ім'я."
+  },
+  "nft_marketplace_address": {
+    "message": "Маркетплейс"
+  },
+  "nft_marketplace_banner_description": {
+    "message": "Купуйте, продавайте, колекціонуйте та обмінюйте."
+  },
+  "nft_marketplace_banner_title": {
+    "message": "Ваші NFT токени будуть зберігатися тут"
+  },
+  "nft_marketplaces": {
+    "message": "Маркетплейси"
+  },
+  "nft_marketplaces_title": {
+    "message": "NFT ринки"
+  },
+  "nft_metadata": {
+    "message": "Метадані"
+  },
+  "nft_more": {
+    "message": "Більше"
+  },
+  "nft_new_owner_address": {
+    "message": "Новий адрес власника"
+  },
+  "nft_on_sale": {
+    "message": "На продажі"
+  },
+  "nft_on_sale_text": {
+    "message": "NFT зараз виставлений на продаж на маркеті.Щоб передати, необхідно спочатку зняти його з продажу."
+  },
+  "nft_open_in_marketplace": {
+    "message": "Переглянути на NFT-маркеті"
+  },
+  "nft_operations_expired": {
+    "message": "Час запиту минув, будь ласка спробуйте ще раз"
+  },
+  "nft_operation_slide_to_confirm": {
+    "message": "Проведіть для підтвердження"
+  },
+  "nft_operation_success": {
+    "message": "Готово"
+  },
+  "nft_owner_address": {
+    "message": "Власник"
+  },
+  "nft_price": {
+    "message": "Ціна"
+  },
+  "nft_proceeds": {
+    "message": "Ваш дохід"
+  },
+  "nft_properties": {
+    "message": "Властивості"
+  },
+  "nft_royalty": {
+    "message": "Роялті"
+  },
+  "nft_royalty_address": {
+    "message": "Адреса роялті"
+  },
+  "nft_sale_cancel_title": {
+    "message": "Зняти з продажу"
+  },
+  "nft_sale_place_title": {
+    "message": "Продай NFT"
+  },
+  "nft_show_details": {
+    "message": "Показати деталі"
+  },
+  "nft_single_nft": {
+    "message": "Одиничний NFT"
+  },
+  "nft_standard": {
+    "message": "Стандарт токенів"
+  },
+  "nft_title": {
+    "message": "NFT"
+  },
+  "nft_token_id": {
+    "message": "ID токена"
+  },
+  "nft_transaction_head_placeholder": {
+    "message": "NFT"
+  },
+  "nft_transfer_comment": {
+    "message": "Коментарий"
+  },
+  "nft_transfer_confirm_fee_label": {
+    "message": "Комісія"
+  },
+  "nft_transfer_confirm_fee_refund_label": {
+    "message": "Відшкодування"
+  },
+  "nft_transfer_confirm_fee_value": {
+    "message": "≈ %{value} TON"
+  },
+  "nft_transfer_title": {
+    "message": "Перевести NFT"
+  },
+  "nft_transfer_description": {
+    "message": "NFT буде надіслано на цю адресу. Будьте обережні, відправляючи NFT іншому користувачеві."
+  },
+  "nft_transfer_dns": {
+    "message": "Перевести"
+  },
+  "nft_transfer_nft": {
+    "message": "Передати NFT"
+  },
+  "nft_transfer_recipient": {
+    "message": "Отримувач"
+  },
+  "nft_unlink_domain_button": {
+    "message": "Пов'язано з {{address}}"
+  },
+  "nft_unnamed_collection": {
+    "message": "Колекція без назви"
+  },
+  "nft_view_in_explorer": {
+    "message": "Переглянути в провіднику"
+  },
+  "nokyc": {
+    "message": "без KYC"
+  },
+  "notcoin_all": {
+    "message": "Обміняти все в Tonkeeper Pro"
+  },
+  "notcoin_burn_not_available_hours": {
+    "message": "Обмін буде доступний через %{count} годин"
+  },
+  "notcoin_burn_not_available_minutes": {
+    "message": "Обмін буде доступний через %{count} хвилину"
+  },
+  "notcoin_burn_not_available_seconds": {
+    "message": "Обмін буде доступний через %{count} секунд"
+  },
+  "notcoin_count": {
+    "message": "Кількість ваучерів"
+  },
+  "notcoin_count_max": {
+    "message": "Максимум 4 за обмін"
+  },
+  "notcoin_exchange": {
+    "message": "Обміняти\nваучери на NOT"
+  },
+  "notcoin_exchange_all": {
+    "message": "Обміняти всі\nв Tonkeeper Pro"
+  },
+  "notcoin_exchange_subtitle": {
+    "message": "NOT з'являться на вашому балансі незабаром після обміну."
+  },
+  "notcoin_exchange_title": {
+    "message": "Обміняйте свої ваучери на NOT"
+  },
+  "notcoin_exchange_to_not": {
+    "message": "Обміняти на NOT"
+  },
+  "notcoin_name": {
+    "message": "Notcoin"
+  },
+  "notcoin_not_vouchers": {
+    "message": "Ваучери NOT"
+  },
+  "notcoin_open": {
+    "message": "Відкрити"
+  },
+  "notcoin_open_bot": {
+    "message": "Відкрити Notcoin Bot"
+  },
+  "notcoin_slogan": {
+    "message": "Мабуть, нічого"
+  },
+  "notcoin_total_amount": {
+    "message": "Загальна сума"
+  },
+  "notcoin_verify_subtitle": {
+    "message": "Перевірка може зайняти кілька годин."
+  },
+  "notcoin_verify_title": {
+    "message": "Підключіть гаманець до Notcoin Bot, щоб перевірити спалювання"
+  },
+  "notifications_alert_cancel": {
+    "message": "Скасувати"
+  },
+  "notifications_alert_description": {
+    "message": "Адрес посилання з повідомлення не збігається з адресою додатка."
+  },
+  "notifications_alert_open": {
+    "message": "Все одно відкрити"
+  },
+  "notifications_alert_title": {
+    "message": "Ви впевнені, що хочете відкрити зовнішнє посилання?"
+  },
+  "notifications_allow_notifications": {
+    "message": "Увімкнути сповіщення"
+  },
+  "notifications_apps": {
+    "message": "Додатки"
+  },
+  "notifications_apps_description": {
+    "message": "Сповіщення від підключених застосунків у вашій активності"
+  },
+  "notifications_disconnect_app": {
+    "message": "Відключити %{app_name}"
+  },
+  "notifications_disconnected_app": {
+    "message": "Відключено додаток"
+  },
+  "notifications_earlier": {
+    "message": "Раніше"
+  },
+  "notifications_from_connected": {
+    "message": "З пов'язаних застосунків"
+  },
+  "notifications_muted": {
+    "message": "Сповіщення вимкнено"
+  },
+  "notifications_mute_notifications": {
+    "message": "Вимкнути сповіщення"
+  },
+  "notifications_notifications": {
+    "message": "Повідомлення"
+  },
+  "notifications_placeholder_description": {
+    "message": "Досліджуйте застосунки та сервіси в браузері Tonkeeper."
+  },
+  "notifications_placeholder_title": {
+    "message": "Сповіщення будуть показані тут"
+  },
+  "notifications_report": {
+    "message": "Поскаржитися"
+  },
+  "notifications_disabled_action": {
+    "message": "Відкрити налаштування"
+  },
+  "notifications_disabled_description": {
+    "message": "Ви вимкнули сповіщення в налаштуваннях вашого телефону. Щоб активувати сповіщення, перейдіть до Налаштувань на цьому пристрої."
+  },
+  "notifications_disabled_title": {
+    "message": "Сповіщення вимкнені"
+  },
+  "notifications_not_supported": {
+    "message": "На вашому пристрої не підтримуються сповіщення"
+  },
+  "notifications_switch_title": {
+    "message": "Push-сповіщення"
+  },
+  "notifications_title": {
+    "message": "Сповіщення"
+  },
+  "notification_switch_description": {
+    "message": "Отримуйте сповіщення при отриманні TON, токенів і NFT. Сповіщення від підключених додатків."
+  },
+  "notify_connection_err_caption": {
+    "message": "%{host} не відповідає. Спробуйте пізніше."
+  },
+  "notify_connection_err_caption_few": {
+    "message": "%{hosts} і %{lastHost} не відповідають. Спробуйте пізніше."
+  },
+  "notify_connection_err_title": {
+    "message": "Не вдалося підключитися до серверу"
+  },
+  "notify_incorrect_time_err_caption": {
+    "message": "Увімкніть автоматичний час і дату у налаштуваннях пристрою. Відсутність автоматичного налаштування часу може вплинути на переказ коштів."
+  },
+  "notify_incorrect_time_err_title": {
+    "message": "Час і дата невірні"
+  },
+  "notify_no_signal_caption": {
+    "message": "Перевірте ваше інтернет-з'єднання."
+  },
+  "notify_no_signal_title": {
+    "message": "Немає сигналу"
+  },
+  "old_wallet_error": {
+    "message": "Використовуйте гаманець версії v4R2"
+  },
+  "pairSigner_about": {
+    "message": "Про Signer"
+  },
+  "pairSigner_open_signer": {
+    "message": "Відкрити підписувач на цьому пристрої"
+  },
+  "pairSigner_subtitle": {
+    "message": "Відкрийте Signer » Виберіть ключ » Відскануйте QR-код"
+  },
+  "pairSigner_title": {
+    "message": "Скануйте QR-код"
+  },
+  "passcode_changed": {
+    "message": "Пароль змінено"
+  },
+  "paste": {
+    "message": "Вставити"
+  },
+  "pin_enter_faceid_err": {
+    "message": "Помилка біометричної перевірки"
+  },
+  "pin_enter_skip_faceid_err": {
+    "message": "Необхідно біометрію"
+  },
+  "platform_android_capitalized_face_recognition": {
+    "message": "Розпізнавання обличчя"
+  },
+  "platform_android_capitalized_fingerprint": {
+    "message": "Відбиток пальця"
+  },
+  "platform_android_face_recognition": {
+    "message": "розпізнавання обличчя"
+  },
+  "platform_android_face_recognition_genitive": {
+    "message": "розпізнавання обличчя"
+  },
+  "platform_android_fingerprint": {
+    "message": "Відбиток пальця"
+  },
+  "platform_android_fingerprint_genitive": {
+    "message": "відбитка пальця"
+  },
+  "platform_ios_capitalized_face_recognition": {
+    "message": "Розпізнавання обличчя"
+  },
+  "platform_ios_capitalized_fingerprint": {
+    "message": "Touch ID"
+  },
+  "platform_ios_face_recognition": {
+    "message": "Face ID"
+  },
+  "platform_ios_face_recognition_genitive": {
+    "message": "Face ID"
+  },
+  "platform_ios_fingerprint": {
+    "message": "Touch ID"
+  },
+  "platform_ios_fingerprint_genitive": {
+    "message": "Touch ID"
+  },
+  "programmable_nfts_alert_cancel": {
+    "message": "Скасування"
+  },
+  "programmable_nfts_alert_description": {
+    "message": "Відвідуйте це зовнішнє посилання тільки в тому випадку, якщо ви довіряєте автору колекції.\n\n{{uri}}"
+  },
+  "programmable_nfts_alert_open": {
+    "message": "Відкрити все одно"
+  },
+  "programmable_nfts_alert_title": {
+    "message": "Ви впевнені, що хочете відкрити зовнішнє посилання?"
+  },
+  "receive_address_title": {
+    "message": "Або використовуйте адресу гаманця"
+  },
+  "receive_copy": {
+    "message": "Копіювати"
+  },
+  "receiveModal_copy": {
+    "message": "Копіювати"
+  },
+  "receiveModal_receive": {
+    "message": "Отримати"
+  },
+  "receiveModal_receive_description": {
+    "message": "Відправляйте на цю адресу тільки %{tokenName} і токени в мережі TON, інакше ви можете втратити свої кошти."
+  },
+  "receiveModal_receive_title": {
+    "message": "Отримати %{tokenName}"
+  },
+  "receiveModal_receive_ton": {
+    "message": "Відправляйте на цю адресу тільки Toncoin TON і токени в мережі TON, інакше ви можете втратити свої кошти."
+  },
+  "receive_qr_title": {
+    "message": "Показати QR-код для отримання"
+  },
+  "receive_received_title": {
+    "message": "Ви отримали\n%{amount} %{currency}"
+  },
+  "receive_share": {
+    "message": "Поділитися"
+  },
+  "receive_title": {
+    "message": "Отримати %{currency}"
+  },
+  "receive_ton_and_jettons": {
+    "message": "Отримуйте TON та інші токени"
+  },
+  "recovery_phrase_caption": {
+    "message": "Запишіть ці слова з їх номерами і збережіть їх у надійному місці."
+  },
+  "recovery_phrase_check_button": {
+    "message": "Перевірити резервну копію"
+  },
+  "recovery_phrase_copy_button": {
+    "message": "Копіювати"
+  },
+  "recovery_phrase_title": {
+    "message": "Секретний ключ"
+  },
+  "refresh_app": {
+    "message": "Перезапустити"
+  },
+  "region_nokyc": {
+    "message": "Нейтральні води"
+  },
+  "reminder_notifications_caption": {
+    "message": "Отримуйте сповіщення при отриманні TON, токенів та NFT."
+  },
+  "reminder_notifications_enable_button": {
+    "message": "Увімкнути сповіщення"
+  },
+  "reminder_notifications_later_button": {
+    "message": "Пізніше"
+  },
+  "reminder_notifications_title": {
+    "message": "Отримуйте миттєві сповіщення"
+  },
+  "renew_in_progress": {
+    "message": "Виконується продовження…"
+  },
+  "renew_progress_of": {
+    "message": "%{current} з %{count}"
+  },
+  "require_create_wallet_modal_caption": {
+    "message": "Вам потрібен підключений гаманець для використання\nTonkeeper. Створіть новий гаманець або імпортуйте наявний."
+  },
+  "require_create_wallet_modal_create_new": {
+    "message": "Створити новий гаманець"
+  },
+  "require_create_wallet_modal_import": {
+    "message": "Імпортувати наявний гаманець"
+  },
+  "require_create_wallet_modal_title": {
+    "message": "Давайте налаштуємо ваш гаманець"
+  },
+  "restake_banner_stake_into_step": {
+    "message": "Внесіть доступний TON у Tonstakers."
+  },
+  "restake_banner_stake_into_tonstakers_action": {
+    "message": "Внести у Tonstakers"
+  },
+  "restake_banner_title": {
+    "message": "Заробляйте більше TON із %apy в ліквідному стейкінгу Tonstakers."
+  },
+  "restake_banner_unstake_action_all": {
+    "message": "Вивести %{amount}"
+  },
+  "restake_banner_unstake_action_manual": {
+    "message": "Ввести вручну"
+  },
+  "restake_banner_unstake_step": {
+    "message": "Ви виводите TON з вашого поточного стейкінгу."
+  },
+  "restake_banner_wait_step": {
+    "message": "Зачекайте, поки ваш TON стане доступним."
+  },
+  "restake_banner_wait_step_collect": {
+    "message": "Зібрати"
+  },
+  "restake_banner_wait_step_cooldown": {
+    "message": "Ваш TON скоро буде доступний. Ви зможете забрати його у найближчий час."
+  },
+  "restake_banner_wait_step_pending": {
+    "message": "Ваш TON буде доступний через %{0, number}uration. Після цього ви зможете їх забрати."
+  },
+  "restake_banner_wait_step_withdraw": {
+    "message": "Заберіть доступний TON з вашого попереднього постачальника стейкінгу."
+  },
+  "scan_qr_open_settings": {
+    "message": "Відкрити налаштування"
+  },
+  "scan_qr_permission_error": {
+    "message": "Дозвольте доступ до камери для сканування QR-кодів"
+  },
+  "scan_qr_title": {
+    "message": "Скануйте QR-код"
+  },
+  "secret_words_caption": {
+    "message": "Запишіть ці 24 слова у вказаному порядку та збережіть у таємному, безпечному місці."
+  },
+  "secret_words_title": {
+    "message": "Ваш секретний ключ"
+  },
+  "security_change_passcode": {
+    "message": "Змінити код доступу"
+  },
+  "security_lock_screen_switch": {
+    "message": "Екран блокування"
+  },
+  "security_lock_screen_tip": {
+    "message": "Запит паролю для перегляду вмісту гаманця."
+  },
+  "security_migration_caption": {
+    "message": "Тепер ваш баланс і всі операції захищені паролем. Ви також можете використовувати біометричний ключ для прискорення входу."
+  },
+  "security_migration_skip_button": {
+    "message": "Не оновлювати зараз"
+  },
+  "security_migration_submit_button": {
+    "message": "Оновити параметри безпеки"
+  },
+  "security_migration_title": {
+    "message": "Оновіть безпеку гаманця"
+  },
+  "security_reset_passcode": {
+    "message": "Скинути пін-код"
+  },
+  "security_title": {
+    "message": "Безпека"
+  },
+  "security_use_biometry_switch": {
+    "message": "Використовувати %{biometryType}"
+  },
+  "security_use_biometry_tip": {
+    "message": "Ви завжди можете розблокувати ваш гаманець за допомогою пароля."
+  },
+  "send_address_placeholder": {
+    "message": "Адреса або ім'я"
+  },
+  "send_all_warning_title": {
+    "message": "Ви впевнені, що хочете відправити весь свій баланс?"
+  },
+  "send_build_tx_error": {
+    "message": "Помилка створення транзакції"
+  },
+  "send_comment_label": {
+    "message": "Додати коментар"
+  },
+  "send_fee_estimation_error": {
+    "message": "Не вдалося обчислити комісію"
+  },
+  "send_get_wallet_info_error": {
+    "message": "Не вдалося отримати інформацію про гаманець"
+  },
+  "send_insufficient_funds": {
+    "message": "Недостатньо коштів"
+  },
+  "send_invalid_recipient_caption": {
+    "message": "Домен не існує або адресу гаманця до нього не прив'язано"
+  },
+  "send_invalid_recipient_title": {
+    "message": "Невірний одержувач"
+  },
+  "send_liquid_jetton_warning_title": {
+    "message": "Ви впевнені, що хочете відправити частину заставного балансу?"
+  },
+  "send_lockup_warning_caption": {
+    "message": "Будь ласка, переконайтеся, що ви надсилаєте на дозволену адресу.\n\nКомісія буде списана навіть у разі невдачі транзакції."
+  },
+  "send_lockup_warning_submit_button": {
+    "message": "Відправити"
+  },
+  "send_lockup_warning_title": {
+    "message": "Сума перевищує ліквідний баланс"
+  },
+  "send_publish_tx_error": {
+    "message": "Не вдалося надіслати транзакцію"
+  },
+  "send_screen_steps_address_delete_alert_text": {
+    "message": "Ви впевнені, що хочете видалити «%{name}» з обраного?"
+  },
+  "send_screen_steps_address_placeholder": {
+    "message": "Адреса гаманця або домен"
+  },
+  "send_screen_steps_address_recent_label": {
+    "message": "Нещодавні"
+  },
+  "send_screen_steps_address_suggest_actions_add": {
+    "message": "Додати до вибраного"
+  },
+  "send_screen_steps_address_suggest_actions_delete": {
+    "message": "Видалити"
+  },
+  "send_screen_steps_address_suggest_actions_edit": {
+    "message": "Редагувати обране"
+  },
+  "send_screen_steps_address_suggest_actions_hide": {
+    "message": "Сховати"
+  },
+  "send_screen_steps_address_suggests_label": {
+    "message": "Обрані та недавні"
+  },
+  "send_screen_steps_address_title": {
+    "message": "Отримувач"
+  },
+  "send_screen_steps_amount_insufficient_balance": {
+    "message": "Недостатньо коштів"
+  },
+  "send_screen_steps_amount_less_than_min": {
+    "message": "Мінімум %{minAmount} TON"
+  },
+  "send_screen_steps_amount_less_than_min_with_symbol": {
+    "message": "Мінімум %{minAmount} %{symbol}"
+  },
+  "send_screen_steps_amount_liquid_jetton_note": {
+    "message": "Надсилання токена ліквідності tsTON"
+  },
+  "send_screen_steps_amount_max": {
+    "message": "МАКС"
+  },
+  "send_screen_steps_amount_recipient_label": {
+    "message": "Кому:"
+  },
+  "send_screen_steps_amount_remaining": {
+    "message": "Доступно: %{amount}"
+  },
+  "send_screen_steps_amount_title": {
+    "message": "Сума"
+  },
+  "send_screen_steps_choose_coin_subtitle": {
+    "message": "Далі ви введете одержувача та суму."
+  },
+  "send_screen_steps_choose_coin_title": {
+    "message": "Виберіть токен для відправки"
+  },
+  "send_screen_steps_comfirm_action": {
+    "message": "Переклад %{coin}"
+  },
+  "send_screen_steps_comfirm_comment_ascii_text": {
+    "message": "Використовуйте тільки ASCII-символи: цифри, літери латинського алфавіту і знаки пунктуації."
+  },
+  "send_screen_steps_comfirm_comment_characters_exceeded": {
+    "message": "Розмір повідомлення перевищує %{count} символів."
+  },
+  "send_screen_steps_comfirm_comment_characters_left": {
+    "message": "Залишилося %{count} символів."
+  },
+  "send_screen_steps_comfirm_comment_decrypt": {
+    "message": "Розшифрувати"
+  },
+  "send_screen_steps_comfirm_comment_description": {
+    "message": "Буде видно всім."
+  },
+  "send_screen_steps_comfirm_comment_description_encrypted": {
+    "message": "Буде видно тільки отримувачу та вам."
+  },
+  "send_screen_steps_comfirm_comment_encrypt": {
+    "message": "Зашифрувати коментар"
+  },
+  "send_screen_steps_comfirm_comment_label": {
+    "message": "Коментар"
+  },
+  "send_screen_steps_comfirm_comment_label_encrypted": {
+    "message": "Зашифрований коментар"
+  },
+  "send_screen_steps_comfirm_comment_label_required": {
+    "message": "Потрібен коментар"
+  },
+  "send_screen_steps_comfirm_comment_placeholder": {
+    "message": "Повідомлення або посилання (необов'язково)"
+  },
+  "send_screen_steps_comfirm_comment_placeholder_required": {
+    "message": "Нотатка або тег"
+  },
+  "send_screen_steps_comfirm_comment_required_text": {
+    "message": "Ви повинні включити примітку біржі для переказу. Без неї ваші кошти буде втрачено."
+  },
+  "send_screen_steps_comfirm_details_label": {
+    "message": "Деталі"
+  },
+  "send_screen_steps_comfirm_details_max_balance_label": {
+    "message": "Відправка всього балансу %{currency}"
+  },
+  "send_screen_steps_comfirm_title": {
+    "message": "Підтвердити дію"
+  },
+  "send_screen_steps_comfirm_wallet": {
+    "message": "Гаманець"
+  },
+  "send_screen_steps_comfirm_will_be_paid_with_battery": {
+    "message": "Буде оплачено батарейкою"
+  },
+  "send_screen_steps_done_add_favorite": {
+    "message": "Зберегти адресу в обране"
+  },
+  "send_screen_steps_done_address": {
+    "message": "Адреса: %{address}"
+  },
+  "send_screen_steps_done_comment": {
+    "message": "Коментар: %{comment}"
+  },
+  "send_screen_steps_done_description": {
+    "message": "Ваша транзакція була відправлена в мережу і буде оброблена за кілька секунд."
+  },
+  "send_screen_steps_done_done_label": {
+    "message": "Готово"
+  },
+  "send_screen_steps_done_favorite_saved": {
+    "message": "Збережено в обране"
+  },
+  "send_screen_steps_done_fee": {
+    "message": "Комісія: %{fee}"
+  },
+  "send_screen_steps_done_title": {
+    "message": "%{currency} відправлено!"
+  },
+  "send_screen_steps_done_to": {
+    "message": "До: %{name}"
+  },
+  "send_sending_failed": {
+    "message": "Надсилання не вдалося"
+  },
+  "send_sending_wrong_time_description": {
+    "message": "Увімкніть автоматичне встановлення часу та дати в налаштуваннях вашого пристрою. Потім повторіть переказ."
+  },
+  "send_sending_wrong_time_title": {
+    "message": "Сталася помилка"
+  },
+  "send_title": {
+    "message": "Відправити %{currency}"
+  },
+  "settings_appearance": {
+    "message": "Зовнішній вигляд"
+  },
+  "settings_backup_seed": {
+    "message": "Резервна копія"
+  },
+  "settings_bank_card": {
+    "message": "Банківська картка"
+  },
+  "settings_contact_support": {
+    "message": "Зв’язатися з нами"
+  },
+  "settings_delete_account": {
+    "message": "Видалити аккаунт"
+  },
+  "settings_delete_signer_account": {
+    "message": "Видалити акаунт?"
+  },
+  "settings_delete_watch_account": {
+    "message": "Видалити обліковий запис для перегляду?"
+  },
+  "settings_delete_watch_account_button": {
+    "message": "Видалити"
+  },
+  "settings_faq": {
+    "message": "Поширені запитання"
+  },
+  "settings_jettons_list": {
+    "message": "Токени"
+  },
+  "settings_legal_documents": {
+    "message": "Юридичні документи"
+  },
+  "settings_network_alert_title": {
+    "message": "Виберіть мережу"
+  },
+  "settings_news": {
+    "message": "Новини Tonkeeper"
+  },
+  "settings_news_url": {
+    "message": "https://t.me/tonkeeper"
+  },
+  "settings_notifications": {
+    "message": "Сповіщення"
+  },
+  "settings_primary_currency": {
+    "message": "Валюта"
+  },
+  "settings_rate": {
+    "message": "Оцініть Tonkeeper"
+  },
+  "settings_recovery_phrase": {
+    "message": "Секретний ключ"
+  },
+  "settings_reset": {
+    "message": "Вийти"
+  },
+  "settings_reset_alert_button": {
+    "message": "Вийти"
+  },
+  "settings_reset_alert_caption": {
+    "message": "Це видалить ключі до вашого гаманця. Переконайтеся, що ви зберегли свою фразу для відновлення."
+  },
+  "settings_reset_alert_caption_all": {
+    "message": "Это удалит ключи ко всем кошелькам. Убедитесь, что вы сохранили свои фразы восстановления."
+  },
+  "settings_reset_alert_title": {
+    "message": "🚧 🚨 Вийти з гаманця? 🚨 🚧"
+  },
+  "settings_reset_alert_title_all": {
+    "message": "🚧 🚨🚨🚨 🚧\nВийти зі всіх гаманців?"
+  },
+  "settings_search_engine": {
+    "message": "Пошук"
+  },
+  "settings_security": {
+    "message": "Безпека"
+  },
+  "settings_subscriptions": {
+    "message": "Підписки"
+  },
+  "settings_support": {
+    "message": "Підтримка"
+  },
+  "settings_theme": {
+    "message": "Тема"
+  },
+  "settings_theme_names_blue": {
+    "message": "Темно-Синя"
+  },
+  "settings_theme_names_dark": {
+    "message": "Темна"
+  },
+  "settings_theme_names_light": {
+    "message": "Світла"
+  },
+  "settings_theme_names_system": {
+    "message": "Системна"
+  },
+  "settings_title": {
+    "message": "Налаштування"
+  },
+  "settings_to_mainnet": {
+    "message": "Переключитися на Mainnet"
+  },
+  "settings_to_testnet": {
+    "message": "Переключитись на Testnet"
+  },
+  "settings_version": {
+    "message": "Версія"
+  },
+  "settings_wallet_version": {
+    "message": "Активна адреса"
+  },
+  "setup_biometry_caption": {
+    "message": "%{biometryType} дозволяє вам швидше відкрити гаманець без введення пароля."
+  },
+  "setup_biometry_enable_button": {
+    "message": "Увімкнути %{biometryType}"
+  },
+  "setup_biometry_title": {
+    "message": "Швидкий вхід за допомогою %{biometryType}"
+  },
+  "setup_notifications_caption": {
+    "message": "Отримуйте сповіщення при отриманні TON, токенів і NFT."
+  },
+  "setup_notifications_enable_button": {
+    "message": "Увімкнути сповіщення"
+  },
+  "setup_notifications_title": {
+    "message": "Отримуйте миттєві сповіщення"
+  },
+  "signerConfirm_confirm": {
+    "message": "Підтвердіть транзакцію в Signer"
+  },
+  "signerConfirm_scan_qr": {
+    "message": "Скануйте QR-код за допомогою Signer"
+  },
+  "signerConfirm_scan_signed_qr": {
+    "message": "Проскануйте QR-код підписаної транзакції з Signer"
+  },
+  "signerConfirm_step": {
+    "message": "Крок %{value}"
+  },
+  "signerConfirm_title": {
+    "message": "Підтвердити дію"
+  },
+  "signer_scan_result": {
+    "message": "Скануйте підписану транзакцію"
+  },
+  "signer_scan_tx_description": {
+    "message": "Будь ласка, відкрийте Signer і відскануйте транзакцію за допомогою QR-коду"
+  },
+  "skip": {
+    "message": "Пропустити"
+  },
+  "spam_action": {
+    "message": "Спам"
+  },
+  "staking_active": {
+    "message": "Активні"
+  },
+  "staking_confirm_address_label": {
+    "message": "Адреса одержувача"
+  },
+  "staking_confirm_amount_label": {
+    "message": "Сума"
+  },
+  "staking_confirm_amount_value": {
+    "message": "%{value} TON"
+  },
+  "staking_confirm_fee_label": {
+    "message": "Комісія"
+  },
+  "staking_confirm_fee_value": {
+    "message": "≈ %{value} TON"
+  },
+  "staking_confirm_recipient_label": {
+    "message": "Отримувач"
+  },
+  "staking_confirm_withdraw_amount_label": {
+    "message": "Сума відклику"
+  },
+  "staking_confirm_withdraw_amount_value": {
+    "message": "%{value} TON"
+  },
+  "staking_confirm_deposit": {
+    "message": "Підтвердити і внести"
+  },
+  "staking_confirm_unstake": {
+    "message": "Підтвердити і відкликати"
+  },
+  "staking_deposit": {
+    "message": "Депозит"
+  },
+  "staking_desc_large": {
+    "message": "Приєднуйтесь до стейкінгу та отримуйте винагороди. Стейкінг допомагає підтримувати мережу TON."
+  },
+  "staking_details_about_pool": {
+    "message": "Деталі"
+  },
+  "staking_details_apy_highest_tag": {
+    "message": "МАКС"
+  },
+  "staking_details_apy_label": {
+    "message": "Річний дохід"
+  },
+  "staking_details_apy_value": {
+    "message": "≈ %{value}%"
+  },
+  "staking_details_balance": {
+    "message": "Баланс стейкінгу"
+  },
+  "staking_details_cooldown_active": {
+    "message": "Активний"
+  },
+  "staking_details_cooldown_desc": {
+    "message": "Двогодинний період, який застосовується на початку кожного стейкінг циклу для покращення процесу зняття і внесення коштів між циклами"
+  },
+  "staking_details_cooldown_title": {
+    "message": "Період очікування"
+  },
+  "staking_details_frequency_label": {
+    "message": "Частота винагород"
+  },
+  "staking_details_frequency_value": {
+    "message": "Кожні %{count} години"
+  },
+  "staking_details_frequency_value_few": {
+    "message": "Кожні %{count} години"
+  },
+  "staking_details_frequency_value_many": {
+    "message": "Кожні %{count} годин"
+  },
+  "staking_details_frequency_value_one": {
+    "message": "Кожні %{count} годину"
+  },
+  "staking_details_frequency_value_zero": {
+    "message": "Кожні %{count} годин"
+  },
+  "staking_details_links_title": {
+    "message": "Посилання"
+  },
+  "staking_details_liquidity_token_label": {
+    "message": "Токен ліквідності %{token}"
+  },
+  "staking_details_liquidity_token_value": {
+    "message": "Дізнатися більше"
+  },
+  "staking_details_min_deposit_label": {
+    "message": "Мінімальний депозит"
+  },
+  "staking_details_min_deposit_value": {
+    "message": "%{value} TON"
+  },
+  "staking_details_next_cycle_desc": {
+    "message": "Усі транзакції набудуть чинності після завершення циклу"
+  },
+  "staking_details_next_cycle_desc_liquid": {
+    "message": "Усі запити на виведення коштів набувають чинності після завершення циклу"
+  },
+  "staking_details_next_cycle_in": {
+    "message": "через"
+  },
+  "staking_details_next_cycle_message": {
+    "message": "Запит на відстеження буде оброблено після закінчення циклу підтвердження через %{value}"
+  },
+  "staking_details_next_cycle_reward_title": {
+    "message": "Наступна винагорода"
+  },
+  "staking_details_next_cycle_time": {
+    "message": "через %{time}"
+  },
+  "staking_details_next_cycle_title": {
+    "message": "Наступний цикл"
+  },
+  "staking_details_note": {
+    "message": "Стейкінг базується на смарт-контрактах третіх сторін. Tonkeeper не несе відповідальності за досвід стейкінгу."
+  },
+  "staking_details_pendingDeposit": {
+    "message": "Очікується зарахування"
+  },
+  "staking_details_pendingWithdraw": {
+    "message": "Очікування виведення"
+  },
+  "staking_details_pendingWithdrawDesc": {
+    "message": "після закінчення циклу"
+  },
+  "staking_details_pool_address_label": {
+    "message": "Адреса пулу"
+  },
+  "staking_details_readyWithdraw": {
+    "message": "Зняття готове"
+  },
+  "staking_details_show_details": {
+    "message": "Докладні відомості"
+  },
+  "staking_details_socials_telegram": {
+    "message": "Спільнота"
+  },
+  "staking_details_socials_twitter": {
+    "message": "Twitter"
+  },
+  "staking_details_tap_to_collect": {
+    "message": "Натисніть, щоб зібрати"
+  },
+  "staking_estimated_profit": {
+    "message": "%{amount} TON – річний прибуток, якщо ви застейкаєте TON сьогодні"
+  },
+  "staking_estimated_profit_compare": {
+    "message": "На %{amount} TON на рік прибутковіше, ніж ваш поточний стекинг"
+  },
+  "staking_get_withdrawal": {
+    "message": "Отримати виведення"
+  },
+  "staking_highest_apy": {
+    "message": "MAX APY"
+  },
+  "staking_jetton_note": {
+    "message": "Коли ви робите стейкінг TON у пул %{poolName}, ви отримуєте токен під назвою %{token}, який представляє вашу частку в пулі. У міру накопичення прибутку в пулі ваш %{token} представляє більшу кількість TON."
+  },
+  "staking_learn_more": {
+    "message": "Детальніше"
+  },
+  "staking_message_pendingDeposit": {
+    "message": "%{amount} TON буде зараховано"
+  },
+  "staking_message_pendingWithdraw": {
+    "message": "%{amount} TON буде виведено\n"
+  },
+  "staking_message_pendingWithdrawLiquid": {
+    "message": "%{amount} TON буде виведено після завершення циклу"
+  },
+  "staking_message_readyWithdraw": {
+    "message": "%{amount} TON готовий до зняття.\nНатисніть, щоб зібрати"
+  },
+  "staking_no_funds": {
+    "message": "Недостатньо коштів для зняття"
+  },
+  "staking_not_exists": {
+    "message": "Невірна адреса пулу"
+  },
+  "staking_other": {
+    "message": "Інше"
+  },
+  "staking_recommended": {
+    "message": "Рекомендовано"
+  },
+  "staking_rewards_after_top_up": {
+    "message": "Після депозита"
+  },
+  "staking_rewards_current": {
+    "message": "Поточна"
+  },
+  "staking_rewards_title": {
+    "message": "Ваша річна доходність"
+  },
+  "staking_rewards_value": {
+    "message": "≈ %{value} TON"
+  },
+  "staking_send_staked_ton": {
+    "message": "Стейкінг TON"
+  },
+  "staking_staked": {
+    "message": "Стейкінг"
+  },
+  "staking_staked_ton": {
+    "message": "Застейканий TON"
+  },
+  "staking_staking_desc": {
+    "message": "Мінімальний депозит %{minStake} TON.\nЗаробляйте до %{maxApy}%."
+  },
+  "staking_staking_pool_desc": {
+    "message": "APY ≈ %{apy}%"
+  },
+  "staking_title": {
+    "message": "Стейкінг"
+  },
+  "staking_title_large": {
+    "message": "Стейкінг TON"
+  },
+  "staking_top_up": {
+    "message": "Поповнити"
+  },
+  "staking_transaction": {
+    "message": "Підтвердити дію"
+  },
+  "staking_warning_about": {
+    "message": "Про %{name}"
+  },
+  "staking_warning_beta_desc": {
+    "message": "Ми не несемо відповідальності за стабільність і результат стейкінгу. Використовуйте на свій страх і ризик."
+  },
+  "staking_warning_desc": {
+    "message": "Стейкінг заснований на сторонніх смарт-контрактах. Ми не несемо відповідальності за їх роботу."
+  },
+  "staking_warning_title": {
+    "message": "Попередження"
+  },
+  "staking_widget_desc": {
+    "message": "Доходність до %{apy}%"
+  },
+  "staking_widget_staking_options": {
+    "message": "Опції стейкінгу"
+  },
+  "staking_widget_title": {
+    "message": "Стейк TON"
+  },
+  "staking_withdraw": {
+    "message": "Вивести"
+  },
+  "staking_withdrawal_fee_warning_continue": {
+    "message": "Все равно продовжити"
+  },
+  "staking_withdrawal_fee_warning_message": {
+    "message": "Будь ласка, залиште мінімум {{amount}} TON на вашому балансі."
+  },
+  "staking_withdrawal_fee_warning_title": {
+    "message": "У вас не залишиться коштів для виведення"
+  },
+  "staking_withdrawal_request": {
+    "message": "Запит на зняття"
+  },
+  "start_screen_caption": {
+    "message": "Створіть новий гаманець або додайте\nіснуючий"
+  },
+  "start_screen_create_wallet_button": {
+    "message": "Створити новий гаманець"
+  },
+  "start_screen_import_wallet_button": {
+    "message": "Підключити наявний гаманець"
+  },
+  "stop_watch": {
+    "message": "Видалити обліковий запис спостереження"
+  },
+  "subscription_back_to_merchant_button": {
+    "message": "Повернутися"
+  },
+  "subscription_back_to_merchant_caption": {
+    "message": "Транзакція обробляється. Ваша підписка незабаром буде активна."
+  },
+  "subscription_back_to_merchant_name": {
+    "message": "Повернутися до %{merchantName}"
+  },
+  "subscription_back_to_merchant_title": {
+    "message": "Повернутися до каналу?"
+  },
+  "subscription_cancel": {
+    "message": "Скасувати підписку"
+  },
+  "subscription_cancel_alert_cancel_btn": {
+    "message": "Не зараз"
+  },
+  "subscription_cancel_alert_caption": {
+    "message": "Якщо ви скасуєте зараз, ви все ще зможете отримати доступ до своєї підписки до %{nextBill}"
+  },
+  "subscription_cancel_alert_submit_btn": {
+    "message": "Так, скасувати"
+  },
+  "subscription_cancel_alert_title": {
+    "message": "Скасувати підписку?"
+  },
+  "subscription_expiring": {
+    "message": "Закінчується"
+  },
+  "subscription_fee": {
+    "message": "Вартість"
+  },
+  "subscription_next_bill": {
+    "message": "Наступний рахунок"
+  },
+  "subscription_open_merchant": {
+    "message": "Відкрити в Telegram"
+  },
+  "subscription_period": {
+    "message": "Інтервал"
+  },
+  "subscription_period_custom": {
+    "message": "Кожні %{period}"
+  },
+  "subscription_period_day": {
+    "message": "Щоденно"
+  },
+  "subscription_period_half_year": {
+    "message": "Раз на півроку"
+  },
+  "subscription_period_hour": {
+    "message": "Щогодини"
+  },
+  "subscription_period_month": {
+    "message": "Щомісячно"
+  },
+  "subscription_period_quarter": {
+    "message": "Щоквартально"
+  },
+  "subscription_period_week": {
+    "message": "Щотижня"
+  },
+  "subscription_period_weeks": {
+    "message": "Кожні %{count} тижні"
+  },
+  "subscription_period_year": {
+    "message": "Щорічно"
+  },
+  "subscription_price": {
+    "message": "Ціна"
+  },
+  "subscription_sent": {
+    "message": "Транзакція відправлена"
+  },
+  "subscriptions_item_caption": {
+    "message": "%{price} TON, наступний рахунок %{nextBill}"
+  },
+  "subscriptions_item_caption_expired": {
+    "message": "Закінчено %{date}"
+  },
+  "subscriptions_item_caption_expiring": {
+    "message": "%{price} TON, завершується %{date}"
+  },
+  "subscriptions_section_active": {
+    "message": "Активні"
+  },
+  "subscriptions_section_expired": {
+    "message": "Закінчено"
+  },
+  "subscription_started": {
+    "message": "Підписка розпочата"
+  },
+  "subscriptions_title": {
+    "message": "Підписки"
+  },
+  "subscription_subscribe": {
+    "message": "Підписатися"
+  },
+  "subscription_title": {
+    "message": "Підписка"
+  },
+  "subscription_unsubscribe": {
+    "message": "Відписатися"
+  },
+  "success": {
+    "message": "Успіх!"
+  },
+  "suspicious_buttons_not_spam": {
+    "message": "Це не спам"
+  },
+  "suspicious_buttons_report": {
+    "message": "Поскаржитися на спам"
+  },
+  "suspicious_label_full": {
+    "message": "Неперевірений NFT"
+  },
+  "suspicious_label_short": {
+    "message": "Неперевірений"
+  },
+  "suspicious_status_update_hidden_collection": {
+    "message": "Колекцію приховано"
+  },
+  "suspicious_status_update_hidden_nft": {
+    "message": "NFT приховано"
+  },
+  "suspicious_status_update_spam_collection": {
+    "message": "Колекцію позначено як спам"
+  },
+  "suspicious_status_update_spam_nft": {
+    "message": "NFT позначено як спам"
+  },
+  "suspiciousNFTDetails_buttons_not_spam": {
+    "message": "Це не спам"
+  },
+  "suspiciousNFTDetails_buttons_report": {
+    "message": "Поскаржитися на спам"
+  },
+  "suspiciousNFTDetails_paragraphs_p1": {
+    "message": "Використовується для спаму. Застосовується для надсилання небажаних і часто нерелевантних повідомлень у великих масштабах."
+  },
+  "suspiciousNFTDetails_paragraphs_p2": {
+    "message": "Використовується для шахрайства. Назва NFT, опис або зображення можуть ввести користувачів у оману."
+  },
+  "suspiciousNFTDetails_paragraphs_p3": {
+    "message": "Ми мало що знаємо про автора та історію цього NFT."
+  },
+  "suspiciousNFTDetails_subtitle": {
+    "message": "NFT може бути небезпечним з однієї з наступних причин."
+  },
+  "suspiciousNFTDetails_title": {
+    "message": "Неперевірений NFT"
+  },
+  "swap_title": {
+    "message": "Обмін"
+  },
+  "tab_browser": {
+    "message": "Браузер"
+  },
+  "tab_collectibles": {
+    "message": "Колекції"
+  },
+  "tab_nft": {
+    "message": "NFT"
+  },
+  "tab_settings": {
+    "message": "Налаштування"
+  },
+  "tab_swap": {
+    "message": "Обмін"
+  },
+  "tab_wallet": {
+    "message": "Гаманець"
+  },
+  "today": {
+    "message": "Сьогодні"
+  },
+  "tokenDetails_name": {
+    "message": "Ім'я"
+  },
+  "tokenDetails_title": {
+    "message": "Деталі токена"
+  },
+  "tokenDetails_token_id": {
+    "message": "ID токену"
+  },
+  "tokenDetails_tonviewer_button": {
+    "message": "Відкрити в Tonviewer"
+  },
+  "tonconnect_error_bad_request": {
+    "message": "Некоректний запит"
+  },
+  "tonconnect_error_wrong_from": {
+    "message": "Неправильний параметр 'from''"
+  },
+  "tonconnect_error_wrong_network": {
+    "message": "Неправильна мережа"
+  },
+  "tonkeeper_pro": {
+    "message": "Tonkeeper Pro"
+  },
+  "tonkeeper_pro_description": {
+    "message": "Підписка Tonkeeper Pro постачається з розширеною функцією гаманця, що пропонує набір інструментів для управління криптовалютою"
+  },
+  "ton_login_back_to_button": {
+    "message": "Повернутися до %{name}"
+  },
+  "ton_login_caption": {
+    "message": "%{name} запитує доступ до адреси вашого гаманця"
+  },
+  "ton_login_connect_button": {
+    "message": "Підключити гаманець"
+  },
+  "ton_login_notice": {
+    "message": "Обов'язково перевірте адресу сервісу перед підключенням гаманця."
+  },
+  "ton_login_success": {
+    "message": "Готово"
+  },
+  "ton_login_title": {
+    "message": "Підключитися до %{0, number}omain?"
+  },
+  "transaction_bid_collection_name": {
+    "message": "Емітент"
+  },
+  "transaction_bid_date": {
+    "message": "Ставка %{date}"
+  },
+  "transaction_bid_dns": {
+    "message": "Ім'я"
+  },
+  "transaction_buy_date": {
+    "message": "Дата покупки %{date}"
+  },
+  "transaction_buy_status_failed": {
+    "message": "Не вдалося"
+  },
+  "transaction_buy_status_pending": {
+    "message": "В очікуванні"
+  },
+  "transaction_buy_status_success": {
+    "message": "Успішно"
+  },
+  "transaction_confirmations": {
+    "message": "Підтвердження"
+  },
+  "transaction_confirm_bid": {
+    "message": "Підтвердити ставку"
+  },
+  "transaction_contract_deploy_date": {
+    "message": "Дата розгортання контракту %{date}"
+  },
+  "transaction_copy_caution": {
+    "message": "Будьте обережні із зовнішніми посиланнями. Ніколи не давайте свою секретну фразу стороннім ресурсам — ви можете втратити всі свої кошти.\n\n- - -"
+  },
+  "transactionDetails_address": {
+    "message": "Адреса"
+  },
+  "transactionDetails_bid_collection_name": {
+    "message": "Емітент"
+  },
+  "transactionDetails_bid_date": {
+    "message": "Ставка о %{time}"
+  },
+  "transactionDetails_bid_name": {
+    "message": "Назва"
+  },
+  "transactionDetails_call_contract_date": {
+    "message": "Виклик контракту %{time}"
+  },
+  "transactionDetails_comment": {
+    "message": "Коментар"
+  },
+  "transactionDetails_description": {
+    "message": "Опис"
+  },
+  "transactionDetails_operation": {
+    "message": "Операція"
+  },
+  "transactionDetails_payload": {
+    "message": "Дані"
+  },
+  "transactionDetails_purchase_date": {
+    "message": "Покупка о %{time}"
+  },
+  "transactionDetails_received_date": {
+    "message": "Отримано %{time}"
+  },
+  "transactionDetails_recipient": {
+    "message": "Отримувач"
+  },
+  "transactionDetails_recipient_address": {
+    "message": "Адреса одержувача"
+  },
+  "transactionDetails_sender": {
+    "message": "Відправник"
+  },
+  "transactionDetails_sender_address": {
+    "message": "Адреса відправника"
+  },
+  "transactionDetails_sent_date": {
+    "message": "Відправлено о %{time}"
+  },
+  "transactionDetails_spam": {
+    "message": "СПАМ"
+  },
+  "transactionDetails_subscription_merchant_label": {
+    "message": "Продавець"
+  },
+  "transactionDetails_subscription_product_label": {
+    "message": "Підписка"
+  },
+  "transactionDetails_swapped_date": {
+    "message": "Обмін %{time}"
+  },
+  "transactionDetails_transaction": {
+    "message": "Транзакція"
+  },
+  "transactionDetails_unsubscription_title": {
+    "message": "Скасування підписки"
+  },
+  "transactionDetails_withdraw_amount": {
+    "message": "Сума зняття"
+  },
+  "transaction_exchange_from_currency": {
+    "message": "З"
+  },
+  "transaction_fee": {
+    "message": "Комісія"
+  },
+  "transaction_hash": {
+    "message": "Транзакція"
+  },
+  "transaction_merchant": {
+    "message": "Продавець"
+  },
+  "transaction_message": {
+    "message": "Повідомлення"
+  },
+  "transaction_purchase_id": {
+    "message": "ID покупки"
+  },
+  "transaction_receive_date": {
+    "message": "Отримано %{date}"
+  },
+  "transaction_recipient": {
+    "message": "Отримувач"
+  },
+  "transaction_recipient_address": {
+    "message": "Адреса одержувача"
+  },
+  "transaction_refund": {
+    "message": "Повернення коштів"
+  },
+  "transactions_bid": {
+    "message": "Ставка"
+  },
+  "transactions_burned": {
+    "message": "Спалено"
+  },
+  "transactions_contract_deploy": {
+    "message": "Розгортання контракту"
+  },
+  "transactions_deposit": {
+    "message": "Депозит"
+  },
+  "transactions_failed": {
+    "message": "Не вдалося"
+  },
+  "transactions_failed_with_reason_swap_refund_no_liq": {
+    "message": "Помилка. Збільште допустиму похибку в налаштуваннях обміну, щоб уникнути цієї помилки."
+  },
+  "transactions_nft_purchase": {
+    "message": "Придбання NFT"
+  },
+  "transactions_smartcontract_exec": {
+    "message": "Виклик контракту"
+  },
+  "transactions_spam": {
+    "message": "Спам"
+  },
+  "transactions_subscription": {
+    "message": "Підписано"
+  },
+  "transactions_swap": {
+    "message": "Обмін"
+  },
+  "transactions_unknown": {
+    "message": "Невідомо"
+  },
+  "transactions_unknown_description": {
+    "message": "Щось сталося, але ми не змогли розпізнати"
+  },
+  "transactions_unsubscription": {
+    "message": "Відписано"
+  },
+  "transactions_wallet_initialized": {
+    "message": "Гаманець ініціалізовано"
+  },
+  "transactions_withdraw": {
+    "message": "Виведення"
+  },
+  "transactions_withdrawal_request": {
+    "message": "Запит на зняття"
+  },
+  "transaction_sender": {
+    "message": "Відправник"
+  },
+  "transaction_sender_address": {
+    "message": "Адреса відправника"
+  },
+  "transaction_send_more_button": {
+    "message": "Отправити ще на цей адрес"
+  },
+  "transaction_sent_date": {
+    "message": "Відправлено %{date}"
+  },
+  "transaction_show_subscription_button": {
+    "message": "Переглянути підписку"
+  },
+  "transaction_status": {
+    "message": "Статус"
+  },
+  "transaction_subscription": {
+    "message": "Підписка"
+  },
+  "transaction_subscription_date": {
+    "message": "Списано %{date}"
+  },
+  "transaction_transfer_name": {
+    "message": "Назва переказу"
+  },
+  "transaction_type_bid": {
+    "message": "Ставка"
+  },
+  "transaction_type_bounced": {
+    "message": "Відправлено назад"
+  },
+  "transaction_type_buy": {
+    "message": "Куплено"
+  },
+  "transaction_type_contract_deploy": {
+    "message": "Розгортання контракту"
+  },
+  "transaction_type_from": {
+    "message": "Від"
+  },
+  "transaction_type_new_subscriber": {
+    "message": "Новий підписник"
+  },
+  "transaction_type_pending": {
+    "message": "В очікуванні"
+  },
+  "transaction_type_receive": {
+    "message": "Отримано"
+  },
+  "transaction_type_sent": {
+    "message": "Відправлено"
+  },
+  "transaction_type_subscriber_lost": {
+    "message": "Втрата підписника"
+  },
+  "transaction_type_subscription": {
+    "message": "Підписка"
+  },
+  "transaction_type_to": {
+    "message": "До"
+  },
+  "transaction_type_unsubscription": {
+    "message": "Відписка оформлена"
+  },
+  "transaction_type_wallet_initialized": {
+    "message": "Гаманець ініціалізовано"
+  },
+  "transaction_unsubscription": {
+    "message": "Скасування підписки"
+  },
+  "transaction_unsubscription_date": {
+    "message": "дата відписки %{date}"
+  },
+  "transaction_view_in_explorer": {
+    "message": "Подивитися в провіднику"
+  },
+  "transaction_wallet_initialized_date": {
+    "message": "%{date}"
+  },
+  "transaction_your_bid": {
+    "message": "Ваша ставка"
+  },
+  "transfer_deeplink_address_error": {
+    "message": "Неправильна адреса одержувача"
+  },
+  "transfer_deeplink_amount_error": {
+    "message": "Некоректний запит суми"
+  },
+  "transfer_deeplink_expired_error": {
+    "message": "Термін дії посилання закінчився"
+  },
+  "transfer_deeplink_nft_address_error": {
+    "message": "Неправильна адреса NFT"
+  },
+  "transfer_deeplink_unknown_jetton_error": {
+    "message": "Невідомий токен"
+  },
+  "transfer_deeplink_unknown_token": {
+    "message": "Невідомий токен"
+  },
+  "transfer_deeplink_wrong_params": {
+    "message": "Неправильні параметри"
+  },
+  "transfer_from_old_wallet_btn": {
+    "message": "Передати"
+  },
+  "transfer_from_old_wallet_caption": {
+    "message": "Tonkeeper перенесе всі монети з вашої старої адреси на вашу поточну адресу."
+  },
+  "transfer_from_old_wallet_in_progress": {
+    "message": "Триває перенесення"
+  },
+  "transfer_from_old_wallet_title": {
+    "message": "Переведіть на поточну адресу"
+  },
+  "transfer_pending_by_battery_error": {
+    "message": "Ще одна транзакція оброблюється акумулятором"
+  },
+  "txActions_amount": {
+    "message": "Сума"
+  },
+  "txActions_fee": {
+    "message": "Комісія"
+  },
+  "txActions_refund": {
+    "message": "Повернення коштів"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_close": {
+    "message": "Скасувати"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_description": {
+    "message": "Перемкніть гаманець, щоб підтвердити дію."
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_switch": {
+    "message": "Перемкнути й продовжити"
+  },
+  "txActions_signRaw_addressMismatch_switchWallet_title": {
+    "message": "Дія для вашого гаманця %{value}"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_close": {
+    "message": "Скасувати"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_description": {
+    "message": "Переключіть свою активну адресу на %{version}, щоб підтвердити цю дію."
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_switch": {
+    "message": "Переключити й продовжити"
+  },
+  "txActions_signRaw_addressMismatch_wrongVersion_title": {
+    "message": "Операція для іншої адреси вашого гаманця"
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_close": {
+    "message": "Добре"
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_description": {
+    "message": "Ввійдіть в інший гаманець %{address} і спробуйте ще раз."
+  },
+  "txActions_signRaw_addressMismatch_wrongWallet_title": {
+    "message": "Дія для іншого гаманця"
+  },
+  "txActions_signRaw_comment": {
+    "message": "Коментарій"
+  },
+  "txActions_signRaw_insufficientFunds_rechargeBattery": {
+    "message": "Зарядити батарею"
+  },
+  "txActions_signRaw_insufficientFunds_rechargeWallet": {
+    "message": "Поповнити гаманець"
+  },
+  "txActions_signRaw_insufficientFunds_stakingDeposit": {
+    "message": "Мінімальний баланс для участі:\n%{amount} %{currency}\n"
+  },
+  "txActions_signRaw_insufficientFunds_stakingFee": {
+    "message": "Для транзакції потрібно %{count} TON. Орієнтовна комісія %{fee} TON буде утримана, залишок буде повернуто."
+  },
+  "txActions_signRaw_insufficientFunds_title": {
+    "message": "Недостатньо коштів"
+  },
+  "txActions_signRaw_insufficientFunds_title_multiwallet": {
+    "message": "Недостатньо коштів у гаманці"
+  },
+  "txActions_signRaw_insufficientFunds_toBePaid": {
+    "message": "До сплати: %{amount} %{currency}\n"
+  },
+  "txActions_signRaw_insufficientFunds_withFees": {
+    "message": "+ комісія блокчейну.\n"
+  },
+  "txActions_signRaw_insufficientFunds_yourBalance": {
+    "message": "Ваш баланс: %{balance} %{currency}."
+  },
+  "txActions_signRaw_recipient": {
+    "message": "Отримувач"
+  },
+  "txActions_signRaw_title": {
+    "message": "Підтвердити транзакцію"
+  },
+  "txActions_signRaw_totalFee": {
+    "message": "Загальна комісія"
+  },
+  "txActions_signRaw_totalRefund": {
+    "message": "Загальний повернення"
+  },
+  "txActions_signRaw_types_contractDeploy": {
+    "message": "Деплой контракту"
+  },
+  "txActions_signRaw_types_jettonTransfer": {
+    "message": "Трансфер токена"
+  },
+  "txActions_signRaw_types_nftItemTransfer": {
+    "message": "Трансфер NFT"
+  },
+  "txActions_signRaw_types_subscribe": {
+    "message": "Підписка"
+  },
+  "txActions_signRaw_types_tonTransfer": {
+    "message": "Відправка TON"
+  },
+  "txActions_signRaw_types_unknownTransaction": {
+    "message": "Невідома транзакція"
+  },
+  "txActions_signRaw_types_unSubscribe": {
+    "message": "Відписка"
+  },
+  "txActions_signRaw_warning_caption": {
+    "message": "Tonkeeper не може повністю перевірити результат цієї транзакції. Переконайтеся, що ви довіряєте одержувачу."
+  },
+  "txActions_signRaw_warning_title": {
+    "message": "Попередження"
+  },
+  "txActions_signRaw_wrongTime_button": {
+    "message": "Відкрити налаштування"
+  },
+  "txActions_signRaw_wrongTime_description": {
+    "message": "Схоже, що години вашого пристрою не синхронізовані з мережею. Відкрийте налаштування пристрою та увімкніть автоматичні час і дату."
+  },
+  "txActions_signRaw_wrongTime_title": {
+    "message": "Час не синхронізовано"
+  },
+  "unverifiedTokenDetails_button": {
+    "message": "Гаразд"
+  },
+  "unverifiedTokenDetails_description": {
+    "message": "Цей токен виглядає підозріло з однієї чи декількох причин."
+  },
+  "unverifiedTokenDetails_paragraphs_p1": {
+    "message": "Низька ліквідність. У токена може бути певна вартість, але вона вкрай низька."
+  },
+  "unverifiedTokenDetails_paragraphs_p2": {
+    "message": "Токен не представлений на торгових платформах і має обмежений попит."
+  },
+  "unverifiedTokenDetails_paragraphs_p3": {
+    "message": "Використовується для спаму. Використовується для надсилання небажаних і часто нерелевантних повідомлень у великих масштабах."
+  },
+  "unverifiedTokenDetails_paragraphs_p4": {
+    "message": "Використовується для шахрайства. Назва токена або зображення може вводити користувачів в оману."
+  },
+  "unverifiedTokenDetails_title": {
+    "message": "Неперевірений токен"
+  },
+  "update_description": {
+    "message": "Доступна нова версія Tonkeeper. Ви можете завантажити її прямо зараз."
+  },
+  "update_download": {
+    "message": "Завантажити"
+  },
+  "update_downloading": {
+    "message": "Завантаження… {{progress}}%"
+  },
+  "update_mb": {
+    "message": "{{size}} МБ"
+  },
+  "update_remindLater": {
+    "message": "Нагадати пізніше"
+  },
+  "update_retry": {
+    "message": "Ошибка завантаження. Торкніться, щоб спробувати ще раз."
+  },
+  "update_tap": {
+    "message": "Натисніть, щоб оновити"
+  },
+  "update_title": {
+    "message": "Оновлення Tonkeeper"
+  },
+  "update_version": {
+    "message": "Версія {{version}}"
+  },
+  "upgrade_to_w5_about_button": {
+    "message": "Про W5 Гаманець"
+  },
+  "upgrade_to_w5_description": {
+    "message": "Спробуйте новий стандарт гаманця W5 з підтримкою безкомісійних платежів USDT та іншими класними функціями."
+  },
+  "upgrade_to_w5_downgrade": {
+    "message": "Гаманець v4R2"
+  },
+  "upgrade_to_w5_hide_button": {
+    "message": "Сховати"
+  },
+  "upgrade_to_w5_settings": {
+    "message": "Гаманець W5"
+  },
+  "upgrade_to_w5_title": {
+    "message": "Безгазові перекази"
+  },
+  "upgrade_to_w5_try_button": {
+    "message": "Спробувати W5"
+  },
+  "username_issued_by_telegram": {
+    "message": "Видано Telegram."
+  },
+  "username_manage_name_button": {
+    "message": "Управління ім’ям"
+  },
+  "w5_stories_0_description": {
+    "message": "W5 використовує більш ефективний підхід до обробки транзакцій, що означає до 25% менші витрати на газ."
+  },
+  "w5_stories_0_title": {
+    "message": "Знижені комісії блокчейна"
+  },
+  "w5_stories_1_description": {
+    "message": "W5 збільшує кількість одночасних операцій з 4 до 255, що може зменшити витрати на комісії."
+  },
+  "w5_stories_1_title": {
+    "message": "До 255 операцій в одній транзакції"
+  },
+  "w5_stories_2_description": {
+    "message": "Відправляйте USDT без необхідності мати TON – комісії за транзакцію автоматично будуть покриті кількома центами USDT."
+  },
+  "w5_stories_2_title": {
+    "message": "Безгазові перекази USDT"
+  },
+  "w5_stories_3_description": {
+    "message": "Старі облікові записи та W5 використовують одну й ту саму фразу для відновлення — при відновленні облікових записів на новому пристрої обидва, старий і новий, з'являться автоматично."
+  },
+  "w5_stories_3_title": {
+    "message": "Фраза відновлення не змінюється"
+  },
+  "w5_stories_4_button": {
+    "message": "Додати гаманець W5"
+  },
+  "w5_stories_4_description": {
+    "message": "Безгазові транзакції пропонуються як експериментальна функція для тестування."
+  },
+  "w5_stories_4_title": {
+    "message": "W5"
+  },
+  "wallet_about": {
+    "message": "Про додаток"
+  },
+  "wallet_buy": {
+    "message": "Купити"
+  },
+  "wallet_buy_btn": {
+    "message": "Купити TON"
+  },
+  "wallet_collectibles_tab_lable": {
+    "message": "Колекції"
+  },
+  "wallet_edit_tokens_btn": {
+    "message": "Редагувати"
+  },
+  "wallet_inscriptions_tab_label": {
+    "message": "Інскрипції"
+  },
+  "wallet_nft_tab_lable": {
+    "message": "Колекції"
+  },
+  "wallet_old_wallets_title": {
+    "message": "Старі гаманці"
+  },
+  "wallet_old_wallet_title": {
+    "message": "Старий гаманець"
+  },
+  "wallet_receive_btn": {
+    "message": "Отримати"
+  },
+  "wallet_scan_btn": {
+    "message": "Сканувати"
+  },
+  "wallet_screen_title": {
+    "message": "Гаманець"
+  },
+  "wallet_sell_btn": {
+    "message": "Продати"
+  },
+  "wallet_send_btn": {
+    "message": "Відправити"
+  },
+  "wallet_stake_btn": {
+    "message": "Заcтейкати"
+  },
+  "wallet_swap_btn": {
+    "message": "Обміняти"
+  },
+  "wallet_tonkens_tab_lable": {
+    "message": "Токени"
+  },
+  "wallet_updated_at": {
+    "message": "Оновлено %{value}"
+  },
+  "wallet_chat": {
+    "message": "Чат"
+  },
+  "wallet_community": {
+    "message": "Спільнота"
+  },
+  "wallet_hours_symbol": {
+    "message": "г"
+  },
+  "wallet_old_balance": {
+    "message": "Старий гаманець:"
+  },
+  "wallet_receive": {
+    "message": "Отримати"
+  },
+  "wallets": {
+    "message": "Гаманці"
+  },
+  "wallet_sell": {
+    "message": "Продати"
+  },
+  "wallet_send": {
+    "message": "Надіслати"
+  },
+  "wallet_source_code": {
+    "message": "Вихідний код"
+  },
+  "wallet_swap": {
+    "message": "Обмін"
+  },
+  "wallet_title": {
+    "message": "Гаманець"
+  },
+  "wallet_toncommunity_chat_link": {
+    "message": "https://t.me/toncoin_ua_chat"
+  },
+  "wallet_toncommunity_link": {
+    "message": "https://t.me/toncoin"
+  },
+  "watch_only": {
+    "message": "Тільки перегляд"
+  },
+  "yesterday": {
+    "message": "Вчора"
+  },
+  "about_tonkeeper_pro": {
+    "message": "Про Tonkeeper Pro"
+  },
+  "actionTitle": {
+    "message": "Відкрити Гаманець"
+  },
+  "add": {
+    "message": "Додати"
+  },
+  "add_dns_address": {
+    "message": "Додайте адресу гаманця, на який буде посилатися домен  %1%"
+  },
+  "add_wallet_modal_mam_subtitle": {
+    "message": "Керуйте кількома гаманцями за допомогою одного секретного ключа "
+  },
+  "add_wallet_modal_mam_title": {
+    "message": "Новий акаунт мульти-гаманець"
+  },
+  "appExtensionDescription": {
+    "message": "Your extension wallet on The Open Network"
+  },
+  "appName": {
+    "message": "Tonkeeper"
+  },
+  "appTitle": {
+    "message": "Tonkeeper — wallet for TON"
+  },
+  "App_version_copied": {
+    "message": "Версію застосунку скопійовано"
+  },
+  "aside_add_wallet": {
+    "message": "Додати гаманець"
+  },
+  "aside_dashboard": {
+    "message": "Дашборд"
+  },
+  "aside_discover": {
+    "message": "Додатки"
+  },
+  "aside_expires_on": {
+    "message": "Підписка закінчується %date%"
+  },
+  "aside_header_number_wallets": {
+    "message": "%{number} гаманців"
+  },
+  "aside_pro_subscription_is_active": {
+    "message": "Підписка Pro активна."
+  },
+  "aside_pro_trial_is_active": {
+    "message": "Пробна версія Pro активна."
+  },
+  "aside_settings": {
+    "message": "Налаштування"
+  },
+  "auto": {
+    "message": "Авто"
+  },
+  "Back_up_now": {
+    "message": "Зробити резервну копію зараз"
+  },
+  "Change": {
+    "message": "Змінити"
+  },
+  "Change_password": {
+    "message": "Змінити пароль"
+  },
+  "close": {
+    "message": "Закрити"
+  },
+  "collectibles_empty_header": {
+    "message": "Тут будуть ваші колекції"
+  },
+  "confirm_modal_transfer": {
+    "message": "Переказ"
+  },
+  "ConfirmPassword": {
+    "message": "Введіть пароль ще раз"
+  },
+  "confirm_unlink": {
+    "message": "Підтвердіть відв'язку"
+  },
+  "connected_apps_short": {
+    "message": "Підключення"
+  },
+  "connect_telegram": {
+    "message": "Підключити Telegram"
+  },
+  "Copy_address": {
+    "message": "Скопіювати адресу"
+  },
+  "country": {
+    "message": "Країна"
+  },
+  "Create_password": {
+    "message": "Придумайте пароль"
+  },
+  "dashboard_column_name": {
+    "message": "Ім'я"
+  },
+  "dashboard_manage_modal_title": {
+    "message": "Дашборд"
+  },
+  "delete": {
+    "message": "Видалити"
+  },
+  "Delete_all_accounts_and_logout": {
+    "message": "Видалити всі облікові записи і вийти"
+  },
+  "Delete_wallet_data": {
+    "message": "Видалити дані гаманця"
+  },
+  "Delete_wallet_data_description": {
+    "message": "Ключі гаманця і всі особисті дані будуть видалені з цього пристрою."
+  },
+  "disconnect": {
+    "message": "Відключити"
+  },
+  "disconnect_all_apps": {
+    "message": "Відключіть усі додатки"
+  },
+  "disconnect_all_apps_confirm": {
+    "message": "Відключити всі програми?"
+  },
+  "dns_linked_with_another_address_warn": {
+    "message": "Домен не пов'язаний із вашою поточною адресою. Будьте обережними з транзакціями на цей домен."
+  },
+  "domains_empty_header": {
+    "message": "Тут будуть ваші домени"
+  },
+  "Edit_jettons": {
+    "message": "Редагувати"
+  },
+  "Enable_storing_config": {
+    "message": "Збереження конфігурації"
+  },
+  "enter_password": {
+    "message": "Введіть пароль"
+  },
+  "export_dot_csv": {
+    "message": "Експорт в .CSV"
+  },
+  "ge_header_history": {
+    "message": "Історія"
+  },
+  "hide": {
+    "message": "Сховати"
+  },
+  "history_spam_nft": {
+    "message": "Спам NFT"
+  },
+  "I_have_a_backup_copy_of_recovery_phrase": {
+    "message": "В мене є резервна копія фрази відновлення"
+  },
+  "import_csv": {
+    "message": "Імпорт CSV"
+  },
+  "import_csv_description": {
+    "message": "Перетягніть файл або натисніть кнопку нижче, щоб завантажити його. Щоб уникнути помилок, ознайомтеся з наведеним нижче прикладом структури таблиці."
+  },
+  "import_dot_csv": {
+    "message": "Імпорт .CSV"
+  },
+  "import_multisend_dnd_error": {
+    "message": "Неможливо розібрати переданий файл"
+  },
+  "import_multisend_drop_file": {
+    "message": "Перетягніть файл"
+  },
+  "import_multisend_error_column": {
+    "message": "колонка"
+  },
+  "import_multisend_error_invalid_amount": {
+    "message": "Неправильна сума переказу"
+  },
+  "import_multisend_error_invalid_asset": {
+    "message": "Неприпустимий актив для переказу"
+  },
+  "import_multisend_error_invalid_csv": {
+    "message": "Неправильний формат файлу CSV"
+  },
+  "import_multisend_error_invalid_receiver": {
+    "message": "Неправильний формат одержувача переказу"
+  },
+  "import_multisend_error_invalid_row_length": {
+    "message": "Неправильна довжина рядка CSV"
+  },
+  "import_multisend_error_line": {
+    "message": "рядок"
+  },
+  "import_multisend_error_list_empty": {
+    "message": "Таблиця CSV порожня"
+  },
+  "import_multisend_error_too_many_crypto_assets": {
+    "message": "У списку занадто багато різних криптоактивів для переказу. Переконайтеся, що у всіх рядках, де вказано криптоактив, використовується один і той самий криптоактив."
+  },
+  "import_multisend_error_too_many_fiat_assets": {
+    "message": "У списку занадто багато різних фіатних активів для переказу. Переконайтеся, що у всіх рядках, де вказано бумажний актив, використовується один і той самий фіатний актив."
+  },
+  "import_multisend_error_unknown": {
+    "message": "Невідома помилка читання файлу"
+  },
+  "import_multisend_fiat_warn_description": {
+    "message": "Переключіть або змініть валюту, щоб продовжити."
+  },
+  "import_multisend_fiat_warn_switch_button": {
+    "message": "Переключіть валюту гаманця на"
+  },
+  "import_multisend_fiat_warn_title": {
+    "message": "Валюта в гаманці та валюта у файлі не співпадають."
+  },
+  "import_multisend_table_comment": {
+    "message": "Коментар"
+  },
+  "import_multisend_table_example": {
+    "message": "Приклад таблиці"
+  },
+  "import_multisend_table_heading_address": {
+    "message": "EQ або UQ адреса / hex адреса / домен .ton"
+  },
+  "import_multisend_table_heading_amount": {
+    "message": "Сума"
+  },
+  "import_multisend_table_heading_asset": {
+    "message": "Фіатний тікер / TON / hex, EQ або UQ адреса жетон майстра"
+  },
+  "import_multisend_table_heading_comment": {
+    "message": "Коментар (необов'язково)"
+  },
+  "import_wallet_title_web": {
+    "message": "Введіть секретну фразу для відновлення"
+  },
+  "IncorrectCurrentPassword": {
+    "message": "Неправильний поточний пароль."
+  },
+  "learn_more": {
+    "message": "Детальніше"
+  },
+  "ledger_choose_wallets": {
+    "message": "Оберіть гаманці"
+  },
+  "ledger_connect_header": {
+    "message": "Підключити Ledger"
+  },
+  "ledger_continue_with_ledger": {
+    "message": "Продовжити з Ledger"
+  },
+  "ledger_pair_subtitle": {
+    "message": "Вищий рівень безпеки завдяки апаратному гаманцю"
+  },
+  "ledger_pair_title": {
+    "message": "Підключити Ledger"
+  },
+  "ledger_steps_confirm_tx": {
+    "message": "Підтвердіть транзакцію в Ledger"
+  },
+  "ledger_steps_connect": {
+    "message": "Підключіть Ledger до свого пристрою"
+  },
+  "ledger_steps_install_ton": {
+    "message": "Встановити застосунок "
+  },
+  "ledger_steps_open_ton": {
+    "message": "Розблокуйте його і відкрийте застосунок TON "
+  },
+  "Localization": {
+    "message": "Мова"
+  },
+  "Lock_screen": {
+    "message": "Екран блокування"
+  },
+  "logout_on_unlock_many": {
+    "message": "Доступ до гаманців буде вимкнено. Переконайтеся, що ви зберегли секретні ключі."
+  },
+  "logout_on_unlock_one": {
+    "message": "Доступ до гаманця буде вимкнено. Переконайтеся, що ви зберегли секретний ключ."
+  },
+  "mam_account_explanation": {
+    "message": "Фраза для відновлення акаунта надає доступ до всіх гаманців, створених за її допомогою, і підтримується тільки в Tonkeeper Pro. Якщо ви хочете експортувати конкретний гаманець, використовуйте резервну копію фрази для відновлення гаманця."
+  },
+  "Manage": {
+    "message": "Керувати"
+  },
+  "Manage_wallets": {
+    "message": "Керування гаманцями"
+  },
+  "MinPassword": {
+    "message": "Має бути щонайменше 6 символів."
+  },
+  "multi_send_about_w5": {
+    "message": "Докладніше про W5"
+  },
+  "multi_send_add_more": {
+    "message": "Додати ще"
+  },
+  "multisend_confirm_error_insufficient_ton_for_fee": {
+    "message": "Балансу гаманця %balance% недостатньо для покриття комісій блокчейна. Необхідний мінімальний баланс: %required%. Невикористаний залишок TON після транзакції буде повернуто на ваш гаманець."
+  },
+  "multi_send_continue_with_pro": {
+    "message": "Продовжити з Pro"
+  },
+  "multi_send_delete_description": {
+    "message": "Ця дія незворотна, і всі дані буде втрачено."
+  },
+  "multi_send_delete_list": {
+    "message": "Видалити список"
+  },
+  "multi_send_discard_and_close": {
+    "message": "Скинути та закрити"
+  },
+  "multi_send_edit": {
+    "message": "Редагувати"
+  },
+  "multi_send_edit_list_name": {
+    "message": "Редагувати ім'я списку"
+  },
+  "multi_send_header": {
+    "message": "Нова мульти відправка"
+  },
+  "multi_send_insufficient_balance": {
+    "message": "Недостатній баланс"
+  },
+  "multi_send_list": {
+    "message": "Список"
+  },
+  "multi_send_maximum_255_reached": {
+    "message": "Максимум із 255 полів досягнуто"
+  },
+  "multi_send_maximum_reached": {
+    "message": "Досягнуто максимуму. До 255 полів у версії гаманця W5"
+  },
+  "multi_send_new_list": {
+    "message": "Новий список"
+  },
+  "multi_send_remaining": {
+    "message": "Залишок"
+  },
+  "multi_send_save_as_new": {
+    "message": "Зберегти як новий"
+  },
+  "multi_send_save_description": {
+    "message": "Збережіть список з адресами, сумами та коментарями для використання в майбутньому."
+  },
+  "multi_send_save_list": {
+    "message": "Зберегти список"
+  },
+  "multi_send_save_title": {
+    "message": "Зберегти цей список?"
+  },
+  "multi_send_show_all": {
+    "message": "Показати все"
+  },
+  "multi_send_switch_to_w5": {
+    "message": "Переключитися на W5"
+  },
+  "multi_send_update_description": {
+    "message": "Оновіть інформацію в поточному списку."
+  },
+  "multi_send_wallets": {
+    "message": "гаманців"
+  },
+  "multi_send_will_be_sent": {
+    "message": "Буде відправлено"
+  },
+  "Name_your_wallet": {
+    "message": "Назвіть свій гаманець"
+  },
+  "Name_your_wallet_description": {
+    "message": "Назвіть свій гаманець, щоб його було легко ідентифікувати під час використання Tonkeeper. Ці імена зберігаються локально і видимі тільки вам."
+  },
+  "NFT_collection_id": {
+    "message": "Ідентифікатор колекції"
+  },
+  "NFT_creation": {
+    "message": "Створення NFT"
+  },
+  "nft_empty_description": {
+    "message": "Купуйте, продавайте, обмінюйте та колекціонуйте."
+  },
+  "nft_empty_go_discover_button": {
+    "message": "Перейти в розділ сервісів і застосунків"
+  },
+  "nft_empty_header": {
+    "message": "Тут будуть ваші покупки"
+  },
+  "NFT_item_id": {
+    "message": "Ідентифікатор NFT"
+  },
+  "no_connected_apps": {
+    "message": "Немає підключених застосунків"
+  },
+  "Old_password": {
+    "message": "Поточний пароль"
+  },
+  "open": {
+    "message": "Відкрити"
+  },
+  "page_header_history": {
+    "message": "Історія"
+  },
+  "page_header_purchases": {
+    "message": "Покупки"
+  },
+  "Password": {
+    "message": "Пароль"
+  },
+  "PasswordChanged": {
+    "message": "Пароль змінено"
+  },
+  "PasswordDoNotMatch": {
+    "message": "Паролі не співпадають."
+  },
+  "preferences_aside_dev_menu": {
+    "message": "Функції для розробників"
+  },
+  "preferences_aside_faq": {
+    "message": "FAQ"
+  },
+  "preferences_aside_sign_out": {
+    "message": "Вийти з акаунту"
+  },
+  "preferences_aside_sign_out_all": {
+    "message": "Вийти з усіх акаунтів"
+  },
+  "preferences_aside_theme": {
+    "message": "Тема"
+  },
+  "pro_banner_buy": {
+    "message": "Купити Про"
+  },
+  "pro_banner_days_left": {
+    "message": "Днів до закінчення пробної підписки: %days%"
+  },
+  "pro_banner_start_trial": {
+    "message": "Спробуйте Pro безкоштовно"
+  },
+  "pro_banner_subtitle": {
+    "message": "Отримайте доступ до розширених функцій та інструментів для покращення вашої роботи"
+  },
+  "pro_banner_title": {
+    "message": "Відкрийте всі можливості з Tonkeeper Pro"
+  },
+  "pro_feature_multisend": {
+    "message": "Множинна відправка"
+  },
+  "pro_feature_multisend_description": {
+    "message": "Завдяки функції мультивідправлення ви можете відправляти кошти на 255 адрес одночасно. Tonkeeper Pro економить час і спрощує процес масових транзакцій."
+  },
+  "pro_features_dashboard": {
+    "message": "Вбудована панель керування гаманцями"
+  },
+  "pro_features_dashboard_description": {
+    "message": "На панелі керування ви отримаєте доступ до аналізу гаманців. Ця функція буде корисна професійним користувачам, які використовують Tonkeeper у своєму щоденному бізнесі."
+  },
+  "pro_features_description": {
+    "message": "Підписка Tonkeeper Pro включає розширену функціональність гаманця, що пропонує набір інструментів для управління криптовалютою."
+  },
+  "pro_other_features": {
+    "message": "І інші круті функції на підході."
+  },
+  "pro_subscription_get_pro": {
+    "message": "Отримати Pro"
+  },
+  "publish_message": {
+    "message": "Публікація повідомлення в Інтернет"
+  },
+  "receive_ton": {
+    "message": "Отримати Toncoin"
+  },
+  "receive_ton_description": {
+    "message": "Надсилайте на цю адресу тільки Toncoin TON і токени в мережі TON, інакше ви можете втратити свої кошти."
+  },
+  "receive_trc20": {
+    "message": "Отримати USDT TRC20"
+  },
+  "receive_trc20_description": {
+    "message": "Надсилайте на цю адресу тільки USDT TRC20, інакше ви можете втратити свої кошти."
+  },
+  "recipients": {
+    "message": "Отримувачі"
+  },
+  "Rename": {
+    "message": "Перейменувати"
+  },
+  "renew_nft_expiration_date": {
+    "message": "Спливає %1%"
+  },
+  "renew_nft_in_progress": {
+    "message": "Виконується поновлення домену..."
+  },
+  "renew_nft_renewed": {
+    "message": "Домен продовжено на 1 рік"
+  },
+  "replace": {
+    "message": "Замінити"
+  },
+  "reset_tron_cache": {
+    "message": "Reset Tron cache"
+  },
+  "save": {
+    "message": "Зберегти"
+  },
+  "settings_backup_account": {
+    "message": "Резервна копія акаунта"
+  },
+  "settings_backup_account_mam_description": {
+    "message": "Використовується для відновлення доступу до вашого мультикаккаунту і всіх пов'язаних з ним гаманців."
+  },
+  "settings_backup_wallet": {
+    "message": "Резервна копія гаманця"
+  },
+  "settings_collectibles_list": {
+    "message": "Колекції"
+  },
+  "settings_connected_apps": {
+    "message": "Підключені застосунки"
+  },
+  "settings_hide_current_wallet": {
+    "message": "Сховати поточний гаманець"
+  },
+  "settings_ledger_indexes": {
+    "message": "Підгаманці леджер"
+  },
+  "settings_mam_add_wallet": {
+    "message": "Додати новий гаманець"
+  },
+  "settings_mam_indexes": {
+    "message": "Додані гаманці"
+  },
+  "settings_mam_number_wallets": {
+    "message": "%{number} гаманців"
+  },
+  "start_trial_notification_description": {
+    "message": "Підключення до Telegram необхідне тільки для перевірки, що ви не бот."
+  },
+  "start_trial_notification_heading": {
+    "message": "Підключіть Telegram для пробного періоду Pro"
+  },
+  "swap_balance": {
+    "message": "Баланс"
+  },
+  "swap_best_price": {
+    "message": "Краща ціна"
+  },
+  "swap_blockchain_fee": {
+    "message": "Комісія блокчейну"
+  },
+  "swap_blockchain_fee_tooltip": {
+    "message": "Орієнтовна комісія, що стягується блокчейном за обробку транзакції."
+  },
+  "swap_enter_amount": {
+    "message": "Введіть суму"
+  },
+  "swap_import": {
+    "message": "Додати"
+  },
+  "swap_import_token_title": {
+    "message": "Додати токен %token%?"
+  },
+  "swap_ledger_not_supported": {
+    "message": "Обміни не підтримуються гаманцями Ledger."
+  },
+  "swap_max": {
+    "message": "MAX"
+  },
+  "swap_minimum_received": {
+    "message": "Мін. до отримання"
+  },
+  "swap_minimum_received_tooltip": {
+    "message": "Мінімальна сума, яку ви гарантовано отримаєте після завершення угоди."
+  },
+  "swap_not_enough_funds": {
+    "message": "Недостатньо коштів"
+  },
+  "swap_price_impact": {
+    "message": "Вплив на ціну"
+  },
+  "swap_price_impact_too_high": {
+    "message": "Занадто високий вплив на ціну"
+  },
+  "swap_price_impact_tooltip": {
+    "message": "Вплив обміну на ринкову ціну токена після завершення угоди."
+  },
+  "swap_provider": {
+    "message": "Провайдер"
+  },
+  "swap_receive": {
+    "message": "Отримати"
+  },
+  "swap_route": {
+    "message": "Маршрут"
+  },
+  "swap_search": {
+    "message": "Пошук"
+  },
+  "swap_send": {
+    "message": "Надіслати"
+  },
+  "swap_settings": {
+    "message": "Налаштування обміну"
+  },
+  "swap_slippage": {
+    "message": "Проковзування"
+  },
+  "swap_slippage_description": {
+    "message": "Максимальна допустима різниця між розрахунковою ціною і фактичною ціною. Якщо різниця в ціні перевищить цю межу, то угода автоматично відхилиться."
+  },
+  "swap_slippage_tooltip": {
+    "message": "Максимальна допустима різниця між розрахунковою ціною і фактичною ціною. Якщо різниця в ціні перевищить цю межу, то угода автоматично відхилиться. Ви можете налаштувати цей параметр у меню налаштувань обміну."
+  },
+  "swap_tokens": {
+    "message": "Токени"
+  },
+  "swap_tokens_not_found": {
+    "message": "Токени не знайдені"
+  },
+  "swap_trade_is_not_available": {
+    "message": "Обмін недоступний"
+  },
+  "swap_tx_info": {
+    "message": "Докладніше"
+  },
+  "swap_unknown_price_impact": {
+    "message": "Вплив на ціну невідомий"
+  },
+  "swap_unknown_token_description": {
+    "message": "Цей токен не включено до списку відомих токенів. Переконайтеся, що ви усвідомлюєте ризики, пов'язані з імпортом невідомих токенів."
+  },
+  "tme_linked_with_another_address_warn": {
+    "message": "Ім'я не пов'язане з вашою поточною адресою. Будьте обережними з транзакціями на це ім'я."
+  },
+  "tokens_hide_statistics_btn": {
+    "message": "Приховати статистику"
+  },
+  "tokens_show_statistics_btn": {
+    "message": "Показати статистику"
+  },
+  "Toncoin": {
+    "message": "Toncoin"
+  },
+  "ton_login_title_web": {
+    "message": "Ввійти в %{name}?"
+  },
+  "Ton_page_description": {
+    "message": "TON - це повністю децентралізований блокчейн першого рівня, розроблений Telegram для мільярдів користувачів. Він може похвалитися надшвидкими транзакціями, невеликими комісіями, простими у використанні додатками та екологічністю."
+  },
+  "total": {
+    "message": "Загалом"
+  },
+  "total_balance": {
+    "message": "Баланс"
+  },
+  "touch_id_unlock_wallet": {
+    "message": "розблокувати ваш гаманець"
+  },
+  "transaction_call_date": {
+    "message": "Виклик контракту %{date}"
+  },
+  "transaction_type_mint": {
+    "message": "Створення"
+  },
+  "transaction_type_purchase": {
+    "message": "Купівля"
+  },
+  "try_again": {
+    "message": "Повторити"
+  },
+  "txActions_USDT_transfer": {
+    "message": "Переказ USDT"
+  },
+  "Unexpected_QR_Code": {
+    "message": "Неочікуваний QR-код"
+  },
+  "Unlock": {
+    "message": "Розблокувати"
+  },
+  "update": {
+    "message": "Оновити"
+  },
+  "update_ledger_error": {
+    "message": "Переконайтеся, що програмне забезпечення Ledger оновлено"
+  },
+  "upload_file": {
+    "message": "Завантажити файл"
+  },
+  "wallet_address": {
+    "message": "Адреса гаманця"
+  },
+  "wallet_aside_collectibles": {
+    "message": "Колекції"
+  },
+  "wallet_aside_domains": {
+    "message": "Домени"
+  },
+  "wallet_aside_history": {
+    "message": "Історія"
+  },
+  "wallet_aside_purchases": {
+    "message": "Покупки"
+  },
+  "wallet_aside_settings": {
+    "message": "Налаштування гаманця"
+  },
+  "wallet_aside_tokens": {
+    "message": "Токени"
+  },
+  "wallet_multi_send": {
+    "message": "Мульти відправка"
+  },
+  "Wallet_name": {
+    "message": "Ім'я гаманця"
+  },
+  "wallet_version_and_tokens": {
+    "message": ", токени"
+  },
+  "battery_description_other": {
+    "message": "You have enough charge battery for more than %{cnt} transactions."
+  },
+  "confirmSendModal_title_multiwallets": {
+    "message": "Action for %{walletName}"
+  },
+  "it_expires_on": {
+    "message": "It expires on"
+  },
+  "pro_subscription_is_active": {
+    "message": "Pro Subscription is active."
+  },
+  "pro_trial_is_active": {
+    "message": "Pro Trial is active."
+  },
+  "purchases_screen_title": {
+    "message": "Purchases"
+  },
+  "select_wallet_for_authorization": {
+    "message": "Select Wallet for authorization"
+  },
+  "settings_delete_alert_button": {
+    "message": "Delete account and data"
+  },
+  "settings_delete_alert_caption": {
+    "message": "This action will delete your account and all data from this application."
+  },
+  "settings_delete_alert_title": {
+    "message": "Are you sure you want to delete your account?"
+  },
+  "account_is_already_added_action": {
+    "message": "Open wallet"
+  },
+  "account_is_already_added_label": {
+    "message": "This wallet is already added as"
+  },
+  "accounts_delete_folder": {
+    "message": "Ungroup Folder"
+  },
+  "accounts_manage_folder": {
+    "message": "Edit Folder"
+  },
+  "accounts_manage_folder_move_from_other": {
+    "message": "Move from other Folders"
+  },
+  "accounts_manage_folder_name": {
+    "message": "Folder Name"
+  },
+  "accounts_new_folder": {
+    "message": "New Folder"
+  },
+  "add_wallet_existing_multisig_description": {
+    "message": "%{number} wallets managed by your wallet list"
+  },
+  "add_wallet_existing_multisig_title": {
+    "message": "Existing Multisig Wallet"
+  },
+  "add_wallet_group_hardware_title": {
+    "message": "Hardware Wallets"
+  },
+  "add_wallet_group_other_options": {
+    "message": "Other Options"
+  },
+  "add_wallet_new_multisig_description": {
+    "message": "For joint management and protection of cryptocurrency funds"
+  },
+  "add_wallet_new_multisig_title": {
+    "message": "New Multisig Wallet"
+  },
+  "all_assets_jettons": {
+    "message": "All Assets"
+  },
+  "battery_buy_error_min": {
+    "message": "Min: %{amount}"
+  },
+  "battery_buy_error_not_enough_balance": {
+    "message": "Not enough funds"
+  },
+  "battery_buy_remaining": {
+    "message": "Remaining: %{value}"
+  },
+  "battery_capabilities_description": {
+    "message": "Swap via Tonkeeper, send tokens and unstake TON."
+  },
+  "battery_capabilities_supported_transactions_label": {
+    "message": "Supported Transactions"
+  },
+  "battery_charges": {
+    "message": "%{charges} charges"
+  },
+  "battery_info_will_be_paid": {
+    "message": "Will be paid: %{items}"
+  },
+  "battery_n_battery_charges": {
+    "message": "%{charges} battery charges"
+  },
+  "battery_out_of_num_available": {
+    "message": "out of %{number} available"
+  },
+  "battery_refunds_link": {
+    "message": "Recharges and Refunds"
+  },
+  "battery_settings_nft_price": {
+    "message": "≈ %{charges} charges per transfer"
+  },
+  "battery_settings_nft_title": {
+    "message": "NFT transfers"
+  },
+  "battery_settings_swap_price": {
+    "message": "≈ %{charges} charges per swap"
+  },
+  "battery_settings_swap_title": {
+    "message": "Swaps via Tonkeeper"
+  },
+  "battery_settings_token_transfer_price": {
+    "message": "≈ %{charges} charges per transfer"
+  },
+  "battery_settings_token_transfer_title": {
+    "message": "Token transfer"
+  },
+  "bring_all_to_front": {
+    "message": "Bring All to Front"
+  },
+  "check_for_updates": {
+    "message": "Check for Updates"
+  },
+  "confirm_discard_btn_continue_editing": {
+    "message": "Continue Editing"
+  },
+  "confirm_discard_btn_discard": {
+    "message": "Discard Changes"
+  },
+  "confirm_discard_description": {
+    "message": "You have unsaved changes. If you close this window, your progress will be lost. Do you want to continue?"
+  },
+  "confirm_discard_title": {
+    "message": "Are you sure you want to leave?"
+  },
+  "confirm_error_insufficient_balance": {
+    "message": "Wallet balance %{balance} is not enough. Minimum balance required: %{required}."
+  },
+  "confirm_sending_sign": {
+    "message": "Sign"
+  },
+  "Copy": {
+    "message": "Copy"
+  },
+  "create_multisig_add_participant": {
+    "message": "Add Participant"
+  },
+  "create_multisig_await_deployment_description": {
+    "message": "It may take couple of minutes."
+  },
+  "create_multisig_await_deployment_help_explorer_button": {
+    "message": "View contract on explorer"
+  },
+  "create_multisig_await_deployment_help_support_button": {
+    "message": "Get Help"
+  },
+  "create_multisig_await_deployment_help_title": {
+    "message": "Nothing happened?"
+  },
+  "create_multisig_await_deployment_title": {
+    "message": "Awaiting your wallet deployment"
+  },
+  "create_multisig_can_change_hint": {
+    "message": "You can always change the number of participants, their roles, and the number of signatures required for a successful transaction."
+  },
+  "create_multisig_create_wallet": {
+    "message": "Create Wallet"
+  },
+  "create_multisig_duplicated_address_error": {
+    "message": "Address has already been added"
+  },
+  "create_multisig_error_already_deployed": {
+    "message": "Such multisig contract already exists. Try using another wallet to deploy the multisig contract."
+  },
+  "create_multisig_invalid_address_error": {
+    "message": "Invalid address"
+  },
+  "create_multisig_participants": {
+    "message": "Participants"
+  },
+  "create_multisig_quorum": {
+    "message": "Quorum"
+  },
+  "create_multisig_quorum_invalid_number_participants_error": {
+    "message": "Invalid number of participants"
+  },
+  "create_multisig_quorum_participants": {
+    "message": "participants"
+  },
+  "create_multisig_quorum_zero_participants_error": {
+    "message": "At least one participant is required"
+  },
+  "create_multisig_what_are_signers": {
+    "message": "All participants can confirm transactions and propose changes, such as adding or removing participants."
+  },
+  "Cut": {
+    "message": "Cut"
+  },
+  "Delete_keystone_wallet_data_description": {
+    "message": "Wallet data and all personal data will be erased from this device."
+  },
+  "Edit": {
+    "message": "Edit"
+  },
+  "force_reload": {
+    "message": "Force Reload"
+  },
+  "hide_others": {
+    "message": "Hide Others"
+  },
+  "hide_tonkeeper_pro": {
+    "message": "Hide Tonkeeper Pro"
+  },
+  "history_filters_all_assets": {
+    "message": "All Tokens"
+  },
+  "history_filters_hide_spam": {
+    "message": "Hide Spam"
+  },
+  "history_filters_hide_spam_description": {
+    "message": "Filter is not reset on restart"
+  },
+  "history_filters_initiator": {
+    "message": "Initiator"
+  },
+  "import_chose_mnemonic_option_bip39": {
+    "message": "Bip39 Mnemonic"
+  },
+  "import_chose_mnemonic_option_tonKeychain": {
+    "message": "Ton Keychain"
+  },
+  "import_chose_mnemonic_option_tonMnemonic": {
+    "message": "Standard Ton Mnemonic"
+  },
+  "import_chose_mnemonic_type_description": {
+    "message": "This secret key can be used for different types of wallets. Choose the one you need from the list below."
+  },
+  "import_chose_mnemonic_type_title": {
+    "message": "Chose Secret Key Type"
+  },
+  "import_existing_wallet_description_extended": {
+    "message": "Import wallet with a 24 or 12 secret recovery words"
+  },
+  "import_wallet_12_words": {
+    "message": "12 words"
+  },
+  "import_wallet_24_words": {
+    "message": "24 words"
+  },
+  "import_wallet_caption_12": {
+    "message": "To restore access to your wallet, enter the 12 secret recovery words given to you when you created your wallet."
+  },
+  "keystone_pair_subtitle": {
+    "message": "A higher level of security with AIR-GAP hardware wallet"
+  },
+  "keystone_pair_title": {
+    "message": "Pair with Keystone"
+  },
+  "keystone_sign_subtitle": {
+    "message": "Please open Keystone and scan QR code with transaction"
+  },
+  "keystone_sign_title": {
+    "message": "Connect Keystone"
+  },
+  "Minimize": {
+    "message": "Minimize"
+  },
+  "multi_send_enter_a_name": {
+    "message": "Enter a new name for your list:"
+  },
+  "multisig_add_description": {
+    "message": "Specify the participants who can manage this wallet."
+  },
+  "multisig_add_title": {
+    "message": "Set up your wallet"
+  },
+  "multisig_config_diff_add_participant": {
+    "message": "Add Participant"
+  },
+  "multisig_config_diff_quorum_updates": {
+    "message": "Quorum Update"
+  },
+  "multisig_config_diff_remove_participant": {
+    "message": "Remove Participant"
+  },
+  "multisig_create_order_title": {
+    "message": "New Multi Signature Request"
+  },
+  "multisig_deploy": {
+    "message": "Deploy Multisig"
+  },
+  "multisig_edit_submit_hint": {
+    "message": "Changes will require signatures from %{number} other participants."
+  },
+  "multisig_edit_suggest_changes": {
+    "message": "Suggest Changes"
+  },
+  "multisig_lifetime_1440_minutes": {
+    "message": "24 hours"
+  },
+  "multisig_lifetime_30_minutes": {
+    "message": "30 minutes"
+  },
+  "multisig_lifetime_360_minutes": {
+    "message": "6 hours"
+  },
+  "multisig_lifetime_60_minutes": {
+    "message": "1 hour"
+  },
+  "multisig_lifetime_720_minutes": {
+    "message": "12 hours"
+  },
+  "multisig_order_details": {
+    "message": "Request details"
+  },
+  "multisig_order_details_explore": {
+    "message": "Request details"
+  },
+  "multisig_order_details_pending_signatures": {
+    "message": "Pending Signatures"
+  },
+  "multisig_order_details_signed_wallets": {
+    "message": "Signed Wallets"
+  },
+  "multisig_order_notification_title": {
+    "message": "Multi Signature Request"
+  },
+  "multisig_order_select_time_description": {
+    "message": "Select time for quorum to sign your transaction."
+  },
+  "multisig_orders_th_created": {
+    "message": "Created"
+  },
+  "multisig_orders_th_send": {
+    "message": "Send"
+  },
+  "multisig_orders_th_signatures": {
+    "message": "Signatures"
+  },
+  "multisig_orders_th_status": {
+    "message": "Status"
+  },
+  "multisig_order_view": {
+    "message": "View"
+  },
+  "multisig_participant_you": {
+    "message": "You:"
+  },
+  "multisig_signed_label": {
+    "message": "Signers"
+  },
+  "multisig_signed_value": {
+    "message": "%{signed} of %{total} signers"
+  },
+  "multisig_signed_value_short": {
+    "message": "%{signed} of %{total}"
+  },
+  "multisig_status_completed": {
+    "message": "Completed"
+  },
+  "multisig_status_expired": {
+    "message": "Expired"
+  },
+  "multisig_status_label": {
+    "message": "Status"
+  },
+  "multisig_status_progress": {
+    "message": "In Progress"
+  },
+  "multisig_time_left": {
+    "message": "Time Left"
+  },
+  "multisig_time_to_sign_transaction": {
+    "message": "Time to sign a transaction"
+  },
+  "multisig_update_config_confirm_title": {
+    "message": "Confirm update multisig parameters"
+  },
+  "multisig_you_have_signed_the_request": {
+    "message": "You have signed this Request"
+  },
+  "new_transfer_order_button": {
+    "message": "New Transfer Request"
+  },
+  "no_multisig_description": {
+    "message": "Only multisigs linked to the current Ton wallet are displayed"
+  },
+  "no_multisig_heading": {
+    "message": "Your multisig wallets will be shown here"
+  },
+  "no_multisig_learn_more": {
+    "message": "Learn more about multisig"
+  },
+  "no_multisig_orders_description": {
+    "message": "All requests from all participants of the multisig wallet are displayed."
+  },
+  "no_multisig_orders_heading": {
+    "message": "Your multisig wallet's requests will be shown here"
+  },
+  "operation_not_supported": {
+    "message": "The operation is not available for this wallets. Select another wallet and try again."
+  },
+  "order_send_token": {
+    "message": "Send Token"
+  },
+  "order_send_token_and_ton": {
+    "message": "Send TON and Token"
+  },
+  "order_send_ton": {
+    "message": "Send TON"
+  },
+  "pinned_jettons": {
+    "message": "Pinned"
+  },
+  "quit_tonkeeper_pro": {
+    "message": "Quit Tonkeeper Pro"
+  },
+  "Redo": {
+    "message": "Redo"
+  },
+  "Reload": {
+    "message": "Reload"
+  },
+  "secret_words_account_title": {
+    "message": "Your Account Recovery Phrase"
+  },
+  "secret_words_caption_12": {
+    "message": "Write down these 12 words in the order given below and store them in a secret, safe place."
+  },
+  "select_all": {
+    "message": "Select All"
+  },
+  "send_change_fee_payment_method": {
+    "message": "Change Payment Method"
+  },
+  "settings_hide_multisig": {
+    "message": "Hide Multisig Wallet"
+  },
+  "settings_mam_add_wallet_with_pro": {
+    "message": "Add More with Pro Subscription"
+  },
+  "settings_multisig_settings": {
+    "message": "Multisig Settings"
+  },
+  "show": {
+    "message": "Show"
+  },
+  "show_all": {
+    "message": "Show All"
+  },
+  "toggle_developer_tools": {
+    "message": "Toggle Developer Tools"
+  },
+  "toggle_full_screen": {
+    "message": "Toggle Full Screen"
+  },
+  "tonkeeper_pro_authorization": {
+    "message": "To access the Pro features, server authorization is required via Ton Proof. Please ensure you import a wallet that supports this technology. This step is crucial for enabling the full range of Pro functionalities securely and effectively."
+  },
+  "Undo": {
+    "message": "Undo"
+  },
+  "View": {
+    "message": "View"
+  },
+  "view_on_tonviewer": {
+    "message": "View on Tonviewer"
+  },
+  "wallet_aside_multisig_wallets": {
+    "message": "Multisig Wallets"
+  },
+  "wallet_aside_orders": {
+    "message": "Requests"
+  },
+  "Window": {
+    "message": "Window"
+  }
+}

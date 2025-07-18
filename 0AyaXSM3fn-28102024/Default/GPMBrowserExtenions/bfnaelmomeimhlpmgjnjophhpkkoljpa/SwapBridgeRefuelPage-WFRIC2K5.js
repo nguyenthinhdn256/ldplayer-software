@@ -1,0 +1,20 @@
+import{a as h,b as s,d as f,e as R}from"./chunk-FPRO5GQI.js";import{Ra as P,z as w}from"./chunk-GR6D4DPI.js";import"./chunk-NYONBW6F.js";import"./chunk-QBZHFUZ3.js";import"./chunk-CCUXU2GU.js";import"./chunk-BT2EXIW3.js";import"./chunk-6DOWJ64L.js";import"./chunk-Z6IB25YE.js";import"./chunk-QEXGR5WT.js";import"./chunk-YCCYNAY3.js";import"./chunk-NDHIYOGB.js";import"./chunk-X3ESGVCB.js";import"./chunk-Y3NV75FH.js";import"./chunk-S24UABH5.js";import"./chunk-SHAEZV7V.js";import"./chunk-H4C3OTZW.js";import"./chunk-DERIAD33.js";import"./chunk-EGXLQXDH.js";import"./chunk-CCQRCL2K.js";import"./chunk-I5YT3SXD.js";import"./chunk-TISYHGD5.js";import"./chunk-BRWGJFNS.js";import"./chunk-IVMV7P4T.js";import"./chunk-P7NGDOTF.js";import"./chunk-HPOS2V3B.js";import"./chunk-XYJX6G2K.js";import"./chunk-3WUBIQFW.js";import"./chunk-W27Z2YZM.js";import"./chunk-PCKXDRQ7.js";import"./chunk-H3FFS4GT.js";import"./chunk-NSMHSELH.js";import"./chunk-YHY2IGPI.js";import"./chunk-PTZMRZUV.js";import"./chunk-VQVTLSDS.js";import{j as a}from"./chunk-OKP6DFCI.js";import{Aa as C,o as r,rb as u}from"./chunk-WIQ4WVKX.js";import{sa as x}from"./chunk-LTUJMY6D.js";import"./chunk-UCBZOSRF.js";import"./chunk-PN7XAO7F.js";import"./chunk-TZKYPSN2.js";import"./chunk-36Y64SHT.js";import"./chunk-2MSBWT3V.js";import"./chunk-NM5XY6LY.js";import"./chunk-AKPGU3DO.js";import"./chunk-IS26EKBL.js";import"./chunk-GQEPK4C4.js";import"./chunk-BTKBODVJ.js";import"./chunk-KXAUXXVB.js";import"./chunk-TYXPKGSM.js";import"./chunk-WFPABEAU.js";import"./chunk-QWOVPA54.js";import"./chunk-LDMZMUWY.js";import"./chunk-X2SBUKU4.js";import"./chunk-OXFZHPMY.js";import"./chunk-EDLKLLZ5.js";import"./chunk-OX7Q6J2U.js";import"./chunk-MHD4HNLY.js";import"./chunk-G3SOTMUM.js";import{m as c}from"./chunk-56SJOU6P.js";import"./chunk-6E74REJW.js";import"./chunk-N7UFQNLW.js";import"./chunk-66TF6S77.js";import"./chunk-4P36KWOF.js";import{a as I}from"./chunk-7X4NV6OJ.js";import"./chunk-UNDMYLJW.js";import{f as v,h as b,n as B}from"./chunk-3KENBVE7.js";b();B();var e=v(I());var V=r.div`
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+`,H=r.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+`,T=r(u).attrs({size:28,lineHeight:32,weight:600,color:"#fff"})`
+  margin: 12px 0 4px;
+`,k=r(u).attrs({size:16,lineHeight:18,weight:400,color:"#999"})`
+  padding: 0 20px;
+`,L=r.div`
+  margin-bottom: 10px;
+`,D=()=>{let{handleHideModalVisibility:i}=P(),{setRefuelEnabled:d,...n}=x(),t=(0,e.useCallback)(()=>{i("bridgeRefuel")},[i]),p=(0,e.useCallback)(l=>{d(l),t()},[t,d]);return{...n,enableRefuel:p,hideBridgeRefuel:t}},E=e.default.memo(({symbol:i,balance:d,refuelAmount:n,uiRefuelAmount:t,estimatedCost:p,refuelEnabled:l,enableRefuel:m,hideBridgeRefuel:y,isFetchingQuote:g})=>{let{t:o}=c();return e.default.createElement(V,null,e.default.createElement(L,null,e.default.createElement(H,null,e.default.createElement(w,{leftButton:{type:"close",onClick:y}},o("bridgeRefuelTitle")),e.default.createElement(C,null),e.default.createElement(T,null,o("bridgeRefuelEnable")),e.default.createElement(k,null,o("bridgeRefuelDescription"))),e.default.createElement(h,{roundedTop:!0,roundedBottom:!0},e.default.createElement(s,{label:o("bridgeRefuelLabelBalance",{symbol:i})},e.default.createElement(f,{color:"#EB3742"},d)),e.default.createElement(s,{label:o("bridgeRefuelLabelReceive"),isLoading:g},e.default.createElement(f,{color:l&&n?"#21E56F":void 0},l&&n?t:"-")),e.default.createElement(s,{label:o("bridgeRefuelLabelFee"),isLoading:g},e.default.createElement(f,null,l&&n?p:"")))),e.default.createElement("div",null,e.default.createElement(a,{theme:"default",onClick:()=>m(!1)},o("bridgeRefuelDismiss")),e.default.createElement(R,{gap:10}),e.default.createElement(a,{theme:"primary",onClick:()=>m(!0)},o("bridgeRefuelEnable"))))}),S=()=>{let i=D();return e.default.createElement(E,{...i})},U=S;export{S as SwapBridgeRefuelPage,U as default};
+//# sourceMappingURL=SwapBridgeRefuelPage-WFRIC2K5.js.map
