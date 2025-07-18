@@ -5,8 +5,6 @@ from typing import Dict, Any
 
 logger = logging.getLogger(__name__)
 
-logger = logging.getLogger(__name__)
-
 class MailThueSimHandler:
     """Xử lý verification qua Gmail thuesim.app"""
     def __init__(self, api_key=None, gmail_account=None):

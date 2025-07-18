@@ -1,1 +1,0 @@
-/*! For license information please see inject_all_chrome.js.LICENSE.txt */

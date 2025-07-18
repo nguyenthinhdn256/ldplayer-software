@@ -5,6 +5,7 @@ import threading
 import time
 from typing import Dict, List, Optional, Any
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import adbutils
 
 logger = logging.getLogger(__name__)
 
@@ -63,17 +64,10 @@ class U2DeviceManager:
     def _connect_with_retry(self, device_id: str, auto_setup: bool) -> bool:
         """Kết nối U2 với retry và auto-setup"""
         try:
-            # Tăng timeout lên 60 giây
-            import uiautomator2 as u2
-            # Set timeout
-            u2.DEBUG = True  # Enable debug logs
-            
             logger.info(f"Attempting direct U2 connection to {device_id}...")
             
-            # Thêm timeout setting
-            d = u2.connect(device_id, timeout=60)
-            
-            # d = u2.connect(device_id)
+            # Kết nối U2 (không có timeout parameter)
+            d = u2.connect(device_id)
             
             # Test connection bằng cách lấy device info
             device_info = d.device_info
@@ -103,25 +97,40 @@ class U2DeviceManager:
         try:
             logger.info(f"🔧 Setting up U2 service for {device_id}...")
             
-            # Tạo connection để setup
-            d = u2.connect(device_id)
+            # THAY ĐỔI: Sử dụng subprocess để chạy init command
+            import subprocess
             
-            # Cài đặt U2 service (có thể mất vài phút)
+            # Chạy lệnh init U2 service
             logger.info(f"Installing U2 service components for {device_id}...")
-            d.app_install_auto()
+            
+            # Chạy: python -m uiautomator2 init --serial device_id
+            init_cmd = [
+                "python", "-m", "uiautomator2", "init", 
+                "--serial", device_id
+            ]
+            
+            result = subprocess.run(init_cmd, capture_output=True, text=True, timeout=120)
+            
+            if result.returncode == 0:
+                logger.info(f"U2 init completed for {device_id}")
+            else:
+                logger.warning(f"U2 init warning for {device_id}: {result.stderr}")
             
             # Đợi service khởi động
             logger.info(f"Waiting for U2 service to start on {device_id}...")
             time.sleep(5)
             
-            # Thử kết nối lại với timeout
+            # Thử kết nối lại với U2
             max_retries = 3
             for attempt in range(max_retries):
                 try:
+                    # Tạo connection để test
+                    d = u2.connect(device_id)
+                    
                     # Test connection
                     device_info = d.device_info
                     
-                    # **SỬA: Lưu device và lock với connection_lock**
+                    # Lưu device và lock
                     with self.connection_lock:
                         self.devices[device_id] = d
                         self.device_locks[device_id] = threading.Lock()
