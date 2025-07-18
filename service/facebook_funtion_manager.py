@@ -20,6 +20,10 @@ class XuLyBuoc1:
         """Clear dữ liệu và cấp quyền storage cho các app"""
         return clear_and_capquyen_app(self.device_id, app_packages)
     
+    def wait_facebook_app(self) -> dict:
+        """Funtion đợi app facebook load thanh công"""
+        return wait_for_facebook_fully_loaded(self.device_id)
+    
 def change_device_language_to_vietnamese(device_id: str) -> dict:
     try:
         logger.info(f"Changing language to Vietnamese for device: {device_id}")
@@ -80,3 +84,50 @@ def clear_and_capquyen_app(device_id: str, app_packages: list = None) -> dict:
         logger.error(f"Error in clear_and_capquyen_app for {device_id}: {str(e)}")
         return {"success": False, "message": f"Error in clear_and_capquyen_app for {device_id}: {str(e)}"}
     
+# Funtion đợi app facebook load thanh công    
+def wait_for_facebook_fully_loaded(d, timeout=60):
+    """Chờ Facebook khởi động hoàn toàn"""
+    
+    # Bước 1: Chờ app chạy foreground
+    print("Đang chờ Facebook khởi động...")
+    start_time = time.time()
+    
+    while time.time() - start_time < timeout:
+        try:
+            current_app = d.app_current()
+            if current_app.get('package') == 'com.facebook.katana':
+                print("✅ Facebook đã chạy foreground")
+                break
+        except:
+            pass
+        time.sleep(1)
+    else:
+        print("❌ Facebook không khởi động trong thời gian quy định")
+        return False
+    
+    # Bước 2: Chờ UI elements xuất hiện
+    print("Đang chờ UI Facebook load...")
+    time.sleep(2)  # Cho app ổn định
+    
+    ui_selectors = [{'method': 'text', 'value': 'Đăng ký Facebook'}, {'method': 'text', 'value': 'Tạo tài khoản mới'}, {'method': 'text', 'value': 'Đăng nhập'}, {'method': 'resourceId', 'value': 'com.facebook.katana:id/login_button'}, {'method': 'className', 'value': 'android.widget.Button'}]
+    for _ in range(20):  # Thử 20 lần, mỗi lần 1s
+        for selector in ui_selectors:
+            try:
+                if selector['method'] == 'text':
+                    if d(text=selector['value']).exists:
+                        print(f"✅ UI element tìm thấy: {selector['value']}")
+                        return True
+                elif selector['method'] == 'resourceId':
+                    if d(resourceId=selector['value']).exists:
+                        print(f"✅ UI element tìm thấy: {selector['value']}")
+                        return True
+                elif selector['method'] == 'className':
+                    if d(className=selector['value']).exists:
+                        print(f"✅ UI element tìm thấy: {selector['value']}")
+                        return True
+            except:
+                continue
+        time.sleep(1)
+    
+    print("❌ Facebook UI không load đầy đủ")
+    return False

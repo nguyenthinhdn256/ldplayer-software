@@ -3,7 +3,7 @@ import argparse
 import json
 import logging
 import sys
-import time
+import time, random
 import uiautomator2 as u2 
 from concurrent.futures import ThreadPoolExecutor
 from service.facebook_funtion_manager import XuLyBuoc1
@@ -225,14 +225,51 @@ class FacebookRegistrationWorker:
 
             # Tiến hành reg account
             time.sleep(2)
+            openfbapp_start_status = {"stt": stt_display, "trang_thai": "Đang khởi động Facebook App", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, openfbapp_start_status, self.table_manager)
             d.app_start('com.facebook.katana')
+            wait_facebook_result = xu_ly_buoc1.wait_facebook_app()
+            time.sleep(10)
+            openfbapp_done_status = {"stt": stt_display, "trang_thai": "Đã khởi động Facebook thành công", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, openfbapp_done_status, self.table_manager)
 
+            # Bắng đầu logic tạo facebook
+            time.sleep(2)
+            if d(text="Tạo tài khoản mới").wait(timeout=2):
+                time.sleep(1) 
+                d(text="Tạo tài khoản mới").click()
+            if d(text="Tham gia Facebook").wait(timeout=2):
+                time.sleep(1) 
+                d(text="Bắt đầu").click()
+            if d(text="Hãy tạo tài khoản để kết nối với bạn bè, người thân và cộng đồng có chung sở thích.").wait(timeout=7):
+                time.sleep(1)  
+                d(className="android.widget.Button", index=2).click()
 
+            if d(text="CHO PHÉP").wait(timeout=5):
+                time.sleep(1) 
+                d(text="CHO PHÉP").click()
 
+            # Lấy random họ
+            with open('dulieu/hoten/Ho.txt', 'r', encoding='utf-8') as f:
+                ho_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                random_ho = random.choice(ho_list)
+            with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
+                ten_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                random_ten = random.choice(ten_list)
 
-
-
-
+            # Gõ text vào field
+            if d(text="Bạn tên gì?").wait(timeout=5):
+                time.sleep(1)
+                d(text="Họ").click()
+                time.sleep(1)
+                d.send_keys(random_ho)
+                time.sleep(1)
+                d(text="Tên").click()
+                time.sleep(1)
+                d.send_keys(random_ten)
+                time.sleep(1)
+            hoten_done_status = {"stt": stt_display, "trang_thai": "Đã nhập Họ Tên", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, hoten_done_status, self.table_manager)
 
 
 
