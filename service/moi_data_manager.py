@@ -109,16 +109,43 @@ class MailDuoiMailHandler:
     
     def generate_data(self, **kwargs) -> Dict[str, Any]:
         try:
-            # Đọc danh sách đầu mail
             dau_mails = self._read_data_file()
             if dau_mails:
                 selected_dau = random.choice(dau_mails)
-                # Tạo email random với đầu này
                 random_number = random.randint(1000, 9999)
                 generated_email = f"{selected_dau}{random_number}@gmail.com"
                 return {"status": "success", "data": generated_email, "type": "generated_email"}
         except Exception as e:
             return {"status": "error", "message": str(e)}
+
+    def duoimail(self) -> str:
+        """Đọc file duoimail.txt và tạo email random với cấu trúc 10 chữ + 5 số + đuôi mail"""
+        try:
+            with open("dulieu/mailphone/duoimail.txt", 'r', encoding='utf-8') as f:
+                duoi_mails = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+            if duoi_mails:
+                selected_duoi = random.choice(duoi_mails)
+                chu_random = ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=10))
+                so_random = ''.join([str(random.randint(0, 9)) for _ in range(5)])
+                generated_email = f"{chu_random}{so_random}{selected_duoi}"
+                logger.info(f"Generated email from duoimail: {generated_email}")
+                return generated_email
+            else:
+                logger.error("Không có đuôi mail nào trong file duoimail.txt")
+                return ""
+        except Exception as e:
+            logger.error(f"Lỗi khi đọc file duoimail.txt: {str(e)}")
+            return ""
+
+    def _read_data_file(self) -> List[str]:
+        """Đọc dữ liệu từ file"""
+        try:
+            with open(self.file_path, 'r', encoding='utf-8') as f:
+                lines = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                return lines
+        except FileNotFoundError:
+            logger.error(f"File not found: {self.file_path}")
+            return []
 
 class SDTDauSoHandler:
     """Handler cho mồi Theo Đầu Số"""
@@ -128,16 +155,42 @@ class SDTDauSoHandler:
     
     def generate_data(self, **kwargs) -> Dict[str, Any]:
         try:
-            # Đọc danh sách đầu số
             dau_sos = self._read_data_file()
             if dau_sos:
                 selected_dau = random.choice(dau_sos)
-                # Tạo SĐT random với đầu này  
                 random_digits = ''.join([str(random.randint(0, 9)) for _ in range(7)])
                 generated_sdt = f"{selected_dau}{random_digits}"
                 return {"status": "success", "data": generated_sdt, "type": "generated_sdt"}
         except Exception as e:
             return {"status": "error", "message": str(e)}
+
+    def dauso(self) -> str:
+        """Đọc file dauso.txt và tạo SĐT random với cấu trúc đầu số + 7 số điện thoại"""
+        try:
+            with open("dulieu/mailphone/dauso.txt", 'r', encoding='utf-8') as f:
+                dau_sos = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+            if dau_sos:
+                selected_dau = random.choice(dau_sos)
+                duoi_so = ''.join([str(random.randint(0, 9)) for _ in range(7)])
+                generated_sdt = f"{selected_dau}{duoi_so}"
+                logger.info(f"Generated SDT from dauso: {generated_sdt}")
+                return generated_sdt
+            else:
+                logger.error("Không có đầu số nào trong file dauso.txt")
+                return ""
+        except Exception as e:
+            logger.error(f"Lỗi khi đọc file dauso.txt: {str(e)}")
+            return ""
+
+    def _read_data_file(self) -> List[str]:
+        """Đọc dữ liệu từ file"""
+        try:
+            with open(self.file_path, 'r', encoding='utf-8') as f:
+                lines = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                return lines
+        except FileNotFoundError:
+            logger.error(f"File not found: {self.file_path}")
+            return []
 
 class MoiDataFactory:
     """Factory class để tạo handler phù hợp"""

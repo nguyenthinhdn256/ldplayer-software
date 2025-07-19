@@ -127,14 +127,14 @@ class CauHinhRegGroupbox4:
             logger.error(f"Error in sua sdt button click: {e}")
             tk.messagebox.showerror("Lỗi", f"Không thể mở file sdttheotep.txt:\n{str(e)}")
 
-    def on_sua_dau_mail_click(self):
+    def on_sua_duoi_mail_click(self):
         """Xử lý khi click button Sửa Mail - mở file daumail.txt"""
         try:
             import os, subprocess, platform
             logger.info("Sua Dau Mail button clicked")
             folder_path = os.path.join("dulieu", "mailphone")
             if not os.path.exists(folder_path): os.makedirs(folder_path)
-            file_path = os.path.join(folder_path, "daumail.txt")
+            file_path = os.path.join(folder_path, "duoimail.txt")
             if not os.path.exists(file_path):
                 with open(file_path, 'w', encoding='utf-8') as f: 
                     f.write("# File chứa danh sách đầu mail\n# Mỗi dòng một đầu mail\nexample1@gmail.com\nexample2@hotmail.com\nexample3@outlook.com\n")
@@ -143,7 +143,7 @@ class CauHinhRegGroupbox4:
             else: subprocess.run(["xdg-open", file_path])
         except Exception as e:
             logger.error(f"Error in sua dau mail button click: {e}")
-            tk.messagebox.showerror("Lỗi", f"Không thể mở file daumail.txt:\n{str(e)}")
+            tk.messagebox.showerror("Lỗi", f"Không thể mở file duoimail.txt:\n{str(e)}")
 
     def on_sua_dau_so_click(self):
         """Xử lý khi click button Sửa SĐT - mở file dauso.txt"""
