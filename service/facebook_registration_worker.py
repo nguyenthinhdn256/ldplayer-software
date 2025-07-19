@@ -8,6 +8,7 @@ import uiautomator2 as u2
 from concurrent.futures import ThreadPoolExecutor
 from service.facebook_funtion_manager import XuLyBuoc1
 from service.table_status_manager import TableStatusManager
+from service.moi_data_manager import MailTheoTepHandler, SDTTheoTepHandler, MailDuoiMailHandler, SDTDauSoHandler
 from utils.u2_device_manager import U2DeviceManager
 from utils.global_u2_pool import global_u2_pool
 from typing import Dict, Any
@@ -23,6 +24,7 @@ class FacebookRegistrationWorker:
         self.device_ids = []
         self.status_manager = TableStatusManager()
         self.u2_manager = global_u2_pool.get_manager()
+        self.moi_config = None
         logger.info(f"Initializing FacebookRegistrationWorker with {max_workers} workers")
     
     def initialize_worker_pool(self, config: Dict[str, Any]) -> Dict[str, Any]:
@@ -34,6 +36,7 @@ class FacebookRegistrationWorker:
             original_device_ids = config.get('selected_devices', [])
             self.table_manager = config.get('table_manager')
             so_ld = config.get('so_ld', 1)
+            self.moi_config = config.get('moi_config')
             
             # **SỬA: Sử dụng selected_devices, chỉ tạo mock khi thực sự trống**
             if not original_device_ids or len(original_device_ids) == 0:
@@ -223,78 +226,57 @@ class FacebookRegistrationWorker:
             self.status_manager.update_device_status(device_index, clear_done_status, self.table_manager)
             time.sleep(2)
 
-            # Tiến hành reg account
-            time.sleep(2)
-            openfbapp_start_status = {"stt": stt_display, "trang_thai": "Đang khởi động Facebook App", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
-            self.status_manager.update_device_status(device_index, openfbapp_start_status, self.table_manager)
-            d.app_start('com.facebook.katana')
-            wait_facebook_result = xu_ly_buoc1.wait_facebook_app()
-            time.sleep(10)
-            openfbapp_done_status = {"stt": stt_display, "trang_thai": "Đã khởi động Facebook thành công", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
-            self.status_manager.update_device_status(device_index, openfbapp_done_status, self.table_manager)
+            # Tiến hành reg account với vòng lặp 3 lần
+            for fb_attempt in range(3):
+                logger.info(f"Facebook startup attempt {fb_attempt + 1}/3")
+                
+                time.sleep(2)
+                openfbapp_start_status = {"stt": stt_display, "trang_thai": f"Đang khởi động Facebook App - lần {fb_attempt + 1}", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+                self.status_manager.update_device_status(device_index, openfbapp_start_status, self.table_manager)
+                d.app_start('com.facebook.katana')
+                wait_facebook_result = xu_ly_buoc1.wait_facebook_app()
+                time.sleep(10)
+                openfbapp_done_status = {"stt": stt_display, "trang_thai": f"Đã khởi động Facebook thành công - lần {fb_attempt + 1}", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+                self.status_manager.update_device_status(device_index, openfbapp_done_status, self.table_manager)
 
-            # Bắng đầu logic tạo facebook
-            time.sleep(2)
-            if d.xpath('//*[@content-desc="Meta logo" or @content-desc="Logo Meta"]').exists:
-                print("Đã thấy Logo Facebook")
-                time.sleep(1)
-                d.xpath('//*[@text="Create new account"] | //android.view.ViewGroup[3]/android.widget.Button[1] | //*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.Button[1]').click()
+                time.sleep(2)
+                if d.xpath('//*[@content-desc="Meta logo" or @content-desc="Logo Meta"]').exists:
+                    print(f"Đã thấy Logo Facebook - lần {fb_attempt + 1}")
+                    time.sleep(1)
+                    d.xpath('//*[@text="Create new account"] | //android.view.ViewGroup[3]/android.widget.Button[1] | //*[@resource-id="android:id/content"]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.Button[1]').click()
+                    if d(text="CHO PHÉP").wait(timeout=5) or d(text="Bạn tên gì?").wait(timeout=5):
+                        break
+                if d.xpath('//*[@text="Hãy tạo tài khoản để kết nối với bạn bè, người thân và cộng đồng có chung sở thích."]').wait(timeout=15):
+                    print(f"Đã thấy Hãy Tạo Tài Khoản - lần {fb_attempt + 1}")
+                    time.sleep(1)
+                    d.xpath("//android.view.ViewGroup[1]/android.widget.Button[1]").click()
+                    if d(text="CHO PHÉP").wait(timeout=5) or d(text="Bạn tên gì?").wait(timeout=5):
+                        break
+                
+                logger.warning(f"Facebook khởi động thất bại - lần {fb_attempt + 1}")
+                d.app_stop('com.facebook.katana')
+                time.sleep(2)
+            else:
+                return f"Facebook startup failed after 3 attempts for {device_id}"
 
-            if d.xpath('//*[@text="Hãy tạo tài khoản để kết nối với bạn bè, người thân và cộng đồng có chung sở thích."]').wait(timeout=5):
-                print("Đã thấy Hãy Tạo Tài Khoản")
-                time.sleep(1)
-                d.xpath("//android.view.ViewGroup[1]/android.widget.Button[1]").click()
-
+            # Tiếp tục logic sau khi Facebook khởi động thành công
             if d(text="CHO PHÉP").wait(timeout=5):
                 time.sleep(1) 
                 d(text="CHO PHÉP").click()
-
-            #### Xử Lý Họ Tên
-            # Lấy random họ
-            with open('dulieu/hoten/Ho.txt', 'r', encoding='utf-8') as f:
-                ho_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
-                random_ho = random.choice(ho_list)
-            with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
-                ten_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
-                random_ten = random.choice(ten_list)
-
-            # Gõ text vào field
-            if d(text="Bạn tên gì?").wait(timeout=5):
-                print("Bạn tên gì?")
-                time.sleep(1)
-                d(text="Họ").click()
-                time.sleep(1)
-                d.send_keys(random_ho)
-                time.sleep(1)
-                d(text="Tên").click()
-                time.sleep(1)
-                d.send_keys(random_ten)
-                time.sleep(1)
-                d.xpath('//*[@text="Tiếp"]').click()
-                time.sleep(5)
-            
-            if d(text="Bạn tên gì?").wait(timeout=5):
-                print("Bạn tên gì? vẫn xuất hiện")
-                time.sleep(1)
-                d(text="Họ").click()
-                time.sleep(0.5)
-                d(description="Xóa văn bản Họ").click()
-                d.send_keys(random_ho)
-                time.sleep(1)
-                d(text="Tên").click()
-                time.sleep(0.5)
-                d(description="Xóa văn bản Tên").click()
-                time.sleep(1)
-                d.send_keys(random_ten)
-                time.sleep(1)
-                d.xpath('//*[@text="Tiếp"]').click()
-                time.sleep(5)
-
-            if d.xpath('//*[@text="Chọn tên của bạn"]').wait(timeout=5):
-                time.sleep(1)
-                d.xpath('//*[@text="Sử dụng tên khác"]').click()
+           
+            for attempt in range(3):
+                logger.info(f"Họ tên attempt {attempt + 1}/3")
+                
+                # Gõ text vào field
                 if d(text="Bạn tên gì?").wait(timeout=5):
-                    print("Bạn tên gì?")
+                    # Lấy random họ tên mới cho mỗi lần thử
+                    with open('dulieu/hoten/Ho.txt', 'r', encoding='utf-8') as f:
+                        ho_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                        random_ho = random.choice(ho_list)
+                    with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
+                        ten_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                        random_ten = random.choice(ten_list)
+                    print(f"Bạn tên gì? - lần {attempt + 1}")
                     time.sleep(1)
                     d(text="Họ").click()
                     time.sleep(1)
@@ -305,7 +287,63 @@ class FacebookRegistrationWorker:
                     d.send_keys(random_ten)
                     time.sleep(1)
                     d.xpath('//*[@text="Tiếp"]').click()
+                    time.sleep(5)
+                
+                if d(text="Bạn tên gì?").wait(timeout=5):
+                    # Lấy random họ tên mới cho mỗi lần thử
+                    with open('dulieu/hoten/Ho.txt', 'r', encoding='utf-8') as f:
+                        ho_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                        random_ho = random.choice(ho_list)
+                    with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
+                        ten_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                        random_ten = random.choice(ten_list)
+                    print(f"Bạn tên gì? vẫn xuất hiện - lần {attempt + 1}")
                     time.sleep(1)
+                    d(text="Họ").click()
+                    time.sleep(0.5)
+                    d(description="Xóa văn bản Họ").click()
+                    d.send_keys(random_ho)
+                    time.sleep(1)
+                    d(text="Tên").click()
+                    time.sleep(0.5)
+                    d(description="Xóa văn bản Tên").click()
+                    time.sleep(1)
+                    d.send_keys(random_ten)
+                    time.sleep(1)
+                    d.xpath('//*[@text="Tiếp"]').click()
+                    time.sleep(5)
+
+                if d.xpath('//*[@text="Chọn tên của bạn"]').wait(timeout=5):
+                    time.sleep(1)
+                    d.xpath('//*[@text="Sử dụng tên khác"]').click()
+                    time.sleep(2)
+                    if d(text="Bạn tên gì?").wait(timeout=5):
+                        # Lấy random họ tên mới cho mỗi lần thử
+                        with open('dulieu/hoten/Ho.txt', 'r', encoding='utf-8') as f:
+                            ho_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                            random_ho = random.choice(ho_list)
+                        with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
+                            ten_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                            random_ten = random.choice(ten_list)
+                        print(f"Bạn tên gì? trong chọn tên - lần {attempt + 1}")
+                        time.sleep(1)
+                        d(text="Họ").click()
+                        time.sleep(1)
+                        d.send_keys(random_ho)
+                        time.sleep(1)
+                        d(text="Tên").click()
+                        time.sleep(1)
+                        d.send_keys(random_ten)
+                        time.sleep(1)
+                        d.xpath('//*[@text="Tiếp"]').click()
+                        time.sleep(1)
+                
+                # Kiểm tra xem đã qua được bước họ tên chưa
+                if not d(text="Bạn tên gì?").exists and not d.xpath('//*[@text="Chọn tên của bạn"]').exists:
+                    logger.info(f"Họ tên thành công ở lần thử {attempt + 1}")
+                    break
+                elif attempt == 2:
+                    logger.warning("Đã thử 3 lần nhập họ tên nhưng vẫn không thành công")
 
             hoten_done_status = {"stt": stt_display, "trang_thai": "Đã nhập Họ Tên", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
             self.status_manager.update_device_status(device_index, hoten_done_status, self.table_manager)
@@ -343,7 +381,74 @@ class FacebookRegistrationWorker:
             sex_done_status = {"stt": stt_display, "trang_thai": "Chọn giới tính {gender} ", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
             self.status_manager.update_device_status(device_index, sex_done_status, self.table_manager)
 
-
+            #### XỬ LÝ MỒI EMAIL/SĐT
+            if d.xpath('//*[@text="Số di động của bạn là gì?" or @text="Email của bạn là gì?"]').wait(timeout=10):
+                moi_type = self.moi_config.get('moi_type', 'khong_moi') if self.moi_config else 'khong_moi'
+                logger.info(f"Detected moi type: {moi_type}")
+                
+                # Xác định loại mồi (Mail hay SĐT)
+                is_mail_moi = moi_type in ['mail_theo_tep', 'duoi_mail']
+                is_sdt_moi = moi_type in ['sdt_theo_tep', 'sdt_dau_so']
+                
+                if is_mail_moi:
+                    # Trường hợp 1: User chọn mồi Mail
+                    if d.xpath('//*[@text="Số di động của bạn là gì?"]').exists:
+                        time.sleep(1)
+                        d.xpath('//*[@text="Đăng ký bằng email"]').click()
+                        time.sleep(2)
+                    
+                    # Lấy email data dựa trên loại mồi
+                    if moi_type == 'mail_theo_tep':
+                        mail_handler = MailTheoTepHandler()
+                        email_data = mail_handler.mailtheotep()
+                    else:  # duoi_mail
+                        mail_handler = MailDuoiMailHandler()
+                        email_data = mail_handler.duoimail()
+                    
+                    if email_data and d.xpath('//*[@text="Email của bạn là gì?"]').wait(timeout=5):
+                        time.sleep(1)
+                        d(className="android.widget.EditText").send_keys(email_data)
+                        time.sleep(1)
+                        d.xpath('//*[@text="Tiếp"]').click()
+                        time.sleep(5)
+                        if d.xpath('//*[@text="Bạn cần hỗ trợ đăng nhập vào tài khoản ư?"]').exists:
+                            time.sleep(1)
+                            d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').click()
+                            time.sleep(1)
+                        email_status = {"stt": stt_display, "trang_thai": f"Đã nhập Email: {moi_type}", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": email_data, "uid": "", "cookie": "", "token": "", "proxy": ""}
+                        self.status_manager.update_device_status(device_index, email_status, self.table_manager)
+                
+                elif is_sdt_moi:
+                    # Trường hợp 2: User chọn mồi SĐT
+                    if d.xpath('//*[@text="Email của bạn là gì?"]').exists:
+                        time.sleep(1)
+                        d.xpath('//*[@text="Đăng ký bằng số di động"]').click()
+                        time.sleep(2)
+                    
+                    # Lấy SĐT data dựa trên loại mồi
+                    if moi_type == 'sdt_theo_tep':
+                        sdt_handler = SDTTheoTepHandler()
+                        sdt_data = sdt_handler.sdttheotep()
+                    else:  # sdt_dau_so
+                        sdt_handler = SDTDauSoHandler()
+                        sdt_data = sdt_handler.dauso()
+                    
+                    if sdt_data and d.xpath('//*[@text="Số di động của bạn là gì?"]').wait(timeout=5):
+                        time.sleep(1)
+                        d(className="android.widget.EditText").send_keys(sdt_data)
+                        time.sleep(1)
+                        d.xpath('//*[@text="Tiếp"]').click()
+                        time.sleep(5)
+                        if d.xpath('//*[@text="Bạn cần hỗ trợ đăng nhập vào tài khoản ư?"]').exists:
+                            time.sleep(1)
+                            d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').click()
+                            time.sleep(1)
+                        sdt_status = {"stt": stt_display, "trang_thai": f"Đã nhập SĐT: {moi_type}", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": sdt_data, "uid": "", "cookie": "", "token": "", "proxy": ""}
+                        self.status_manager.update_device_status(device_index, sdt_status, self.table_manager)
+                else:
+                    # Không có mồi được chọn
+                    no_moi_status = {"stt": stt_display, "trang_thai": "Không có mồi được chọn - dừng tại bước nhập Email/SĐT", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+                    self.status_manager.update_device_status(device_index, no_moi_status, self.table_manager)
 
 
 

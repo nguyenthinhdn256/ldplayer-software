@@ -3,7 +3,7 @@ import time
 import random
 
 # Kết nối emulator-5556
-d = u2.connect('emulator-5562')
+d = u2.connect('emulator-5556')
 
 # if d.xpath('//*[@content-desc="Facebook from Meta"]').wait(timeout=10):
 #     print("Đã thấy Logo Facebook")
@@ -75,19 +75,22 @@ with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
 #         # hoten_done_status = {"stt": stt_display, "trang_thai": "Đã nhập Họ Tên", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
 #         # self.status_manager.update_device_status(device_index, hoten_done_status, self.table_manager)
 
-if d(text="Bạn tên gì?").wait(timeout=5):
+
+
+if d.xpath('//*[@text="Chọn tên của bạn"]').wait(timeout=5):
     time.sleep(1)
-    d(text="Họ").click()
-    time.sleep(0.5)
-    d(description="Xóa văn bản Họ").click()
-    d.send_keys(random_ho)
-    time.sleep(1)
-    d(text="Tên").click()
-    time.sleep(0.5)
-    d(description="Xóa văn bản Tên").click()
-    time.sleep(1)
-    d.send_keys(random_ten)
-    time.sleep(1)
-    d.xpath('//*[@text="Tiếp"]').click()
-    time.sleep(1)
-    
+    d.xpath('//*[@text="Sử dụng tên khác"]').click()
+    time.sleep(2)
+    if d(text="Bạn tên gì?").wait(timeout=5):
+        print("Bạn tên gì?")
+        time.sleep(1)
+        d(text="Họ").click()
+        time.sleep(1)
+        d.send_keys(random_ho)
+        time.sleep(1)
+        d(text="Tên").click()
+        time.sleep(1)
+        d.send_keys(random_ten)
+        time.sleep(1)
+        d.xpath('//*[@text="Tiếp"]').click()
+        time.sleep(1)

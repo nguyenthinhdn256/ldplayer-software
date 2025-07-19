@@ -62,7 +62,7 @@ class CauHinhRegGroupbox4:
         label_duoi_mail = tk.Label(self.cauhinhreggroupbox4, text="Mồi Theo Đuôi Mail", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
         label_duoi_mail.place(x=725, y=7)
         label_duoi_mail.bind('<Button-1>', lambda e: on_checkbox_click("duoi_mail"))
-        mail_duoi_mail_button = tk.Button(self.cauhinhreggroupbox4, text="Sửa Mail", command=self.on_sua_dau_mail_click, bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
+        mail_duoi_mail_button = tk.Button(self.cauhinhreggroupbox4, text="Sửa Mail", command=self.on_sua_duoi_mail_click, bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
         mail_duoi_mail_button.place(x=900, y=7)
 
         # Checkbox "Mồi Theo Đầu Số", "sdt_dau_so"

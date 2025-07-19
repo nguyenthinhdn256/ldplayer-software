@@ -54,6 +54,12 @@ class FacebookRegistrationStarter:
                 # Lấy table_manager từ QUẢN LÝ REG tab
                 if hasattr(groupbox4_manager, 'groupbox1_manager'):
                     config['table_manager'] = groupbox4_manager.groupbox1_manager
+
+                # THÊM: Lấy cấu hình mồi từ CauHinhRegGroupbox4
+                if hasattr(groupbox4_manager, 'groupbox4_manager'):
+                    moi_config = groupbox4_manager.groupbox4_manager.get_moi_configuration()
+                    config['moi_config'] = moi_config
+                    logger.info(f"Collected moi config: {moi_config}")
             
             logger.info(f"Collected basic config: {config}")
             return config

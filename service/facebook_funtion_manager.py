@@ -68,7 +68,7 @@ def clear_and_capquyen_app(device_id: str, app_packages: list = None) -> dict:
                 logger.warning(f"Failed to clear {package} on {device_id}: {e}")
         
         # Cấp quyền READ_EXTERNAL_STORAGE và WRITE_EXTERNAL_STORAGE cho tất cả apps
-        permissions = ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"]
+        permissions = ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE","android.permission.READ_CONTACTS"]
         for package in app_packages:
             for permission in permissions:
                 try:
