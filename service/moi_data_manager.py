@@ -202,7 +202,7 @@ class MoiDataFactory:
             'mail_theo_tep': MailTheoTepHandler,
             'sdt_theo_tep': SDTTheoTepHandler,
             'sdt_dau_mail': MailDuoiMailHandler,
-            'sdt_dau_so': SDTDauSoHandler
+            'duoi_mail': SDTDauSoHandler
         }
         
         handler_class = handlers.get(handler_type)
