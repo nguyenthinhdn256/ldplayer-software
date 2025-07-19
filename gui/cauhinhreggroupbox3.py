@@ -13,6 +13,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 class CauHinhRegGroupbox3:
     def __init__(self, parent):
         self.parent = parent
+        self.app_selection_var = tk.StringVar(value="")
+        self.checkboxes = {}
         self.create_cauhinhreggroupbox3()
     
     def create_cauhinhreggroupbox3(self):
@@ -148,7 +150,34 @@ class CauHinhRegGroupbox3:
         ten_button = tk.Button(content_frame, text="Tên", command=lambda: self.on_ten_button_click(), bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
         ten_button.place(x=95, y=10)
 
-        
+        def create_checkbox_icon(parent, x, y, checked=False):
+            canvas = tk.Canvas(parent, width=18, height=18, bg="#3b3b3b", highlightthickness=0)
+            canvas.place(x=x, y=y)
+            canvas.create_rectangle(2, 2, 16, 16, outline="white", fill="", width=2)
+            if checked:
+                canvas.create_line(5, 9, 8, 12, fill="white", width=2)
+                canvas.create_line(8, 12, 13, 6, fill="white", width=2)
+            return canvas
+
+        def on_checkbox_click(value):
+            self.xuly_checkbox(value)
+
+        icon_randompass = create_checkbox_icon(content_frame, 5, 60, False)
+        icon_randompass.bind('<Button-1>', lambda e: on_checkbox_click("randompass"))
+        label_randompass = tk.Label(content_frame, text="Random Password:", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
+        label_randompass.place(x=30, y=57)
+        label_randompass.bind('<Button-1>', lambda e: on_checkbox_click("randompass"))
+
+        icon_custompass = create_checkbox_icon(content_frame, 5, 100, False)
+        icon_custompass.bind('<Button-1>', lambda e: on_checkbox_click("custompass"))
+        label_custompass = tk.Label(content_frame, text="Custom Password:", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
+        label_custompass.place(x=30, y=97)
+        label_custompass.bind('<Button-1>', lambda e: on_checkbox_click("custompass"))
+        custompass_input = ctk.CTkEntry(content_frame, width=250, height=25, placeholder_text="Write Password", border_color="#212529")
+        custompass_input.place(x=200, y=97)
+
+        self.checkboxes.update({"randompass": icon_randompass, "custompass": icon_custompass})
+
     def setup_changeinfo_tab_content(self, content_frame):
         ho_button = tk.Button(content_frame, text="Họ", command=lambda: self.on_ho_button_click(), bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
         ho_button.place(x=5, y=10)
@@ -242,3 +271,17 @@ class CauHinhRegGroupbox3:
         except Exception as e:
             logger.error(f"Error in ten button click: {e}")
             tk.messagebox.showerror("Lỗi", f"Không thể mở file Tên:\n{str(e)}")
+
+    def xuly_checkbox(self, value): # Xử lý logic tích chọn checkbox cho Ver Mail Api và Ver SMS
+        current_value = self.app_selection_var.get()
+        if current_value == value:
+            self.app_selection_var.set("")
+        else:
+            self.app_selection_var.set(value)
+        selected_value = self.app_selection_var.get()
+        for checkbox_name, checkbox_canvas in self.checkboxes.items():
+            checkbox_canvas.delete("all")
+            checkbox_canvas.create_rectangle(2, 2, 16, 16, outline="white", fill="", width=2)
+            if checkbox_name == selected_value:
+                checkbox_canvas.create_line(5, 9, 8, 12, fill="white", width=2)
+                checkbox_canvas.create_line(8, 12, 13, 6, fill="white", width=2)
