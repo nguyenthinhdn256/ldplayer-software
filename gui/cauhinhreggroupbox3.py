@@ -178,6 +178,8 @@ class CauHinhRegGroupbox3:
 
         self.checkboxes.update({"randompass": icon_randompass, "custompass": icon_custompass})
 
+
+
     def setup_changeinfo_tab_content(self, content_frame):
         ho_button = tk.Button(content_frame, text="Họ", command=lambda: self.on_ho_button_click(), bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
         ho_button.place(x=5, y=10)

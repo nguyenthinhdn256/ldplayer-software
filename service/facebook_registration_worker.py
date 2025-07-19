@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 from service.facebook_funtion_manager import XuLyBuoc1
 from service.table_status_manager import TableStatusManager
 from service.moi_data_manager import MailTheoTepHandler, SDTTheoTepHandler, MailDuoiMailHandler, SDTDauSoHandler
+from service.facebook_funtion_manager import XuLyBuoc1, get_password_configuration
 from utils.u2_device_manager import U2DeviceManager
 from utils.global_u2_pool import global_u2_pool
 from typing import Dict, Any
@@ -31,60 +32,78 @@ class FacebookRegistrationWorker:
         """Tạo worker pool với số workers = số devices"""
         try:
             logger.info("Creating unlimited worker pool...")
+            # **THÊM DEBUG LOG**
+            logger.info(f"🔍 DEBUG - Received config: {config}")
             
             # Lấy cấu hình
             original_device_ids = config.get('selected_devices', [])
+            logger.info(f"🔍 DEBUG - original_device_ids from config: {original_device_ids}")
+
             self.table_manager = config.get('table_manager')
             so_ld = config.get('so_ld', 1)
             self.moi_config = config.get('moi_config')
             
-            # **SỬA: Sử dụng selected_devices, chỉ tạo mock khi thực sự trống**
+            # **KIỂM TRA DEVICES THỰC TẾ QUA ADB**
+            logger.info("Checking real ADB devices...")
+            try:
+                import subprocess
+                result = subprocess.run(['adb', 'devices'], capture_output=True, text=True, timeout=10)
+                adb_devices = []
+                for line in result.stdout.strip().split('\n')[1:]:
+                    if line.strip() and '\t' in line:
+                        device_id, status = line.strip().split('\t')
+                        if status == 'device':
+                            adb_devices.append(device_id)
+                logger.info(f"📱 ADB devices online: {adb_devices}")
+            except Exception as e:
+                logger.error(f"❌ Error checking ADB devices: {e}")
+                return {'success': False, 'error': f'ADB check failed: {str(e)}'}
+            
+            # **VALIDATION DEVICES**
             if not original_device_ids or len(original_device_ids) == 0:
-                original_device_ids = [f"mock_device_{i+1}" for i in range(so_ld)]
-                logger.info(f"Created mock devices: {original_device_ids}")
-            else:
-                logger.info(f"Using selected devices: {original_device_ids}")
-
-            # **THÊM: Sắp xếp device_ids theo thứ tự port từ thấp đến cao**
+                logger.error("❌ No devices selected from GUI")
+                return {'success': False, 'error': 'No devices selected', 'message': 'Vui lòng chọn devices từ tab QUẢN LÝ LD/PHONE trước khi Start'}
+            
+            # Lọc chỉ những devices thực sự online
+            valid_devices = [device_id for device_id in original_device_ids if device_id in adb_devices]
+            
+            if not valid_devices:
+                logger.error(f"❌ No valid devices found. Selected: {original_device_ids}, Online: {adb_devices}")
+                return {'success': False, 'error': 'No valid devices online', 'message': f'Devices được chọn không online. Có sẵn: {adb_devices}. Đã chọn: {original_device_ids}'}
+            
+            # **SẮPXẾP DEVICES THEO PORT**
             def get_port_number(device_id):
-                """Lấy port number từ device_id để sắp xếp"""
                 if device_id.startswith('emulator-'):
                     try:
                         return int(device_id.split('-')[1])
                     except:
-                        return 99999  # fallback cho device không đúng format
+                        return 99999
                 else:
-                    return 0  # device thật sẽ đứng đầu
+                    return 0
             
-            # Sắp xếp devices theo port
-            sorted_device_ids = sorted(original_device_ids, key=get_port_number)
-            logger.info(f"📋 Sorted devices: {sorted_device_ids}")
-
-             # **BƯỚC QUAN TRỌNG: Kết nối tất cả devices qua U2 song song**
-            logger.info(f"Connecting {len(self.device_ids)} devices via U2...")
+            sorted_device_ids = sorted(valid_devices, key=get_port_number)
+            logger.info(f"📋 Sorted valid devices: {sorted_device_ids}")
+            
+            # **KẾT NỐI TẤT CẢ DEVICES QUA U2 SONG SONG**
+            logger.info(f"Connecting {len(sorted_device_ids)} devices via U2...")
             connected_devices = global_u2_pool.initialize_connections(sorted_device_ids)
             
             failed_devices = [device_id for device_id in sorted_device_ids if device_id not in connected_devices]
             
-            # **QUAN TRỌNG: Giữ thứ tự đã sắp xếp**
-            logger.info(f"📊 Connected devices in order: {connected_devices}")
-
-
             # Log kết quả
             logger.info(f"U2 Connection Results:")
-            logger.info(f"  ✅ Connected: {len(connected_devices)}/{len(self.device_ids)}")
+            logger.info(f"  ✅ Connected: {len(connected_devices)}/{len(sorted_device_ids)}")
             logger.info(f"  ❌ Failed: {len(failed_devices)}")
             
             if failed_devices:
                 logger.warning(f"Failed devices: {failed_devices}")
             
             if not connected_devices:
-                return {'success': False, 'error': 'No devices connected via U2', 'failed_devices': failed_devices}
+                return {'success': False, 'error': 'No devices connected via U2', 'failed_devices': failed_devices, 'message': 'Không có device nào kết nối U2 thành công'}
             
             # Cập nhật device_ids chỉ với những devices kết nối thành công
             self.device_ids = connected_devices
-
-
+            
             # Tạo ThreadPoolExecutor với max_workers = số devices
             num_workers = len(connected_devices)
             self.executor = ThreadPoolExecutor(max_workers=num_workers)
@@ -174,15 +193,14 @@ class FacebookRegistrationWorker:
             logger.info("Step 1: Tạm nghỉ 5s lần 2")
             time.sleep(5)
 
-            # # Thực hiện thây đổi ngôn ngữ.
-            # start_change_language_status = {"stt": stt_display, "trang_thai": "Bắt đầu đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}    
-            # self.status_manager.update_device_status(device_index, start_change_language_status, self.table_manager)
+            # Thực hiện thây đổi ngôn ngữ.
+            start_change_language_status = {"stt": stt_display, "trang_thai": "Bắt đầu đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}    
+            self.status_manager.update_device_status(device_index, start_change_language_status, self.table_manager)
             xu_ly_buoc1 = XuLyBuoc1(device_id)
-            # language_result = xu_ly_buoc1.thay_doi_ngon_ngu()
-            
-            # time.sleep(5)
-            # done_change_language_status = {"stt": stt_display, "trang_thai": "Đã đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
-            # self.status_manager.update_device_status(device_index, done_change_language_status, self.table_manager)
+            language_result = xu_ly_buoc1.thay_doi_ngon_ngu()
+            time.sleep(3)
+            done_change_language_status = {"stt": stt_display, "trang_thai": "Đã đổi ngôn ngữ sang tiếng Việt", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
+            self.status_manager.update_device_status(device_index, done_change_language_status, self.table_manager)
 
             # # Change info device
             # maxchanger_start_status = {"stt": stt_display, "trang_thai": "Đang khởi động MaxChanger", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
@@ -474,6 +492,34 @@ class FacebookRegistrationWorker:
                     no_moi_status = {"stt": stt_display, "trang_thai": "Không có mồi được chọn - dừng tại bước nhập Email/SĐT", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
                     self.status_manager.update_device_status(device_index, no_moi_status, self.table_manager)
 
+            #### XỬ LÝ PASSWORD
+            if d.xpath('//*[@text="Tạo mật khẩu"]').wait(timeout=10):
+                password_config = get_password_configuration()
+                password_type = password_config.get('password_type', 'randompass')
+                custom_password = password_config.get('custom_password', '')
+                
+                password_result = xu_ly_buoc1.xu_ly_password(password_type, custom_password)
+                
+                if password_result.get('success'):
+                    generated_password = password_result.get('password', '')
+                    time.sleep(1)
+                    d(className="android.widget.EditText").send_keys(generated_password)
+                    time.sleep(1)
+                    d.xpath('//*[@text="Tiếp"]').click()
+                    time.sleep(3)
+                    password_status = {"stt": stt_display, "trang_thai": f"Đã nhập Password: {password_result.get('type', 'unknown')}", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}
+                    self.status_manager.update_device_status(device_index, password_status, self.table_manager)
+                else:
+                    error_password_status = {"stt": stt_display, "trang_thai": f"Lỗi tạo password: {password_result.get('message', 'Unknown error')}", "ten_may": device_id, "ket_qua": "Lỗi", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}
+                    self.status_manager.update_device_status(device_index, error_password_status, self.table_manager)
+
+            if d.xpath('//*[@text="Lúc khác"]').wait(timeout=5):
+                time.sleep(1)
+                d.xpath('//*[@text="Lúc khác"]').click()
+
+            if d.xpath('//*[@text="Tôi đồng ý"]').wait(timeout=15):
+                print("Tôi đồng ý xuất hiện")
+            
 
 
             return f"Processed {device_id}"

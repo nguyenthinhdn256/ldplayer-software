@@ -43,13 +43,19 @@ class FacebookRegistrationStarter:
                 if hasattr(groupbox4_manager, 'groupbox3_manager'):
                     config['so_ld'] = int(groupbox4_manager.groupbox3_manager.so_ld_var.get())
                 
-                # Lấy danh sách devices đã chọn
+                # **SỬA: Lấy danh sách devices đã chọn ĐÚNG CÁCH**
+                selected_devices = []
                 if hasattr(groupbox4_manager, 'ldgroupbox1_manager'):
-                    selected_devices = []
                     device_manager = groupbox4_manager.ldgroupbox1_manager
-                    if hasattr(device_manager, 'device_checkboxes'):
+                    if hasattr(device_manager, 'device_checkboxes') and device_manager.device_checkboxes:
                         selected_devices = [device_id for device_id, checkbox_var in device_manager.device_checkboxes.items() if checkbox_var.get()]
-                    config['selected_devices'] = selected_devices
+                        logger.info(f"📱 Found selected devices from GUI: {selected_devices}")
+                    else:
+                        logger.warning("⚠️ device_checkboxes not found or empty")
+                else:
+                    logger.warning("⚠️ ldgroupbox1_manager not found")
+                
+                config['selected_devices'] = selected_devices
                 
                 # Lấy table_manager từ QUẢN LÝ REG tab
                 if hasattr(groupbox4_manager, 'groupbox1_manager'):
@@ -60,6 +66,13 @@ class FacebookRegistrationStarter:
                     moi_config = groupbox4_manager.groupbox4_manager.get_moi_configuration()
                     config['moi_config'] = moi_config
                     logger.info(f"Collected moi config: {moi_config}")
+                
+                # THÊM: Lấy cấu hình password từ CauHinhRegGroupbox3
+                if hasattr(groupbox4_manager, 'groupbox3_manager'):
+                    from service.facebook_funtion_manager import get_password_configuration
+                    password_config = get_password_configuration(app_window)
+                    config['password_config'] = password_config
+                    logger.info(f"Collected password config: {password_config}")
             
             logger.info(f"Collected basic config: {config}")
             return config
