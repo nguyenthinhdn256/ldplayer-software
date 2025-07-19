@@ -424,25 +424,49 @@ class FacebookRegistrationWorker:
                         time.sleep(1)
                         d.xpath('//*[@text="Đăng ký bằng số di động"]').click()
                         time.sleep(2)
+                    # Retry logic cho việc nhập SĐT (tối đa 3 lần thử)
+                    sdt_success = False
+                    sdt_data = None
+
+                    for sdt_attempt in range(3):
+                        logger.info(f"SĐT input attempt {sdt_attempt + 1}/3")
+
+                        # Lấy SĐT data dựa trên loại mồi
+                        if moi_type == 'sdt_theo_tep':
+                            sdt_handler = SDTTheoTepHandler()
+                            sdt_data = sdt_handler.sdttheotep()
+                        else:  # sdt_dau_so
+                            sdt_handler = SDTDauSoHandler()
+                            sdt_data = sdt_handler.dauso()
                     
-                    # Lấy SĐT data dựa trên loại mồi
-                    if moi_type == 'sdt_theo_tep':
-                        sdt_handler = SDTTheoTepHandler()
-                        sdt_data = sdt_handler.sdttheotep()
-                    else:  # sdt_dau_so
-                        sdt_handler = SDTDauSoHandler()
-                        sdt_data = sdt_handler.dauso()
-                    
-                    if sdt_data and d.xpath('//*[@text="Số di động của bạn là gì?"]').wait(timeout=5):
-                        time.sleep(1)
-                        d(className="android.widget.EditText").send_keys(sdt_data)
-                        time.sleep(1)
-                        d.xpath('//*[@text="Tiếp"]').click()
-                        time.sleep(5)
-                        if d.xpath('//*[@text="Bạn cần hỗ trợ đăng nhập vào tài khoản ư?"]').exists:
+                        if sdt_data and d.xpath('//*[@text="Số di động của bạn là gì?"]').wait(timeout=5):
                             time.sleep(1)
-                            d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').click()
+                            # Clear field trước khi nhập (nếu có sẵn text)
+                            input_field = d(className="android.widget.EditText")
+                            if input_field.exists:
+                                input_field.clear_text()
+                                time.sleep(0.5)
+                            # Nhập SĐT mới
+                            input_field.send_keys(sdt_data)
                             time.sleep(1)
+                            logger.info(f"👆 Clicking Tiếp button...")
+                            d.xpath('//*[@text="Tiếp"]').click()
+                            time.sleep(10)
+                            if d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').exists:
+                                time.sleep(1)
+                                d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').click()
+                                time.sleep(1)
+                                break
+                            if d.xpath('//*[@text="Tạo mật khẩu"]').exists:
+                                break
+                            # Kiểm tra lỗi "Số di động không hợp lệ"
+                            if d.xpath('//*[@text="Số di động"]').exists:
+                                logger.warning(f"❌ Error found with content-desc")
+                                continue                        
+                        else:
+                            logger.error(f"Không lấy được SĐT hoặc không tìm thấy field nhập (lần {sdt_attempt + 1})")
+                
+                if sdt_success:    
                         sdt_status = {"stt": stt_display, "trang_thai": f"Đã nhập SĐT: {moi_type}", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": sdt_data, "uid": "", "cookie": "", "token": "", "proxy": ""}
                         self.status_manager.update_device_status(device_index, sdt_status, self.table_manager)
                 else:

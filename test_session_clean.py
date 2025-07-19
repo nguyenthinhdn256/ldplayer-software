@@ -3,7 +3,7 @@ import time
 import random
 
 # Kết nối emulator-5556
-d = u2.connect('emulator-5556')
+d = u2.connect('emulator-5568')
 
 # if d.xpath('//*[@content-desc="Facebook from Meta"]').wait(timeout=10):
 #     print("Đã thấy Logo Facebook")
@@ -77,20 +77,7 @@ with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
 
 
 
-if d.xpath('//*[@text="Chọn tên của bạn"]').wait(timeout=5):
+if d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').exists:
     time.sleep(1)
-    d.xpath('//*[@text="Sử dụng tên khác"]').click()
-    time.sleep(2)
-    if d(text="Bạn tên gì?").wait(timeout=5):
-        print("Bạn tên gì?")
-        time.sleep(1)
-        d(text="Họ").click()
-        time.sleep(1)
-        d.send_keys(random_ho)
-        time.sleep(1)
-        d(text="Tên").click()
-        time.sleep(1)
-        d.send_keys(random_ten)
-        time.sleep(1)
-        d.xpath('//*[@text="Tiếp"]').click()
-        time.sleep(1)
+    d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').click()
+    time.sleep(1)
