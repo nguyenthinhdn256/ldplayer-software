@@ -56,14 +56,14 @@ class CauHinhRegGroupbox4:
         sdt_theo_tep_button = tk.Button(self.cauhinhreggroupbox4, text="Sửa SĐT", command=self.on_sua_tep_sdt_click, bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
         sdt_theo_tep_button.place(x=450, y=42)
 
-        # Checkbox "Mồi Theo Đầu Mail", "sdt_dau_mail"
-        icon_sdt_dau_mail = create_checkbox_icon(self.cauhinhreggroupbox4, 700, 10, False)
-        icon_sdt_dau_mail.bind('<Button-1>', lambda e: on_checkbox_click("sdt_dau_mail"))
-        label_sdt_dau_mail = tk.Label(self.cauhinhreggroupbox4, text="Mồi Theo Đầu Mail", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
-        label_sdt_dau_mail.place(x=725, y=7)
-        label_sdt_dau_mail.bind('<Button-1>', lambda e: on_checkbox_click("sdt_dau_mail"))
-        mail_sdt_dau_mail_button = tk.Button(self.cauhinhreggroupbox4, text="Sửa Mail", command=self.on_sua_dau_mail_click, bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
-        mail_sdt_dau_mail_button.place(x=900, y=7)
+        # Checkbox "Mồi Theo Đầu Mail", "duoi_mail"
+        icon_duoi_mail = create_checkbox_icon(self.cauhinhreggroupbox4, 700, 10, False)
+        icon_duoi_mail.bind('<Button-1>', lambda e: on_checkbox_click("duoi_mail"))
+        label_duoi_mail = tk.Label(self.cauhinhreggroupbox4, text="Mồi Theo Đuôi Mail", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
+        label_duoi_mail.place(x=725, y=7)
+        label_duoi_mail.bind('<Button-1>', lambda e: on_checkbox_click("duoi_mail"))
+        mail_duoi_mail_button = tk.Button(self.cauhinhreggroupbox4, text="Sửa Mail", command=self.on_sua_dau_mail_click, bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
+        mail_duoi_mail_button.place(x=900, y=7)
 
         # Checkbox "Mồi Theo Đầu Số", "sdt_dau_so"
         icon_sdt_dau_so = create_checkbox_icon(self.cauhinhreggroupbox4, 700, 45, False)
@@ -74,7 +74,7 @@ class CauHinhRegGroupbox4:
         sdt_sdt_dau_so_button = tk.Button(self.cauhinhreggroupbox4, text="Sửa SĐT", command=self.on_sua_dau_so_click, bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1)
         sdt_sdt_dau_so_button.place(x=900, y=42)
 
-        self.checkboxes.update({"khong_moi": icon_khong_moi, "mail_theo_tep": icon_mail_theo_tep, "sdt_theo_tep": icon_sdt_theo_tep, "sdt_dau_mail": icon_sdt_dau_mail, "sdt_dau_so": icon_sdt_dau_so})
+        self.checkboxes.update({"khong_moi": icon_khong_moi, "mail_theo_tep": icon_mail_theo_tep, "sdt_theo_tep": icon_sdt_theo_tep, "duoi_mail": icon_duoi_mail, "sdt_dau_so": icon_sdt_dau_so})
         
     # DI CHUYỂN METHOD RA NGOÀI VÀ SỬA INDENTATION
     def xuly_checkbox(self, value):

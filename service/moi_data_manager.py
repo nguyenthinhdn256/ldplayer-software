@@ -33,12 +33,26 @@ class MailTheoTepHandler:
         except Exception as e:
             return {"status": "error", "message": str(e)}
     
+    def mailtheotep(self) -> str:
+        """Đọc và lấy random 1 email duy nhất từ file mailtheotep.txt"""
+        try:
+            emails = self._read_data_file()
+            if emails:
+                selected_email = random.choice(emails)
+                logger.info(f"Random email selected: {selected_email}")
+                return selected_email
+            else:
+                logger.error("Không có email nào trong file mailtheotep.txt")
+                return ""
+        except Exception as e:
+            logger.error(f"Lỗi khi đọc file mailtheotep.txt: {str(e)}")
+            return ""
+    
     def _read_data_file(self) -> List[str]:
         """Đọc dữ liệu từ file"""
         try:
             with open(self.file_path, 'r', encoding='utf-8') as f:
-                lines = [line.strip() for line in f.readlines() 
-                        if line.strip() and not line.startswith('#')]
+                lines = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
                 return lines
         except FileNotFoundError:
             logger.error(f"File not found: {self.file_path}")
@@ -51,10 +65,43 @@ class SDTTheoTepHandler:
         self.file_path = "dulieu/mailphone/sdttheotep.txt"
     
     def generate_data(self, **kwargs) -> Dict[str, Any]:
-        # Logic tương tự MailTheoTepHandler
-        pass
+        try:
+            sdts = self._read_data_file()
+            if sdts:
+                selected_sdt = random.choice(sdts)
+                logger.info(f"Selected SDT: {selected_sdt}")
+                return {"status": "success", "data": selected_sdt, "type": "sdt"}
+            else:
+                return {"status": "error", "message": "Không có SĐT trong file"}
+        except Exception as e:
+            return {"status": "error", "message": str(e)}
+    
+    def sdttheotep(self) -> str:
+        """Đọc và lấy random 1 SĐT duy nhất từ file sdttheotep.txt"""
+        try:
+            sdts = self._read_data_file()
+            if sdts:
+                selected_sdt = random.choice(sdts)
+                logger.info(f"Random SDT selected: {selected_sdt}")
+                return selected_sdt
+            else:
+                logger.error("Không có SĐT nào trong file sdttheotep.txt")
+                return ""
+        except Exception as e:
+            logger.error(f"Lỗi khi đọc file sdttheotep.txt: {str(e)}")
+            return ""
+    
+    def _read_data_file(self) -> List[str]:
+        """Đọc dữ liệu từ file"""
+        try:
+            with open(self.file_path, 'r', encoding='utf-8') as f:
+                lines = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+                return lines
+        except FileNotFoundError:
+            logger.error(f"File not found: {self.file_path}")
+            return []
 
-class SDTDauMailHandler:
+class MailDuoiMailHandler:
     """Handler cho mồi Theo Đầu Mail"""
     def __init__(self):
         self.provider_name = "Mồi Theo Đầu Mail"
@@ -101,7 +148,7 @@ class MoiDataFactory:
             'khong_moi': KhongMoiHandler,
             'mail_theo_tep': MailTheoTepHandler,
             'sdt_theo_tep': SDTTheoTepHandler,
-            'sdt_dau_mail': SDTDauMailHandler,
+            'sdt_dau_mail': MailDuoiMailHandler,
             'sdt_dau_so': SDTDauSoHandler
         }
         
