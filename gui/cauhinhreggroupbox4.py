@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import customtkinter as ctk
 import logging
+from service.moi_data_manager import MoiDataFactory
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -161,3 +162,34 @@ class CauHinhRegGroupbox4:
         except Exception as e:
             logger.error(f"Error in sua dau so button click: {e}")
             tk.messagebox.showerror("Lỗi", f"Không thể mở file dauso.txt:\n{str(e)}")
+
+    def get_selected_moi_handler(self):
+        """Lấy handler cho mồi data được chọn"""
+        selected = self.app_selection_var.get()
+        if not selected:
+            return None
+        
+        try:
+            return MoiDataFactory.create_handler(selected)
+        except Exception as e:
+            logging.error(f"Lỗi tạo moi handler: {str(e)}")
+            return None
+    
+    def get_moi_configuration(self):
+        """Lấy cấu hình mồi đầy đủ cho script chính"""
+        try:
+            selected = self.app_selection_var.get()
+            handler = self.get_selected_moi_handler()
+            
+            if handler:
+                return {
+                    "use_moi": selected != "khong_moi",
+                    "moi_type": selected,
+                    "handler": handler,
+                    "enabled": bool(selected)
+                }
+            else:
+                return {"use_moi": False, "moi_type": "", "enabled": False}
+        except Exception as e:
+            logger.error(f"Error getting moi configuration: {e}")
+            return {"use_moi": False, "moi_type": "", "enabled": False}
