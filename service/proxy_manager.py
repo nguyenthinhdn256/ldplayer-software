@@ -2,7 +2,7 @@
 """
 Ver Proxy Service - Xử lý verification proxy với 5 loại provider
 """
-import logging
+import logging, time, subprocess
 from typing import Dict, Any
 
 logger = logging.getLogger(__name__)
@@ -58,12 +58,60 @@ class WWProxyHandler:
         self.config_data = config_data
         self.provider_name = "WW Proxy"
     
-    def setup_proxy(self, **kwargs) -> Dict[str, Any]:
+    def process_proxy(self, **kwargs) -> Dict[str, Any]:
         logger.info(f"Processing proxy with {self.provider_name}")
         return {"status": "ready", "provider": self.provider_name, "format": "wwproxy", "data": self.config_data}
     
+    def setup_proxy(self, device, device_index=0, **kwargs) -> Dict[str, Any]:
+        """Thiết lập WW Proxy - khởi chạy app và đọc proxy data"""
+        try:
+            logger.info("Bắt đầu setup WW Proxy")
+            
+            # ĐỌC PROXY DATA
+            proxy_file = f"Profile/Profile-{device_index + 1}/wwproxy.txt"
+            with open(proxy_file, 'r', encoding='utf-8') as f:
+                proxies = [line.strip() for line in f.readlines() if line.strip()]
+            
+            proxy_data = proxies[device_index % len(proxies)] if proxies else ""
+            logger.info(f"Using proxy: {proxy_data}")
+            device.set_clipboard(proxy_data)
+            
+            # Khởi chạy app WW Proxy
+            device.app_start('com.hct.myapplication')
 
+            time.sleep(5)
+            device.xpath('//*[@resource-id="com.hct.myapplication:id/btnPaste"]').click()
+            time.sleep(1)
+            if device(text="TẮT").exists:
+                device(text="TẮT").click()
+            time.sleep(2)
+            if device(text="OK").exists:
+                device(text="OK").click()
+            time.sleep(5)
+            device.app_stop('com.hct.myapplication')
 
+            return { "success": True, "provider": "WW Proxy", "proxy_data": proxy_data, "message": "WW Proxy setup completed" }
+            
+        except Exception as e:
+            logger.error(f"Error setting up WW Proxy: {str(e)}")
+            return {"success": False, "error": str(e)}
+
+    def change_ip(self, device, device_index=0, **kwargs) -> Dict[str, Any]:
+        try:
+            logger.info("Bắt đầu thây đổi ip WW Proxy")
+
+            # Khởi chạy app WW Proxy
+            device.app_start('com.hct.myapplication')
+            time.sleep(5)
+            device.xpath('//*[@resource-id="com.hct.myapplication:id/btnChangeIP"]').click()
+            time.sleep(5)
+            device.app_stop('com.hct.myapplication')
+
+        except Exception as e:
+            logger.error(f"Error setting up WW Proxy: {str(e)}")
+            return {"success": False, "error": str(e)}
+            
+            
 class ProxyNo1Handler:
     """Handler cho Proxy No1 provider"""
     def __init__(self, config_data: str = ""):

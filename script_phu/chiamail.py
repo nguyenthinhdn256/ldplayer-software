@@ -18,12 +18,7 @@ class LDPlayerManager:
         self.root.configure(bg='#f0f0f0')
         
         # Cấu hình lưu trữ - THAY ĐỔI SANG EMAIL
-        self.configs = {
-            'gmail': {'data': [], 'split': 1},
-            'hotmail': {'data': [], 'split': 1},
-            'outlookmail': {'data': [], 'split': 1}
-        }
-        
+        self.configs = {'gmail': {'data': [], 'split': 1}, 'hotmail': {'data': [], 'split': 1}, 'outlookmail': {'data': [], 'split': 1}}
         self.setup_ui()
 
     def run_standalone(self):
@@ -36,12 +31,10 @@ class LDPlayerManager:
         title_frame = tk.Frame(self.root, bg='#3b3b3b', height=80)
         title_frame.place(x=0, y=0, width=800, height=80)
         
-        title_label = tk.Label(title_frame, text="QUẢN LÝ DỮ LIỆU EMAIL", 
-                              font=('Arial', 24, 'bold'), fg='white', bg='#3b3b3b')
+        title_label = tk.Label(title_frame, text="QUẢN LÝ DỮ LIỆU EMAIL", font=('Arial', 24, 'bold'), fg='white', bg='#3b3b3b')
         title_label.place(x=400, y=25, anchor='center')
         
-        subtitle_label = tk.Label(title_frame, text="Tool quản lý dữ liệu email folders LDPlayer", 
-                                 font=('Arial', 12), fg='#ecf0f1', bg='#3b3b3b')
+        subtitle_label = tk.Label(title_frame, text="Tool quản lý dữ liệu email folders LDPlayer",  font=('Arial', 12), fg='#ecf0f1', bg='#3b3b3b')
         subtitle_label.place(x=400, y=55, anchor='center')
         
         # Main content area - sử dụng Frame thông thường thay vì Canvas
@@ -49,34 +42,27 @@ class LDPlayerManager:
         main_frame.place(x=0, y=80, width=800, height=820)
         
         # Folder count section
-        folder_frame = tk.LabelFrame(main_frame, text="CẤU HÌNH FOLDER", 
-                                    font=('Arial', 12, 'bold'), fg='#2c3e50', bg='#f8f9fa')
+        folder_frame = tk.LabelFrame(main_frame, text="CẤU HÌNH FOLDER", font=('Arial', 12, 'bold'), fg='#2c3e50', bg='#f8f9fa')
         folder_frame.place(x=20, y=20, width=760, height=100)
         
-        folder_label = tk.Label(folder_frame, text="Số folder LDPlayer", 
-                               font=('Arial', 12, 'bold'), bg='#f8f9fa')
+        folder_label = tk.Label(folder_frame, text="Số folder LDPlayer", font=('Arial', 12, 'bold'), bg='#f8f9fa')
         folder_label.place(x=15, y=5)
         
         self.folder_count = tk.StringVar(value="1")
-        folder_spinbox = tk.Spinbox(folder_frame, from_=1, to=40, width=10, 
-                                   textvariable=self.folder_count, font=('Arial', 11))
+        folder_spinbox = tk.Spinbox(folder_frame, from_=1, to=40, width=10, textvariable=self.folder_count, font=('Arial', 11))
         folder_spinbox.place(x=15, y=45)
         
-        self.folder_info = tk.Label(folder_frame, text="(Từ LDPlayer-1 đến LDPlayer-xx)", 
-                                   font=('Arial', 10), fg='#666', bg='#f8f9fa')
+        self.folder_info = tk.Label(folder_frame, text="(Từ LDPlayer-1 đến LDPlayer-xx)", font=('Arial', 10), fg='#666', bg='#f8f9fa')
         self.folder_info.place(x=150, y=47)
         
         self.folder_count.trace('w', self.update_folder_info)
         
         # Delete section - THAY ĐỔI TEXT
-        delete_frame = tk.LabelFrame(main_frame, text="XÓA DỮ LIỆU EMAIL", 
-                                    font=('Arial', 12, 'bold'), fg='#2c3e50', bg='#f8f9fa')
+        delete_frame = tk.LabelFrame(main_frame, text="XÓA DỮ LIỆU EMAIL", font=('Arial', 12, 'bold'), fg='#2c3e50', bg='#f8f9fa')
         delete_frame.place(x=20, y=130, width=760, height=210)
         
         self.enable_delete = tk.BooleanVar()
-        delete_check = tk.Checkbutton(delete_frame, text="Xóa file email", 
-                                     variable=self.enable_delete, font=('Arial', 12, 'bold'),
-                                     bg='#f8f9fa', command=self.toggle_delete_options)
+        delete_check = tk.Checkbutton(delete_frame, text="Xóa file email", variable=self.enable_delete, font=('Arial', 12, 'bold'), bg='#f8f9fa', command=self.toggle_delete_options)
         delete_check.place(x=15, y=5)
         
         self.delete_options_frame = tk.Frame(delete_frame, bg='white', relief='ridge', bd=1)
@@ -87,27 +73,21 @@ class LDPlayerManager:
         self.delete_outlookmail = tk.BooleanVar()
         
         # THAY ĐỔI CÁC CHECKBOX DELETE
-        gmail_del_check = tk.Checkbutton(self.delete_options_frame, text="Gmail", 
-                                        variable=self.delete_gmail, font=('Arial', 10), bg='white')
+        gmail_del_check = tk.Checkbutton(self.delete_options_frame, text="Gmail", variable=self.delete_gmail, font=('Arial', 10), bg='white')
         gmail_del_check.place(x=20, y=10)
         
-        hotmail_del_check = tk.Checkbutton(self.delete_options_frame, text="Hot Mail", 
-                                        variable=self.delete_hotmail, font=('Arial', 10), bg='white')
+        hotmail_del_check = tk.Checkbutton(self.delete_options_frame, text="Hot Mail", variable=self.delete_hotmail, font=('Arial', 10), bg='white')
         hotmail_del_check.place(x=20, y=35)
         
-        outlookmail_del_check = tk.Checkbutton(self.delete_options_frame, text="Outlook Mail", 
-                                         variable=self.delete_outlookmail, font=('Arial', 10), bg='white')
+        outlookmail_del_check = tk.Checkbutton(self.delete_options_frame, text="Outlook Mail", variable=self.delete_outlookmail, font=('Arial', 10), bg='white')
         outlookmail_del_check.place(x=20, y=60)
         
         # Add data section - THAY ĐỔI TEXT
-        add_frame = tk.LabelFrame(main_frame, text="➕ Thêm dữ liệu email", 
-                                 font=('Arial', 12, 'bold'), fg='#2c3e50', bg='#f8f9fa')
+        add_frame = tk.LabelFrame(main_frame, text="➕ Thêm dữ liệu email", font=('Arial', 12, 'bold'), fg='#2c3e50', bg='#f8f9fa')
         add_frame.place(x=20, y=350, width=760, height=410)
         
         self.enable_add = tk.BooleanVar()
-        add_check = tk.Checkbutton(add_frame, text="Thêm file email", 
-                                  variable=self.enable_add, font=('Arial', 11, 'bold'),
-                                  bg='#f8f9fa', command=self.toggle_add_options)
+        add_check = tk.Checkbutton(add_frame, text="Thêm file email", variable=self.enable_add, font=('Arial', 11, 'bold'), bg='#f8f9fa', command=self.toggle_add_options)
         add_check.place(x=15, y=5)
         
         # Container cho các file type checkboxes
@@ -119,19 +99,13 @@ class LDPlayerManager:
         self.add_outlookmail = tk.BooleanVar()
         
         # THAY ĐỔI CÁC CHECKBOX ADD
-        gmail_check = tk.Checkbutton(self.add_options_frame, text="Gmail", 
-                                       variable=self.add_gmail, font=('Arial', 10), bg='white',
-                                       command=lambda: self.toggle_file_config('gmail'))
+        gmail_check = tk.Checkbutton(self.add_options_frame, text="Gmail", variable=self.add_gmail, font=('Arial', 10), bg='white', command=lambda: self.toggle_file_config('gmail'))
         gmail_check.place(x=10, y=10)
         
-        hotmail_check = tk.Checkbutton(self.add_options_frame, text="Hot Mail", 
-                                     variable=self.add_hotmail, font=('Arial', 10), bg='white',
-                                     command=lambda: self.toggle_file_config('hotmail'))
+        hotmail_check = tk.Checkbutton(self.add_options_frame, text="Hot Mail", variable=self.add_hotmail, font=('Arial', 10), bg='white', command=lambda: self.toggle_file_config('hotmail'))
         hotmail_check.place(x=150, y=10)
         
-        outlookmail_check = tk.Checkbutton(self.add_options_frame, text="Outlook Mail", 
-                                          variable=self.add_outlookmail, font=('Arial', 10), bg='white',
-                                          command=lambda: self.toggle_file_config('outlookmail'))
+        outlookmail_check = tk.Checkbutton(self.add_options_frame, text="Outlook Mail", variable=self.add_outlookmail, font=('Arial', 10), bg='white', command=lambda: self.toggle_file_config('outlookmail'))
         outlookmail_check.place(x=280, y=10)
         
         # File configurations container
@@ -142,9 +116,7 @@ class LDPlayerManager:
         self.create_file_configs()
         
         # Run button
-        run_button = tk.Button(main_frame, text="XỬ LÝ", 
-                              font=('Arial', 14, 'bold'), bg='#e74c3c', fg='white',
-                              width=10, height=1, command=self.run_process)
+        run_button = tk.Button(main_frame, text="XỬ LÝ", font=('Arial', 14, 'bold'), bg='#e74c3c', fg='white', width=10, height=1, command=self.run_process)
         run_button.place(x=400, y=790, anchor='center')
         
     def create_file_configs(self):
@@ -153,24 +125,17 @@ class LDPlayerManager:
             config_frame = tk.Frame(self.file_configs_container, bg='#f8f9fa', relief='groove', bd=1)
             
             # Title - THAY ĐỔI TITLE MAP
-            title_map = {
-                'gmail': 'Chia Gmail', 
-                'hotmail': 'Chia Hotmail', 
-                'outlookmail': 'Chia Outlook Mail'
-            }
+            title_map = { 'gmail': 'Chia Gmail', 'hotmail': 'Chia Hotmail', 'outlookmail': 'Chia Outlook Mail' }
             
-            title_label = tk.Label(config_frame, text=title_map[file_type], 
-                                  font=('Arial', 11, 'bold'), bg='#f8f9fa')
+            title_label = tk.Label(config_frame, text=title_map[file_type], font=('Arial', 11, 'bold'), bg='#f8f9fa')
             title_label.place(x=10, y=10)
             
             # Data input label
-            data_label = tk.Label(config_frame, text=f"Dữ liệu {file_type.upper()}:", 
-                                 font=('Arial', 10), bg='#f8f9fa')
+            data_label = tk.Label(config_frame, text=f"Dữ liệu {file_type.upper()}:", font=('Arial', 10), bg='#f8f9fa')
             data_label.place(x=10, y=40)
             
             # Text widget
-            text_widget = scrolledtext.ScrolledText(config_frame, height=4, width=80, 
-                                                   font=('Courier', 9))
+            text_widget = scrolledtext.ScrolledText(config_frame, height=4, width=80, font=('Courier', 9))
             text_widget.place(x=10, y=65, width=680, height=80)
             
             # Placeholder text - THAY ĐỔI PLACEHOLDER
@@ -196,26 +161,18 @@ class LDPlayerManager:
             text_widget.bind('<FocusOut>', on_focus_out)
             
             # Split config
-            split_label = tk.Label(config_frame, text=f"Số lượng {file_type} mỗi file:", 
-                                  font=('Arial', 12), bg='#f8f9fa')
+            split_label = tk.Label(config_frame, text=f"Số lượng {file_type} mỗi file:", font=('Arial', 12), bg='#f8f9fa')
             split_label.place(x=10, y=165)
             
             split_var = tk.StringVar(value="1")
-            split_spinbox = tk.Spinbox(config_frame, from_=1, to=100, width=5, 
-                                      textvariable=split_var, font=('Arial', 12))
+            split_spinbox = tk.Spinbox(config_frame, from_=1, to=100, width=5, textvariable=split_var, font=('Arial', 12))
             split_spinbox.place(x=230, y=168)
             
             # Save button
-            save_btn = tk.Button(config_frame, text="Save", 
-                               font=('Arial', 12), bg='#0dcaf0', fg='white', width=10,
-                               command=lambda ft=file_type: self.save_config(ft))
+            save_btn = tk.Button(config_frame, text="Save", font=('Arial', 12), bg='#0dcaf0', fg='white', width=10, command=lambda ft=file_type: self.save_config(ft))
             save_btn.place(x=300, y=162)
             
-            self.file_configs[file_type] = {
-                'frame': config_frame,
-                'text': text_widget,
-                'split': split_var
-            }
+            self.file_configs[file_type] = { 'frame': config_frame, 'text': text_widget, 'split': split_var }
     
     def update_folder_info(self, *args):
         count = self.folder_count.get()

@@ -1,9 +1,13 @@
 import uiautomator2 as u2
 import time
-import random
+import random, subprocess
+import logging, time
+from typing import Dict, Any
+
+logger = logging.getLogger(__name__)
 
 # Kết nối emulator-5556
-d = u2.connect('emulator-5556')
+d = u2.connect('emulator-5558')
 
 d.app_start("com.windscribe.vpn")
 
@@ -52,29 +56,49 @@ d.app_start("com.windscribe.vpn")
 #     time.sleep(1)
 #     d.xpath('//*[@text="Tiếp"]').click()
     
-# Lấy random họ
-with open('dulieu/hoten/Ho.txt', 'r', encoding='utf-8') as f:
-    ho_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
-    random_ho = random.choice(ho_list)
-with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
-    ten_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
-    random_ten = random.choice(ten_list)    
-# if d.xpath('//*[@text="Chọn tên của bạn"]').wait(timeout=5):
-#     time.sleep(1)
-#     d.xpath('//*[@text="Sử dụng tên khác"]').click()
-#     if d(text="Bạn tên gì?").wait(timeout=5):
-#         time.sleep(1)
-#         d(text="Họ").click()
-#         time.sleep(1)
-#         d.send_keys(random_ho)
-#         time.sleep(1)
-#         d(text="Tên").click()
-#         time.sleep(1)
-#         d.send_keys(random_ten)
-#         time.sleep(1)
-#         d.xpath('//*[@text="Tiếp"]').click()
-#         time.sleep(1)
-#         # hoten_done_status = {"stt": stt_display, "trang_thai": "Đã nhập Họ Tên", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}
-#         # self.status_manager.update_device_status(device_index, hoten_done_status, self.table_manager)
+# # Lấy random họ
+# with open('dulieu/hoten/Ho.txt', 'r', encoding='utf-8') as f:
+#     ho_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+#     random_ho = random.choice(ho_list)
+# with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
+#     ten_list = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+#     random_ten = random.choice(ten_list)    
+# **ĐỌC PROXY DATA - NGẮN GỌN**
+def setup_proxy(device, device_index=0, **kwargs) -> Dict[str, Any]:
+    """Thiết lập WW Proxy - khởi chạy app và đọc proxy data"""
+    try:
+        logger.info("Setting up WW Proxy on device...")
+        
+        # ĐỌC PROXY DATA
+        proxy_file = f"Profile/Profile-{device_index + 1}/wwproxy.txt"
+        with open(proxy_file, 'r', encoding='utf-8') as f:
+            proxies = [line.strip() for line in f.readlines() if line.strip()]
+        
+        proxy_data = proxies[device_index % len(proxies)] if proxies else ""
+        logger.info(f"Using proxy: {proxy_data}")
+        d.set_clipboard(proxy_data)
+        # Khởi chạy app WW Proxy
+        device.app_start('com.hct.myapplication')
+        
+        import time
+        time.sleep(5)
 
+        d.xpath('//*[@resource-id="com.hct.myapplication:id/btnPaste"]').click()
+        time.sleep(1)
+        if device(text="TẮT").exists:
+            device(text="TẮT").click()
+        time.sleep(2)
+        if device(text="OK").exists:
+            device(text="OK").click()
+
+
+        return { "success": True, "provider": "WW Proxy", "proxy_data": proxy_data, "message": "WW Proxy setup completed" }
+        
+    except Exception as e:
+        logger.error(f"Error setting up WW Proxy: {str(e)}")
+        return {"success": False, "error": str(e)}
+
+
+result = setup_proxy(d, device_index=0)
+print("Proxy Result:", result)
 
