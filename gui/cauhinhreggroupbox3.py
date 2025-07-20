@@ -153,7 +153,7 @@ class CauHinhRegGroupbox3:
                 messagebox.showerror("Lỗi", "Vui lòng chọn loại proxy!")
                 return
             
-            proxy_mapping = {"Vn2ray": "com.v2ray.ang", "WW Proxy": "com.hct.myapplication", "Proxy No1": "com.saturn.no1vpn1"}
+            proxy_mapping = {"Vn2ray": "com.v2ray.ang", "WW Proxy": "com.hct.myapplication", "Proxy No1": "com.saturn.no1vpn1", "Super Proxy": "com.scheler.superproxy", "Windscribe VPN": "com.windscribe.vpn"}
             target_package = proxy_mapping.get(selected_proxy)
             
             if not target_package:

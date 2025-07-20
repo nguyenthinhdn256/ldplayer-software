@@ -107,7 +107,23 @@ class CauHinhRegGroupbox5:
         label_proxy_no1.place(x=40, y=127)
         label_proxy_no1.bind('<Button-1>', lambda e: on_checkbox_click2("proxy_no1"))
 
-        self.checkboxes2.update({"host_port_user_pass": icon_host_port_user_pass, "host_port": icon_host_port, "vn2ray": icon_vn2ray, "ww_proxy": icon_ww_proxy, "proxy_no1": icon_proxy_no1})
+        # Checkbox "Super Proxy", "super_proxy"
+        icon_super_proxy = create_checkbox_icon(self.border_frame3, 15, 160, False)
+        icon_super_proxy.bind('<Button-1>', lambda e: on_checkbox_click2("super_proxy"))
+        label_super_proxy = tk.Label(self.border_frame3, text="Super Proxy", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
+        label_super_proxy.place(x=40, y=157)
+        label_super_proxy.bind('<Button-1>', lambda e: on_checkbox_click2("super_proxy"))
+
+        # Checkbox "Windscribe VPN", "windscribe_vpn"
+        icon_windscribe_vpn = create_checkbox_icon(self.border_frame3, 15, 190, False)
+        icon_windscribe_vpn.bind('<Button-1>', lambda e: on_checkbox_click2("windscribe_vpn"))
+        label_windscribe_vpn = tk.Label(self.border_frame3, text="Windscribe VPN", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
+        label_windscribe_vpn.place(x=40, y=187)
+        label_windscribe_vpn.bind('<Button-1>', lambda e: on_checkbox_click2("windscribe_vpn"))
+
+
+
+        self.checkboxes2.update({"host_port_user_pass": icon_host_port_user_pass, "host_port": icon_host_port, "vn2ray": icon_vn2ray, "ww_proxy": icon_ww_proxy, "proxy_no1": icon_proxy_no1, "super_proxy": icon_super_proxy, "windscribe_vpn": icon_windscribe_vpn})
 
         # BUTTON "CHIA DỮ LIỆU"
         chia_du_lieu_label = tk.Label(self.border_frame3, text="Chia Dữ Liệu:", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
@@ -128,6 +144,8 @@ class CauHinhRegGroupbox5:
         self.border_frame3_widgets.append(label_vn2ray)
         self.border_frame3_widgets.append(label_ww_proxy)
         self.border_frame3_widgets.append(label_proxy_no1)
+        self.border_frame3_widgets.append(label_super_proxy)
+        self.border_frame3_widgets.append(label_windscribe_vpn)
         self.border_frame3_widgets.append(chia_du_lieu_label)
         self.border_frame3_widgets.append(chia_du_lieu_button)
 
