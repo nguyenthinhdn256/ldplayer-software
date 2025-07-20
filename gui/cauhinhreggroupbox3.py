@@ -2,10 +2,11 @@ import tkinter as tk
 from tkinter import ttk
 import customtkinter as ctk
 from tkinter import filedialog
-import logging
-import os
-import subprocess
-import platform
+from utils.apk_manager import ApkManager
+from tkinter import messagebox
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading, logging, os, subprocess, platform
+
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -90,10 +91,10 @@ class CauHinhRegGroupbox3:
         cai_apk_proxy_label.place(x=15, y=140)
         
         self.apk_proxy_var = tk.StringVar(value="Vn2ray")
-        apk_proxy_dropdown = ttk.Combobox(content_frame, values=["Vn2ray", "WW Proxy", "Proxy No1"], state="readonly", width=21, textvariable=self.apk_proxy_var)
+        apk_proxy_dropdown = ttk.Combobox(content_frame, values=["Vn2ray", "WW Proxy", "Proxy No1", "Super Proxy", "Windscribe VPN"], state="readonly", width=21, textvariable=self.apk_proxy_var)
         apk_proxy_dropdown.place(x=150, y=145)
 
-        cai_dat_button = tk.Button(content_frame, text="Cài đặt", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1) #  command=self.on_cai_dat_button_click,
+        cai_dat_button = tk.Button(content_frame, text="Cài đặt", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1, command=self.on_cai_dat_button_click)
         cai_dat_button.place(x=320, y=140)
 
     
@@ -141,6 +142,111 @@ class CauHinhRegGroupbox3:
         except Exception as e:
             logger.error(f"Error creating number input: {e}")
             return tk.StringVar(value=str(default_val))
+        
+    #########################
+    # Logic Cài đặt App Proxy
+    def on_cai_dat_button_click(self):
+        """Xử lý logic cài đặt apk proxy theo app được chọn"""
+        try:
+            selected_proxy = self.apk_proxy_var.get()
+            if not selected_proxy:
+                messagebox.showerror("Lỗi", "Vui lòng chọn loại proxy!")
+                return
+            
+            proxy_mapping = {"Vn2ray": "com.v2ray.ang", "WW Proxy": "com.hct.myapplication", "Proxy No1": "com.saturn.no1vpn1"}
+            target_package = proxy_mapping.get(selected_proxy)
+            
+            if not target_package:
+                messagebox.showerror("Lỗi", f"Không tìm thấy package cho {selected_proxy}!")
+                return
+            
+            threading.Thread(target=self._process_proxy_apk_installation, args=(selected_proxy, target_package), daemon=True).start()
+            
+        except Exception as e:
+            logger.error(f"Error in cai dat button click: {e}")
+            messagebox.showerror("Lỗi", f"Lỗi khi cài đặt: {str(e)}")
+
+    def _process_proxy_apk_installation(self, selected_proxy, target_package):
+        """Worker thread để xử lý cài đặt apk proxy song song"""
+        try:
+            manager = ApkManager()
+            devices = manager.get_connected_devices()
+            
+            if not devices:
+                self.parent.after(0, lambda: messagebox.showwarning("Cảnh báo", "Không có device nào kết nối! Vui lòng kết nối ADB trước."))
+                return
+            
+            self.parent.after(0, lambda: messagebox.showinfo("Đang xử lý", f"Đang xóa và cài lại {selected_proxy} cho {len(devices)} device(s) song song...\nVui lòng đợi."))
+            
+            all_proxy_packages = ["com.v2ray.ang", "com.hct.myapplication", "com.saturn.no1vpn1", "com.scheler.superproxy", "com.windscribe.vpn"]
+            print("DEBUG: target_package =", target_package)
+            apk_filename = {"com.v2ray.ang": "vn2ray.apk", "com.hct.myapplication": "wwproxy.apk", "com.saturn.no1vpn1": "proxyno1.apk", "com.scheler.superproxy": "superproxy.apk", "com.windscribe.vpn": "windscribe.apk"}.get(target_package.strip(), "")
+            
+            if not apk_filename:
+                self.parent.after(0, lambda: messagebox.showerror("Lỗi", f"Không tìm thấy APK file cho {selected_proxy}"))
+                return
+            
+            apk_path = os.path.join("apk", apk_filename)
+            if not os.path.exists(apk_path):
+                self.parent.after(0, lambda: messagebox.showerror("Lỗi", f"APK file không tồn tại: {apk_path}"))
+                return
+            
+            max_workers = min(len(devices), 8)
+            results = []
+            
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                futures = {executor.submit(self._process_single_device_proxy, device_id, all_proxy_packages, target_package, apk_path, selected_proxy): device_id for device_id in devices}
+                
+                for future in as_completed(futures):
+                    device_id = futures[future]
+                    try:
+                        result = future.result()
+                        results.append(result)
+                        logger.info(f"Device {device_id} processing completed: {result['success']}")
+                    except Exception as e:
+                        logger.error(f"Error processing device {device_id}: {e}")
+                        results.append({"device": device_id, "success": False, "message": f"Exception: {str(e)}"})
+            
+            success_count = sum(1 for r in results if r.get("success", False))
+            failed_count = len(results) - success_count
+            
+            if success_count == len(devices):
+                result_message = f"🎉 Hoàn hảo!\nĐã cài đặt {selected_proxy} thành công cho tất cả {len(devices)} device(s)."
+            elif success_count > 0:
+                result_message = f"⚠️ Một phần thành công!\nThành công: {success_count}/{len(devices)} device(s)\nThất bại: {failed_count} device(s)"
+            else:
+                result_message = f"❌ Thất bại!\nKhông thể cài đặt {selected_proxy} cho bất kỳ device nào."
+            
+            self.parent.after(0, lambda: messagebox.showinfo("Kết quả cài đặt", result_message))
+            
+        except Exception as e:
+            logger.error(f"Error in proxy apk installation: {e}")
+            self.parent.after(0, lambda: messagebox.showerror("Lỗi", f"Lỗi trong quá trình cài đặt: {str(e)}"))
+
+    def _process_single_device_proxy(self, device_id, all_proxy_packages, target_package, apk_path, selected_proxy):
+        """Xử lý một device riêng lẻ - xóa tất cả proxy rồi cài app được chọn"""
+        try:
+            logger.info(f"Processing device {device_id} for {selected_proxy}")
+            
+            for package in all_proxy_packages:
+                try:
+                    subprocess.run(["adb", "-s", device_id, "uninstall", package], capture_output=True, text=True, timeout=30)
+                    logger.info(f"Uninstalled {package} from {device_id}")
+                except Exception as e:
+                    logger.warning(f"Failed to uninstall {package} from {device_id}: {e}")
+            
+            install_result = subprocess.run(["adb", "-s", device_id, "install", "-r", apk_path], capture_output=True, text=True, timeout=60)
+            
+            if install_result.returncode == 0 and "Success" in install_result.stdout:
+                logger.info(f"Successfully installed {selected_proxy} to {device_id}")
+                return {"device": device_id, "success": True, "message": f"Installed {selected_proxy} successfully"}
+            else:
+                logger.error(f"Failed to install {selected_proxy} to {device_id}: {install_result.stderr}")
+                return {"device": device_id, "success": False, "message": f"Install failed: {install_result.stderr or install_result.stdout}"}
+                
+        except Exception as e:
+            logger.error(f"Exception processing device {device_id}: {e}")
+            return {"device": device_id, "success": False, "message": f"Exception: {str(e)}"}
 
     #########################
         

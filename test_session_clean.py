@@ -3,7 +3,9 @@ import time
 import random
 
 # Kết nối emulator-5556
-d = u2.connect('emulator-5568')
+d = u2.connect('emulator-5556')
+
+d.app_start("com.windscribe.vpn")
 
 # if d.xpath('//*[@content-desc="Facebook from Meta"]').wait(timeout=10):
 #     print("Đã thấy Logo Facebook")
@@ -76,8 +78,3 @@ with open('dulieu/hoten/Ten.txt', 'r', encoding='utf-8') as f:
 #         # self.status_manager.update_device_status(device_index, hoten_done_status, self.table_manager)
 
 
-
-if d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').exists:
-    time.sleep(1)
-    d.xpath('//*[@text="Tiếp tục tạo tài khoản"]').click()
-    time.sleep(1)
