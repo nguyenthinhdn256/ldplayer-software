@@ -58,9 +58,11 @@ class WWProxyHandler:
         self.config_data = config_data
         self.provider_name = "WW Proxy"
     
-    def process_proxy(self, **kwargs) -> Dict[str, Any]:
+    def setup_proxy(self, **kwargs) -> Dict[str, Any]:
         logger.info(f"Processing proxy with {self.provider_name}")
         return {"status": "ready", "provider": self.provider_name, "format": "wwproxy", "data": self.config_data}
+    
+
 
 class ProxyNo1Handler:
     """Handler cho Proxy No1 provider"""
