@@ -99,8 +99,9 @@ class CauHinhRegGroupbox3:
 
         click_dongy_label = tk.Label(content_frame, text="Click Tôi Đồng Ý:", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
         click_dongy_label.place(x=15, y=180)
-        click_dongy_input = ctk.CTkEntry(content_frame, width=150, height=25,  border_color="#3b3b3b", justify="center")
-        click_dongy_input.place(x=160, y=180)
+        self.click_dongy_input = ctk.CTkEntry(content_frame, width=150, height=25,  border_color="#3b3b3b", justify="center")
+        self.click_dongy_input.place(x=160, y=180)
+        self.click_dongy_input.insert(0, "3")
     
     def create_custom_number_input(self, parent, x, y, width=150, min_val=1, max_val=999, default_val=1):
         try:

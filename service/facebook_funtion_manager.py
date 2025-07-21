@@ -223,3 +223,24 @@ def get_password_configuration(parent_window=None) -> Dict[str, str]:
         logger.error(f"Error getting password configuration: {e}")
         return {"password_type": "randompass", "custom_password": ""}
 ##########################
+# Xử lý Tôi Đồng Ý
+def get_click_dongy_configuration(parent_window=None) -> int:
+    """Lấy cấu hình số lần click 'Tôi đồng ý' từ GUI"""
+    try:
+        app_window = parent_window
+        while app_window and not hasattr(app_window, 'groupbox4_manager'):
+            app_window = app_window.master if hasattr(app_window, 'master') else None
+        
+        if app_window and hasattr(app_window, 'groupbox4_manager'):
+            groupbox4_manager = app_window.groupbox4_manager
+            if hasattr(groupbox4_manager, 'groupbox3_manager') and hasattr(groupbox4_manager.groupbox3_manager, 'click_dongy_input'):
+                try:
+                    click_count = int(groupbox4_manager.groupbox3_manager.click_dongy_input.get())
+                    return max(1, click_count)  # Tối thiểu là 1
+                except (ValueError, AttributeError):
+                    return 3  # Giá trị mặc định
+        
+        return 3  # Giá trị mặc định nếu không lấy được
+    except Exception as e:
+        logger.error(f"Error getting click dongy configuration: {e}")
+        return 3

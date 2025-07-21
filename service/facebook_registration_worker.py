@@ -174,6 +174,11 @@ class FacebookRegistrationWorker:
             stt_display = str(device_index + 1)
             d = u2.connect(device_id)
 
+            # THÊM CÁC BIẾN GLOBAL CHO FUNCTION
+            sdt_success = False
+            sdt_data = None
+            email_data = None
+
             # **BƯỚC 1: Kiểm tra kết nối U2**
             logger.info(f"Processing device {device_id} with U2...")
 
@@ -481,10 +486,8 @@ class FacebookRegistrationWorker:
                         time.sleep(1)
                         d.xpath('//*[@text="Đăng ký bằng số di động"]').click()
                         time.sleep(2)
-                    # Retry logic cho việc nhập SĐT (tối đa 3 lần thử)
-                    sdt_success = False
-                    sdt_data = None
 
+                    # Retry logic cho việc nhập SĐT (tối đa 3 lần thử)
                     for sdt_attempt in range(3):
                         logger.info(f"SĐT input attempt {sdt_attempt + 1}/3")
 
@@ -567,12 +570,12 @@ class FacebookRegistrationWorker:
             # Thực thi dựa trên proxy_type
             if proxy_type and proxy_type in proxy_mapping:
                 handler_name, function_name = proxy_mapping[proxy_type]["handler"], proxy_mapping[proxy_type]["function"]
-                self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": "Đang tiến hành change Ip", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
+                self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": "Đang tiến hành change Ip", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
                 
                 if function_name:
                     result = ProxyConfigManager.execute_proxy_function(d, device_index, proxy_type, function_name)
                     status, message, proxy_data = ("Thành công", f"Hoàn thành: {handler_name}", result.get('proxy_data', '')) if result.get("success", False) else ("Lỗi", f"Lỗi: {result.get('error', 'Unknown')}", "")
-                    self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": message, "ten_may": device_id, "ket_qua": status, "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": proxy_data}, self.table_manager)
+                    self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": message, "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": proxy_data}, self.table_manager)
                 else:
                     self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": f"Không dùng proxy: {handler_name}", "ten_may": device_id, "ket_qua": "", "ho": "", "ten": "", "mat_khau": "", "email_sdt": "", "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
             else:
@@ -583,17 +586,67 @@ class FacebookRegistrationWorker:
             # Xử lý đồng ý
             d.app_start('com.facebook.katana')
             time.sleep(2)
-            if d.xpath('//*[@text="Tôi đồng ý"]').wait(timeout=15):
+
+            # Lấy số lần thử từ GUI (nếu không có thì mặc định 3)
+            clickdongy_start_status = {"stt": stt_display, "trang_thai": "Bắt đầu click Tôi Đồng Ý", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": proxy_data}
+            self.status_manager.update_device_status(device_index, clickdongy_start_status, self.table_manager)
+
+            try:
+                max_attempts = int(self.main_config.get('click_dongy_attempts', 3)) if hasattr(self, 'main_config') else 3
+            except:
+                max_attempts = 3
+
+            attempt_count = 0
+            while attempt_count < max_attempts:
+                if d.xpath('//*[@text="Tôi đồng ý"]').wait(timeout=15):
+                    time.sleep(1)
+                    d.xpath('//*[@text="Tôi đồng ý"]').click()
+                    time.sleep(2)
+                    
+                    # Kiểm tra lỗi "Không thể tạo tài khoản"
+                    if d(className="android.view.View", text="Không thể tạo tài khoản", descriptionContains="Không thể tạo tài khoản").wait(timeout=10):
+                        attempt_count += 1
+                        logger.warning(f"Device {device_id}: Lỗi 'Không thể tạo tài khoản' - lần {attempt_count}/{max_attempts}")
+                        continue
+                    else:
+                        logger.info(f"Device {device_id}: 'Tôi đồng ý' thành công")
+                        break
+                else:
+                    logger.info(f"Device {device_id}: Không tìm thấy nút 'Tôi đồng ý'")
+                    break
+
+            if attempt_count >= max_attempts:
+                logger.error(f"Device {device_id}: Thất bại sau {max_attempts} lần thử")
+
+            clickdongy_done_status = {"stt": stt_display, "trang_thai": "Click Tôi Đồng Ý thành công", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": proxy_data}
+            self.status_manager.update_device_status(device_index, clickdongy_done_status, self.table_manager)
+
+            #######################
+
+            # Click Tiếp tục dùng tiếng Anh (Mỹ)
+            if d(text="Tiếp tục dùng tiếng Anh (Mỹ)").wait(timeout=35):
+                d(resourceId="com.facebook.katana:id/(name removed)", text="Tiếp tục dùng tiếng Anh (Mỹ)").click()
+            else:
+                logger.error(f"Device {device_id}: Không tìm thấy 'Tiếp tục dùng tiếng Anh (Mỹ)")
+                
+
+            maxacnhan_doi_status = {"stt": stt_display, "trang_thai": "Đợi Mã Xác Nhận xuất hiện", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": proxy_data}
+            self.status_manager.update_device_status(device_index, maxacnhan_doi_status, self.table_manager)
+            for _ in range(30):
+                if any([d(textContains="Lý do bạn nhìn thấy nội dung này").exists, d(text="Tự động xác nhận tài khoản của bạn").exists, d(text="Nhập mã xác nhận").exists, d(text="Xác nhận tài khoản Facebook của bạn qua cuộc gọi điện thoại?").exists, d(text="Xác nhận số di động của bạn qua WhatsApp").exists, d(text="Xác nhận số di động của bạn").exists]):                        
+                    logger.error(f"[{device_id}] Đã tìm thấy nút Tự động xác nhận or Nhập mã xác nhận")
+                    time.sleep(3)
+                    maxacnhan_xuathien_status = {"stt": stt_display, "trang_thai": "Mã Xác Nhận đã xuất hiện", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": proxy_data}
+                    self.status_manager.update_device_status(device_index, maxacnhan_xuathien_status, self.table_manager)
+                    break
                 time.sleep(1)
-                d.xpath('//*[@text="Tôi đồng ý"]').click()
+            
 
 
-
-
-
-
-
-
+            if d.xpath('//*[@text="Nhập mã xác nhận"]').exists(timeout=5):
+                time.sleep(1)
+                d.xpath('//*[@text="Tôi không nhận được mã"]').click()
+                
 
 
 

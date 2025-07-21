@@ -79,6 +79,12 @@ class FacebookRegistrationStarter:
                     proxy_config = groupbox4_manager.groupbox5_manager.get_proxy_configuration()
                     config['proxy_config'] = proxy_config
                     logger.info(f"Collected proxy config: {proxy_config}")
+
+                if hasattr(groupbox4_manager, 'groupbox3_manager'):
+                    from service.facebook_funtion_manager import get_click_dongy_configuration
+                    click_dongy_config = get_click_dongy_configuration(app_window)
+                    config['click_dongy_attempts'] = click_dongy_config
+                    logger.info(f"Collected click dongy config: {click_dongy_config} attempts")
             
             logger.info(f"Collected basic config: {config}")
             return config
