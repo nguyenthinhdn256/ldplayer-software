@@ -73,30 +73,34 @@ class CauHinhRegGroupbox3:
     def setup_caidat_tab_content(self, content_frame):       
         so_ld_label = tk.Label(content_frame, text="Số LD/Phone:", font=('Arial', 12, 'bold'), bg='#3b3b3b', fg='white')
         so_ld_label.place(x=15, y=20)
-        self.so_ld_var = self.create_custom_number_input(content_frame, x=150, y=25, width=150, min_val=1, max_val=999, default_val=1)
+        self.so_ld_var = self.create_custom_number_input(content_frame, x=160, y=25, width=150, min_val=1, max_val=999, default_val=1)
         
         so_acc_label = tk.Label(content_frame, text="Số Acc/Email:", font=('Arial', 12, 'bold'), bg='#3b3b3b', fg='white')
         so_acc_label.place(x=15, y=60)
-        self.so_acc_var = self.create_custom_number_input(content_frame, x=150, y=65, width=150, min_val=1, max_val=999, default_val=1)
+        self.so_acc_var = self.create_custom_number_input(content_frame, x=160, y=65, width=150, min_val=1, max_val=999, default_val=1)
         
         duong_dan_label = tk.Label(content_frame, text="Đường dẫn:", font=('Arial', 12, 'bold'), bg='#3b3b3b', fg='white')
         duong_dan_label.place(x=15, y=100)
         self.duong_dan_var = tk.StringVar()
         duong_dan_input = ctk.CTkEntry(content_frame, width=150, height=25, placeholder_text="Chọn đường dẫn file", textvariable=self.duong_dan_var, border_color="#3b3b3b")
-        duong_dan_input.place(x=150, y=105)
+        duong_dan_input.place(x=160, y=105)
         browse_button = tk.Button(content_frame, text="Browse", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1, command=lambda: self.duong_dan_var.set(filedialog.askopenfilename(title="Chọn file", filetypes=[("All files", "*.*")]) or self.duong_dan_var.get()))
-        browse_button.place(x=320, y=102)
+        browse_button.place(x=330, y=102)
 
         cai_apk_proxy_label = tk.Label(content_frame, text="Cài Apk Proxy:", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
         cai_apk_proxy_label.place(x=15, y=140)
         
         self.apk_proxy_var = tk.StringVar(value="Vn2ray")
         apk_proxy_dropdown = ttk.Combobox(content_frame, values=["Vn2ray", "WW Proxy", "Proxy No1", "Super Proxy", "Windscribe VPN"], state="readonly", width=21, textvariable=self.apk_proxy_var)
-        apk_proxy_dropdown.place(x=150, y=145)
+        apk_proxy_dropdown.place(x=160, y=145)
 
         cai_dat_button = tk.Button(content_frame, text="Cài đặt", bg='#404040', fg='white', font=('Arial', 10, 'bold'), width=8, height=1, command=self.on_cai_dat_button_click)
-        cai_dat_button.place(x=320, y=140)
+        cai_dat_button.place(x=330, y=140)
 
+        click_dongy_label = tk.Label(content_frame, text="Click Tôi Đồng Ý:", font=('Arial', 12, 'bold'), bg="#3b3b3b", fg='white')
+        click_dongy_label.place(x=15, y=180)
+        click_dongy_input = ctk.CTkEntry(content_frame, width=150, height=25,  border_color="#3b3b3b", justify="center")
+        click_dongy_input.place(x=160, y=180)
     
     def create_custom_number_input(self, parent, x, y, width=150, min_val=1, max_val=999, default_val=1):
         try:

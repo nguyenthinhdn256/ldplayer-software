@@ -121,8 +121,6 @@ class CauHinhRegGroupbox5:
         label_windscribe_vpn.place(x=40, y=187)
         label_windscribe_vpn.bind('<Button-1>', lambda e: on_checkbox_click2("windscribe_vpn"))
 
-
-
         self.checkboxes2.update({"host_port_user_pass": icon_host_port_user_pass, "host_port": icon_host_port, "vn2ray": icon_vn2ray, "ww_proxy": icon_ww_proxy, "proxy_no1": icon_proxy_no1, "super_proxy": icon_super_proxy, "windscribe_vpn": icon_windscribe_vpn})
 
         # BUTTON "CHIA DỮ LIỆU"

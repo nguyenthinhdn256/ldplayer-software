@@ -73,6 +73,12 @@ class FacebookRegistrationStarter:
                     password_config = get_password_configuration(app_window)
                     config['password_config'] = password_config
                     logger.info(f"Collected password config: {password_config}")
+
+                # THÊM: Lấy cấu hình proxy từ CauHinhRegGroupbox5
+                if hasattr(groupbox4_manager, 'groupbox5_manager'):
+                    proxy_config = groupbox4_manager.groupbox5_manager.get_proxy_configuration()
+                    config['proxy_config'] = proxy_config
+                    logger.info(f"Collected proxy config: {proxy_config}")
             
             logger.info(f"Collected basic config: {config}")
             return config
