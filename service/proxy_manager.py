@@ -127,12 +127,14 @@ class WWProxyHandler:
             time.sleep(5)
             device.xpath('//*[@resource-id="com.hct.myapplication:id/btnPaste"]').click()
             time.sleep(1)
-            if device(text="TẮT").exists:
-                device(text="TẮT").click()
-            time.sleep(2)
-            if device(text="OK").exists:
+            device.xpath('//*[@resource-id="com.hct.myapplication:id/menu_item_switch"]').click()
+            # if device(text="TẮT").exists:
+            #     device(text="TẮT").click()
+            if device(text="OK").wait(timeout=10):
+                time.sleep(1)
                 device(text="OK").click()
             time.sleep(10)
+
             device.app_stop('com.hct.myapplication')
             time.sleep(5)
             return {"success": True, "provider": "WW Proxy", "proxy_data": proxy_data, "message": "WW Proxy setup completed"}

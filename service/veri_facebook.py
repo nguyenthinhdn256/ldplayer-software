@@ -105,7 +105,7 @@ class FunOTPHandler:
         logger.info(f"Khởi tạo FunOTPHandler với API: {api_key}")
 
     def rent_number(self):
-        """Thuê số điện thoại từ FunOTP API"""
+        """Thuê số điện thoại từ FunOTP API - không chỉ định operator"""
         try:
             if not self.api_key and self.parent_window:
                 self.api_key = get_sms_api_key('funotp', self.parent_window)
@@ -114,8 +114,8 @@ class FunOTPHandler:
                 logger.error("API key không được cung cấp")
                 return {"success": False, "error": "API key không được cung cấp"}
             
-            # Tham số request
-            params = {"action": "number", "service": "facebook", "operator": "viettel|mobifone", "apikey": self.api_key}
+            # Tham số request - không chỉ định operator
+            params = { "action": "number", "service": "facebook", "apikey": self.api_key }
 
             logger.info(f"Đang request thuê số với params: {params}")
             
@@ -131,19 +131,22 @@ class FunOTPHandler:
             if result.get("ResponseCode") == 0 and "Result" in result:
                 number = result["Result"].get("number")
                 sim_id = result["Result"].get("id")
+                operator = result["Result"].get("operator", "Unknown")
+                price = result["Result"].get("price")
+                balance = result["Result"].get("balance")
                 
                 if number and sim_id:
-                    logger.info(f"✅ Thuê số thành công: {number} (ID: {sim_id})")
-                    return {"success": True, "number": number, "id": sim_id, "full_response": result["Result"]}
-
+                    logger.info(f"✅ Thuê số thành công: {number} (ID: {sim_id}) - Operator: {operator}")
+                    return { "success": True, "number": number, "id": sim_id, "operator": operator, "price": price, "balance": balance, "full_response": result["Result"] }
                 else:
                     logger.error(f"Response thiếu thông tin: {result}")
                     return {"success": False, "error": "Response thiếu number hoặc id"}
             else:
                 error_msg = result.get("Message", "Unknown error")
-                logger.error(f"API error: ResponseCode={result.get('ResponseCode')}, Message={error_msg}")
-                return {"success": False, "error": f"API error: {error_msg}"}
-                
+                response_code = result.get("ResponseCode")
+                logger.error(f"API error: ResponseCode={response_code}, Message={error_msg}")
+                return {"success": False, "error": f"API error: {error_msg} (Code: {response_code})"}
+                    
         except requests.exceptions.RequestException as e:
             logger.error(f"Network error khi thuê số FunOTP: {e}")
             return {"success": False, "error": f"Network error: {str(e)}"}
@@ -154,8 +157,8 @@ class FunOTPHandler:
             logger.error(f"Unexpected error khi thuê số FunOTP: {e}")
             return {"success": False, "error": f"Unexpected error: {str(e)}"}
 
-    def get_otp_code(self, sim_id: str, max_attempts: int = 10, delay: int = 10):
-        """Nhận mã OTP từ FunOTP API với retry"""
+    def get_otp_code(self, sim_id: str, max_attempts: int = 12, delay: int = 5):
+        """Nhận mã OTP từ FunOTP API với retry - 12 lần, mỗi lần 5s"""
         import time
         
         try:
@@ -166,32 +169,48 @@ class FunOTPHandler:
             if not self.api_key or not sim_id:
                 return {"success": False, "error": "Thiếu API key hoặc Sim ID"}
             
-            # Retry loop
+            logger.info(f"🔄 Bắt đầu lấy OTP cho ID: {sim_id} - {max_attempts} lần, mỗi lần {delay}s")
+            
+            # Retry loop - 12 lần, mỗi lần 5s
             for attempt in range(max_attempts):
                 logger.info(f"Lần thử lấy OTP {attempt + 1}/{max_attempts} cho ID: {sim_id}")
                 
-                # Request API
-                params = {"action": "code", "id": sim_id, "apikey": self.api_key}
-                response = requests.get(self.base_url, params=params, timeout=30)
-                result = response.json()
-                
-                # Kiểm tra response
-                if result.get("ResponseCode") == 0 and "Result" in result:
-                    otp_code = result["Result"].get("otp")
-                    if otp_code:
-                        logger.info(f"✅ Lấy OTP thành công: {otp_code}")
-                        return {"success": True, "otp": otp_code, "sms": result["Result"].get("SMS")}
-                
-                # Chưa có OTP, đợi và thử lại
-                if attempt < max_attempts - 1:
-                    logger.info(f"OTP chưa có, đợi {delay}s...")
-                    time.sleep(delay)
+                try:
+                    # Request API
+                    url = f"{self.base_url}?action=code&id={sim_id}&apikey={self.api_key}"
+                    response = requests.get(url, timeout=30)
+                    result = response.json()
+                    
+                    logger.info(f"📋 API Response: {result}")
+                    
+                    # Kiểm tra response
+                    if result.get("ResponseCode") == 0 and "Result" in result:
+                        otp_code = result["Result"].get("otp")
+                        sms_content = result["Result"].get("SMS")
+                        
+                        if otp_code:
+                            logger.info(f"✅ Lấy OTP thành công: {otp_code}")
+                            return { "success": True, "otp": otp_code, "sms": sms_content, "attempt": attempt + 1 }
+                    
+                    # ResponseCode != 0 hoặc chưa có OTP
+                    logger.info(f"⏳ Chưa có OTP (ResponseCode: {result.get('ResponseCode')})")
+                    
+                    # Đợi và thử lại (trừ lần cuối)
+                    if attempt < max_attempts - 1:
+                        logger.info(f"⏳ Đợi {delay}s trước lần thử tiếp theo...")
+                        time.sleep(delay)
+                        
+                except Exception as request_error:
+                    logger.error(f"❌ Lỗi request lần {attempt + 1}: {request_error}")
+                    if attempt < max_attempts - 1:
+                        time.sleep(delay)
             
-            logger.error(f"Không nhận được OTP sau {max_attempts} lần thử")
-            return {"success": False, "error": f"Không nhận được OTP sau {max_attempts} lần thử"}
+            # Hết số lần thử
+            logger.error(f"❌ Không nhận được OTP sau {max_attempts} lần thử")
+            return { "success": False, "error": f"Không nhận được OTP sau {max_attempts} lần thử ({max_attempts * delay}s)", "total_attempts": max_attempts }
             
         except Exception as e:
-            logger.error(f"Error getting OTP: {e}")
+            logger.error(f"❌ Error getting OTP: {e}")
             return {"success": False, "error": str(e)}
     
     def execute_verification(self, device, device_id: str, device_index: int):
@@ -207,24 +226,77 @@ class FunOTPHandler:
                 device.xpath('//*[@text="Đổi số di động"]').click()
                 time.sleep(1)
 
-                # Thuê số điện thoại
-                rent_result = self.rent_number()
-                phone_number = rent_result.get("number")
-                sim_id = rent_result.get("id")
-                
-                # Nhập số điện thoại
-                device.xpath("//android.widget.EditText").send_keys(phone_number)
-                time.sleep(1)
-                device.xpath('//*[@text="Tiếp"]').click()
-                time.sleep(2)
+                found_verification = False 
+                for sdt_attempt in range(3):
+                    if found_verification:  # Kiểm tra flag
+                        break
+
+                    # Thuê số điện thoại
+                    rent_result = self.rent_number()
+                    if not rent_result.get("success"):
+                        return {"success": False, "error": f"Rent number failed: {rent_result.get('error')}"}
+                    phone_number = rent_result.get("number")
+                    sim_id = rent_result.get("id")
+                    
+                    input_field = device(className="android.widget.EditText")
+                    if input_field.exists:
+                        input_field.clear_text()
+                        time.sleep(0.5)
+                    # Nhập số điện thoại
+                    input_field = device.xpath("//android.widget.EditText")
+                    if input_field.exists:
+                        input_field.set_text(phone_number)  # Thay send_keys bằng set_text
+                    else:
+                        return {"success": False, "error": "Không tìm thấy field nhập số điện thoại"}
+                    time.sleep(1)
+                    device.xpath('//*[@text="Tiếp"]').click()
+                    xpaths = [
+                        '//*[@text="Nhập mã xác nhận"]',
+                        '//*[@text="Xác nhận số di động của bạn qua WhatsApp"]', 
+                        '//*[@text="Xác nhận số di động qua SMS"]'
+                    ]
+                    for attempt in range(30):
+                        if any(device.xpath(xpath).exists for xpath in xpaths):
+                            print(f"Có ít nhất 1 button (lần thử {attempt + 1})")
+                            found_verification = True
+                            break
+                        time.sleep(1)  # Đợi 1 giây trước lần thử tiếp theo
+                    
+                    if found_verification:  # Kiểm tra flag để thoát vòng lặp 3
+                        break
+
+                    if device.xpath('//*[@text="Số di động"]').exists:
+                        logger.warning("Số  đã sử dụng. Tiếp tục thuê")
+                        continue  
+                    time.sleep(2)
+
+                if device.xpath('//*[@text="Xác nhận số di động của bạn qua WhatsApp" or @text="Xác nhận số di động qua SMS"]').exists:
+                    time.sleep(1)
+                    if device.xpath('//*[@text="Thử cách khác"]').exists:
+                        time.sleep(1)
+                        device.xpath('//*[@text="Thử cách khác"]').click()
+                        time.sleep(1)
+                    if device.xpath('//*[@text="Gửi mã qua SMS"]').exists:
+                        time.sleep(1)
+                        device.xpath('//*[@text="Gửi mã qua SMS"]').click()
+                        time.sleep(1)
+                        device.xpath('//*[@text="Tiếp tục"]').click()
+
+                time.sleep(5)
                 
                 # Nhận OTP code
                 otp_result = self.get_otp_code(sim_id)
+                if not otp_result.get("success"):
+                    return {"success": False, "error": f"Get OTP failed: {otp_result.get('error')}"}
                 otp_code = otp_result.get("otp")
                 time.sleep(1)
-                device.xpath("//android.widget.EditText").send_keys(otp_code)
+                otp_field = device.xpath("//android.widget.EditText")
+                if otp_field.exists:
+                    otp_field.set_text(otp_code)  # Thay send_keys bằng set_text
+                else:
+                    return {"success": False, "error": "Không tìm thấy field nhập OTP"}
                 time.sleep(1)
-                device.xpath('//*[@text="Tiếp"]').click()
+                # device.xpath('//*[@text="Tiếp"]').click()
 
 
                 logger.info(f"Đã thực hiện các bước verification cho device {device_id}")

@@ -299,6 +299,8 @@ class FacebookRegistrationWorker:
 
             ################
 
+            d.press("home")
+
             # Tiến hành reg account với vòng lặp 3 lần
             for fb_attempt in range(3):
                 logger.info(f"Facebook startup attempt {fb_attempt + 1}/3")
@@ -645,7 +647,7 @@ class FacebookRegistrationWorker:
             self.status_manager.update_device_status(device_index, maxacnhan_doi_status, self.table_manager)
             for _ in range(30):
                 if any([d(textContains="Lý do bạn nhìn thấy nội dung này").exists, d(text="Tự động xác nhận tài khoản của bạn").exists, d(text="Nhập mã xác nhận").exists, d(text="Xác nhận tài khoản Facebook của bạn qua cuộc gọi điện thoại?").exists, d(text="Xác nhận số di động của bạn qua WhatsApp").exists, d(text="Xác nhận số di động của bạn").exists]):                        
-                    logger.error(f"[{device_id}] Đã tìm thấy nút Tự động xác nhận or Nhập mã xác nhận")
+                    logger.error(f"[{device_id}] Nhập mã xác nhận xuất hiện")
                     time.sleep(3)
                     maxacnhan_xuathien_status = {"stt": stt_display, "trang_thai": "Mã Xác Nhận đã xuất hiện", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": proxy_data}
                     self.status_manager.update_device_status(device_index, maxacnhan_xuathien_status, self.table_manager)
@@ -655,7 +657,9 @@ class FacebookRegistrationWorker:
 
             if d.xpath('//*[@text="Xác nhận tài khoản Facebook của bạn qua cuộc gọi điện thoại?"]').exists:
                 time.sleep(1)
-                d.xpath('//*[@text="Thử cách khác"]').click()
+                if d.xpath('//*[@text="Thử cách khác"]').exists:
+                    time.sleep(1)
+                    d.xpath('//*[@text="Thử cách khác"]').click()
                 time.sleep(2)
                 if d.xpath('//*[@text="Gửi mã qua SMS"]').exists:
                     time.sleep(1)
@@ -667,8 +671,9 @@ class FacebookRegistrationWorker:
                         logger.error(f"Device {device_id}: Xuất hiện Nhập mã xác nhận ")
 
             if d.xpath('//*[@text="Xác nhận số di động của bạn qua WhatsApp"]').exists:
-                time.sleep(2)
-                d.xpath('//*[@text="Gửi mã qua SMS"]').click()
+                if d.xpath('//*[@text="Gửi mã qua SMS"]').exists:
+                    time.sleep(2)
+                    d.xpath('//*[@text="Gửi mã qua SMS"]').click()
                 time.sleep(3)
                 if d.xpath('//*[@text="Thử cách khác"]').exists:
                     time.sleep(3)
@@ -683,18 +688,30 @@ class FacebookRegistrationWorker:
                             logger.error(f"Device {device_id}: Xuất hiện Nhập mã xác nhận ")
             
             if d.xpath('//*[@text="Xác nhận số di động của bạn"]').exists:
-                time.sleep(2)
-                d.xpath('//*[@text="Gửi mã qua SMS"]').click()
                 time.sleep(1)
-                d.xpath('//*[@text="Tiếp tục"]').click()
+                if d.xpath('//*[@text="Gửi mã qua SMS"]').exists:
+                    time.sleep(1)
+                    d.xpath('//*[@text="Gửi mã qua SMS"]').click()
+                    time.sleep(1)
+                    d.xpath('//*[@text="Tiếp tục"]').click()
+                    time.sleep(1)
                 if d.xpath('//*[@text="Nhập mã xác nhận"]').wait(timeout=10):
                     logger.error(f"Device {device_id}: Xuất hiện Nhập mã xác nhận ")
 
-            if d.xpath('//*[@text="Xác nhận số di động của bạn"]').exists:
-                time.sleep(2)
+            if d.xpath('//*[@text="Xác nhận số di động qua SMS"]').exists:
+                time.sleep(1)
+                if d.xpath('//*[@text="Xác nhận qua cuộc gọi điện thoại"]').exists:
+                    time.sleep(1)
+                    d.xpath('//*[@text="Tiếp tục"]').click()
 
+            if d.xpath('//*[@text="Xác nhận số di động qua SMS"]').exists:
+                time.sleep(1)
+                d.xpath('//*[@text="Gửi mã qua WhatsApp"]').click()
+                if d.xpath('//*[@text="Nhập mã xác nhận"]').wait(timeout=10):
+                    logger.error(f"Device {device_id}: Xuất hiện Nhập mã xác nhận ")
 
-
+            if d.xpath('//*[@text="Nhập mã xác nhận"]').exists:
+                logger.error(f"Device {device_id}: Xuất hiện Nhập mã xác nhận ")
 
             #### XỬ LÝ VERIFICATION EMAIL/SMS
             verification_config = self.get_verification_config_from_main_config()
@@ -703,7 +720,7 @@ class FacebookRegistrationWorker:
             logger.info(f"Retrieved verification_type from config: {verification_type}, method: {verification_method}")
 
             # Mapping verification_type với handler và function
-            verification_mapping = {"mailthuesim": {"handler": "MailThueSimHandler", "function": "verify"}, "mailironsim": {"handler": "MailIronSimHandler", "function": "verify"}, "regclone2fa": {"handler": "RegClone2FAHandler", "function": "verify"}, "dongvanfb": {"handler": "DongVanFBHandler", "function": "verify"}, "inputmail": {"handler": "InputMailHandler", "function": "verify"}, "simviotp": {"handler": "SimVIOTPHandler", "function": "verify"}, "smsironsim": {"handler": "SMSIronSimHandler", "function": "verify"}, "funotp": {"handler": "FunOTPHandler", "function": "verify"}, "5sim": {"handler": "FiveSimHandler", "function": "verify"}, "368sms": {"handler": "SMS368Handler", "function": "verify"}, "hcotp": {"handler": "HCOTPHandler", "function": "verify"}, "smsthuesim": {"handler": "SMSThueSimHandler", "function": "verify"}, "sim24": {"handler": "Sim24Handler", "function": "verify"}}
+            verification_mapping = {"mailthuesim": {"handler": "MailThueSimHandler", "function": "execute_verification"}, "mailironsim": {"handler": "MailIronSimHandler", "function": "execute_verification"}, "regclone2fa": {"handler": "RegClone2FAHandler", "function": "execute_verification"}, "dongvanfb": {"handler": "DongVanFBHandler", "function": "execute_verification"}, "inputmail": {"handler": "InputMailHandler", "function": "execute_verification"}, "simviotp": {"handler": "SimVIOTPHandler", "function": "execute_verification"}, "smsironsim": {"handler": "SMSIronSimHandler", "function": "execute_verification"}, "funotp": {"handler": "FunOTPHandler", "function": "execute_verification"}, "5sim": {"handler": "FiveSimHandler", "function": "execute_verification"}, "368sms": {"handler": "SMS368Handler", "function": "execute_verification"}, "hcotp": {"handler": "HCOTPHandler", "function": "execute_verification"}, "smsthuesim": {"handler": "SMSThueSimHandler", "function": "execute_verification"}, "sim24": {"handler": "Sim24Handler", "function": "execute_verification"}}
 
             # Thực thi dựa trên verification_type
             if verification_type and verification_type in verification_mapping:
@@ -730,7 +747,12 @@ class FacebookRegistrationWorker:
             time.sleep(3)
                 
 
-
+            if d.xpath('//*[@text="Thêm ảnh đại diện"]').wait(timeout=20):
+                regthanhcong_status = {"stt": stt_display, "trang_thai": "Đã tạo thành công tk Full", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": proxy_data}
+                self.status_manager.update_device_status(device_index, regthanhcong_status, self.table_manager)
+            else:
+                regnovery_status = {"stt": stt_display, "trang_thai": "Đã tạo thành công Novery", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password, "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": proxy_data}
+                self.status_manager.update_device_status(device_index, regnovery_status, self.table_manager)
 
 
 
