@@ -502,3 +502,26 @@ class CauHinhRegGroupbox2:
             if checkbox_name == selected_value:
                 checkbox_canvas.create_line(5, 9, 8, 12, fill="white", width=2)
                 checkbox_canvas.create_line(8, 12, 13, 6, fill="white", width=2)
+
+    def get_verification_configuration(self):
+        """Lấy cấu hình verification đầy đủ cho script chính"""
+        try:
+            selected = self.app_selection_var.get()
+            if selected:
+                # Xác định loại verification
+                mail_verification_types = ['mailthuesim', 'mailironsim', 'regclone2fa', 'dongvanfb', 'inputmail']
+                sms_verification_types = ['simviotp', 'smsironsim', 'funotp', '5sim', '368sms', 'hcotp', 'smsthuesim', 'sim24']
+                
+                if selected in mail_verification_types:
+                    verification_method = "mail"
+                elif selected in sms_verification_types:
+                    verification_method = "sms"
+                else:
+                    verification_method = "unknown"
+                
+                return {"use_verification": True, "verification_type": selected, "verification_method": verification_method, "enabled": True}
+            else:
+                return {"use_verification": False, "verification_type": "", "verification_method": "", "enabled": False}
+        except Exception as e:
+            logger.error(f"Error getting verification configuration: {e}")
+            return {"use_verification": False, "verification_type": "", "verification_method": "", "enabled": False}

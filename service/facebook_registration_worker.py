@@ -135,6 +135,17 @@ class FacebookRegistrationWorker:
         except Exception as e:
             logger.error(f"Error getting proxy config from main config: {e}")
             return {"use_proxy": False, "proxy_type": "", "enabled": False}
+    
+    def get_verification_config_from_main_config(self) -> Dict[str, Any]:
+        """Lấy verification config từ main config đã được truyền vào"""
+        try:
+            if hasattr(self, 'main_config') and self.main_config:
+                return self.main_config.get('verification_config', {})
+            else:
+                return {"use_verification": False, "verification_type": "", "verification_method": "", "enabled": False}
+        except Exception as e:
+            logger.error(f"Error getting verification config from main config: {e}")
+            return {"use_verification": False, "verification_type": "", "verification_method": "", "enabled": False}
 
     def main(self, config: Dict[str, Any]) -> Dict[str, Any]:
         """Main function để xử lý logic registration"""
@@ -642,10 +653,81 @@ class FacebookRegistrationWorker:
                 time.sleep(1)
             
 
-
-            if d.xpath('//*[@text="Nhập mã xác nhận"]').exists(timeout=5):
+            if d.xpath('//*[@text="Xác nhận tài khoản Facebook của bạn qua cuộc gọi điện thoại?"]').exists:
                 time.sleep(1)
-                d.xpath('//*[@text="Tôi không nhận được mã"]').click()
+                d.xpath('//*[@text="Thử cách khác"]').click()
+                time.sleep(2)
+                if d.xpath('//*[@text="Gửi mã qua SMS"]').exists:
+                    time.sleep(1)
+                    d.xpath('//*[@text="Gửi mã qua SMS"]').click()
+                    time.sleep(1)
+                    d.xpath('//*[@text="Tiếp tục"]').click()
+                    time.sleep(1)
+                    if d.xpath('//*[@text="Nhập mã xác nhận"]').wait(timeout=10):
+                        logger.error(f"Device {device_id}: Xuất hiện Nhập mã xác nhận ")
+
+            if d.xpath('//*[@text="Xác nhận số di động của bạn qua WhatsApp"]').exists:
+                time.sleep(2)
+                d.xpath('//*[@text="Gửi mã qua SMS"]').click()
+                time.sleep(3)
+                if d.xpath('//*[@text="Thử cách khác"]').exists:
+                    time.sleep(3)
+                    d.xpath('//*[@text="Thử cách khác"]').click()
+                    time.sleep(3)
+                    if d.xpath('//*[@text="Xác nhận số di động của bạn"]').exists:
+                        time.sleep(3)
+                        d.xpath('//*[@text="Gửi mã qua SMS"]').click()
+                        time.sleep(1)
+                        d.xpath('//*[@text="Tiếp tục"]').click()
+                        if d.xpath('//*[@text="Nhập mã xác nhận"]').wait(timeout=10):
+                            logger.error(f"Device {device_id}: Xuất hiện Nhập mã xác nhận ")
+            
+            if d.xpath('//*[@text="Xác nhận số di động của bạn"]').exists:
+                time.sleep(2)
+                d.xpath('//*[@text="Gửi mã qua SMS"]').click()
+                time.sleep(1)
+                d.xpath('//*[@text="Tiếp tục"]').click()
+                if d.xpath('//*[@text="Nhập mã xác nhận"]').wait(timeout=10):
+                    logger.error(f"Device {device_id}: Xuất hiện Nhập mã xác nhận ")
+
+            if d.xpath('//*[@text="Xác nhận số di động của bạn"]').exists:
+                time.sleep(2)
+
+
+
+
+            #### XỬ LÝ VERIFICATION EMAIL/SMS
+            verification_config = self.get_verification_config_from_main_config()
+            verification_type = verification_config.get('verification_type', '')
+            verification_method = verification_config.get('verification_method', '')
+            logger.info(f"Retrieved verification_type from config: {verification_type}, method: {verification_method}")
+
+            # Mapping verification_type với handler và function
+            verification_mapping = {"mailthuesim": {"handler": "MailThueSimHandler", "function": "verify"}, "mailironsim": {"handler": "MailIronSimHandler", "function": "verify"}, "regclone2fa": {"handler": "RegClone2FAHandler", "function": "verify"}, "dongvanfb": {"handler": "DongVanFBHandler", "function": "verify"}, "inputmail": {"handler": "InputMailHandler", "function": "verify"}, "simviotp": {"handler": "SimVIOTPHandler", "function": "verify"}, "smsironsim": {"handler": "SMSIronSimHandler", "function": "verify"}, "funotp": {"handler": "FunOTPHandler", "function": "verify"}, "5sim": {"handler": "FiveSimHandler", "function": "verify"}, "368sms": {"handler": "SMS368Handler", "function": "verify"}, "hcotp": {"handler": "HCOTPHandler", "function": "verify"}, "smsthuesim": {"handler": "SMSThueSimHandler", "function": "verify"}, "sim24": {"handler": "Sim24Handler", "function": "verify"}}
+
+            # Thực thi dựa trên verification_type
+            if verification_type and verification_type in verification_mapping:
+                handler_name, function_name = verification_mapping[verification_type]["handler"], verification_mapping[verification_type]["function"]
+                self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": f"Đang tiến hành verification {verification_method.upper()}: {handler_name}", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password if 'generated_password' in locals() else "", "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
+                
+                if function_name:
+                    try:
+                        from service.veri_facebook import VerificationHandlerFactory
+                        handler = VerificationHandlerFactory.create_handler(verification_type)
+                        if handler:
+                            result = handler.verify()
+                            status, message = ("Thành công", f"Verification {verification_method.upper()} hoàn thành: {handler_name}") if result else ("Chờ xử lý", f"Verification {verification_method.upper()} đang chờ: {handler_name}")
+                            self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": message, "ten_may": device_id, "ket_qua": status, "ho": random_ho, "ten": random_ten, "mat_khau": generated_password if 'generated_password' in locals() else "", "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
+                        else:
+                            self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": f"Lỗi tạo handler: {verification_type}", "ten_may": device_id, "ket_qua": "Lỗi", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password if 'generated_password' in locals() else "", "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
+                    except Exception as ve:
+                        self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": f"Lỗi verification: {str(ve)}", "ten_may": device_id, "ket_qua": "Lỗi", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password if 'generated_password' in locals() else "", "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
+                else:
+                    self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": f"Không có verification: {handler_name}", "ten_may": device_id, "ket_qua": "", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password if 'generated_password' in locals() else "", "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
+            else:
+                self.status_manager.update_device_status(device_index, {"stt": stt_display, "trang_thai": f"Verification type không xác định: {verification_type}", "ten_may": device_id, "ket_qua": "Cảnh báo", "ho": random_ho, "ten": random_ten, "mat_khau": generated_password if 'generated_password' in locals() else "", "email_sdt": sdt_data if 'sdt_data' in locals() else (email_data if 'email_data' in locals() else ""), "uid": "", "cookie": "", "token": "", "proxy": ""}, self.table_manager)
+
+            time.sleep(3)
                 
 
 

@@ -85,6 +85,11 @@ class FacebookRegistrationStarter:
                     click_dongy_config = get_click_dongy_configuration(app_window)
                     config['click_dongy_attempts'] = click_dongy_config
                     logger.info(f"Collected click dongy config: {click_dongy_config} attempts")
+
+                if hasattr(groupbox4_manager, 'groupbox2_manager'):
+                    verification_config = groupbox4_manager.groupbox2_manager.get_verification_configuration()
+                    config['verification_config'] = verification_config
+                    logger.info(f"Collected verification config: {verification_config}")
             
             logger.info(f"Collected basic config: {config}")
             return config
